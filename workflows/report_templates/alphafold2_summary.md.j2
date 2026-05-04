@@ -1,0 +1,46 @@
+# AlphaFold2 (Superbio) — Run Summary
+
+- **Run ID:** {{ run_id }}
+- **Workflow:** {{ workflow_name }}
+- **QC status:** {{ qc_status }}
+
+## Predicted structures
+
+| Metric                | Value                                  |
+| --------------------- | -------------------------------------- |
+| PDB files             | {{ qa_report.metrics.n_pdb_files }}    |
+| CIF files             | {{ qa_report.metrics.n_cif_files }}    |
+| Confidence files      | {{ qa_report.metrics.n_confidence_files }} |
+
+## Failed checks
+
+{% if qa_report.failed_checks %}
+{% for check in qa_report.failed_checks %}- {{ check }}
+{% endfor %}
+{% else %}
+None.
+{% endif %}
+
+## Warnings
+
+{% if qa_report.warnings %}
+{% for warning in qa_report.warnings %}- {{ warning }}
+{% endfor %}
+{% else %}
+None.
+{% endif %}
+
+## Recommended remediation
+
+{% if qa_report.recommended_remediation %}
+{% for item in qa_report.recommended_remediation %}- {{ item }}
+{% endfor %}
+{% else %}
+No follow-up action required.
+{% endif %}
+
+## Output artifacts
+
+{% for artifact in qa_report.checklist_artifacts %}
+- `{{ artifact.artifact_type }}` → `{{ artifact.path }}`
+{% endfor %}

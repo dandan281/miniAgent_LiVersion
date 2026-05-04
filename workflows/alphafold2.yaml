@@ -1,0 +1,254 @@
+schema_version: "1.0.0"
+kind: workflow_spec
+workflow_id: alphafold2
+version: "1.0.0"
+name: AlphaFold2 (Superbio)
+purpose: Submit one or more protein sequences to AlphaFold2 on Superbio.ai and ingest the predicted structures with QC summary, while preserving BioAPEX provenance, QC gates, and compliance hooks.
+engine: external_workflow_adapter_v1
+required_inputs:
+  - name: sequence_set
+    kind: artifact
+    artifact_type: protein_sequence_set
+    schema_ref: artifact_schema:protein_sequence_set@1.0.0
+    description: |
+      Input artifact describing one or more amino-acid sequences to fold. Concretely a JSON
+      file at the artifact path with shape `[{"protein_name": "<name>", "sequence": "<aa>"}, ...]`,
+      or a FASTA file the preflight runner will normalize into that shape.
+optional_inputs:
+  - name: model_preset
+    kind: parameter
+    data_type: string
+    default: monomer
+    description: AlphaFold2 model preset forwarded to Superbio. One of `monomer`, `monomer_ptm`, `multimer`.
+  - name: poll_timeout_seconds
+    kind: parameter
+    data_type: integer
+    default: 5400
+    description: Maximum seconds to wait for the Superbio job to finish before failing the launch step.
+  - name: poll_interval_seconds
+    kind: parameter
+    data_type: integer
+    default: 30
+    description: Seconds between Superbio job-status polls.
+  - name: structure_summary_template
+    kind: template
+    template_path: workflows/report_templates/alphafold2_summary.md.j2
+    description: Optional Jinja2 markdown template for the human-readable structure QA summary.
+runtime:
+  provided_inputs:
+    - sequence_set
+    - model_preset
+    - poll_timeout_seconds
+    - poll_interval_seconds
+    - structure_summary_template
+  allowed_parameter_overrides:
+    - model_preset
+    - poll_timeout_seconds
+    - poll_interval_seconds
+  generated_state:
+    - run_id
+    - created_at
+    - submitted_job_id
+    - superbio_app_id
+    - step_statuses
+    - artifact_paths
+    - warnings
+  state_artifact: workflow_run
+  artifact_root_template: artifacts/{workflow_id}/{date}/{run_id}
+outputs:
+  - name: structure_predictions
+    kind: artifact
+    artifact_type: protein_structure_prediction_set
+    schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+    description: Bundle of predicted structures (PDB/CIF) and per-sequence confidence metrics returned by AlphaFold2.
+    source:
+      step_id: download_results
+      output_name: structure_predictions
+  - name: qa_report
+    kind: artifact
+    artifact_type: qa_report
+    schema_ref: artifact_schema:qa_report@1.0.0
+    description: Structured QA summary of the AlphaFold2 run for artifact registration and downstream review.
+    source:
+      step_id: summarize_structures
+      output_name: qa_report
+    report_template_path: workflows/report_templates/alphafold2_summary.md.j2
+qc_gates:
+  - id: sequence-set-required
+    label: Input sequence set must be present
+    when: before_execution
+    target:
+      source_type: workflow_input
+      input_name: sequence_set
+    failure_policy: block
+    description: Block execution before any external submission when the protein sequence input is missing.
+  - id: sequence-validation-passed
+    label: Preflight sequence validation must pass before launch
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: preflight_check
+      output_name: validated_sequence_set
+    failure_policy: block
+    description: Disallow Superbio submission unless preflight emitted a normalized sequence_set artifact.
+  - id: external-outputs-materialized
+    label: AlphaFold2 outputs must be materialized before summarization
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: download_results
+      output_name: structure_predictions
+    failure_policy: block
+    description: QA summary may only run after the external engine outputs have been downloaded into the run directory.
+compliance_hooks:
+  - id: privacy-preflight
+    stage: before_execution
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+    description: Run deterministic compliance screening on the input sequences before any external launch occurs.
+  - id: publish-review
+    stage: before_publish
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+      - name: qa_report
+        source:
+          source_type: step_output
+          step_id: summarize_structures
+          output_name: qa_report
+    description: Re-screen structure outputs and QA summary before publication or report export.
+steps:
+  - id: preflight_check
+    label: Validate and normalize input protein sequences
+    executor:
+      executor_type: python
+      module: workflows.runners.alphafold2
+      function: validate_sequence_set
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+      - name: model_preset
+        source:
+          source_type: workflow_input
+          input_name: model_preset
+    outputs:
+      - name: validated_sequence_set
+        kind: artifact
+        artifact_type: protein_sequence_set
+        schema_ref: artifact_schema:protein_sequence_set@1.0.0
+        description: Normalized JSON sequence set ([{protein_name, sequence}, ...]) forwarded to the external engine launch step.
+    prerequisites: []
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: launch_alphafold2
+    label: Submit AlphaFold2 job to Superbio
+    executor:
+      executor_type: external_engine
+      engine_name: superbio
+      entrypoint: workflows/engines/superbio/alphafold2_entrypoint.md
+      version_command: python -c "import superbio, sys; sys.stdout.write(getattr(superbio, '__version__', 'unknown'))"
+      execution_profile: superbio_gpu
+      parameter_bindings:
+        app_id: "62bf442025b09dead5853d24"
+        app_name: "alphafold2"
+        running_mode: "gpu"
+        aa_pairs: "{validated_sequence_set}"
+        model_preset: "{model_preset}"
+      environment_references:
+        - "secret:SUPERBIO_TOKEN"
+        - "secret:SUPERBIO_USER_ID"
+        - "package:superbio>=0.1.0"
+      output_locations:
+        - "{run_dir}/outputs/generated/external/alphafold2/structures"
+        - "{run_dir}/outputs/generated/external/alphafold2/logs"
+        - "{run_dir}/outputs/generated/external/alphafold2/manifest.json"
+    inputs:
+      - name: validated_sequence_set
+        source:
+          source_type: step_output
+          step_id: preflight_check
+          output_name: validated_sequence_set
+      - name: model_preset
+        source:
+          source_type: workflow_input
+          input_name: model_preset
+    outputs:
+      - name: external_job_handle
+        kind: value
+        description: Handle to the submitted Superbio job (job_id, app_id, submission timestamp) used by the download step.
+    prerequisites:
+      - preflight_check
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: download_results
+    label: Poll Superbio and download AlphaFold2 results
+    executor:
+      executor_type: python
+      module: workflows.runners.alphafold2
+      function: poll_and_download
+    inputs:
+      - name: external_job_handle
+        source:
+          source_type: step_output
+          step_id: launch_alphafold2
+          output_name: external_job_handle
+      - name: poll_timeout_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_timeout_seconds
+      - name: poll_interval_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_interval_seconds
+    outputs:
+      - name: structure_predictions
+        kind: artifact
+        artifact_type: protein_structure_prediction_set
+        schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+        description: Downloaded predicted-structure bundle (PDB/CIF + per-residue confidence) materialized inside the run directory.
+    prerequisites:
+      - launch_alphafold2
+    retry_policy:
+      max_attempts: 3
+      backoff_seconds: 60
+    failure_policy: fail_workflow
+  - id: summarize_structures
+    label: Summarize AlphaFold2 prediction quality
+    executor:
+      executor_type: python
+      module: workflows.runners.alphafold2
+      function: summarize_structures
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+    outputs:
+      - name: qa_report
+        kind: artifact
+        artifact_type: qa_report
+        schema_ref: artifact_schema:qa_report@1.0.0
+        description: Structured QA report summarizing AlphaFold2 confidence metrics, missing outputs, and recommended remediation.
+    prerequisites:
+      - download_results
+    retry_policy:
+      max_attempts: 2
+      backoff_seconds: 30
+    failure_policy: fail_workflow

@@ -11,6 +11,8 @@ __pycache__/
 .Python
 venv/
 .venv/
+.py311/
+.node-env/
 env/
 *.egg-info/
 dist/

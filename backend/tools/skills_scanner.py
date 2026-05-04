@@ -24,6 +24,7 @@ VALID_BIOLOGY_CATEGORIES = frozenset(
         "bio/spatial",
         "bio/molecular_lab",
         "bio/compute",
+        "bio/rejuvenation",
     }
 )
 VALID_MODALITIES = frozenset(
@@ -36,6 +37,7 @@ VALID_MODALITIES = frozenset(
         "wet_lab",
         "literature",
         "compute",
+        "protein_design",
     }
 )
 VALID_STAGES = frozenset(
@@ -50,6 +52,7 @@ VALID_STAGES = frozenset(
         "validation",
         "reporting",
         "utilities",
+        "in_silico_evaluation",
     }
 )
 VALID_STABILITIES = frozenset({"stable", "evolving", "experimental"})

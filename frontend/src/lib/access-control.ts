@@ -39,7 +39,7 @@ export function scopeRequirement(scope: AccessScope): string {
     return "Required for session history, files, Ops reads, and registry inspection.";
   }
   if (scope === "execution") {
-    return "Required for chat, session mutations, file writes, and reference uploads.";
+    return "Required for chat, session mutations, and file writes.";
   }
   return "Required for config changes, RAG control, and admin-only mutations.";
 }
@@ -155,12 +155,17 @@ export function classifyAccessError(
     };
   }
 
+  const originHint =
+    typeof window !== "undefined"
+      ? ` This page is ${window.location.origin}; the API must be reachable and CORS must allow that origin.`
+      : "";
+
   return {
     scope,
     status: "unavailable",
     authorizationMode: null,
     hasToken,
-    detail: `${label} access could not be checked because the backend is unavailable or returned an unexpected response.`,
+    detail: `${label} access could not be checked because the backend is unreachable, CORS blocked the browser request, or the response was not usable.${originHint}`,
   };
 }
 

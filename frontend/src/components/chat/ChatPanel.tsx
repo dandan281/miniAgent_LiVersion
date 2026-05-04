@@ -15,19 +15,17 @@ export default function ChatPanel() {
     currentSessionId,
     messages,
     isStreaming,
-    isReferenceUploading,
     isSessionLoading,
     sessionListStatus,
     sessionHistoryStatus,
     sessionHistoryError,
     sessionContinuitySummaries,
     sendMessage,
+    stopStreaming,
+    refreshAccessState,
+    refreshSessions,
     reloadCurrentSession,
-    attachedIdentifiers,
     setInspectorTab,
-    uploadAttachedReference,
-    removeAttachedIdentifier,
-    clearAttachedIdentifiers,
     draftMessage,
     draftRevision,
     primeDraftMessage,
@@ -101,6 +99,15 @@ export default function ChatPanel() {
     await sendMessage(text);
   };
 
+  const handleRetryWorkspaceSync = useCallback(async () => {
+    await refreshAccessState();
+    if (currentSessionId) {
+      await reloadCurrentSession();
+      return;
+    }
+    await refreshSessions();
+  }, [currentSessionId, refreshAccessState, refreshSessions, reloadCurrentSession]);
+
   const chatDisabled = isSessionLoading || !hasExecutionAccess;
   const chatDisabledReason = !hasExecutionAccess
     ? accessByScope.execution.detail
@@ -166,6 +173,7 @@ export default function ChatPanel() {
                 sessionHistoryStatus={sessionHistoryStatus}
                 sessionHistoryError={sessionHistoryError}
                 showWorkspaceSetupState={showWorkspaceSetupState}
+                onRetryWorkspaceSync={() => void handleRetryWorkspaceSync()}
                 onRetryHistory={() => void reloadCurrentSession()}
               />
             ) : (
@@ -185,16 +193,12 @@ export default function ChatPanel() {
           <div className="mx-auto w-full max-w-[56rem]">
             <ChatInput
               onSend={handleSend}
+              onStop={stopStreaming}
               isStreaming={isStreaming}
-              isReferenceUploading={isReferenceUploading}
               disabled={chatDisabled}
               disabledReason={chatDisabledReason}
-              attachedIdentifiers={attachedIdentifiers}
               onOpenInspectorTab={setInspectorTab}
               onPrimeDraftMessage={primeDraftMessage}
-              onUploadReferenceFile={uploadAttachedReference}
-              onRemoveAttachedIdentifier={removeAttachedIdentifier}
-              onClearAttachedIdentifiers={clearAttachedIdentifiers}
               prefillText={draftMessage}
               prefillRevision={draftRevision}
               clearPrefill={clearDraftMessage}
@@ -237,6 +241,7 @@ function EmptyState({
   sessionHistoryStatus,
   sessionHistoryError,
   showWorkspaceSetupState,
+  onRetryWorkspaceSync,
   onRetryHistory,
 }: {
   currentSessionId: string | null;
@@ -251,6 +256,7 @@ function EmptyState({
   sessionHistoryStatus: "idle" | "loading" | "ready" | "error";
   sessionHistoryError: string | null;
   showWorkspaceSetupState: boolean;
+  onRetryWorkspaceSync: () => void;
   onRetryHistory: () => void;
 }) {
   if (inspectionStatus === "checking" || executionStatus === "checking" || isSessionLoading) {
@@ -261,6 +267,12 @@ function EmptyState({
           eyebrow="Workspace Loading"
           title="Loading the active workspace"
           description="BioAPEX is checking access and syncing the selected session so the center panel can show the latest conversation state."
+          actions={
+            <InlineActionButton onClick={onRetryWorkspaceSync}>
+              <RefreshCw size={12} />
+              Retry Workspace Sync
+            </InlineActionButton>
+          }
         />
       </div>
     );
@@ -322,6 +334,12 @@ function EmptyState({
           eyebrow="Session Workspace"
           title="The workspace list is unavailable"
           description="BioAPEX could not load the saved session list, so there is no active workspace to display in the center panel yet."
+          actions={
+            <InlineActionButton onClick={onRetryWorkspaceSync}>
+              <RefreshCw size={12} />
+              Retry Workspace Sync
+            </InlineActionButton>
+          }
         />
       </div>
     );

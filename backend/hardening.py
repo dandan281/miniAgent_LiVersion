@@ -47,6 +47,8 @@ class ApiHardeningPolicy(BaseModel):
     execution_bearer_token_env_var: str | None = None
     admin_bearer_token_env_var: str | None = None
     cors_allowed_origins: list[str] = Field(default_factory=_default_cors_allowed_origins)
+    # Allow dev UIs on LAN hostnames / non-localhost URLs (see app.py CORS regex).
+    cors_allow_lan_dev_origins: bool = True
 
     @classmethod
     def fail_closed(cls) -> "ApiHardeningPolicy":
@@ -55,6 +57,7 @@ class ApiHardeningPolicy(BaseModel):
             allow_loopback_without_auth=False,
             trust_forwarded_loopback_headers=False,
             cors_allowed_origins=[],
+            cors_allow_lan_dev_origins=False,
         )
 
 

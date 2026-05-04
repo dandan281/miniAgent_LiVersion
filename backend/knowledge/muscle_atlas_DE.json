@@ -1,0 +1,9733 @@
+{
+  "version": "1.0",
+  "description": "Skeletal muscle aging DEG atlas. P1=aged (>=65y), P2=young (25-35y). direction=up means upregulated in aged (P1 enriched); direction=down means downregulated in aged (P2 enriched).",
+  "P1_up": [
+    "OTUD1",
+    "TTN",
+    "PRUNE2",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "MAP3K7CL",
+    "PPDPFL",
+    "EGR1",
+    "DNAJA4",
+    "ETS2",
+    "IL32",
+    "FABP5",
+    "TXNIP",
+    "CSRP3",
+    "ADIRF",
+    "C1R",
+    "RRAS2",
+    "HDAC9",
+    "MYF5",
+    "GPAT3",
+    "DEPP1",
+    "MYF6",
+    "CAV1",
+    "HIPK3",
+    "ATP11B",
+    "FOS",
+    "GPX3",
+    "UBC",
+    "ST3GAL5",
+    "PPP2R3A",
+    "SPRY1",
+    "USP13",
+    "TP63",
+    "CCSER2",
+    "PRKAA2",
+    "NRAP",
+    "KAT6B",
+    "IFRD1",
+    "PICALM",
+    "MCU",
+    "NPC2",
+    "TNNC2",
+    "JUN",
+    "KCNQ5",
+    "RARRES2",
+    "S100A4",
+    "TCAP",
+    "S100A6",
+    "AKAP6",
+    "SRSF5",
+    "LSP1",
+    "CSNK1A1",
+    "RICTOR",
+    "DGKD",
+    "CSDE1",
+    "FHIP1A",
+    "MYL12A",
+    "STRN3",
+    "SLMAP",
+    "LGALS3",
+    "TPM3",
+    "KLHL41",
+    "PPM1B",
+    "SQSTM1",
+    "PPP1R27",
+    "B2M",
+    "PAM",
+    "CD63",
+    "GPX4",
+    "MAP3K20",
+    "ACTB",
+    "HLA-B",
+    "ACTG1",
+    "S100A10",
+    "KTN1",
+    "PRKG1"
+  ],
+  "P1_down": [
+    "FMN1",
+    "TAGLN",
+    "MAFB",
+    "ACTA2",
+    "MYL9",
+    "DSTN",
+    "ZBED3",
+    "MT-ND3",
+    "MT-ATP6",
+    "PRKAG2",
+    "FABP4",
+    "MT-CO2",
+    "ACTB",
+    "ENTREP1",
+    "DHCR24",
+    "IGFBP7",
+    "MYH11",
+    "MYOM2",
+    "MT-CO3",
+    "MYL6",
+    "NBPF14",
+    "TMSB4X",
+    "TIMP3",
+    "MT-ND4",
+    "MT-ND2",
+    "MT-CYB",
+    "ADIRF",
+    "RGCC",
+    "MT-CO1",
+    "DDX3Y",
+    "MT-ND1",
+    "CLIC4",
+    "ITGA8",
+    "PPP1R14A",
+    "ENPP5",
+    "IGFBP6",
+    "C11ORF96",
+    "EEF1A1",
+    "SH3BP5",
+    "PTMA",
+    "HES4",
+    "FBLN1",
+    "CALM2",
+    "KCNAB1",
+    "FLNA",
+    "VIM",
+    "PLN",
+    "TBC1D1",
+    "RPS4Y1",
+    "NBPF19",
+    "PHLDA2",
+    "C1QTNF1",
+    "TOGARAM2",
+    "RPS27",
+    "CSRP1",
+    "AKR1C1",
+    "S100A6",
+    "FHL5",
+    "SLC38A1",
+    "PRKAG3",
+    "NR4A3",
+    "CAV1",
+    "LPL",
+    "LMOD1",
+    "RHOB",
+    "MYADM",
+    "PPP2R3B",
+    "ZFAND5",
+    "FTH1",
+    "GADD45G",
+    "PMP22",
+    "GADD45B",
+    "ANK1",
+    "LBH",
+    "POR",
+    "MYLK",
+    "TPM2",
+    "MT-ND4L",
+    "CCDC107",
+    "GPX3",
+    "SELENOM",
+    "TACC1",
+    "SIMC1",
+    "SPATS2L",
+    "MAP1B",
+    "CLMN",
+    "COX7A2",
+    "COX6A1",
+    "IFITM3",
+    "MT-ND5",
+    "CNN1",
+    "PPARGC1A",
+    "SOCS1",
+    "NPAS2",
+    "MCAM",
+    "COX8A",
+    "MGP",
+    "RPL23A",
+    "H3-3A",
+    "LPIN1",
+    "AXL",
+    "SPTBN1",
+    "RPL37A",
+    "ANKRD2",
+    "RPL35A",
+    "PTMS",
+    "ROBO1",
+    "GUK1",
+    "TNS1",
+    "RPS6KA2",
+    "CYP27A1",
+    "ATP5F1E",
+    "SH3BGRL",
+    "ITM2B",
+    "NAMPT",
+    "GSN",
+    "PITPNC1",
+    "FAU",
+    "SPARC",
+    "RERGL",
+    "SERF2",
+    "HSPH1",
+    "NDUFA11",
+    "NDUFA4",
+    "MYOM3",
+    "EPS8",
+    "FKBP5",
+    "ARPC1A",
+    "FN1",
+    "NDUFB8",
+    "FOSL2",
+    "PFN1",
+    "ZFP36L2",
+    "RPL19",
+    "ZFP36",
+    "COX6C",
+    "ATP1A1",
+    "ANKRD9",
+    "CKB",
+    "SLC22A3",
+    "UBL5",
+    "CFL1",
+    "EID1",
+    "ACTN1",
+    "RRAD",
+    "UQCR11",
+    "GUCY1A1",
+    "CKMT2",
+    "CST3",
+    "ZFP36L1",
+    "NOTCH3",
+    "SH3RF2",
+    "CAVIN1",
+    "TLN1",
+    "ATP5MK",
+    "MICOS10",
+    "ISYNA1",
+    "VCL",
+    "C12ORF57",
+    "RPS17",
+    "CAV2",
+    "TPM1",
+    "COX7C",
+    "RPS7",
+    "HSPA1B",
+    "RPLP2",
+    "RPL35",
+    "RPL38",
+    "ANKS1B",
+    "CD9",
+    "FAM110B",
+    "ACTG1",
+    "RPS29",
+    "CRIP1",
+    "RPL23",
+    "SOD3",
+    "RPL37",
+    "RPS11",
+    "ACACB",
+    "PALMD",
+    "SUMO2",
+    "CRIP2",
+    "VEGFA",
+    "MZT2B",
+    "RPL27",
+    "CPE",
+    "PPDPF",
+    "CD99",
+    "RNF150",
+    "RPL28",
+    "ACOT11",
+    "RPL7A",
+    "RPL36",
+    "RPL36AL",
+    "BCAM",
+    "RBPMS",
+    "COX5B",
+    "EEF2K",
+    "NTRK2",
+    "ILK",
+    "SSPN",
+    "ELOB",
+    "TINAGL1",
+    "RPL5",
+    "B2M",
+    "NDUFB7",
+    "ATP5ME",
+    "TSPAN5",
+    "RNF157",
+    "DYNLT1",
+    "ABCC9",
+    "SPARCL1",
+    "RPS26",
+    "FIS1",
+    "RABAC1",
+    "OST4",
+    "CAP1",
+    "SRP14",
+    "NDUFS5",
+    "SEC61G",
+    "STON2",
+    "MRPL33",
+    "TMA7",
+    "NDUFA13",
+    "C4ORF3",
+    "LDHB",
+    "RPS21",
+    "SORBS2",
+    "UGP2",
+    "PPM1L",
+    "FOXO1",
+    "ZFAND2A",
+    "ZNF385D",
+    "COX6B1",
+    "H3-3B",
+    "BRK1",
+    "LIFR",
+    "ZBTB16",
+    "MT1M",
+    "CCNI",
+    "ST3GAL1",
+    "USP53",
+    "UQCRQ",
+    "KHDRBS3",
+    "PPP1R12A",
+    "NDUFB4",
+    "PKDCC",
+    "NRG2",
+    "NDUFA1",
+    "LAMA2",
+    "SEPTIN7",
+    "ATP5MC3",
+    "COX7B",
+    "UQCRH",
+    "KCNMA1",
+    "MTHFD2",
+    "PIK3CB",
+    "SELENOW",
+    "SAP18",
+    "LAPTM4A",
+    "EDF1",
+    "PEBP1",
+    "NPPC",
+    "SMYD1",
+    "ATP5MG",
+    "ACSL1",
+    "EIF1",
+    "PPIA",
+    "CRISPLD2",
+    "ATP5PF",
+    "TPD52L1",
+    "FHL1",
+    "RAB11FIP3",
+    "BMERB1",
+    "FHOD3",
+    "CDC42EP4",
+    "RAPGEF1",
+    "IP6K3",
+    "ABI3BP",
+    "TOB2",
+    "PXN",
+    "FGD4",
+    "IER3",
+    "EEPD1",
+    "DIO2",
+    "SKP1",
+    "ANKRD28",
+    "COL4A1",
+    "SLC1A3",
+    "DGLUCY",
+    "CDK14",
+    "KIAA1217",
+    "EGLN1",
+    "CHRNA1",
+    "TUT4",
+    "MAGI2",
+    "PEG10",
+    "SLC19A2",
+    "MT1E",
+    "BNC2",
+    "KANK1",
+    "ABLIM1",
+    "ZBTB38",
+    "LDB3",
+    "COL4A2",
+    "ZNF385B",
+    "RASSF4",
+    "ZFHX3",
+    "BZW1",
+    "ANK3",
+    "REV3L",
+    "ATF3",
+    "HSPB3",
+    "KLF2",
+    "GLRX",
+    "NFIB",
+    "CNST",
+    "JPH2",
+    "TRHDE",
+    "FSD2",
+    "PPTC7",
+    "MKNK2",
+    "VIT",
+    "CASQ2",
+    "SMIM3",
+    "PTPRG",
+    "JARID2",
+    "DNAJB1",
+    "IGFBP5",
+    "SYTL4",
+    "SERPINH1",
+    "B4GALT1",
+    "R3HDM1",
+    "AUTS2",
+    "TBX15",
+    "CADM2",
+    "PLOD1",
+    "MTUS1",
+    "ASPH",
+    "DCXR",
+    "SRL",
+    "ANK2",
+    "BAG3",
+    "POLA2",
+    "PPP1R12B",
+    "RCAN2",
+    "PPP3CC",
+    "PHKA1",
+    "INO80D",
+    "NFKBIZ",
+    "PHC2",
+    "TSC22D3",
+    "MEF2A",
+    "CNKSR3",
+    "TMEM182",
+    "ANO5",
+    "BICC1",
+    "GLUL",
+    "SGCD",
+    "MAT2A",
+    "CACNA2D3",
+    "GHR",
+    "GAS2",
+    "BCL6",
+    "MT1A",
+    "PLPP1",
+    "SPEG",
+    "MT2A",
+    "FHIT",
+    "TNS2",
+    "HOMER1",
+    "EPS15L1",
+    "PDZRN3",
+    "EGFR",
+    "RIC1",
+    "SMAD3",
+    "BIN1",
+    "RC3H1",
+    "KLHL29",
+    "DNAJA1",
+    "CEBPD",
+    "AGL",
+    "RUNX1",
+    "ADPRHL1",
+    "HSP90AA1",
+    "CHMP1B",
+    "WDPCP",
+    "MT1X",
+    "ROCK2",
+    "ABRA",
+    "CXCL14",
+    "HIF1A",
+    "FOCAD",
+    "ZNF438",
+    "FOSB",
+    "NPIPB5",
+    "PTGDS",
+    "PDE7A",
+    "MYL11",
+    "ELL2",
+    "NUDT4",
+    "ACSS3",
+    "FBXO32",
+    "PDLIM1",
+    "COPS9",
+    "PSMD8",
+    "TFDP2",
+    "SSBP2",
+    "PLIN2",
+    "IQGAP1",
+    "HADHA",
+    "TRA2B",
+    "MPST",
+    "SCN4A",
+    "PIK3R1",
+    "CPED1",
+    "SLC25A12",
+    "NFKBIA",
+    "LPP",
+    "OBSCN",
+    "SOS2",
+    "PLPP3",
+    "RORA",
+    "AKAP13",
+    "PPP1CB",
+    "CCNL1",
+    "SLC26A3",
+    "RASGEF1B",
+    "TGFBR3",
+    "HDAC4",
+    "MAFF",
+    "COL19A1",
+    "DHX36",
+    "GBE1",
+    "TNIK",
+    "SLC2A4",
+    "NEDD4",
+    "SLC22A5",
+    "HADHB",
+    "PON2",
+    "MPRIP",
+    "HSPD1",
+    "SYPL2",
+    "UBB",
+    "DPF3",
+    "ARPP21",
+    "CLIC5",
+    "RHOBTB3",
+    "EIF4A1",
+    "SORT1",
+    "STIM1",
+    "SOX6",
+    "CRYAB",
+    "ESRRG",
+    "NR4A1",
+    "MAX",
+    "ENAH",
+    "CFLAR",
+    "DNAJB4",
+    "ATF4",
+    "BTG3",
+    "CSRP2",
+    "ABHD2",
+    "CECR2",
+    "COPS2",
+    "SETBP1",
+    "TGFBI",
+    "EYA4",
+    "STAC3",
+    "BTG2",
+    "ECHDC2",
+    "TBC1D8",
+    "PRRX1",
+    "CEBPB",
+    "SERTAD1",
+    "RAB7A",
+    "GTF2IRD1",
+    "EGR1",
+    "C1ORF21",
+    "BABAM2",
+    "VWA8",
+    "ZBTB20",
+    "PBX1",
+    "DDX21",
+    "HSPE1",
+    "SELENOS",
+    "TMED10",
+    "USP54",
+    "SERPINF1",
+    "MLXIP",
+    "XBP1",
+    "HSPA8",
+    "SMG1",
+    "ACTN2",
+    "CHD9",
+    "SYNPO2",
+    "FOXO3",
+    "ATP2A2",
+    "NAP1L1",
+    "PDK4",
+    "RBM20",
+    "SLC7A2",
+    "AFF1",
+    "RSRC2",
+    "ARID5B",
+    "NFIA",
+    "RBM24",
+    "GPM6B",
+    "LRRFIP2",
+    "RERE",
+    "FEZ2",
+    "FILIP1",
+    "HSPA1A",
+    "LINGO1",
+    "ATP1A2",
+    "PRDX6",
+    "JUNB",
+    "SUB1",
+    "MYOM1",
+    "SERBP1",
+    "DDIT4",
+    "MSI2",
+    "TOMM20",
+    "CALD1",
+    "UBE2E2",
+    "SAT1",
+    "EIF5",
+    "UBC",
+    "PDLIM3",
+    "SRSF3",
+    "PDE4D",
+    "MYBPC1",
+    "HNRNPK",
+    "HSP90AB1",
+    "RPS10",
+    "PDLIM5"
+  ],
+  "P2_up": [
+    "FMN1",
+    "TAGLN",
+    "MAFB",
+    "ACTA2",
+    "MYL9",
+    "DSTN",
+    "ZBED3",
+    "MT-ND3",
+    "MT-ATP6",
+    "PRKAG2",
+    "FABP4",
+    "MT-CO2",
+    "ACTB",
+    "ENTREP1",
+    "DHCR24",
+    "IGFBP7",
+    "MYH11",
+    "MYOM2",
+    "MT-CO3",
+    "MYL6",
+    "NBPF14",
+    "TMSB4X",
+    "TIMP3",
+    "MT-ND4",
+    "MT-ND2",
+    "MT-CYB",
+    "ADIRF",
+    "RGCC",
+    "MT-CO1",
+    "DDX3Y",
+    "MT-ND1",
+    "CLIC4",
+    "ITGA8",
+    "PPP1R14A",
+    "ENPP5",
+    "IGFBP6",
+    "C11ORF96",
+    "EEF1A1",
+    "SH3BP5",
+    "PTMA",
+    "HES4",
+    "FBLN1",
+    "CALM2",
+    "KCNAB1",
+    "FLNA",
+    "VIM",
+    "PLN",
+    "TBC1D1",
+    "RPS4Y1",
+    "NBPF19",
+    "PHLDA2",
+    "C1QTNF1",
+    "TOGARAM2",
+    "RPS27",
+    "CSRP1",
+    "AKR1C1",
+    "S100A6",
+    "FHL5",
+    "SLC38A1",
+    "PRKAG3",
+    "NR4A3",
+    "CAV1",
+    "LPL",
+    "LMOD1",
+    "RHOB",
+    "MYADM",
+    "PPP2R3B",
+    "ZFAND5",
+    "FTH1",
+    "GADD45G",
+    "PMP22",
+    "GADD45B",
+    "ANK1",
+    "LBH",
+    "POR",
+    "MYLK",
+    "TPM2",
+    "MT-ND4L",
+    "CCDC107",
+    "GPX3",
+    "SELENOM",
+    "TACC1",
+    "SIMC1",
+    "SPATS2L",
+    "MAP1B",
+    "CLMN",
+    "COX7A2",
+    "COX6A1",
+    "IFITM3",
+    "MT-ND5",
+    "CNN1",
+    "PPARGC1A",
+    "SOCS1",
+    "NPAS2",
+    "MCAM",
+    "COX8A",
+    "MGP",
+    "RPL23A",
+    "H3-3A",
+    "LPIN1",
+    "AXL",
+    "SPTBN1",
+    "RPL37A",
+    "ANKRD2",
+    "RPL35A",
+    "PTMS",
+    "ROBO1",
+    "GUK1",
+    "TNS1",
+    "RPS6KA2",
+    "CYP27A1",
+    "ATP5F1E",
+    "SH3BGRL",
+    "ITM2B",
+    "NAMPT",
+    "GSN",
+    "PITPNC1",
+    "FAU",
+    "SPARC",
+    "RERGL",
+    "SERF2",
+    "HSPH1",
+    "NDUFA11",
+    "NDUFA4",
+    "MYOM3",
+    "EPS8",
+    "FKBP5",
+    "ARPC1A",
+    "FN1",
+    "NDUFB8",
+    "FOSL2",
+    "PFN1",
+    "ZFP36L2",
+    "RPL19",
+    "ZFP36",
+    "COX6C",
+    "ATP1A1",
+    "ANKRD9",
+    "CKB",
+    "SLC22A3",
+    "UBL5",
+    "CFL1",
+    "EID1",
+    "ACTN1",
+    "RRAD",
+    "UQCR11",
+    "GUCY1A1",
+    "CKMT2",
+    "CST3",
+    "ZFP36L1",
+    "NOTCH3",
+    "SH3RF2",
+    "CAVIN1",
+    "TLN1",
+    "ATP5MK",
+    "MICOS10",
+    "ISYNA1",
+    "VCL",
+    "C12ORF57",
+    "RPS17",
+    "CAV2",
+    "TPM1",
+    "COX7C",
+    "RPS7",
+    "HSPA1B",
+    "RPLP2",
+    "RPL35",
+    "RPL38",
+    "ANKS1B",
+    "CD9",
+    "FAM110B",
+    "ACTG1",
+    "RPS29",
+    "CRIP1",
+    "RPL23",
+    "SOD3",
+    "RPL37",
+    "RPS11",
+    "ACACB",
+    "PALMD",
+    "SUMO2",
+    "CRIP2",
+    "VEGFA",
+    "MZT2B",
+    "RPL27",
+    "CPE",
+    "PPDPF",
+    "CD99",
+    "RNF150",
+    "RPL28",
+    "ACOT11",
+    "RPL7A",
+    "RPL36",
+    "RPL36AL",
+    "BCAM",
+    "RBPMS",
+    "COX5B",
+    "EEF2K",
+    "NTRK2",
+    "ILK",
+    "SSPN",
+    "ELOB",
+    "TINAGL1",
+    "RPL5",
+    "B2M",
+    "NDUFB7",
+    "ATP5ME",
+    "TSPAN5",
+    "RNF157",
+    "DYNLT1",
+    "ABCC9",
+    "SPARCL1",
+    "RPS26",
+    "FIS1",
+    "RABAC1",
+    "OST4",
+    "CAP1",
+    "SRP14",
+    "NDUFS5",
+    "SEC61G",
+    "STON2",
+    "MRPL33",
+    "TMA7",
+    "NDUFA13",
+    "C4ORF3",
+    "LDHB",
+    "RPS21",
+    "SORBS2",
+    "UGP2",
+    "PPM1L",
+    "FOXO1",
+    "ZFAND2A",
+    "ZNF385D",
+    "COX6B1",
+    "H3-3B",
+    "BRK1",
+    "LIFR",
+    "ZBTB16",
+    "MT1M",
+    "CCNI",
+    "ST3GAL1",
+    "USP53",
+    "UQCRQ",
+    "KHDRBS3",
+    "PPP1R12A",
+    "NDUFB4",
+    "PKDCC",
+    "NRG2",
+    "NDUFA1",
+    "LAMA2",
+    "SEPTIN7",
+    "ATP5MC3",
+    "COX7B",
+    "UQCRH",
+    "KCNMA1",
+    "MTHFD2",
+    "PIK3CB",
+    "SELENOW",
+    "SAP18",
+    "LAPTM4A",
+    "EDF1",
+    "PEBP1",
+    "NPPC",
+    "SMYD1",
+    "ATP5MG",
+    "ACSL1",
+    "EIF1",
+    "PPIA",
+    "CRISPLD2",
+    "ATP5PF",
+    "TPD52L1",
+    "FHL1",
+    "RAB11FIP3",
+    "BMERB1",
+    "FHOD3",
+    "CDC42EP4",
+    "RAPGEF1",
+    "IP6K3",
+    "ABI3BP",
+    "TOB2",
+    "PXN",
+    "FGD4",
+    "IER3",
+    "EEPD1",
+    "DIO2",
+    "SKP1",
+    "ANKRD28",
+    "COL4A1",
+    "SLC1A3",
+    "DGLUCY",
+    "CDK14",
+    "KIAA1217",
+    "EGLN1",
+    "CHRNA1",
+    "TUT4",
+    "MAGI2",
+    "PEG10",
+    "SLC19A2",
+    "MT1E",
+    "BNC2",
+    "KANK1",
+    "ABLIM1",
+    "ZBTB38",
+    "LDB3",
+    "COL4A2",
+    "ZNF385B",
+    "RASSF4",
+    "ZFHX3",
+    "BZW1",
+    "ANK3",
+    "REV3L",
+    "ATF3",
+    "HSPB3",
+    "KLF2",
+    "GLRX",
+    "NFIB",
+    "CNST",
+    "JPH2",
+    "TRHDE",
+    "FSD2",
+    "PPTC7",
+    "MKNK2",
+    "VIT",
+    "CASQ2",
+    "SMIM3",
+    "PTPRG",
+    "JARID2",
+    "DNAJB1",
+    "IGFBP5",
+    "SYTL4",
+    "SERPINH1",
+    "B4GALT1",
+    "R3HDM1",
+    "AUTS2",
+    "TBX15",
+    "CADM2",
+    "PLOD1",
+    "MTUS1",
+    "ASPH",
+    "DCXR",
+    "SRL",
+    "ANK2",
+    "BAG3",
+    "POLA2",
+    "PPP1R12B",
+    "RCAN2",
+    "PPP3CC",
+    "PHKA1",
+    "INO80D",
+    "NFKBIZ",
+    "PHC2",
+    "TSC22D3",
+    "MEF2A",
+    "CNKSR3",
+    "TMEM182",
+    "ANO5",
+    "BICC1",
+    "GLUL",
+    "SGCD",
+    "MAT2A",
+    "CACNA2D3",
+    "GHR",
+    "GAS2",
+    "BCL6",
+    "MT1A",
+    "PLPP1",
+    "SPEG",
+    "MT2A",
+    "FHIT",
+    "TNS2",
+    "HOMER1",
+    "EPS15L1",
+    "PDZRN3",
+    "EGFR",
+    "RIC1",
+    "SMAD3",
+    "BIN1",
+    "RC3H1",
+    "KLHL29",
+    "DNAJA1",
+    "CEBPD",
+    "AGL",
+    "RUNX1",
+    "ADPRHL1",
+    "HSP90AA1",
+    "CHMP1B",
+    "WDPCP",
+    "MT1X",
+    "ROCK2",
+    "ABRA",
+    "CXCL14",
+    "HIF1A",
+    "FOCAD",
+    "ZNF438",
+    "FOSB",
+    "NPIPB5",
+    "PTGDS",
+    "PDE7A",
+    "MYL11",
+    "ELL2",
+    "NUDT4",
+    "ACSS3",
+    "FBXO32",
+    "PDLIM1",
+    "COPS9",
+    "PSMD8",
+    "TFDP2",
+    "SSBP2",
+    "PLIN2",
+    "IQGAP1",
+    "HADHA",
+    "TRA2B",
+    "MPST",
+    "SCN4A",
+    "PIK3R1",
+    "CPED1",
+    "SLC25A12",
+    "NFKBIA",
+    "LPP",
+    "OBSCN",
+    "SOS2",
+    "PLPP3",
+    "RORA",
+    "AKAP13",
+    "PPP1CB",
+    "CCNL1",
+    "SLC26A3",
+    "RASGEF1B",
+    "TGFBR3",
+    "HDAC4",
+    "MAFF",
+    "COL19A1",
+    "DHX36",
+    "GBE1",
+    "TNIK",
+    "SLC2A4",
+    "NEDD4",
+    "SLC22A5",
+    "HADHB",
+    "PON2",
+    "MPRIP",
+    "HSPD1",
+    "SYPL2",
+    "UBB",
+    "DPF3",
+    "ARPP21",
+    "CLIC5",
+    "RHOBTB3",
+    "EIF4A1",
+    "SORT1",
+    "STIM1",
+    "SOX6",
+    "CRYAB",
+    "ESRRG",
+    "NR4A1",
+    "MAX",
+    "ENAH",
+    "CFLAR",
+    "DNAJB4",
+    "ATF4",
+    "BTG3",
+    "CSRP2",
+    "ABHD2",
+    "CECR2",
+    "COPS2",
+    "SETBP1",
+    "TGFBI",
+    "EYA4",
+    "STAC3",
+    "BTG2",
+    "ECHDC2",
+    "TBC1D8",
+    "PRRX1",
+    "CEBPB",
+    "SERTAD1",
+    "RAB7A",
+    "GTF2IRD1",
+    "EGR1",
+    "C1ORF21",
+    "BABAM2",
+    "VWA8",
+    "ZBTB20",
+    "PBX1",
+    "DDX21",
+    "HSPE1",
+    "SELENOS",
+    "TMED10",
+    "USP54",
+    "SERPINF1",
+    "MLXIP",
+    "XBP1",
+    "HSPA8",
+    "SMG1",
+    "ACTN2",
+    "CHD9",
+    "SYNPO2",
+    "FOXO3",
+    "ATP2A2",
+    "NAP1L1",
+    "PDK4",
+    "RBM20",
+    "SLC7A2",
+    "AFF1",
+    "RSRC2",
+    "ARID5B",
+    "NFIA",
+    "RBM24",
+    "GPM6B",
+    "LRRFIP2",
+    "RERE",
+    "FEZ2",
+    "FILIP1",
+    "HSPA1A",
+    "LINGO1",
+    "ATP1A2",
+    "PRDX6",
+    "JUNB",
+    "SUB1",
+    "MYOM1",
+    "SERBP1",
+    "DDIT4",
+    "MSI2",
+    "TOMM20",
+    "CALD1",
+    "UBE2E2",
+    "SAT1",
+    "EIF5",
+    "UBC",
+    "PDLIM3",
+    "SRSF3",
+    "PDE4D",
+    "MYBPC1",
+    "HNRNPK",
+    "HSP90AB1",
+    "RPS10",
+    "PDLIM5"
+  ],
+  "P2_down": [
+    "OTUD1",
+    "TTN",
+    "PRUNE2",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "MAP3K7CL",
+    "PPDPFL",
+    "EGR1",
+    "DNAJA4",
+    "ETS2",
+    "IL32",
+    "FABP5",
+    "TXNIP",
+    "CSRP3",
+    "ADIRF",
+    "C1R",
+    "RRAS2",
+    "HDAC9",
+    "MYF5",
+    "GPAT3",
+    "DEPP1",
+    "MYF6",
+    "CAV1",
+    "HIPK3",
+    "ATP11B",
+    "FOS",
+    "GPX3",
+    "UBC",
+    "ST3GAL5",
+    "PPP2R3A",
+    "SPRY1",
+    "USP13",
+    "TP63",
+    "CCSER2",
+    "PRKAA2",
+    "NRAP",
+    "KAT6B",
+    "IFRD1",
+    "PICALM",
+    "MCU",
+    "NPC2",
+    "TNNC2",
+    "JUN",
+    "KCNQ5",
+    "RARRES2",
+    "S100A4",
+    "TCAP",
+    "S100A6",
+    "AKAP6",
+    "SRSF5",
+    "LSP1",
+    "CSNK1A1",
+    "RICTOR",
+    "DGKD",
+    "CSDE1",
+    "FHIP1A",
+    "MYL12A",
+    "STRN3",
+    "SLMAP",
+    "LGALS3",
+    "TPM3",
+    "KLHL41",
+    "PPM1B",
+    "SQSTM1",
+    "PPP1R27",
+    "B2M",
+    "PAM",
+    "CD63",
+    "GPX4",
+    "MAP3K20",
+    "ACTB",
+    "HLA-B",
+    "ACTG1",
+    "S100A10",
+    "KTN1",
+    "PRKG1"
+  ],
+  "FAP_P1_up": [
+    "CCL4",
+    "HLA-DQA1",
+    "HOPX",
+    "CTSW",
+    "CD52",
+    "CORO1A",
+    "TRAIP",
+    "PAMR1",
+    "NR4A2",
+    "PACC1",
+    "KHK",
+    "ARVCF",
+    "HSPA12B",
+    "MRGPRF",
+    "ZSWIM4",
+    "TNFRSF11B",
+    "MRPS6",
+    "REEP2",
+    "TNFSF10",
+    "RGS16",
+    "DDB2",
+    "PPP1R3G",
+    "AKR1C3",
+    "HHIP",
+    "LOXL1",
+    "EFEMP1",
+    "CDK20",
+    "IL6",
+    "PLA2G15",
+    "IFIT1",
+    "CADM3",
+    "TRIM47",
+    "DKK3",
+    "HHIP-AS1",
+    "TSTD1",
+    "MFAP2",
+    "ADM",
+    "MIR23AHG",
+    "OLFM4",
+    "NQO1",
+    "ARL6IP6",
+    "HSPB2",
+    "EEF1AKMT3",
+    "PSMB10",
+    "MITF",
+    "DUSP14",
+    "ABHD8",
+    "KCND2",
+    "CSRNP1",
+    "PTGES",
+    "ANKRD35",
+    "NT5E",
+    "RARG",
+    "ENG",
+    "CDCA4",
+    "PRKD2",
+    "PLK3",
+    "PTGFR",
+    "MYL9",
+    "CCL2",
+    "SERTAD4-AS1",
+    "HAS1",
+    "VWA5A",
+    "TOP3B",
+    "ATF3",
+    "HDHD3",
+    "PIGB",
+    "ANGPTL2",
+    "ID2",
+    "CDK2",
+    "GEM",
+    "CABIN1",
+    "SLC6A6",
+    "BHLHE40",
+    "PLAU",
+    "SOCS3",
+    "STING1",
+    "ID3",
+    "AKR1C1",
+    "AKR1C2",
+    "RNF24",
+    "LRRC28",
+    "TMEM106C",
+    "IRF1",
+    "ACTA2",
+    "CSRP1",
+    "NR4A1",
+    "PHGDH",
+    "LEPR",
+    "LINGO1",
+    "ALDH1A1",
+    "MYC",
+    "OLFML1",
+    "ZFP36",
+    "ALDH16A1",
+    "PPL",
+    "MEOX2",
+    "CD9",
+    "C1ORF198",
+    "NIF3L1",
+    "CLEC14A",
+    "ISLR",
+    "IER2",
+    "CRYAB",
+    "LMNA",
+    "INHBA",
+    "C1QTNF2",
+    "FAM43A",
+    "CMTM8",
+    "ADAM33",
+    "HSPB8",
+    "GSTM5",
+    "EGR1",
+    "S100A4",
+    "CAVIN3",
+    "PIP4P2",
+    "HSF2",
+    "RIC8A",
+    "SERTAD3",
+    "PKM",
+    "VASN",
+    "DEDD2",
+    "FDFT1",
+    "CES1",
+    "SLC35B2",
+    "ADK",
+    "TMEM176B",
+    "KLF4",
+    "GTPBP3",
+    "SLC2A3",
+    "JUNB",
+    "SGSH",
+    "CD34",
+    "CARD19",
+    "FKBP9",
+    "SNAP47",
+    "FOS",
+    "EPHX1",
+    "CAPN2",
+    "RAB3IL1",
+    "NOVA1"
+  ],
+  "FAP_P2_up": [
+    "IL1RL1",
+    "MMP3",
+    "PTX3",
+    "S100A8",
+    "STC2",
+    "PPDPFL",
+    "LONRF2",
+    "KCNB1",
+    "COL6A6",
+    "PAX8",
+    "STRIT1",
+    "PLCG2",
+    "HK2",
+    "SLC25A18",
+    "NKD2",
+    "ZFPM1",
+    "PCDHGA12",
+    "CD38",
+    "ALKAL2",
+    "IGF2",
+    "KIF5C",
+    "ZC3H11A",
+    "TPM3",
+    "GPM6B",
+    "JCAD",
+    "MT1G",
+    "H4C11",
+    "DNER",
+    "PAPPA",
+    "SERPINE1",
+    "PMEPA1",
+    "GASK1B",
+    "SERPINF2",
+    "PITPNC1",
+    "KIAA0040",
+    "H2AC20",
+    "MBNL3",
+    "RPGRIP1L",
+    "ODC1",
+    "SLC7A8",
+    "IGF1",
+    "CMYA5",
+    "ALYREF",
+    "COL4A1",
+    "SEPTIN11",
+    "CYP4B1",
+    "ARHGEF19",
+    "CCDC144A",
+    "DHX33",
+    "RGCC",
+    "RAMP2-AS1",
+    "PDE4D",
+    "ZNF660",
+    "SOCS6",
+    "SLC7A2",
+    "DPP6",
+    "LARP4",
+    "TIAM1",
+    "TMEM59L",
+    "IZUMO4",
+    "GXYLT2",
+    "ACSL4",
+    "PDE3B",
+    "NRIP1",
+    "MDK",
+    "LAMB1",
+    "UBALD2",
+    "PHC2",
+    "RBM12B",
+    "INPP5A",
+    "MAP2K6",
+    "NOTCH2NLA",
+    "USP10",
+    "LRRC75A",
+    "BCAT1",
+    "HIF3A",
+    "RALGPS2",
+    "TPM2",
+    "DGCR6",
+    "NEURL1B",
+    "RRN3",
+    "LAMA3",
+    "SESN3",
+    "LMCD1",
+    "VEGFA",
+    "TAF10",
+    "CRLF1",
+    "UBE2V1",
+    "CIBAR1-DT",
+    "RDH10",
+    "MYL6B",
+    "NME1",
+    "PNO1",
+    "E2F3",
+    "COL4A2",
+    "C1QTNF1",
+    "KLF15",
+    "TAF4B",
+    "C6ORF120",
+    "GOLGA8B",
+    "RPGR",
+    "NOP14",
+    "MTHFD2",
+    "SOCS4",
+    "TMEM97",
+    "WDR81",
+    "NOP16",
+    "FKTN",
+    "TSPAN8",
+    "MBD2",
+    "NUDT2",
+    "ALDH1A3",
+    "RFLNB",
+    "RGPD5",
+    "PTPN1",
+    "MEDAG",
+    "FOXD1",
+    "COLEC12",
+    "RAMP2",
+    "ZDBF2",
+    "PTPN11",
+    "BOD1L1",
+    "PLXNA2",
+    "TASOR2",
+    "ZNF708",
+    "URB1",
+    "SINHCAF",
+    "RFNG",
+    "ZFHX3",
+    "AKAP12",
+    "WDR43",
+    "CTF1",
+    "NOC3L",
+    "BTBD3",
+    "GOLGB1",
+    "GOLGA8A",
+    "BMP2",
+    "COL5A3",
+    "PALS2",
+    "OMD",
+    "NCL",
+    "SUPT16H",
+    "PXDN",
+    "UPF1",
+    "BLTP2",
+    "RC3H2",
+    "ACACB",
+    "PRKDC",
+    "MAP1B",
+    "SPARCL1",
+    "TJP1",
+    "WWTR1",
+    "SLK",
+    "SH3PXD2A",
+    "PRDM2",
+    "TPM1",
+    "COL6A3",
+    "NOL8",
+    "ANKRD11",
+    "CEBPZ",
+    "ZFC3H1",
+    "GSPT1",
+    "TLN1",
+    "FBXO9",
+    "DHX36",
+    "PUM3",
+    "PAK2",
+    "TGS1",
+    "ABCE1",
+    "ZNF106",
+    "TOP1",
+    "LARS1",
+    "GABPB2",
+    "CCND2",
+    "CPNE3",
+    "DPH3",
+    "TMEM181",
+    "UBFD1",
+    "IFNAR1",
+    "COX20",
+    "SMARCA5",
+    "MBNL1",
+    "PRRC2C",
+    "TXNL4A",
+    "ZC3H13",
+    "RHOBTB3",
+    "NCOA7",
+    "CDK12",
+    "NCBP3",
+    "TRNT1",
+    "MPHOSPH10",
+    "PRP4K",
+    "PCM1",
+    "HPS5",
+    "METAP2",
+    "ZNF326",
+    "VPS36",
+    "EFCAB14",
+    "FERMT2",
+    "DDX24",
+    "BDP1",
+    "SLC39A9",
+    "TGOLN2",
+    "TFPI",
+    "EIF5B",
+    "NSRP1",
+    "ARGLU1",
+    "SRRM1"
+  ],
+  "detailed": {
+    "muscle_P1_up": {
+      "OTUD1": {
+        "log2fc": 3.4673,
+        "padj": 1.529e-17,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "TTN": {
+        "log2fc": 3.117,
+        "padj": 9.368e-99,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PRUNE2": {
+        "log2fc": 2.916,
+        "padj": 6.546e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MYH9": {
+        "log2fc": 2.9033,
+        "padj": 2.457e-25,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ASB5": {
+        "log2fc": 2.8628,
+        "padj": 9.695e-81,
+        "cell_types": [
+          "Myofiber",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "NEB": {
+        "log2fc": 2.7025,
+        "padj": 5.599e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MAP3K7CL": {
+        "log2fc": 2.5737,
+        "padj": 5.586e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PPDPFL": {
+        "log2fc": 2.498,
+        "padj": 6.752e-77,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "EGR1": {
+        "log2fc": 2.2256,
+        "padj": 1.639e-30,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "DNAJA4": {
+        "log2fc": 1.9433,
+        "padj": 1.875e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ETS2": {
+        "log2fc": 1.9044,
+        "padj": 7.332e-26,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "IL32": {
+        "log2fc": 1.863,
+        "padj": 1.03e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "FABP5": {
+        "log2fc": 1.8038,
+        "padj": 1.954e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TXNIP": {
+        "log2fc": 1.7044,
+        "padj": 4.729e-77,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CSRP3": {
+        "log2fc": 1.6717,
+        "padj": 1.165e-63,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ADIRF": {
+        "log2fc": 1.5943,
+        "padj": 1.593e-63,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "C1R": {
+        "log2fc": 1.5699,
+        "padj": 1.14e-45,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RRAS2": {
+        "log2fc": 1.5195,
+        "padj": 5.399e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "HDAC9": {
+        "log2fc": 1.4576,
+        "padj": 2.751e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MYF5": {
+        "log2fc": 1.4213,
+        "padj": 8.565e-96,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "GPAT3": {
+        "log2fc": 1.38,
+        "padj": 1.216e-17,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "DEPP1": {
+        "log2fc": 1.3761,
+        "padj": 3.122e-33,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MYF6": {
+        "log2fc": 1.3464,
+        "padj": 2.16e-29,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI"
+        ]
+      },
+      "CAV1": {
+        "log2fc": 1.2871,
+        "padj": 1.013e-28,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HIPK3": {
+        "log2fc": 1.2531,
+        "padj": 1.276e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ATP11B": {
+        "log2fc": 1.2487,
+        "padj": 3.302e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "FOS": {
+        "log2fc": 1.233,
+        "padj": 2.541e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "GPX3": {
+        "log2fc": 1.2048,
+        "padj": 1.651e-82,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "UBC": {
+        "log2fc": 1.1603,
+        "padj": 5.302e-38,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ST3GAL5": {
+        "log2fc": 1.1273,
+        "padj": 1.098e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PPP2R3A": {
+        "log2fc": 1.107,
+        "padj": 2.364e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "SPRY1": {
+        "log2fc": 1.0645,
+        "padj": 2.538e-52,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "USP13": {
+        "log2fc": 1.0568,
+        "padj": 1.84e-31,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TP63": {
+        "log2fc": 1.0227,
+        "padj": 3.087e-20,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CCSER2": {
+        "log2fc": 1.0029,
+        "padj": 5.212e-20,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PRKAA2": {
+        "log2fc": 0.9967,
+        "padj": 8.003e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NRAP": {
+        "log2fc": 0.9856,
+        "padj": 1.552e-22,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "KAT6B": {
+        "log2fc": 0.9827,
+        "padj": 8.48e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "IFRD1": {
+        "log2fc": 0.9715,
+        "padj": 2.232e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PICALM": {
+        "log2fc": 0.9679,
+        "padj": 1.217e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "MCU": {
+        "log2fc": 0.9639,
+        "padj": 2.058e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NPC2": {
+        "log2fc": 0.9588,
+        "padj": 8.747e-30,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TNNC2": {
+        "log2fc": 0.9555,
+        "padj": 4.766e-28,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "JUN": {
+        "log2fc": 0.9552,
+        "padj": 6.159e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "KCNQ5": {
+        "log2fc": 0.9111,
+        "padj": 1.447e-49,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RARRES2": {
+        "log2fc": 0.9063,
+        "padj": 5.452e-29,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "S100A4": {
+        "log2fc": 0.8701,
+        "padj": 1.413e-44,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TCAP": {
+        "log2fc": 0.8692,
+        "padj": 3.121e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "S100A6": {
+        "log2fc": 0.8593,
+        "padj": 7.958e-132,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "AKAP6": {
+        "log2fc": 0.8523,
+        "padj": 5.973e-24,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SRSF5": {
+        "log2fc": 0.8521,
+        "padj": 3.469e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "LSP1": {
+        "log2fc": 0.8245,
+        "padj": 5.913e-32,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CSNK1A1": {
+        "log2fc": 0.8186,
+        "padj": 1.403e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RICTOR": {
+        "log2fc": 0.7977,
+        "padj": 3.423e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "DGKD": {
+        "log2fc": 0.7793,
+        "padj": 3.803e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CSDE1": {
+        "log2fc": 0.7727,
+        "padj": 1.144e-16,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FHIP1A": {
+        "log2fc": 0.7638,
+        "padj": 1.875e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MYL12A": {
+        "log2fc": 0.7606,
+        "padj": 4.573e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "STRN3": {
+        "log2fc": 0.7589,
+        "padj": 2.445e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SLMAP": {
+        "log2fc": 0.7585,
+        "padj": 1.186e-21,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "LGALS3": {
+        "log2fc": 0.7497,
+        "padj": 1.627e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TPM3": {
+        "log2fc": 0.7437,
+        "padj": 6.677e-36,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "KLHL41": {
+        "log2fc": 0.7406,
+        "padj": 2.552e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PPM1B": {
+        "log2fc": 0.7249,
+        "padj": 1.765e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SQSTM1": {
+        "log2fc": 0.6934,
+        "padj": 3.29e-16,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PPP1R27": {
+        "log2fc": 0.6867,
+        "padj": 4.111e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "B2M": {
+        "log2fc": 0.6793,
+        "padj": 4.829e-103,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PAM": {
+        "log2fc": 0.6342,
+        "padj": 2.127e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CD63": {
+        "log2fc": 0.6206,
+        "padj": 2.146e-65,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "GPX4": {
+        "log2fc": 0.6159,
+        "padj": 9.724e-34,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MAP3K20": {
+        "log2fc": 0.6099,
+        "padj": 1.164e-21,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ACTB": {
+        "log2fc": 0.6096,
+        "padj": 1.707e-49,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HLA-B": {
+        "log2fc": 0.6058,
+        "padj": 1.451e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ACTG1": {
+        "log2fc": 0.569,
+        "padj": 4.522e-46,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "S100A10": {
+        "log2fc": 0.5655,
+        "padj": 6.559e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "KTN1": {
+        "log2fc": 0.5491,
+        "padj": 7.602e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PRKG1": {
+        "log2fc": 0.5092,
+        "padj": 2.32e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      }
+    },
+    "muscle_P2_up": {
+      "FMN1": {
+        "log2fc": -3.5146,
+        "padj": 1.321e-23,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TAGLN": {
+        "log2fc": -3.3777,
+        "padj": 9.948e-129,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MAFB": {
+        "log2fc": -3.2834,
+        "padj": 2.944e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ACTA2": {
+        "log2fc": -3.2599,
+        "padj": 3.164e-136,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MYL9": {
+        "log2fc": -3.1865,
+        "padj": 2.866e-128,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "DSTN": {
+        "log2fc": -3.053,
+        "padj": 1.227e-180,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ZBED3": {
+        "log2fc": -3.0497,
+        "padj": 9.207e-26,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MT-ND3": {
+        "log2fc": -2.988,
+        "padj": 1.141e-209,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-ATP6": {
+        "log2fc": -2.9547,
+        "padj": 1.172e-199,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PRKAG2": {
+        "log2fc": -2.8822,
+        "padj": 7.493e-31,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FABP4": {
+        "log2fc": -2.8809,
+        "padj": 6.291e-136,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-CO2": {
+        "log2fc": -2.873,
+        "padj": 2.469e-161,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ACTB": {
+        "log2fc": -2.8683,
+        "padj": 1.353e-161,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ENTREP1": {
+        "log2fc": -2.8654,
+        "padj": 1.284e-34,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "DHCR24": {
+        "log2fc": -2.8483,
+        "padj": 1.308e-23,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "IGFBP7": {
+        "log2fc": -2.8373,
+        "padj": 9.482e-114,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MYH11": {
+        "log2fc": -2.7992,
+        "padj": 2.756e-149,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MYOM2": {
+        "log2fc": -2.7799,
+        "padj": 1.285e-67,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT-CO3": {
+        "log2fc": -2.7666,
+        "padj": 2.392e-134,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MYL6": {
+        "log2fc": -2.7454,
+        "padj": 6.29e-142,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NBPF14": {
+        "log2fc": -2.7419,
+        "padj": 3.707e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "TMSB4X": {
+        "log2fc": -2.7279,
+        "padj": 4.199e-125,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TIMP3": {
+        "log2fc": -2.7248,
+        "padj": 2.683e-177,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-ND4": {
+        "log2fc": -2.7202,
+        "padj": 5.252e-149,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-ND2": {
+        "log2fc": -2.7072,
+        "padj": 4.351e-158,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-CYB": {
+        "log2fc": -2.6851,
+        "padj": 2.006e-140,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ADIRF": {
+        "log2fc": -2.6821,
+        "padj": 8.425e-85,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RGCC": {
+        "log2fc": -2.6697,
+        "padj": 2.493e-109,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-CO1": {
+        "log2fc": -2.6689,
+        "padj": 2.087e-127,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "DDX3Y": {
+        "log2fc": -2.6076,
+        "padj": 3.246e-33,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MT-ND1": {
+        "log2fc": -2.5957,
+        "padj": 1.48e-160,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CLIC4": {
+        "log2fc": -2.5637,
+        "padj": 8.808e-141,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ITGA8": {
+        "log2fc": -2.5154,
+        "padj": 2.189e-106,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PPP1R14A": {
+        "log2fc": -2.5102,
+        "padj": 2.871e-136,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ENPP5": {
+        "log2fc": -2.5065,
+        "padj": 3.144e-58,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "IGFBP6": {
+        "log2fc": -2.4997,
+        "padj": 8.405e-82,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "C11ORF96": {
+        "log2fc": -2.4736,
+        "padj": 7.809e-129,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "EEF1A1": {
+        "log2fc": -2.4678,
+        "padj": 9.367e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SH3BP5": {
+        "log2fc": -2.46,
+        "padj": 1.032e-23,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PTMA": {
+        "log2fc": -2.4483,
+        "padj": 7.355e-128,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "HES4": {
+        "log2fc": -2.4447,
+        "padj": 9.271e-146,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FBLN1": {
+        "log2fc": -2.4233,
+        "padj": 6.539e-41,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CALM2": {
+        "log2fc": -2.4059,
+        "padj": 5.624e-124,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "KCNAB1": {
+        "log2fc": -2.3968,
+        "padj": 1.652e-103,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FLNA": {
+        "log2fc": -2.3931,
+        "padj": 4.504e-137,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "VIM": {
+        "log2fc": -2.3916,
+        "padj": 7.706e-91,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PLN": {
+        "log2fc": -2.3868,
+        "padj": 1.336e-156,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TBC1D1": {
+        "log2fc": -2.3801,
+        "padj": 5.709e-27,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RPS4Y1": {
+        "log2fc": -2.3778,
+        "padj": 9.261e-174,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "NBPF19": {
+        "log2fc": -2.3609,
+        "padj": 3.317e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PHLDA2": {
+        "log2fc": -2.3525,
+        "padj": 3.225e-99,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "C1QTNF1": {
+        "log2fc": -2.3269,
+        "padj": 2.68e-107,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TOGARAM2": {
+        "log2fc": -2.3099,
+        "padj": 3.805e-48,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RPS27": {
+        "log2fc": -2.3057,
+        "padj": 9.371e-113,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CSRP1": {
+        "log2fc": -2.2947,
+        "padj": 4.568e-124,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "AKR1C1": {
+        "log2fc": -2.2937,
+        "padj": 2.277e-34,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "S100A6": {
+        "log2fc": -2.2884,
+        "padj": 7.876e-102,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FHL5": {
+        "log2fc": -2.286,
+        "padj": 2.079e-95,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SLC38A1": {
+        "log2fc": -2.2817,
+        "padj": 3.244e-51,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PRKAG3": {
+        "log2fc": -2.2814,
+        "padj": 1.643e-19,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NR4A3": {
+        "log2fc": -2.2575,
+        "padj": 3.365e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CAV1": {
+        "log2fc": -2.2553,
+        "padj": 3.191e-121,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LPL": {
+        "log2fc": -2.2399,
+        "padj": 8.184e-63,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "LMOD1": {
+        "log2fc": -2.2178,
+        "padj": 2.291e-124,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RHOB": {
+        "log2fc": -2.2078,
+        "padj": 3.109e-141,
+        "cell_types": [
+          "Myofiber",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MYADM": {
+        "log2fc": -2.2056,
+        "padj": 2.951e-84,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PPP2R3B": {
+        "log2fc": -2.2043,
+        "padj": 5.418e-31,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ZFAND5": {
+        "log2fc": -2.1971,
+        "padj": 1.768e-152,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "FTH1": {
+        "log2fc": -2.1901,
+        "padj": 5.413e-87,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "GADD45G": {
+        "log2fc": -2.1896,
+        "padj": 4.049e-22,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PMP22": {
+        "log2fc": -2.1888,
+        "padj": 6.664e-32,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "GADD45B": {
+        "log2fc": -2.1724,
+        "padj": 1.753e-95,
+        "cell_types": [
+          "Myofiber",
+          "Myofiber_TypeI"
+        ]
+      },
+      "ANK1": {
+        "log2fc": -2.1706,
+        "padj": 1.673e-70,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "LBH": {
+        "log2fc": -2.1603,
+        "padj": 8.934e-114,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "POR": {
+        "log2fc": -2.1581,
+        "padj": 6.999e-40,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MYLK": {
+        "log2fc": -2.1367,
+        "padj": 2.873e-110,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TPM2": {
+        "log2fc": -2.1343,
+        "padj": 3.435e-144,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-ND4L": {
+        "log2fc": -2.132,
+        "padj": 2.494e-98,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CCDC107": {
+        "log2fc": -2.1221,
+        "padj": 1.081e-125,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "GPX3": {
+        "log2fc": -2.1201,
+        "padj": 5.124e-108,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SELENOM": {
+        "log2fc": -2.1181,
+        "padj": 3.369e-120,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TACC1": {
+        "log2fc": -2.1126,
+        "padj": 1.631e-103,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SIMC1": {
+        "log2fc": -2.0973,
+        "padj": 2.92e-36,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SPATS2L": {
+        "log2fc": -2.0759,
+        "padj": 8.384e-29,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "MAP1B": {
+        "log2fc": -2.0729,
+        "padj": 3.158e-114,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CLMN": {
+        "log2fc": -2.0712,
+        "padj": 9.898e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX7A2": {
+        "log2fc": -2.0626,
+        "padj": 1.063e-135,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX6A1": {
+        "log2fc": -2.0463,
+        "padj": 2.247e-118,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "IFITM3": {
+        "log2fc": -2.0452,
+        "padj": 1.195e-100,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MT-ND5": {
+        "log2fc": -2.0422,
+        "padj": 1.012e-116,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CNN1": {
+        "log2fc": -2.0418,
+        "padj": 3.57e-94,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PPARGC1A": {
+        "log2fc": -2.0412,
+        "padj": 1.412e-58,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SOCS1": {
+        "log2fc": -2.0388,
+        "padj": 3.843e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "NPAS2": {
+        "log2fc": -2.038,
+        "padj": 3.18e-36,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "MCAM": {
+        "log2fc": -2.0246,
+        "padj": 3.135e-105,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX8A": {
+        "log2fc": -2.0241,
+        "padj": 1.127e-118,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MGP": {
+        "log2fc": -2.0236,
+        "padj": 6.523e-99,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL23A": {
+        "log2fc": -2.0203,
+        "padj": 6.95e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "H3-3A": {
+        "log2fc": -2.0189,
+        "padj": 1.109e-121,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LPIN1": {
+        "log2fc": -2.0149,
+        "padj": 5.565e-76,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "AXL": {
+        "log2fc": -1.9978,
+        "padj": 1.102e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SPTBN1": {
+        "log2fc": -1.9932,
+        "padj": 8.281e-21,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RPL37A": {
+        "log2fc": -1.9876,
+        "padj": 1.141e-87,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ANKRD2": {
+        "log2fc": -1.9865,
+        "padj": 4.277e-109,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RPL35A": {
+        "log2fc": -1.9825,
+        "padj": 5.944e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PTMS": {
+        "log2fc": -1.9726,
+        "padj": 2.233e-106,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ROBO1": {
+        "log2fc": -1.9725,
+        "padj": 6.053e-43,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "GUK1": {
+        "log2fc": -1.9644,
+        "padj": 4.612e-105,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TNS1": {
+        "log2fc": -1.9628,
+        "padj": 6.206e-117,
+        "cell_types": [
+          "Myofiber",
+          "Myofiber_TypeI"
+        ]
+      },
+      "RPS6KA2": {
+        "log2fc": -1.9606,
+        "padj": 2.075e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CYP27A1": {
+        "log2fc": -1.9577,
+        "padj": 3.389e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ATP5F1E": {
+        "log2fc": -1.9536,
+        "padj": 3.022e-121,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SH3BGRL": {
+        "log2fc": -1.9479,
+        "padj": 2.05e-100,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ITM2B": {
+        "log2fc": -1.943,
+        "padj": 5.327e-119,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NAMPT": {
+        "log2fc": -1.9377,
+        "padj": 6.781e-24,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "GSN": {
+        "log2fc": -1.937,
+        "padj": 4.719e-105,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PITPNC1": {
+        "log2fc": -1.9302,
+        "padj": 1.474e-36,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "FAU": {
+        "log2fc": -1.9238,
+        "padj": 1.576e-88,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SPARC": {
+        "log2fc": -1.915,
+        "padj": 3.405e-94,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RERGL": {
+        "log2fc": -1.8926,
+        "padj": 1.657e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SERF2": {
+        "log2fc": -1.8897,
+        "padj": 1.4e-114,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "HSPH1": {
+        "log2fc": -1.8839,
+        "padj": 3.494e-107,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "NDUFA11": {
+        "log2fc": -1.8834,
+        "padj": 1.439e-93,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NDUFA4": {
+        "log2fc": -1.8832,
+        "padj": 1.223e-118,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MYOM3": {
+        "log2fc": -1.8826,
+        "padj": 3.571e-77,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "EPS8": {
+        "log2fc": -1.8754,
+        "padj": 1.07e-82,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FKBP5": {
+        "log2fc": -1.8717,
+        "padj": 7.986e-106,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ARPC1A": {
+        "log2fc": -1.87,
+        "padj": 8.522e-90,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FN1": {
+        "log2fc": -1.8697,
+        "padj": 3.939e-106,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "NDUFB8": {
+        "log2fc": -1.8693,
+        "padj": 7.478e-95,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FOSL2": {
+        "log2fc": -1.8646,
+        "padj": 1.057e-38,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PFN1": {
+        "log2fc": -1.8642,
+        "padj": 3.761e-101,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ZFP36L2": {
+        "log2fc": -1.8642,
+        "padj": 1.327e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RPL19": {
+        "log2fc": -1.8581,
+        "padj": 1.599e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ZFP36": {
+        "log2fc": -1.8571,
+        "padj": 1.895e-94,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX6C": {
+        "log2fc": -1.8543,
+        "padj": 1.127e-114,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ATP1A1": {
+        "log2fc": -1.8499,
+        "padj": 1.016e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ANKRD9": {
+        "log2fc": -1.8478,
+        "padj": 2.2e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CKB": {
+        "log2fc": -1.8457,
+        "padj": 4.059e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SLC22A3": {
+        "log2fc": -1.8454,
+        "padj": 2.43e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "UBL5": {
+        "log2fc": -1.8437,
+        "padj": 2.117e-111,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CFL1": {
+        "log2fc": -1.8377,
+        "padj": 7.38e-103,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "EID1": {
+        "log2fc": -1.8355,
+        "padj": 3.01e-102,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ACTN1": {
+        "log2fc": -1.8335,
+        "padj": 3.532e-85,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RRAD": {
+        "log2fc": -1.832,
+        "padj": 5.376e-91,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "UQCR11": {
+        "log2fc": -1.8304,
+        "padj": 1.911e-96,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "GUCY1A1": {
+        "log2fc": -1.8296,
+        "padj": 1.554e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CKMT2": {
+        "log2fc": -1.8283,
+        "padj": 2.251e-69,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CST3": {
+        "log2fc": -1.8262,
+        "padj": 1.064e-116,
+        "cell_types": [
+          "Myofiber",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ZFP36L1": {
+        "log2fc": -1.8257,
+        "padj": 4.542e-30,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "NOTCH3": {
+        "log2fc": -1.8195,
+        "padj": 1.845e-88,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SH3RF2": {
+        "log2fc": -1.8184,
+        "padj": 1.034e-33,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CAVIN1": {
+        "log2fc": -1.8167,
+        "padj": 3.246e-89,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TLN1": {
+        "log2fc": -1.8117,
+        "padj": 9.317e-85,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ATP5MK": {
+        "log2fc": -1.8093,
+        "padj": 4.46e-106,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "MICOS10": {
+        "log2fc": -1.8085,
+        "padj": 6.095e-87,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ISYNA1": {
+        "log2fc": -1.8081,
+        "padj": 1.099e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "VCL": {
+        "log2fc": -1.8034,
+        "padj": 2.86e-74,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "C12ORF57": {
+        "log2fc": -1.8032,
+        "padj": 9.7e-96,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPS17": {
+        "log2fc": -1.7983,
+        "padj": 1.783e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CAV2": {
+        "log2fc": -1.7979,
+        "padj": 5.827e-81,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TPM1": {
+        "log2fc": -1.7954,
+        "padj": 1.188e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX7C": {
+        "log2fc": -1.7902,
+        "padj": 6.444e-108,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPS7": {
+        "log2fc": -1.7895,
+        "padj": 6.869e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "HSPA1B": {
+        "log2fc": -1.7884,
+        "padj": 7.217e-89,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPLP2": {
+        "log2fc": -1.7879,
+        "padj": 1.044e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL35": {
+        "log2fc": -1.783,
+        "padj": 1.312e-73,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL38": {
+        "log2fc": -1.7829,
+        "padj": 1.095e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ANKS1B": {
+        "log2fc": -1.7753,
+        "padj": 2.097e-32,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CD9": {
+        "log2fc": -1.7745,
+        "padj": 3.383e-91,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FAM110B": {
+        "log2fc": -1.7738,
+        "padj": 2.331e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ACTG1": {
+        "log2fc": -1.7647,
+        "padj": 1.008e-95,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPS29": {
+        "log2fc": -1.7616,
+        "padj": 5.719e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CRIP1": {
+        "log2fc": -1.7611,
+        "padj": 2.547e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL23": {
+        "log2fc": -1.7595,
+        "padj": 5.831e-88,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SOD3": {
+        "log2fc": -1.7592,
+        "padj": 6.694e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL37": {
+        "log2fc": -1.758,
+        "padj": 1.266e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPS11": {
+        "log2fc": -1.7561,
+        "padj": 9.528e-82,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ACACB": {
+        "log2fc": -1.7538,
+        "padj": 5.277e-77,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PALMD": {
+        "log2fc": -1.7537,
+        "padj": 2.453e-37,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SUMO2": {
+        "log2fc": -1.7536,
+        "padj": 1.137e-95,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CRIP2": {
+        "log2fc": -1.753,
+        "padj": 5.316e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "VEGFA": {
+        "log2fc": -1.7518,
+        "padj": 8.415e-54,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MZT2B": {
+        "log2fc": -1.7493,
+        "padj": 1.48e-81,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL27": {
+        "log2fc": -1.7428,
+        "padj": 1.606e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CPE": {
+        "log2fc": -1.7403,
+        "padj": 7.219e-88,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PPDPF": {
+        "log2fc": -1.7326,
+        "padj": 4.843e-90,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CD99": {
+        "log2fc": -1.7306,
+        "padj": 1.751e-27,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RNF150": {
+        "log2fc": -1.7299,
+        "padj": 1.011e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RPL28": {
+        "log2fc": -1.7299,
+        "padj": 8.03e-83,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ACOT11": {
+        "log2fc": -1.7298,
+        "padj": 4.238e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RPL7A": {
+        "log2fc": -1.7254,
+        "padj": 4.376e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL36": {
+        "log2fc": -1.7227,
+        "padj": 1.538e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL36AL": {
+        "log2fc": -1.7223,
+        "padj": 4.901e-94,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "BCAM": {
+        "log2fc": -1.7133,
+        "padj": 4.048e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RBPMS": {
+        "log2fc": -1.7131,
+        "padj": 7.079e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX5B": {
+        "log2fc": -1.7073,
+        "padj": 1.78e-102,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "EEF2K": {
+        "log2fc": -1.7059,
+        "padj": 2.724e-24,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NTRK2": {
+        "log2fc": -1.704,
+        "padj": 9.451e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ILK": {
+        "log2fc": -1.7015,
+        "padj": 6.316e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SSPN": {
+        "log2fc": -1.7007,
+        "padj": 3.423e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ELOB": {
+        "log2fc": -1.7002,
+        "padj": 6.85e-91,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TINAGL1": {
+        "log2fc": -1.6995,
+        "padj": 2.11e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPL5": {
+        "log2fc": -1.6914,
+        "padj": 9.003e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "B2M": {
+        "log2fc": -1.6909,
+        "padj": 3.687e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NDUFB7": {
+        "log2fc": -1.6904,
+        "padj": 3.871e-92,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ATP5ME": {
+        "log2fc": -1.688,
+        "padj": 6.111e-93,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TSPAN5": {
+        "log2fc": -1.6864,
+        "padj": 6.036e-20,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RNF157": {
+        "log2fc": -1.6805,
+        "padj": 5.544e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "DYNLT1": {
+        "log2fc": -1.6739,
+        "padj": 1.23e-90,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ABCC9": {
+        "log2fc": -1.6721,
+        "padj": 6.901e-47,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "SPARCL1": {
+        "log2fc": -1.6707,
+        "padj": 1.552e-304,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "RPS26": {
+        "log2fc": -1.6691,
+        "padj": 1.079e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "FIS1": {
+        "log2fc": -1.661,
+        "padj": 1.076e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RABAC1": {
+        "log2fc": -1.6574,
+        "padj": 5.472e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "OST4": {
+        "log2fc": -1.6568,
+        "padj": 2.409e-84,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CAP1": {
+        "log2fc": -1.6562,
+        "padj": 1.906e-73,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SRP14": {
+        "log2fc": -1.6549,
+        "padj": 1.919e-97,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NDUFS5": {
+        "log2fc": -1.6523,
+        "padj": 3.9e-91,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SEC61G": {
+        "log2fc": -1.6484,
+        "padj": 6.858e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "STON2": {
+        "log2fc": -1.6418,
+        "padj": 1.289e-31,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MRPL33": {
+        "log2fc": -1.6381,
+        "padj": 2.758e-91,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TMA7": {
+        "log2fc": -1.6291,
+        "padj": 8.951e-88,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NDUFA13": {
+        "log2fc": -1.6241,
+        "padj": 1.251e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "C4ORF3": {
+        "log2fc": -1.6195,
+        "padj": 8.75e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LDHB": {
+        "log2fc": -1.61,
+        "padj": 5.244e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "RPS21": {
+        "log2fc": -1.6098,
+        "padj": 2.056e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SORBS2": {
+        "log2fc": -1.6064,
+        "padj": 7.107e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "UGP2": {
+        "log2fc": -1.6047,
+        "padj": 9.696e-75,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PPM1L": {
+        "log2fc": -1.6021,
+        "padj": 1.37e-29,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FOXO1": {
+        "log2fc": -1.6019,
+        "padj": 3.669e-59,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ZFAND2A": {
+        "log2fc": -1.6003,
+        "padj": 3.684e-25,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ZNF385D": {
+        "log2fc": -1.5987,
+        "padj": 8.418e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "COX6B1": {
+        "log2fc": -1.5958,
+        "padj": 3.678e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "H3-3B": {
+        "log2fc": -1.5911,
+        "padj": 3.784e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "BRK1": {
+        "log2fc": -1.5902,
+        "padj": 1.698e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LIFR": {
+        "log2fc": -1.5885,
+        "padj": 1.485e-24,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ZBTB16": {
+        "log2fc": -1.5862,
+        "padj": 8.507e-82,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT1M": {
+        "log2fc": -1.5857,
+        "padj": 7.349e-69,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CCNI": {
+        "log2fc": -1.583,
+        "padj": 4.768e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ST3GAL1": {
+        "log2fc": -1.5766,
+        "padj": 1.842e-26,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "USP53": {
+        "log2fc": -1.5728,
+        "padj": 2.196e-48,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "UQCRQ": {
+        "log2fc": -1.5724,
+        "padj": 2.07e-81,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "KHDRBS3": {
+        "log2fc": -1.5717,
+        "padj": 3.063e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PPP1R12A": {
+        "log2fc": -1.5606,
+        "padj": 1.315e-86,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NDUFB4": {
+        "log2fc": -1.5471,
+        "padj": 2.375e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PKDCC": {
+        "log2fc": -1.544,
+        "padj": 5.265e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NRG2": {
+        "log2fc": -1.5419,
+        "padj": 1.233e-32,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NDUFA1": {
+        "log2fc": -1.5386,
+        "padj": 9.316e-82,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LAMA2": {
+        "log2fc": -1.5342,
+        "padj": 5.665e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SEPTIN7": {
+        "log2fc": -1.5341,
+        "padj": 2.884e-78,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ATP5MC3": {
+        "log2fc": -1.5282,
+        "padj": 2.568e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "COX7B": {
+        "log2fc": -1.5212,
+        "padj": 7.776e-82,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "UQCRH": {
+        "log2fc": -1.5131,
+        "padj": 6.942e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "KCNMA1": {
+        "log2fc": -1.5087,
+        "padj": 3.697e-47,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MTHFD2": {
+        "log2fc": -1.5084,
+        "padj": 1.445e-43,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "PIK3CB": {
+        "log2fc": -1.5057,
+        "padj": 3.466e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SELENOW": {
+        "log2fc": -1.5035,
+        "padj": 4.278e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "SAP18": {
+        "log2fc": -1.5024,
+        "padj": 1.48e-77,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "LAPTM4A": {
+        "log2fc": -1.5003,
+        "padj": 5.433e-79,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "EDF1": {
+        "log2fc": -1.493,
+        "padj": 3.133e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PEBP1": {
+        "log2fc": -1.4817,
+        "padj": 1.683e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "NPPC": {
+        "log2fc": -1.4798,
+        "padj": 2.636e-23,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SMYD1": {
+        "log2fc": -1.4687,
+        "padj": 1.383e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ATP5MG": {
+        "log2fc": -1.4646,
+        "padj": 2.021e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ACSL1": {
+        "log2fc": -1.4637,
+        "padj": 2.505e-63,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "EIF1": {
+        "log2fc": -1.4607,
+        "padj": 9.09e-74,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "PPIA": {
+        "log2fc": -1.4575,
+        "padj": 2.617e-75,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "CRISPLD2": {
+        "log2fc": -1.4546,
+        "padj": 4.806e-35,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ATP5PF": {
+        "log2fc": -1.4504,
+        "padj": 1.201e-76,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "TPD52L1": {
+        "log2fc": -1.4443,
+        "padj": 3.056e-82,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "FHL1": {
+        "log2fc": -1.4433,
+        "padj": 3.364e-26,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RAB11FIP3": {
+        "log2fc": -1.4433,
+        "padj": 4.966e-17,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "BMERB1": {
+        "log2fc": -1.438,
+        "padj": 6.363e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "FHOD3": {
+        "log2fc": -1.4374,
+        "padj": 1.777e-23,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CDC42EP4": {
+        "log2fc": -1.4344,
+        "padj": 1.437e-36,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RAPGEF1": {
+        "log2fc": -1.4308,
+        "padj": 3.53e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "IP6K3": {
+        "log2fc": -1.3987,
+        "padj": 2.219e-24,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ABI3BP": {
+        "log2fc": -1.3969,
+        "padj": 1.567e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TOB2": {
+        "log2fc": -1.392,
+        "padj": 8.912e-27,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PXN": {
+        "log2fc": -1.3897,
+        "padj": 2.835e-23,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FGD4": {
+        "log2fc": -1.3814,
+        "padj": 8.693e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "IER3": {
+        "log2fc": -1.3761,
+        "padj": 4.291e-31,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "EEPD1": {
+        "log2fc": -1.3707,
+        "padj": 9.201e-32,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "DIO2": {
+        "log2fc": -1.3651,
+        "padj": 4.514e-21,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI"
+        ]
+      },
+      "SKP1": {
+        "log2fc": -1.3615,
+        "padj": 8.23e-80,
+        "cell_types": [
+          "Myofiber"
+        ]
+      },
+      "ANKRD28": {
+        "log2fc": -1.3593,
+        "padj": 6.866e-30,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "COL4A1": {
+        "log2fc": -1.3544,
+        "padj": 1.058e-41,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SLC1A3": {
+        "log2fc": -1.3529,
+        "padj": 1.076e-28,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "DGLUCY": {
+        "log2fc": -1.3459,
+        "padj": 8.003e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CDK14": {
+        "log2fc": -1.3456,
+        "padj": 3.538e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "KIAA1217": {
+        "log2fc": -1.3446,
+        "padj": 3.295e-43,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "EGLN1": {
+        "log2fc": -1.3389,
+        "padj": 6.2e-38,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CHRNA1": {
+        "log2fc": -1.3387,
+        "padj": 2.184e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "TUT4": {
+        "log2fc": -1.3354,
+        "padj": 4.213e-34,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "MAGI2": {
+        "log2fc": -1.3303,
+        "padj": 1.597e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PEG10": {
+        "log2fc": -1.3295,
+        "padj": 1.942e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SLC19A2": {
+        "log2fc": -1.3279,
+        "padj": 4.127e-19,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT1E": {
+        "log2fc": -1.3204,
+        "padj": 6.611e-73,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "BNC2": {
+        "log2fc": -1.3194,
+        "padj": 9.464e-23,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "KANK1": {
+        "log2fc": -1.3139,
+        "padj": 7.238e-21,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ABLIM1": {
+        "log2fc": -1.3014,
+        "padj": 5.454e-50,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ZBTB38": {
+        "log2fc": -1.2992,
+        "padj": 5.547e-23,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "LDB3": {
+        "log2fc": -1.2971,
+        "padj": 6.429e-53,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "COL4A2": {
+        "log2fc": -1.2942,
+        "padj": 1.599e-27,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ZNF385B": {
+        "log2fc": -1.2847,
+        "padj": 1.938e-44,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RASSF4": {
+        "log2fc": -1.2806,
+        "padj": 4.39e-51,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ZFHX3": {
+        "log2fc": -1.2788,
+        "padj": 3.97e-42,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "BZW1": {
+        "log2fc": -1.2768,
+        "padj": 7.765e-52,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ANK3": {
+        "log2fc": -1.276,
+        "padj": 1.017e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "REV3L": {
+        "log2fc": -1.2753,
+        "padj": 1.325e-43,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ATF3": {
+        "log2fc": -1.2713,
+        "padj": 3.772e-45,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HSPB3": {
+        "log2fc": -1.2688,
+        "padj": 2.583e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "KLF2": {
+        "log2fc": -1.2627,
+        "padj": 1.126e-50,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "GLRX": {
+        "log2fc": -1.2622,
+        "padj": 6.856e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NFIB": {
+        "log2fc": -1.2609,
+        "padj": 7.481e-21,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CNST": {
+        "log2fc": -1.2607,
+        "padj": 1.2e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "JPH2": {
+        "log2fc": -1.2586,
+        "padj": 3.868e-23,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TRHDE": {
+        "log2fc": -1.2562,
+        "padj": 7.53e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "FSD2": {
+        "log2fc": -1.2561,
+        "padj": 1.2e-24,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PPTC7": {
+        "log2fc": -1.2552,
+        "padj": 8.139e-25,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MKNK2": {
+        "log2fc": -1.2547,
+        "padj": 1.316e-32,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "VIT": {
+        "log2fc": -1.2483,
+        "padj": 2.43e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CASQ2": {
+        "log2fc": -1.2455,
+        "padj": 1.346e-33,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "SMIM3": {
+        "log2fc": -1.2427,
+        "padj": 2.596e-32,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PTPRG": {
+        "log2fc": -1.2399,
+        "padj": 1.368e-30,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "JARID2": {
+        "log2fc": -1.2394,
+        "padj": 3.413e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "DNAJB1": {
+        "log2fc": -1.2381,
+        "padj": 2.908e-92,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "IGFBP5": {
+        "log2fc": -1.2129,
+        "padj": 2.087e-114,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "SYTL4": {
+        "log2fc": -1.2117,
+        "padj": 1.635e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SERPINH1": {
+        "log2fc": -1.2103,
+        "padj": 1.626e-25,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "B4GALT1": {
+        "log2fc": -1.206,
+        "padj": 1.554e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "R3HDM1": {
+        "log2fc": -1.2053,
+        "padj": 2.159e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "AUTS2": {
+        "log2fc": -1.2045,
+        "padj": 3.101e-26,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TBX15": {
+        "log2fc": -1.204,
+        "padj": 1.352e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CADM2": {
+        "log2fc": -1.2016,
+        "padj": 6.748e-26,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PLOD1": {
+        "log2fc": -1.1991,
+        "padj": 3.434e-28,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MTUS1": {
+        "log2fc": -1.1899,
+        "padj": 1.646e-34,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ASPH": {
+        "log2fc": -1.1875,
+        "padj": 1.232e-45,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "DCXR": {
+        "log2fc": -1.1868,
+        "padj": 1.541e-33,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SRL": {
+        "log2fc": -1.1831,
+        "padj": 4.22e-32,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ANK2": {
+        "log2fc": -1.1807,
+        "padj": 6.61e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "BAG3": {
+        "log2fc": -1.1804,
+        "padj": 8.886e-33,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "POLA2": {
+        "log2fc": -1.1744,
+        "padj": 1.632e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PPP1R12B": {
+        "log2fc": -1.1725,
+        "padj": 3.606e-35,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RCAN2": {
+        "log2fc": -1.1683,
+        "padj": 4.926e-30,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PPP3CC": {
+        "log2fc": -1.1676,
+        "padj": 2.696e-23,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PHKA1": {
+        "log2fc": -1.1659,
+        "padj": 4.727e-19,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "INO80D": {
+        "log2fc": -1.1654,
+        "padj": 3.543e-19,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "NFKBIZ": {
+        "log2fc": -1.1641,
+        "padj": 7.866e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PHC2": {
+        "log2fc": -1.1635,
+        "padj": 5.404e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "TSC22D3": {
+        "log2fc": -1.1596,
+        "padj": 2.44e-55,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MEF2A": {
+        "log2fc": -1.1524,
+        "padj": 3.263e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CNKSR3": {
+        "log2fc": -1.1498,
+        "padj": 1.491e-23,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TMEM182": {
+        "log2fc": -1.1474,
+        "padj": 4.389e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ANO5": {
+        "log2fc": -1.1467,
+        "padj": 2.861e-24,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "BICC1": {
+        "log2fc": -1.1405,
+        "padj": 1.481e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "GLUL": {
+        "log2fc": -1.1349,
+        "padj": 8.728e-73,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SGCD": {
+        "log2fc": -1.1311,
+        "padj": 3.851e-50,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MAT2A": {
+        "log2fc": -1.1304,
+        "padj": 2.483e-19,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CACNA2D3": {
+        "log2fc": -1.1251,
+        "padj": 2.216e-17,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "GHR": {
+        "log2fc": -1.1196,
+        "padj": 8.791e-27,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "GAS2": {
+        "log2fc": -1.1163,
+        "padj": 1.84e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "BCL6": {
+        "log2fc": -1.113,
+        "padj": 4.749e-57,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT1A": {
+        "log2fc": -1.11,
+        "padj": 3.217e-18,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PLPP1": {
+        "log2fc": -1.1072,
+        "padj": 1.089e-25,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SPEG": {
+        "log2fc": -1.1067,
+        "padj": 3.027e-14,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT2A": {
+        "log2fc": -1.1031,
+        "padj": 3.144e-58,
+        "cell_types": [
+          "MuSC",
+          "Myofiber",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FHIT": {
+        "log2fc": -1.0995,
+        "padj": 3.029e-26,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TNS2": {
+        "log2fc": -1.0964,
+        "padj": 2.414e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HOMER1": {
+        "log2fc": -1.0952,
+        "padj": 9.03e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "EPS15L1": {
+        "log2fc": -1.0892,
+        "padj": 2.122e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PDZRN3": {
+        "log2fc": -1.0851,
+        "padj": 4.991e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "EGFR": {
+        "log2fc": -1.0832,
+        "padj": 2.315e-38,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RIC1": {
+        "log2fc": -1.0827,
+        "padj": 1.371e-17,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SMAD3": {
+        "log2fc": -1.0797,
+        "padj": 9.906e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "BIN1": {
+        "log2fc": -1.0769,
+        "padj": 5.998e-37,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RC3H1": {
+        "log2fc": -1.0727,
+        "padj": 1.039e-20,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "KLHL29": {
+        "log2fc": -1.0712,
+        "padj": 3.387e-23,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "DNAJA1": {
+        "log2fc": -1.0711,
+        "padj": 1.153e-41,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CEBPD": {
+        "log2fc": -1.0695,
+        "padj": 1.506e-16,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "AGL": {
+        "log2fc": -1.0693,
+        "padj": 1.706e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RUNX1": {
+        "log2fc": -1.0691,
+        "padj": 5.458e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ADPRHL1": {
+        "log2fc": -1.0667,
+        "padj": 2.282e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "HSP90AA1": {
+        "log2fc": -1.064,
+        "padj": 2.749e-95,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CHMP1B": {
+        "log2fc": -1.0566,
+        "padj": 2.707e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "WDPCP": {
+        "log2fc": -1.0557,
+        "padj": 1.533e-31,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MT1X": {
+        "log2fc": -1.0534,
+        "padj": 1.936e-75,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ROCK2": {
+        "log2fc": -1.0489,
+        "padj": 6.127e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ABRA": {
+        "log2fc": -1.0485,
+        "padj": 3.098e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CXCL14": {
+        "log2fc": -1.0456,
+        "padj": 1.09e-41,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HIF1A": {
+        "log2fc": -1.0423,
+        "padj": 6.459e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "FOCAD": {
+        "log2fc": -1.0371,
+        "padj": 1.435e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ZNF438": {
+        "log2fc": -1.0344,
+        "padj": 2.678e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "FOSB": {
+        "log2fc": -1.0237,
+        "padj": 1.457e-39,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "NPIPB5": {
+        "log2fc": -1.0232,
+        "padj": 8.695e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PTGDS": {
+        "log2fc": -1.0143,
+        "padj": 2.587e-25,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PDE7A": {
+        "log2fc": -1.0143,
+        "padj": 3.651e-40,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MYL11": {
+        "log2fc": -1.0141,
+        "padj": 2.623e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ELL2": {
+        "log2fc": -1.0104,
+        "padj": 1.295e-24,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "NUDT4": {
+        "log2fc": -1.0098,
+        "padj": 2.05e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ACSS3": {
+        "log2fc": -1.0095,
+        "padj": 4.573e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "FBXO32": {
+        "log2fc": -1.008,
+        "padj": 4.157e-39,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PDLIM1": {
+        "log2fc": -1.0079,
+        "padj": 7.528e-20,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "COPS9": {
+        "log2fc": -1.0061,
+        "padj": 7.716e-53,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "PSMD8": {
+        "log2fc": -1.0046,
+        "padj": 4.437e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TFDP2": {
+        "log2fc": -1.0041,
+        "padj": 8.889e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SSBP2": {
+        "log2fc": -1.0002,
+        "padj": 5.188e-27,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PLIN2": {
+        "log2fc": -0.9941,
+        "padj": 3.504e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "IQGAP1": {
+        "log2fc": -0.9921,
+        "padj": 9.707e-16,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "HADHA": {
+        "log2fc": -0.9918,
+        "padj": 3.736e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TRA2B": {
+        "log2fc": -0.9896,
+        "padj": 3.193e-37,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MPST": {
+        "log2fc": -0.9884,
+        "padj": 1.293e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SCN4A": {
+        "log2fc": -0.9875,
+        "padj": 2.013e-14,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PIK3R1": {
+        "log2fc": -0.9856,
+        "padj": 5.195e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CPED1": {
+        "log2fc": -0.9837,
+        "padj": 1.738e-34,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SLC25A12": {
+        "log2fc": -0.9836,
+        "padj": 1.15e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NFKBIA": {
+        "log2fc": -0.9831,
+        "padj": 1.16e-39,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "LPP": {
+        "log2fc": -0.9811,
+        "padj": 2.659e-34,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "OBSCN": {
+        "log2fc": -0.9792,
+        "padj": 3.938e-35,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SOS2": {
+        "log2fc": -0.9774,
+        "padj": 6.553e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "PLPP3": {
+        "log2fc": -0.9713,
+        "padj": 2.065e-32,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "RORA": {
+        "log2fc": -0.9705,
+        "padj": 1.695e-41,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "AKAP13": {
+        "log2fc": -0.9596,
+        "padj": 5.903e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PPP1CB": {
+        "log2fc": -0.9585,
+        "padj": 1.646e-32,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "CCNL1": {
+        "log2fc": -0.9562,
+        "padj": 1.624e-37,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SLC26A3": {
+        "log2fc": -0.955,
+        "padj": 4.23e-16,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RASGEF1B": {
+        "log2fc": -0.9523,
+        "padj": 1.281e-34,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "TGFBR3": {
+        "log2fc": -0.9507,
+        "padj": 4.429e-29,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HDAC4": {
+        "log2fc": -0.9447,
+        "padj": 8.287e-28,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MAFF": {
+        "log2fc": -0.9398,
+        "padj": 9.85e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "COL19A1": {
+        "log2fc": -0.9382,
+        "padj": 6.7e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "DHX36": {
+        "log2fc": -0.9326,
+        "padj": 9.824e-22,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "GBE1": {
+        "log2fc": -0.9313,
+        "padj": 5.866e-42,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "TNIK": {
+        "log2fc": -0.9287,
+        "padj": 1.903e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SLC2A4": {
+        "log2fc": -0.9272,
+        "padj": 1.074e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NEDD4": {
+        "log2fc": -0.9241,
+        "padj": 9.898e-24,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SLC22A5": {
+        "log2fc": -0.9193,
+        "padj": 1.456e-14,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "HADHB": {
+        "log2fc": -0.9173,
+        "padj": 2.983e-22,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PON2": {
+        "log2fc": -0.9167,
+        "padj": 4.855e-36,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MPRIP": {
+        "log2fc": -0.9138,
+        "padj": 2.534e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "HSPD1": {
+        "log2fc": -0.9117,
+        "padj": 6.265e-36,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SYPL2": {
+        "log2fc": -0.9091,
+        "padj": 7.516e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "UBB": {
+        "log2fc": -0.9063,
+        "padj": 2.119e-65,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "DPF3": {
+        "log2fc": -0.9034,
+        "padj": 3.617e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "ARPP21": {
+        "log2fc": -0.9031,
+        "padj": 2.178e-25,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CLIC5": {
+        "log2fc": -0.8987,
+        "padj": 5.372e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "RHOBTB3": {
+        "log2fc": -0.8968,
+        "padj": 1.948e-34,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI"
+        ]
+      },
+      "EIF4A1": {
+        "log2fc": -0.8948,
+        "padj": 2.679e-32,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SORT1": {
+        "log2fc": -0.8938,
+        "padj": 1.883e-18,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "STIM1": {
+        "log2fc": -0.8928,
+        "padj": 1.058e-17,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SOX6": {
+        "log2fc": -0.8845,
+        "padj": 3.002e-25,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CRYAB": {
+        "log2fc": -0.8836,
+        "padj": 9.027e-18,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ESRRG": {
+        "log2fc": -0.8834,
+        "padj": 3.672e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NR4A1": {
+        "log2fc": -0.8802,
+        "padj": 5.093e-27,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MAX": {
+        "log2fc": -0.8789,
+        "padj": 3.736e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "ENAH": {
+        "log2fc": -0.8759,
+        "padj": 7.954e-17,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CFLAR": {
+        "log2fc": -0.8721,
+        "padj": 3.655e-17,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "DNAJB4": {
+        "log2fc": -0.8716,
+        "padj": 6.535e-22,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ATF4": {
+        "log2fc": -0.8714,
+        "padj": 8.777e-31,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "BTG3": {
+        "log2fc": -0.8671,
+        "padj": 1.986e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CSRP2": {
+        "log2fc": -0.8636,
+        "padj": 8.121e-23,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "ABHD2": {
+        "log2fc": -0.8634,
+        "padj": 4.973e-17,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "CECR2": {
+        "log2fc": -0.8621,
+        "padj": 4.686e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "COPS2": {
+        "log2fc": -0.8608,
+        "padj": 4.398e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SETBP1": {
+        "log2fc": -0.8577,
+        "padj": 3.829e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "TGFBI": {
+        "log2fc": -0.8552,
+        "padj": 2.15e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "EYA4": {
+        "log2fc": -0.8531,
+        "padj": 1.178e-28,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "STAC3": {
+        "log2fc": -0.8502,
+        "padj": 8.154e-21,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "BTG2": {
+        "log2fc": -0.8498,
+        "padj": 4.642e-24,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ECHDC2": {
+        "log2fc": -0.8493,
+        "padj": 4.442e-23,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TBC1D8": {
+        "log2fc": -0.847,
+        "padj": 2.552e-21,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "PRRX1": {
+        "log2fc": -0.8463,
+        "padj": 2.442e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "CEBPB": {
+        "log2fc": -0.8457,
+        "padj": 1.383e-31,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SERTAD1": {
+        "log2fc": -0.8405,
+        "padj": 1.169e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RAB7A": {
+        "log2fc": -0.8373,
+        "padj": 4.324e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "GTF2IRD1": {
+        "log2fc": -0.8229,
+        "padj": 5.506e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "EGR1": {
+        "log2fc": -0.8176,
+        "padj": 3.396e-25,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "C1ORF21": {
+        "log2fc": -0.8158,
+        "padj": 3.977e-16,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "BABAM2": {
+        "log2fc": -0.8146,
+        "padj": 1.703e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "VWA8": {
+        "log2fc": -0.8134,
+        "padj": 5.868e-18,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ZBTB20": {
+        "log2fc": -0.8121,
+        "padj": 8.196e-44,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PBX1": {
+        "log2fc": -0.8113,
+        "padj": 5.494e-19,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "DDX21": {
+        "log2fc": -0.8086,
+        "padj": 7.298e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HSPE1": {
+        "log2fc": -0.8069,
+        "padj": 2.958e-33,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SELENOS": {
+        "log2fc": -0.8055,
+        "padj": 6.593e-19,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "TMED10": {
+        "log2fc": -0.8051,
+        "padj": 1.978e-24,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "USP54": {
+        "log2fc": -0.8042,
+        "padj": 1.844e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SERPINF1": {
+        "log2fc": -0.7999,
+        "padj": 2.651e-22,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "MLXIP": {
+        "log2fc": -0.7948,
+        "padj": 5.05e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "XBP1": {
+        "log2fc": -0.7932,
+        "padj": 1.852e-18,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HSPA8": {
+        "log2fc": -0.7838,
+        "padj": 1.71e-32,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "SMG1": {
+        "log2fc": -0.7802,
+        "padj": 2.351e-19,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ACTN2": {
+        "log2fc": -0.7738,
+        "padj": 7.12e-15,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "CHD9": {
+        "log2fc": -0.7733,
+        "padj": 2.75e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "SYNPO2": {
+        "log2fc": -0.7687,
+        "padj": 1.335e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "FOXO3": {
+        "log2fc": -0.7531,
+        "padj": 3.758e-24,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ATP2A2": {
+        "log2fc": -0.7512,
+        "padj": 4.74e-21,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "NAP1L1": {
+        "log2fc": -0.7498,
+        "padj": 5.618e-36,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PDK4": {
+        "log2fc": -0.7414,
+        "padj": 1.919e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RBM20": {
+        "log2fc": -0.7412,
+        "padj": 8.267e-11,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "SLC7A2": {
+        "log2fc": -0.735,
+        "padj": 8.415e-14,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "AFF1": {
+        "log2fc": -0.7311,
+        "padj": 1.376e-16,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RSRC2": {
+        "log2fc": -0.7265,
+        "padj": 2.711e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "ARID5B": {
+        "log2fc": -0.7249,
+        "padj": 1.629e-19,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeII"
+        ]
+      },
+      "NFIA": {
+        "log2fc": -0.7243,
+        "padj": 6.433e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "RBM24": {
+        "log2fc": -0.7227,
+        "padj": 2.944e-18,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "GPM6B": {
+        "log2fc": -0.7205,
+        "padj": 1.282e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "LRRFIP2": {
+        "log2fc": -0.7195,
+        "padj": 5.587e-13,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "RERE": {
+        "log2fc": -0.7136,
+        "padj": 3.514e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "FEZ2": {
+        "log2fc": -0.7105,
+        "padj": 3.666e-14,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "FILIP1": {
+        "log2fc": -0.7098,
+        "padj": 8.968e-12,
+        "cell_types": [
+          "Myofiber_TypeII"
+        ]
+      },
+      "HSPA1A": {
+        "log2fc": -0.7092,
+        "padj": 2.466e-42,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "LINGO1": {
+        "log2fc": -0.7041,
+        "padj": 7.797e-20,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "ATP1A2": {
+        "log2fc": -0.6947,
+        "padj": 2.555e-16,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "PRDX6": {
+        "log2fc": -0.6795,
+        "padj": 1.053e-23,
+        "cell_types": [
+          "MuSC",
+          "Myofiber_TypeI"
+        ]
+      },
+      "JUNB": {
+        "log2fc": -0.6777,
+        "padj": 3.987e-16,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "SUB1": {
+        "log2fc": -0.6774,
+        "padj": 4.809e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MYOM1": {
+        "log2fc": -0.6722,
+        "padj": 1.519e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SERBP1": {
+        "log2fc": -0.6584,
+        "padj": 1.919e-20,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "DDIT4": {
+        "log2fc": -0.653,
+        "padj": 2.224e-17,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "MSI2": {
+        "log2fc": -0.6342,
+        "padj": 4.389e-14,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "TOMM20": {
+        "log2fc": -0.6289,
+        "padj": 2.567e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "CALD1": {
+        "log2fc": -0.6082,
+        "padj": 1.235e-17,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "UBE2E2": {
+        "log2fc": -0.6019,
+        "padj": 1.831e-15,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "SAT1": {
+        "log2fc": -0.6013,
+        "padj": 2.184e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "EIF5": {
+        "log2fc": -0.5915,
+        "padj": 3.399e-16,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "UBC": {
+        "log2fc": -0.5837,
+        "padj": 1.363e-32,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PDLIM3": {
+        "log2fc": -0.5784,
+        "padj": 1.096e-17,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "SRSF3": {
+        "log2fc": -0.5772,
+        "padj": 7.415e-21,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "PDE4D": {
+        "log2fc": -0.5716,
+        "padj": 2.585e-25,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      },
+      "MYBPC1": {
+        "log2fc": -0.5601,
+        "padj": 7.954e-15,
+        "cell_types": [
+          "Myofiber_TypeI",
+          "Myofiber_TypeII"
+        ]
+      },
+      "HNRNPK": {
+        "log2fc": -0.5493,
+        "padj": 6.088e-18,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "HSP90AB1": {
+        "log2fc": -0.5154,
+        "padj": 1.35e-46,
+        "cell_types": [
+          "MuSC"
+        ]
+      },
+      "RPS10": {
+        "log2fc": -0.5091,
+        "padj": 7.559e-22,
+        "cell_types": [
+          "MuSC",
+          "Myofiber"
+        ]
+      },
+      "PDLIM5": {
+        "log2fc": -0.5089,
+        "padj": 9.744e-17,
+        "cell_types": [
+          "Myofiber_TypeI"
+        ]
+      }
+    },
+    "fap_P1_up": {
+      "CCL4": {
+        "log2fc": 5.6818,
+        "padj": 0.006854,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "HLA-DQA1": {
+        "log2fc": 4.5679,
+        "padj": 0.00117,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "HOPX": {
+        "log2fc": 4.4754,
+        "padj": 0.0003573,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CTSW": {
+        "log2fc": 4.0108,
+        "padj": 0.0007166,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CD52": {
+        "log2fc": 3.4426,
+        "padj": 0.00571,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CORO1A": {
+        "log2fc": 3.15,
+        "padj": 0.003752,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TRAIP": {
+        "log2fc": 2.3918,
+        "padj": 0.001108,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PAMR1": {
+        "log2fc": 2.3218,
+        "padj": 9.693e-08,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "NR4A2": {
+        "log2fc": 2.1847,
+        "padj": 2.031e-14,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PACC1": {
+        "log2fc": 2.1346,
+        "padj": 0.0002918,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "KHK": {
+        "log2fc": 2.0801,
+        "padj": 0.006263,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ARVCF": {
+        "log2fc": 2.0046,
+        "padj": 0.001594,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "HSPA12B": {
+        "log2fc": 1.9555,
+        "padj": 0.005581,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MRGPRF": {
+        "log2fc": 1.9301,
+        "padj": 3.888e-17,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ZSWIM4": {
+        "log2fc": 1.8807,
+        "padj": 0.0001191,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TNFRSF11B": {
+        "log2fc": 1.7505,
+        "padj": 0.006247,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MRPS6": {
+        "log2fc": 1.7347,
+        "padj": 9.35e-37,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "REEP2": {
+        "log2fc": 1.6662,
+        "padj": 0.00123,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TNFSF10": {
+        "log2fc": 1.6378,
+        "padj": 0.0002852,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "RGS16": {
+        "log2fc": 1.6274,
+        "padj": 0.000101,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "DDB2": {
+        "log2fc": 1.6151,
+        "padj": 0.005601,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PPP1R3G": {
+        "log2fc": 1.5592,
+        "padj": 0.005734,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "AKR1C3": {
+        "log2fc": 1.5378,
+        "padj": 9.961e-13,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HHIP": {
+        "log2fc": 1.5209,
+        "padj": 0.01436,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LOXL1": {
+        "log2fc": 1.5168,
+        "padj": 0.0001,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "EFEMP1": {
+        "log2fc": 1.513,
+        "padj": 0.0003798,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "CDK20": {
+        "log2fc": 1.509,
+        "padj": 0.005907,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "IL6": {
+        "log2fc": 1.5056,
+        "padj": 0.01161,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PLA2G15": {
+        "log2fc": 1.4846,
+        "padj": 3.807e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "IFIT1": {
+        "log2fc": 1.4522,
+        "padj": 0.001105,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CADM3": {
+        "log2fc": 1.4498,
+        "padj": 0.002493,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TRIM47": {
+        "log2fc": 1.4493,
+        "padj": 0.002156,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "DKK3": {
+        "log2fc": 1.4392,
+        "padj": 0.0002006,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HHIP-AS1": {
+        "log2fc": 1.4217,
+        "padj": 0.0003378,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "TSTD1": {
+        "log2fc": 1.4159,
+        "padj": 0.002493,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MFAP2": {
+        "log2fc": 1.4083,
+        "padj": 0.002403,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ADM": {
+        "log2fc": 1.3882,
+        "padj": 0.00158,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "MIR23AHG": {
+        "log2fc": 1.3852,
+        "padj": 0.004076,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "OLFM4": {
+        "log2fc": 1.3753,
+        "padj": 0.001626,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NQO1": {
+        "log2fc": 1.368,
+        "padj": 4.805e-12,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ARL6IP6": {
+        "log2fc": 1.3677,
+        "padj": 0.0007205,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "HSPB2": {
+        "log2fc": 1.3315,
+        "padj": 9.862e-05,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "EEF1AKMT3": {
+        "log2fc": 1.3083,
+        "padj": 0.000123,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PSMB10": {
+        "log2fc": 1.2983,
+        "padj": 0.01032,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MITF": {
+        "log2fc": 1.2976,
+        "padj": 2.206e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "DUSP14": {
+        "log2fc": 1.2932,
+        "padj": 0.0028,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "ABHD8": {
+        "log2fc": 1.2856,
+        "padj": 0.003313,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "KCND2": {
+        "log2fc": 1.2767,
+        "padj": 0.0006656,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CSRNP1": {
+        "log2fc": 1.273,
+        "padj": 2.806e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PTGES": {
+        "log2fc": 1.264,
+        "padj": 0.02016,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ANKRD35": {
+        "log2fc": 1.2525,
+        "padj": 2.932e-12,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NT5E": {
+        "log2fc": 1.224,
+        "padj": 2.71e-05,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RARG": {
+        "log2fc": 1.2202,
+        "padj": 0.01651,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ENG": {
+        "log2fc": 1.22,
+        "padj": 4.093e-14,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CDCA4": {
+        "log2fc": 1.2062,
+        "padj": 0.00672,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PRKD2": {
+        "log2fc": 1.1898,
+        "padj": 0.0002876,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PLK3": {
+        "log2fc": 1.1894,
+        "padj": 0.0006573,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PTGFR": {
+        "log2fc": 1.1892,
+        "padj": 1.108e-07,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MYL9": {
+        "log2fc": 1.1791,
+        "padj": 7.621e-22,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CCL2": {
+        "log2fc": 1.1616,
+        "padj": 2.571e-16,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SERTAD4-AS1": {
+        "log2fc": 1.1564,
+        "padj": 0.04476,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HAS1": {
+        "log2fc": 1.1554,
+        "padj": 0.0227,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "VWA5A": {
+        "log2fc": 1.1542,
+        "padj": 0.000576,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TOP3B": {
+        "log2fc": 1.1538,
+        "padj": 0.003262,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ATF3": {
+        "log2fc": 1.1503,
+        "padj": 3.98e-16,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HDHD3": {
+        "log2fc": 1.1499,
+        "padj": 9.306e-06,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PIGB": {
+        "log2fc": 1.1459,
+        "padj": 0.006123,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ANGPTL2": {
+        "log2fc": 1.1458,
+        "padj": 4.785e-14,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ID2": {
+        "log2fc": 1.1448,
+        "padj": 5.034e-21,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CDK2": {
+        "log2fc": 1.1325,
+        "padj": 0.001123,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GEM": {
+        "log2fc": 1.1306,
+        "padj": 0.0028,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "CABIN1": {
+        "log2fc": 1.1236,
+        "padj": 0.0002119,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SLC6A6": {
+        "log2fc": 1.1219,
+        "padj": 0.03332,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "BHLHE40": {
+        "log2fc": 1.114,
+        "padj": 4.196e-05,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PLAU": {
+        "log2fc": 1.111,
+        "padj": 3.442e-12,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SOCS3": {
+        "log2fc": 1.1093,
+        "padj": 5.444e-36,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "STING1": {
+        "log2fc": 1.1005,
+        "padj": 1.931e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ID3": {
+        "log2fc": 1.0966,
+        "padj": 1.318e-45,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "AKR1C1": {
+        "log2fc": 1.0849,
+        "padj": 2.205e-42,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "AKR1C2": {
+        "log2fc": 1.084,
+        "padj": 3.452e-21,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RNF24": {
+        "log2fc": 1.0825,
+        "padj": 0.0001272,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LRRC28": {
+        "log2fc": 1.0823,
+        "padj": 0.006477,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TMEM106C": {
+        "log2fc": 1.0578,
+        "padj": 1.326e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "IRF1": {
+        "log2fc": 1.0555,
+        "padj": 6.435e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ACTA2": {
+        "log2fc": 1.0327,
+        "padj": 0.02078,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CSRP1": {
+        "log2fc": 1.0159,
+        "padj": 9.371e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NR4A1": {
+        "log2fc": 1.006,
+        "padj": 2.656e-35,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PHGDH": {
+        "log2fc": 1.0059,
+        "padj": 9.676e-05,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LEPR": {
+        "log2fc": 1.0032,
+        "padj": 1.531e-11,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LINGO1": {
+        "log2fc": 1.0011,
+        "padj": 0.008772,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ALDH1A1": {
+        "log2fc": 0.9942,
+        "padj": 1.599e-49,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MYC": {
+        "log2fc": 0.9917,
+        "padj": 2.683e-24,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "OLFML1": {
+        "log2fc": 0.98,
+        "padj": 0.002938,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ZFP36": {
+        "log2fc": 0.9729,
+        "padj": 7.588e-118,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ALDH16A1": {
+        "log2fc": 0.9621,
+        "padj": 0.01928,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PPL": {
+        "log2fc": 0.9507,
+        "padj": 4.261e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MEOX2": {
+        "log2fc": 0.948,
+        "padj": 3.579e-09,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CD9": {
+        "log2fc": 0.943,
+        "padj": 1.115e-20,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "C1ORF198": {
+        "log2fc": 0.9408,
+        "padj": 0.04424,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NIF3L1": {
+        "log2fc": 0.926,
+        "padj": 0.00226,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CLEC14A": {
+        "log2fc": 0.9237,
+        "padj": 9.041e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ISLR": {
+        "log2fc": 0.9222,
+        "padj": 5.953e-24,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "IER2": {
+        "log2fc": 0.9188,
+        "padj": 2.091e-21,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CRYAB": {
+        "log2fc": 0.9166,
+        "padj": 6.012e-33,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LMNA": {
+        "log2fc": 0.9132,
+        "padj": 2.666e-59,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "INHBA": {
+        "log2fc": 0.9096,
+        "padj": 0.000857,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "C1QTNF2": {
+        "log2fc": 0.9051,
+        "padj": 0.0192,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "FAM43A": {
+        "log2fc": 0.8997,
+        "padj": 0.04923,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CMTM8": {
+        "log2fc": 0.8972,
+        "padj": 0.001191,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ADAM33": {
+        "log2fc": 0.897,
+        "padj": 0.008739,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HSPB8": {
+        "log2fc": 0.8933,
+        "padj": 0.03743,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "GSTM5": {
+        "log2fc": 0.8904,
+        "padj": 0.0001123,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "EGR1": {
+        "log2fc": 0.8887,
+        "padj": 1.987e-29,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "S100A4": {
+        "log2fc": 0.8838,
+        "padj": 3.223e-134,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CAVIN3": {
+        "log2fc": 0.8812,
+        "padj": 3.526e-23,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PIP4P2": {
+        "log2fc": 0.88,
+        "padj": 0.004233,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "HSF2": {
+        "log2fc": 0.8766,
+        "padj": 0.0007923,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "RIC8A": {
+        "log2fc": 0.8738,
+        "padj": 0.03801,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SERTAD3": {
+        "log2fc": 0.8688,
+        "padj": 0.00753,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PKM": {
+        "log2fc": 0.8657,
+        "padj": 3.328e-28,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "VASN": {
+        "log2fc": 0.865,
+        "padj": 0.006087,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "DEDD2": {
+        "log2fc": 0.8616,
+        "padj": 0.0006699,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FDFT1": {
+        "log2fc": 0.8503,
+        "padj": 0.006263,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CES1": {
+        "log2fc": 0.8501,
+        "padj": 3.14e-05,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SLC35B2": {
+        "log2fc": 0.8499,
+        "padj": 0.04428,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ADK": {
+        "log2fc": 0.8488,
+        "padj": 0.01083,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "TMEM176B": {
+        "log2fc": 0.8444,
+        "padj": 9.011e-24,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "KLF4": {
+        "log2fc": 0.8424,
+        "padj": 7.405e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "GTPBP3": {
+        "log2fc": 0.8391,
+        "padj": 0.004531,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SLC2A3": {
+        "log2fc": 0.8245,
+        "padj": 2.97e-12,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "JUNB": {
+        "log2fc": 0.8237,
+        "padj": 8.87e-70,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SGSH": {
+        "log2fc": 0.8183,
+        "padj": 0.001816,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CD34": {
+        "log2fc": 0.8176,
+        "padj": 6.762e-11,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CARD19": {
+        "log2fc": 0.8118,
+        "padj": 0.01185,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "FKBP9": {
+        "log2fc": 0.8008,
+        "padj": 0.0007393,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SNAP47": {
+        "log2fc": 0.7963,
+        "padj": 0.002871,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FOS": {
+        "log2fc": 0.7936,
+        "padj": 9.279e-54,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "EPHX1": {
+        "log2fc": 0.793,
+        "padj": 1.458e-44,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CAPN2": {
+        "log2fc": 0.7919,
+        "padj": 6.68e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RAB3IL1": {
+        "log2fc": 0.7888,
+        "padj": 0.005884,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NOVA1": {
+        "log2fc": 0.6692,
+        "padj": 0.0001224,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      }
+    },
+    "fap_P2_up": {
+      "IL1RL1": {
+        "log2fc": -6.743,
+        "padj": 0.0002918,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MMP3": {
+        "log2fc": -5.9052,
+        "padj": 0.0028,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PTX3": {
+        "log2fc": -5.2958,
+        "padj": 0.005879,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "S100A8": {
+        "log2fc": -4.6952,
+        "padj": 0.007114,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "STC2": {
+        "log2fc": -4.5943,
+        "padj": 0.0004417,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PPDPFL": {
+        "log2fc": -4.3313,
+        "padj": 7.721e-05,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "LONRF2": {
+        "log2fc": -4.2493,
+        "padj": 4.114e-06,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "KCNB1": {
+        "log2fc": -4.2325,
+        "padj": 2.468e-19,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "COL6A6": {
+        "log2fc": -4.173,
+        "padj": 0.0002918,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PAX8": {
+        "log2fc": -4.1445,
+        "padj": 0.002152,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "STRIT1": {
+        "log2fc": -4.1024,
+        "padj": 0.005181,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PLCG2": {
+        "log2fc": -3.6026,
+        "padj": 1.407e-11,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HK2": {
+        "log2fc": -3.6016,
+        "padj": 0.001354,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SLC25A18": {
+        "log2fc": -3.5357,
+        "padj": 7.721e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NKD2": {
+        "log2fc": -3.4628,
+        "padj": 0.002975,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZFPM1": {
+        "log2fc": -3.4545,
+        "padj": 3.91e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PCDHGA12": {
+        "log2fc": -3.3757,
+        "padj": 0.00304,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CD38": {
+        "log2fc": -3.3388,
+        "padj": 0.0003872,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ALKAL2": {
+        "log2fc": -3.2862,
+        "padj": 0.004942,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "IGF2": {
+        "log2fc": -3.2222,
+        "padj": 0.0001129,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "KIF5C": {
+        "log2fc": -3.1566,
+        "padj": 0.002871,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZC3H11A": {
+        "log2fc": -3.1095,
+        "padj": 0.001579,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TPM3": {
+        "log2fc": -2.9966,
+        "padj": 2.572e-11,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "GPM6B": {
+        "log2fc": -2.973,
+        "padj": 0.001816,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "JCAD": {
+        "log2fc": -2.7735,
+        "padj": 0.003017,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MT1G": {
+        "log2fc": -2.7569,
+        "padj": 2.027e-26,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "H4C11": {
+        "log2fc": -2.7465,
+        "padj": 0.0005377,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "DNER": {
+        "log2fc": -2.7072,
+        "padj": 0.0001729,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PAPPA": {
+        "log2fc": -2.6583,
+        "padj": 0.0005344,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "SERPINE1": {
+        "log2fc": -2.6487,
+        "padj": 0.0003476,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PMEPA1": {
+        "log2fc": -2.5751,
+        "padj": 0.02438,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "GASK1B": {
+        "log2fc": -2.5238,
+        "padj": 4.114e-06,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "SERPINF2": {
+        "log2fc": -2.5059,
+        "padj": 1.182e-07,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PITPNC1": {
+        "log2fc": -2.491,
+        "padj": 0.002035,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "KIAA0040": {
+        "log2fc": -2.4652,
+        "padj": 0.0003369,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "H2AC20": {
+        "log2fc": -2.4495,
+        "padj": 0.0008535,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "MBNL3": {
+        "log2fc": -2.4469,
+        "padj": 3.673e-07,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RPGRIP1L": {
+        "log2fc": -2.4302,
+        "padj": 0.006677,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ODC1": {
+        "log2fc": -2.422,
+        "padj": 4.279e-14,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SLC7A8": {
+        "log2fc": -2.4209,
+        "padj": 9.238e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "IGF1": {
+        "log2fc": -2.3906,
+        "padj": 0.001368,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CMYA5": {
+        "log2fc": -2.3875,
+        "padj": 4.13e-05,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "ALYREF": {
+        "log2fc": -2.3569,
+        "padj": 6.986e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "COL4A1": {
+        "log2fc": -2.3506,
+        "padj": 5.2e-07,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SEPTIN11": {
+        "log2fc": -2.3253,
+        "padj": 3.125e-05,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "CYP4B1": {
+        "log2fc": -2.3049,
+        "padj": 5.223e-162,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ARHGEF19": {
+        "log2fc": -2.27,
+        "padj": 0.0005949,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CCDC144A": {
+        "log2fc": -2.2651,
+        "padj": 0.001774,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "DHX33": {
+        "log2fc": -2.2607,
+        "padj": 0.0001563,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RGCC": {
+        "log2fc": -2.2513,
+        "padj": 4.879e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RAMP2-AS1": {
+        "log2fc": -2.2491,
+        "padj": 5.239e-30,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PDE4D": {
+        "log2fc": -2.1751,
+        "padj": 0.004531,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZNF660": {
+        "log2fc": -2.1713,
+        "padj": 1.197e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SOCS6": {
+        "log2fc": -2.1449,
+        "padj": 0.005504,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SLC7A2": {
+        "log2fc": -2.1347,
+        "padj": 0.001626,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "DPP6": {
+        "log2fc": -2.1306,
+        "padj": 0.005696,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "LARP4": {
+        "log2fc": -2.1279,
+        "padj": 0.006239,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "TIAM1": {
+        "log2fc": -2.1238,
+        "padj": 0.0002918,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TMEM59L": {
+        "log2fc": -2.1035,
+        "padj": 0.0005636,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "IZUMO4": {
+        "log2fc": -2.1028,
+        "padj": 0.007123,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GXYLT2": {
+        "log2fc": -2.0879,
+        "padj": 0.001166,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ACSL4": {
+        "log2fc": -2.085,
+        "padj": 0.004706,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PDE3B": {
+        "log2fc": -2.0782,
+        "padj": 0.001165,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NRIP1": {
+        "log2fc": -2.0728,
+        "padj": 0.002135,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "MDK": {
+        "log2fc": -2.0556,
+        "padj": 4.377e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LAMB1": {
+        "log2fc": -2.0512,
+        "padj": 5.365e-13,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "UBALD2": {
+        "log2fc": -2.0477,
+        "padj": 1.345e-22,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PHC2": {
+        "log2fc": -2.0222,
+        "padj": 1.103e-61,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RBM12B": {
+        "log2fc": -2.0033,
+        "padj": 0.00149,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "INPP5A": {
+        "log2fc": -1.9927,
+        "padj": 0.007077,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MAP2K6": {
+        "log2fc": -1.9862,
+        "padj": 2.003e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NOTCH2NLA": {
+        "log2fc": -1.9637,
+        "padj": 0.0067,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "USP10": {
+        "log2fc": -1.9615,
+        "padj": 2.28e-63,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LRRC75A": {
+        "log2fc": -1.9443,
+        "padj": 5.569e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "BCAT1": {
+        "log2fc": -1.9235,
+        "padj": 0.002453,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "HIF3A": {
+        "log2fc": -1.9203,
+        "padj": 2.868e-37,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RALGPS2": {
+        "log2fc": -1.9177,
+        "padj": 0.004233,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "TPM2": {
+        "log2fc": -1.8945,
+        "padj": 0.0003299,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "DGCR6": {
+        "log2fc": -1.8916,
+        "padj": 0.0005518,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NEURL1B": {
+        "log2fc": -1.886,
+        "padj": 7.042e-11,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RRN3": {
+        "log2fc": -1.8821,
+        "padj": 1.269e-05,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "LAMA3": {
+        "log2fc": -1.8624,
+        "padj": 0.008037,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SESN3": {
+        "log2fc": -1.862,
+        "padj": 0.007199,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "LMCD1": {
+        "log2fc": -1.8617,
+        "padj": 8.556e-11,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "VEGFA": {
+        "log2fc": -1.8548,
+        "padj": 0.002981,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TAF10": {
+        "log2fc": -1.8533,
+        "padj": 3.529e-20,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "CRLF1": {
+        "log2fc": -1.8437,
+        "padj": 0.001831,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "UBE2V1": {
+        "log2fc": -1.8415,
+        "padj": 0.0005344,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CIBAR1-DT": {
+        "log2fc": -1.8409,
+        "padj": 0.02371,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RDH10": {
+        "log2fc": -1.838,
+        "padj": 3.304e-29,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MYL6B": {
+        "log2fc": -1.8313,
+        "padj": 8.106e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NME1": {
+        "log2fc": -1.8236,
+        "padj": 0.005633,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PNO1": {
+        "log2fc": -1.8151,
+        "padj": 1.259e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "E2F3": {
+        "log2fc": -1.7999,
+        "padj": 0.02888,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "COL4A2": {
+        "log2fc": -1.7872,
+        "padj": 4.066e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "C1QTNF1": {
+        "log2fc": -1.7866,
+        "padj": 9.67e-28,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "KLF15": {
+        "log2fc": -1.7798,
+        "padj": 9.044e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "TAF4B": {
+        "log2fc": -1.7754,
+        "padj": 0.0007655,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "C6ORF120": {
+        "log2fc": -1.7677,
+        "padj": 0.0001748,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "GOLGA8B": {
+        "log2fc": -1.7606,
+        "padj": 7.177e-06,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "RPGR": {
+        "log2fc": -1.7428,
+        "padj": 0.001021,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NOP14": {
+        "log2fc": -1.7298,
+        "padj": 1.759e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MTHFD2": {
+        "log2fc": -1.7243,
+        "padj": 6.57e-30,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SOCS4": {
+        "log2fc": -1.7213,
+        "padj": 2.237e-06,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TMEM97": {
+        "log2fc": -1.7212,
+        "padj": 4.764e-06,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "WDR81": {
+        "log2fc": -1.7084,
+        "padj": 4.362e-10,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NOP16": {
+        "log2fc": -1.708,
+        "padj": 0.007199,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FKTN": {
+        "log2fc": -1.7018,
+        "padj": 0.01656,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "TSPAN8": {
+        "log2fc": -1.6998,
+        "padj": 0.007823,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "MBD2": {
+        "log2fc": -1.6974,
+        "padj": 1.09e-15,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "NUDT2": {
+        "log2fc": -1.6877,
+        "padj": 1.176e-08,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ALDH1A3": {
+        "log2fc": -1.6849,
+        "padj": 0.0003938,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "RFLNB": {
+        "log2fc": -1.6819,
+        "padj": 0.0006043,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RGPD5": {
+        "log2fc": -1.6796,
+        "padj": 0.0009957,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "PTPN1": {
+        "log2fc": -1.6676,
+        "padj": 5.713e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MEDAG": {
+        "log2fc": -1.6473,
+        "padj": 0.0028,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FOXD1": {
+        "log2fc": -1.6445,
+        "padj": 4.948e-07,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "COLEC12": {
+        "log2fc": -1.6381,
+        "padj": 7.649e-37,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RAMP2": {
+        "log2fc": -1.6374,
+        "padj": 6.105e-123,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "ZDBF2": {
+        "log2fc": -1.6305,
+        "padj": 0.0005239,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PTPN11": {
+        "log2fc": -1.6248,
+        "padj": 6.054e-20,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "BOD1L1": {
+        "log2fc": -1.6244,
+        "padj": 0.004527,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PLXNA2": {
+        "log2fc": -1.6237,
+        "padj": 0.001285,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TASOR2": {
+        "log2fc": -1.623,
+        "padj": 5.007e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZNF708": {
+        "log2fc": -1.6225,
+        "padj": 0.007891,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "URB1": {
+        "log2fc": -1.6147,
+        "padj": 0.002476,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "SINHCAF": {
+        "log2fc": -1.6133,
+        "padj": 0.01429,
+        "cell_types": [
+          "fibroblast"
+        ]
+      },
+      "RFNG": {
+        "log2fc": -1.6052,
+        "padj": 0.0001752,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZFHX3": {
+        "log2fc": -1.5869,
+        "padj": 0.005995,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "AKAP12": {
+        "log2fc": -1.5849,
+        "padj": 0.001911,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "WDR43": {
+        "log2fc": -1.5844,
+        "padj": 0.0001802,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "CTF1": {
+        "log2fc": -1.584,
+        "padj": 0.004602,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NOC3L": {
+        "log2fc": -1.5206,
+        "padj": 5.713e-05,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "BTBD3": {
+        "log2fc": -1.5193,
+        "padj": 0.001238,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GOLGB1": {
+        "log2fc": -1.5138,
+        "padj": 2.103e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GOLGA8A": {
+        "log2fc": -1.4684,
+        "padj": 0.004587,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "BMP2": {
+        "log2fc": -1.4556,
+        "padj": 0.003431,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "COL5A3": {
+        "log2fc": -1.4211,
+        "padj": 0.0002118,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PALS2": {
+        "log2fc": -1.4169,
+        "padj": 0.006931,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "OMD": {
+        "log2fc": -1.414,
+        "padj": 0.006247,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NCL": {
+        "log2fc": -1.3939,
+        "padj": 0.000822,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SUPT16H": {
+        "log2fc": -1.3822,
+        "padj": 4.114e-06,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PXDN": {
+        "log2fc": -1.382,
+        "padj": 0.0003798,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "UPF1": {
+        "log2fc": -1.3761,
+        "padj": 0.003428,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "BLTP2": {
+        "log2fc": -1.3748,
+        "padj": 0.006263,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "RC3H2": {
+        "log2fc": -1.3696,
+        "padj": 0.001574,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ACACB": {
+        "log2fc": -1.3525,
+        "padj": 0.00226,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "PRKDC": {
+        "log2fc": -1.3499,
+        "padj": 0.0002876,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MAP1B": {
+        "log2fc": -1.3333,
+        "padj": 0.002152,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SPARCL1": {
+        "log2fc": -1.3163,
+        "padj": 0.001354,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TJP1": {
+        "log2fc": -1.261,
+        "padj": 4.114e-06,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "WWTR1": {
+        "log2fc": -1.1899,
+        "padj": 9.693e-08,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SLK": {
+        "log2fc": -1.1828,
+        "padj": 0.003428,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SH3PXD2A": {
+        "log2fc": -1.1816,
+        "padj": 0.00568,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PRDM2": {
+        "log2fc": -1.1565,
+        "padj": 0.00568,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TPM1": {
+        "log2fc": -1.1436,
+        "padj": 0.0006699,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "COL6A3": {
+        "log2fc": -1.1165,
+        "padj": 0.0005239,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NOL8": {
+        "log2fc": -1.115,
+        "padj": 0.00127,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ANKRD11": {
+        "log2fc": -1.1103,
+        "padj": 0.0026,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CEBPZ": {
+        "log2fc": -1.1048,
+        "padj": 0.0001564,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZFC3H1": {
+        "log2fc": -1.0857,
+        "padj": 0.004834,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GSPT1": {
+        "log2fc": -1.0848,
+        "padj": 0.006477,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TLN1": {
+        "log2fc": -1.0754,
+        "padj": 3.807e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FBXO9": {
+        "log2fc": -1.0702,
+        "padj": 0.001626,
+        "cell_types": [
+          "fibroblast",
+          "fibroblast_deseq2"
+        ]
+      },
+      "DHX36": {
+        "log2fc": -1.0696,
+        "padj": 0.001096,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PUM3": {
+        "log2fc": -1.0654,
+        "padj": 0.002351,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PAK2": {
+        "log2fc": -1.0586,
+        "padj": 0.0002785,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TGS1": {
+        "log2fc": -1.0567,
+        "padj": 0.0004417,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ABCE1": {
+        "log2fc": -1.0555,
+        "padj": 0.001987,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZNF106": {
+        "log2fc": -1.0495,
+        "padj": 0.0003399,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TOP1": {
+        "log2fc": -1.0491,
+        "padj": 7.721e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "LARS1": {
+        "log2fc": -0.9921,
+        "padj": 0.002975,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "GABPB2": {
+        "log2fc": -0.988,
+        "padj": 7.853e-06,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CCND2": {
+        "log2fc": -0.978,
+        "padj": 0.002328,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CPNE3": {
+        "log2fc": -0.9775,
+        "padj": 0.0006699,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "DPH3": {
+        "log2fc": -0.9775,
+        "padj": 0.001816,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TMEM181": {
+        "log2fc": -0.9564,
+        "padj": 0.002152,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "UBFD1": {
+        "log2fc": -0.9495,
+        "padj": 0.005791,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "IFNAR1": {
+        "log2fc": -0.9303,
+        "padj": 0.004988,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "COX20": {
+        "log2fc": -0.9279,
+        "padj": 3.294e-05,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SMARCA5": {
+        "log2fc": -0.922,
+        "padj": 0.0006573,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MBNL1": {
+        "log2fc": -0.9074,
+        "padj": 0.003466,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PRRC2C": {
+        "log2fc": -0.8996,
+        "padj": 0.000984,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TXNL4A": {
+        "log2fc": -0.8991,
+        "padj": 0.0003798,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZC3H13": {
+        "log2fc": -0.8978,
+        "padj": 1.299e-07,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "RHOBTB3": {
+        "log2fc": -0.8929,
+        "padj": 2.572e-11,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NCOA7": {
+        "log2fc": -0.8926,
+        "padj": 0.0002127,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "CDK12": {
+        "log2fc": -0.8923,
+        "padj": 0.001285,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NCBP3": {
+        "log2fc": -0.8783,
+        "padj": 0.002975,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TRNT1": {
+        "log2fc": -0.8695,
+        "padj": 0.005679,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "MPHOSPH10": {
+        "log2fc": -0.8668,
+        "padj": 0.0009373,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PRP4K": {
+        "log2fc": -0.8641,
+        "padj": 0.000576,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "PCM1": {
+        "log2fc": -0.8634,
+        "padj": 0.002784,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "HPS5": {
+        "log2fc": -0.8616,
+        "padj": 0.002268,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "METAP2": {
+        "log2fc": -0.8474,
+        "padj": 0.003741,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ZNF326": {
+        "log2fc": -0.8399,
+        "padj": 0.00226,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "VPS36": {
+        "log2fc": -0.8168,
+        "padj": 0.005367,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "EFCAB14": {
+        "log2fc": -0.8127,
+        "padj": 0.0008535,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "FERMT2": {
+        "log2fc": -0.7982,
+        "padj": 0.002135,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "DDX24": {
+        "log2fc": -0.7854,
+        "padj": 0.006996,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "BDP1": {
+        "log2fc": -0.7741,
+        "padj": 0.003741,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SLC39A9": {
+        "log2fc": -0.7697,
+        "padj": 0.004055,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TGOLN2": {
+        "log2fc": -0.7609,
+        "padj": 0.002152,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "TFPI": {
+        "log2fc": -0.7599,
+        "padj": 0.003063,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "EIF5B": {
+        "log2fc": -0.7536,
+        "padj": 0.0001932,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "NSRP1": {
+        "log2fc": -0.6591,
+        "padj": 0.003063,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "ARGLU1": {
+        "log2fc": -0.6349,
+        "padj": 0.003392,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      },
+      "SRRM1": {
+        "log2fc": -0.627,
+        "padj": 0.0006699,
+        "cell_types": [
+          "fibroblast_deseq2"
+        ]
+      }
+    }
+  },
+  "per_cell_type": {
+    "MuSC": {
+      "P1_up": [
+        "S100A6",
+        "B2M",
+        "MYF5",
+        "GPX3",
+        "CD63",
+        "ADIRF",
+        "SPRY1",
+        "ACTB",
+        "ACTG1",
+        "C1R",
+        "S100A4",
+        "GPX4",
+        "DEPP1",
+        "LSP1",
+        "NPC2",
+        "MYF6",
+        "RARRES2",
+        "CAV1",
+        "LGALS3",
+        "FABP5",
+        "S100A10",
+        "HLA-B",
+        "PRUNE2",
+        "ST3GAL5"
+      ],
+      "P2_up": [
+        "SPARCL1",
+        "RPS4Y1",
+        "ZFAND5",
+        "IGFBP5",
+        "HSPH1",
+        "FN1",
+        "FKBP5",
+        "HSP90AA1",
+        "DNAJB1",
+        "TPD52L1",
+        "ZBTB16",
+        "MT1X",
+        "MT1E",
+        "GLUL",
+        "MT1M",
+        "UBB",
+        "LPL",
+        "FOXO1",
+        "MT2A",
+        "ENPP5",
+        "TSC22D3",
+        "COPS9",
+        "BZW1",
+        "RASSF4",
+        "KLF2",
+        "ABLIM1",
+        "USP53",
+        "HSP90AB1",
+        "ATF3",
+        "ZBTB20",
+        "MTHFD2",
+        "HSPA1A",
+        "ZFHX3",
+        "COL4A1",
+        "CXCL14",
+        "DNAJA1",
+        "FBLN1",
+        "NFKBIA",
+        "FOSB",
+        "EGFR",
+        "CCNL1",
+        "TRA2B",
+        "CDC42EP4",
+        "PITPNC1",
+        "PON2",
+        "NAP1L1",
+        "HSPD1",
+        "CRISPLD2",
+        "RHOBTB3",
+        "LPP",
+        "DCXR",
+        "HSPE1",
+        "DDX3Y",
+        "BAG3",
+        "MKNK2",
+        "UBC",
+        "PPP1CB",
+        "HSPA8",
+        "PLPP3",
+        "SMIM3",
+        "EIF4A1",
+        "CEBPB",
+        "IER3",
+        "ATF4",
+        "PPM1L",
+        "TGFBR3",
+        "PLOD1",
+        "COL4A2",
+        "NR4A1",
+        "TOB2",
+        "FHL1",
+        "ZBED3",
+        "PLPP1",
+        "SERPINH1",
+        "PTGDS",
+        "EGR1",
+        "ZFAND2A",
+        "ELL2",
+        "TMED10",
+        "IP6K3",
+        "FOXO3",
+        "BTG2",
+        "SH3BP5",
+        "PRDX6",
+        "CNKSR3",
+        "NPPC",
+        "ECHDC2",
+        "CSRP2",
+        "SERPINF1",
+        "GADD45G",
+        "DNAJB4",
+        "RPS10",
+        "DHX36",
+        "RNF150",
+        "SERTAD1",
+        "NUDT4",
+        "TGFBI",
+        "RSRC2",
+        "DIO2",
+        "HIF1A",
+        "SRSF3",
+        "MAFF",
+        "SYTL4",
+        "SERBP1",
+        "VIT",
+        "SLC22A3",
+        "COPS2",
+        "AKAP13",
+        "MPST",
+        "ABI3BP",
+        "ARID5B",
+        "POLA2",
+        "SLC19A2",
+        "SELENOS",
+        "DDX21",
+        "NFKBIZ",
+        "XBP1",
+        "MT1A",
+        "HNRNPK",
+        "CALD1",
+        "GPM6B",
+        "PDK4",
+        "PEG10",
+        "DDIT4",
+        "TNS2",
+        "CHMP1B",
+        "CFLAR",
+        "SOCS1",
+        "SUB1",
+        "TRHDE",
+        "TFDP2",
+        "B4GALT1",
+        "BTG3",
+        "SAT1",
+        "TOMM20",
+        "MEF2A",
+        "EIF5",
+        "JUNB"
+      ]
+    },
+    "Myofiber": {
+      "P1_up": [
+        "TTN",
+        "ASB5",
+        "NEB"
+      ],
+      "P2_up": [
+        "CALD1",
+        "MT-ND3",
+        "MT-ATP6",
+        "SPARCL1",
+        "DSTN",
+        "TIMP3",
+        "ACTB",
+        "MT-CO2",
+        "MT-ND1",
+        "MT-ND2",
+        "PLN",
+        "MYH11",
+        "MT-ND4",
+        "HES4",
+        "TPM2",
+        "MYL6",
+        "RHOB",
+        "CLIC4",
+        "MT-CYB",
+        "FLNA",
+        "PPP1CB",
+        "PPP1R14A",
+        "ACTA2",
+        "FABP4",
+        "COX7A2",
+        "MT-CO3",
+        "CSRP2",
+        "C11ORF96",
+        "TAGLN",
+        "MYL9",
+        "PTMA",
+        "MT-CO1",
+        "CCDC107",
+        "TMSB4X",
+        "LMOD1",
+        "CSRP1",
+        "CALM2",
+        "H3-3A",
+        "ATP5F1E",
+        "CAV1",
+        "SELENOM",
+        "ITM2B",
+        "COX8A",
+        "NDUFA4",
+        "COX6A1",
+        "TNS1",
+        "MT-ND5",
+        "CST3",
+        "RPS4Y1",
+        "COX6C",
+        "SERF2",
+        "MAP1B",
+        "UBB",
+        "LBH",
+        "IGFBP7",
+        "RPS27",
+        "UBL5",
+        "MYLK",
+        "RGCC",
+        "GPX3",
+        "COX7C",
+        "C1QTNF1",
+        "ITGA8",
+        "PTMS",
+        "ATP5MK",
+        "MCAM",
+        "GUK1",
+        "GSN",
+        "RPS10",
+        "TACC1",
+        "KCNAB1",
+        "CFL1",
+        "COX5B",
+        "EID1",
+        "S100A6",
+        "PFN1",
+        "IFITM3",
+        "SH3BGRL",
+        "PHLDA2",
+        "MGP",
+        "MT-ND4L",
+        "MTHFD2",
+        "SRP14",
+        "MT2A",
+        "UQCR11",
+        "C12ORF57",
+        "ACTG1",
+        "SUMO2",
+        "GADD45B",
+        "FHL5",
+        "NDUFB8",
+        "ZFP36",
+        "SPARC",
+        "CNN1",
+        "HSPA1A",
+        "RPL36AL",
+        "NDUFA11",
+        "ATP5ME",
+        "NDUFB7",
+        "MRPL33",
+        "CD9",
+        "NDUFS5",
+        "ELOB",
+        "VIM",
+        "DYNLT1",
+        "PPDPF",
+        "ARPC1A",
+        "CAVIN1",
+        "HSPA1B",
+        "FAU",
+        "NOTCH3",
+        "RPL23",
+        "CPE",
+        "TMA7",
+        "RPL37A",
+        "FTH1",
+        "MICOS10",
+        "RPS26",
+        "TPM1",
+        "PPP1R12A",
+        "RPS17",
+        "COX6B1",
+        "H3-3B",
+        "DNAJB1",
+        "ACTN1",
+        "ADIRF",
+        "TLN1",
+        "OST4",
+        "MYADM",
+        "IGFBP5",
+        "RPL28",
+        "EPS8",
+        "COX7B",
+        "IGFBP6",
+        "NDUFA1",
+        "RPS11",
+        "MZT2B",
+        "UQCRQ",
+        "CAV2",
+        "RPL38",
+        "AXL",
+        "RPL37",
+        "RERGL",
+        "CKB",
+        "SKP1",
+        "FIS1",
+        "MT1E",
+        "RPS21",
+        "SELENOW",
+        "CRIP2",
+        "LAPTM4A",
+        "RABAC1",
+        "SOD3",
+        "ISYNA1",
+        "COPS9",
+        "NDUFB4",
+        "JUNB",
+        "SEPTIN7",
+        "RPS29",
+        "RPS7",
+        "RPL5",
+        "SAP18",
+        "RPL19",
+        "RPL27",
+        "CRIP1",
+        "RPL7A",
+        "CCNI",
+        "ILK",
+        "SEC61G",
+        "ATP5PF",
+        "PEBP1",
+        "TINAGL1",
+        "ATP5MC3",
+        "B2M",
+        "BCAM",
+        "LDHB",
+        "SORBS2",
+        "C4ORF3",
+        "PLPP3",
+        "CLMN",
+        "RPL36",
+        "GUCY1A1",
+        "ATP5MG",
+        "PPIA",
+        "EDF1",
+        "UQCRH",
+        "RPL23A",
+        "NTRK2",
+        "RPLP2",
+        "NDUFA13",
+        "BRK1",
+        "RPL35A",
+        "RBPMS",
+        "EIF1",
+        "EEF1A1",
+        "RPL35",
+        "CAP1"
+      ]
+    },
+    "Myofiber_TypeI": {
+      "P1_up": [
+        "TXNIP",
+        "PPDPFL",
+        "CSRP3",
+        "UBC",
+        "TPM3",
+        "USP13",
+        "EGR1",
+        "MYH9",
+        "MYF6",
+        "ASB5",
+        "HIPK3",
+        "NRAP",
+        "PAM",
+        "PPP1R27",
+        "MAP3K20",
+        "SLMAP",
+        "CCSER2",
+        "KAT6B",
+        "IFRD1",
+        "PPP2R3A",
+        "DNAJA4",
+        "FHIP1A",
+        "HDAC9",
+        "RICTOR",
+        "SRSF5",
+        "RRAS2",
+        "CSNK1A1",
+        "PRKAA2",
+        "CSDE1",
+        "JUN",
+        "KTN1",
+        "FOS",
+        "MAP3K7CL",
+        "KLHL41",
+        "ATP11B",
+        "MYL12A"
+      ],
+      "P2_up": [
+        "FKBP5",
+        "ANKRD2",
+        "RRAD",
+        "PPM1L",
+        "FOXO1",
+        "MYOM3",
+        "ACACB",
+        "LPIN1",
+        "UGP2",
+        "VCL",
+        "ANK1",
+        "CKMT2",
+        "MYOM2",
+        "CST3",
+        "ACSL1",
+        "FOXO3",
+        "PPARGC1A",
+        "VEGFA",
+        "LDB3",
+        "SLC38A1",
+        "SGCD",
+        "TOGARAM2",
+        "KCNMA1",
+        "ABCC9",
+        "ASPH",
+        "ZNF385B",
+        "REV3L",
+        "GBE1",
+        "SLC19A2",
+        "RORA",
+        "PDE7A",
+        "POR",
+        "FOSL2",
+        "EGLN1",
+        "PALMD",
+        "BIN1",
+        "GADD45G",
+        "GLUL",
+        "RASGEF1B",
+        "ENTREP1",
+        "MTUS1",
+        "CPED1",
+        "AKR1C1",
+        "CASQ2",
+        "SRL",
+        "PMP22",
+        "STON2",
+        "WDPCP",
+        "PPP2R3B",
+        "PRKAG2",
+        "PTPRG",
+        "ZFP36L1",
+        "RCAN2",
+        "ANKRD28",
+        "SLC1A3",
+        "EYA4",
+        "HDAC4",
+        "CD99",
+        "SSBP2",
+        "TBC1D1",
+        "ST3GAL1",
+        "FHIT",
+        "AUTS2",
+        "CADM2",
+        "ARPP21",
+        "PDE4D",
+        "SOX6",
+        "PPTC7",
+        "MT2A",
+        "FSD2",
+        "LIFR",
+        "ANO5",
+        "ZFHX3",
+        "PRDX6",
+        "NAMPT",
+        "DHCR24",
+        "FMN1",
+        "FHOD3",
+        "PXN",
+        "MKNK2",
+        "JPH2",
+        "ZBTB38",
+        "BNC2",
+        "ANK3",
+        "BICC1",
+        "AGL",
+        "HADHB",
+        "TBC1D8",
+        "ATP2A2",
+        "KANK1",
+        "STAC3",
+        "USP54",
+        "EPS15L1",
+        "RERE",
+        "PHC2",
+        "PDLIM1",
+        "LINGO1",
+        "DIO2",
+        "SMG1",
+        "MAT2A",
+        "PBX1",
+        "GLRX",
+        "ZNF385D",
+        "SMAD3",
+        "ATP1A1",
+        "CFLAR",
+        "SORT1",
+        "RBM24",
+        "SSPN",
+        "PSMD8",
+        "CLIC5",
+        "RUNX1",
+        "VWA8",
+        "STIM1",
+        "PDLIM3",
+        "RIC1",
+        "RPS6KA2",
+        "KHDRBS3",
+        "RAPGEF1",
+        "RAB11FIP3",
+        "ABHD2",
+        "ANK2",
+        "DGLUCY",
+        "RHOBTB3",
+        "PDLIM5",
+        "SLC2A4",
+        "AFF1",
+        "CEBPD",
+        "TNS1",
+        "FAM110B",
+        "ATP1A2",
+        "CHD9",
+        "DPF3",
+        "HADHA",
+        "SLC26A3",
+        "GTF2IRD1",
+        "COL19A1",
+        "RHOB",
+        "SLC25A12",
+        "FOCAD",
+        "MYOM1",
+        "MAGI2",
+        "BABAM2",
+        "UBE2E2",
+        "GAS2",
+        "PRRX1",
+        "NR4A3",
+        "PLIN2",
+        "ESRRG",
+        "MLXIP",
+        "NFIA",
+        "MYBPC1",
+        "CNST",
+        "SLC22A5",
+        "GADD45B",
+        "SCN4A",
+        "ANKRD9",
+        "SPEG",
+        "FEZ2",
+        "ACOT11",
+        "TMEM182",
+        "MSI2",
+        "ACSS3"
+      ]
+    },
+    "Myofiber_TypeII": {
+      "P1_up": [
+        "KCNQ5",
+        "NRAP",
+        "ASB5",
+        "TNNC2",
+        "UBC",
+        "ETS2",
+        "EGR1",
+        "AKAP6",
+        "MAP3K20",
+        "TP63",
+        "TXNIP",
+        "PRKG1",
+        "GPAT3",
+        "OTUD1",
+        "SQSTM1",
+        "FOS",
+        "PPDPFL",
+        "STRN3",
+        "KAT6B",
+        "IL32",
+        "PPM1B",
+        "DGKD",
+        "PICALM",
+        "MCU",
+        "TCAP",
+        "CSDE1"
+      ],
+      "P2_up": [
+        "FKBP5",
+        "VCL",
+        "ACACB",
+        "MYOM2",
+        "LPIN1",
+        "PTPRG",
+        "PDE7A",
+        "ACSL1",
+        "WDPCP",
+        "ANKRD2",
+        "SLC38A1",
+        "RORA",
+        "RCAN2",
+        "MYBPC1",
+        "LDB3",
+        "BCL6",
+        "UGP2",
+        "ZBTB16",
+        "TBC1D1",
+        "ANK1",
+        "PPM1L",
+        "RASGEF1B",
+        "RHOB",
+        "CST3",
+        "GADD45G",
+        "SLC19A2",
+        "SORT1",
+        "KIAA1217",
+        "PPARGC1A",
+        "ROBO1",
+        "ASPH",
+        "ARID5B",
+        "TBC1D8",
+        "SGCD",
+        "VEGFA",
+        "FOXO3",
+        "FBXO32",
+        "HDAC4",
+        "ZFP36L1",
+        "SIMC1",
+        "NPAS2",
+        "PPP1R12B",
+        "OBSCN",
+        "FOXO1",
+        "LPP",
+        "TUT4",
+        "CFLAR",
+        "SH3RF2",
+        "EYA4",
+        "NRG2",
+        "ANKS1B",
+        "EEPD1",
+        "CD99",
+        "MYOM1",
+        "ZFHX3",
+        "SPEG",
+        "CPED1",
+        "SPATS2L",
+        "FSD2",
+        "GLUL",
+        "NFIA",
+        "RERE",
+        "GHR",
+        "PPP2R3B",
+        "AFF1",
+        "PDLIM3",
+        "CKMT2",
+        "EPS15L1",
+        "EEF2K",
+        "MT1X",
+        "TSC22D3",
+        "NEDD4",
+        "PMP22",
+        "PPP3CC",
+        "KLHL29",
+        "STAC3",
+        "SMG1",
+        "EGLN1",
+        "BIN1",
+        "BNC2",
+        "NFIB",
+        "SPTBN1",
+        "RC3H1",
+        "MKNK2",
+        "ENTREP1",
+        "PXN",
+        "TSPAN5",
+        "ELL2",
+        "PRKAG3",
+        "LINGO1",
+        "FOSL2",
+        "INO80D",
+        "PHKA1",
+        "SRL",
+        "ST3GAL1",
+        "SLC26A3",
+        "ADPRHL1",
+        "MYL11",
+        "MTUS1",
+        "SSBP2",
+        "LAMA2",
+        "FGD4",
+        "CRYAB",
+        "MYOM3",
+        "ABHD2",
+        "CACNA2D3",
+        "IP6K3",
+        "STIM1",
+        "ENAH",
+        "MT2A",
+        "C1ORF21",
+        "IQGAP1",
+        "NBPF19",
+        "NR4A3",
+        "RRAD",
+        "RAB7A",
+        "CECR2",
+        "RNF157",
+        "PHC2",
+        "ACTN2",
+        "SOX6",
+        "MLXIP",
+        "USP54",
+        "CHRNA1",
+        "CEBPD",
+        "MAFB",
+        "JARID2",
+        "PKDCC",
+        "ROCK2",
+        "SLC7A2",
+        "ANO5",
+        "RAB11FIP3",
+        "VWA8",
+        "SERPINF1",
+        "SCN4A",
+        "TNIK",
+        "REV3L",
+        "ZNF438",
+        "ABRA",
+        "MSI2",
+        "CDK14",
+        "SETBP1",
+        "PIK3R1",
+        "LRRFIP2",
+        "BMERB1",
+        "SLC22A5",
+        "HOMER1",
+        "SYNPO2",
+        "R3HDM1",
+        "MPRIP",
+        "ANKRD28",
+        "FHOD3",
+        "PIK3CB",
+        "NBPF14",
+        "MAT2A",
+        "PRKAG2",
+        "PALMD",
+        "FILIP1",
+        "CADM2",
+        "ZFP36L2",
+        "TBX15",
+        "SMYD1",
+        "HSPB3",
+        "PPTC7",
+        "CYP27A1",
+        "RIC1",
+        "MAX",
+        "PDZRN3",
+        "SOS2",
+        "SYPL2",
+        "RBM20",
+        "NPIPB5"
+      ]
+    },
+    "fibroblast_deseq2": {
+      "P1_up": [
+        "PAMR1",
+        "HDHD3",
+        "PLA2G15",
+        "HSPB2",
+        "ZSWIM4",
+        "NOVA1",
+        "EEF1AKMT3",
+        "CABIN1",
+        "TNFSF10",
+        "PRKD2",
+        "PACC1",
+        "HOPX",
+        "EFEMP1",
+        "VWA5A",
+        "PLK3",
+        "DEDD2",
+        "CTSW",
+        "ARL6IP6",
+        "HSF2",
+        "TRAIP",
+        "CDK2",
+        "HLA-DQA1",
+        "REEP2",
+        "ADM",
+        "ARVCF",
+        "OLFM4",
+        "SGSH",
+        "TRIM47",
+        "NIF3L1",
+        "TSTD1",
+        "CADM3",
+        "DUSP14",
+        "GEM",
+        "SNAP47",
+        "TOP3B",
+        "ABHD8",
+        "CORO1A",
+        "PIP4P2",
+        "GTPBP3",
+        "HSPA12B",
+        "DDB2",
+        "CD52",
+        "PPP1R3G",
+        "RAB3IL1",
+        "CDK20",
+        "PIGB",
+        "TNFRSF11B",
+        "FDFT1",
+        "KHK",
+        "LRRC28",
+        "CDCA4",
+        "CCL4"
+      ],
+      "P2_up": [
+        "LAMB1",
+        "TPM3",
+        "RHOBTB3",
+        "WWTR1",
+        "ZC3H13",
+        "COL4A1",
+        "SOCS4",
+        "LONRF2",
+        "GASK1B",
+        "TJP1",
+        "SUPT16H",
+        "GOLGA8B",
+        "GABPB2",
+        "ZNF660",
+        "GOLGB1",
+        "SEPTIN11",
+        "COX20",
+        "TLN1",
+        "COL4A2",
+        "CMYA5",
+        "TASOR2",
+        "NOC3L",
+        "PTPN1",
+        "TOP1",
+        "SLC25A18",
+        "PPDPFL",
+        "IGF2",
+        "CEBPZ",
+        "RFNG",
+        "WDR43",
+        "EIF5B",
+        "COL5A3",
+        "NCOA7",
+        "PAK2",
+        "PRKDC",
+        "TIAM1",
+        "COL6A6",
+        "IL1RL1",
+        "TPM2",
+        "KIAA0040",
+        "ZNF106",
+        "SERPINE1",
+        "PXDN",
+        "TXNL4A",
+        "CD38",
+        "ALDH1A3",
+        "TGS1",
+        "STC2",
+        "COL6A3",
+        "ZDBF2",
+        "PAPPA",
+        "UBE2V1",
+        "H4C11",
+        "PRP4K",
+        "SMARCA5",
+        "SRRM1",
+        "TPM1",
+        "CPNE3",
+        "NCL",
+        "H2AC20",
+        "EFCAB14",
+        "MPHOSPH10",
+        "PRRC2C",
+        "DHX36",
+        "PDE3B",
+        "BTBD3",
+        "NOL8",
+        "CDK12",
+        "PLXNA2",
+        "HK2",
+        "SPARCL1",
+        "IGF1",
+        "RC3H2",
+        "ZC3H11A",
+        "SLC7A2",
+        "FBXO9",
+        "CCDC144A",
+        "DPH3",
+        "GPM6B",
+        "CRLF1",
+        "AKAP12",
+        "ABCE1",
+        "PITPNC1",
+        "FERMT2",
+        "NRIP1",
+        "PAX8",
+        "MAP1B",
+        "TGOLN2",
+        "TMEM181",
+        "ZNF326",
+        "ACACB",
+        "HPS5",
+        "CCND2",
+        "PUM3",
+        "ANKRD11",
+        "PCM1",
+        "MMP3",
+        "MEDAG",
+        "KIF5C",
+        "NKD2",
+        "NCBP3",
+        "LARS1",
+        "VEGFA",
+        "JCAD",
+        "PCDHGA12",
+        "NSRP1",
+        "TFPI",
+        "ARGLU1",
+        "SLK",
+        "UPF1",
+        "BMP2",
+        "MBNL1",
+        "BDP1",
+        "METAP2",
+        "SLC39A9",
+        "RALGPS2",
+        "BOD1L1",
+        "PDE4D",
+        "GOLGA8A",
+        "CTF1",
+        "ACSL4",
+        "ZFC3H1",
+        "ALKAL2",
+        "IFNAR1",
+        "STRIT1",
+        "VPS36",
+        "NME1",
+        "TRNT1",
+        "SH3PXD2A",
+        "PRDM2",
+        "DPP6",
+        "UBFD1",
+        "PTX3",
+        "ZFHX3",
+        "LARP4",
+        "OMD",
+        "BLTP2",
+        "GSPT1",
+        "RPGRIP1L",
+        "PALS2",
+        "DDX24",
+        "S100A8",
+        "IZUMO4",
+        "NOP16",
+        "SESN3"
+      ]
+    },
+    "fibroblast": {
+      "P1_up": [
+        "NR4A2",
+        "PAMR1",
+        "MRGPRF",
+        "MRPS6",
+        "TRIM47",
+        "RGS16",
+        "AKR1C3",
+        "HHIP",
+        "LOXL1",
+        "IL6",
+        "DDB2",
+        "IFIT1",
+        "DKK3",
+        "HHIP-AS1",
+        "MFAP2",
+        "MIR23AHG",
+        "NQO1",
+        "PSMB10",
+        "MITF",
+        "KCND2",
+        "CSRNP1",
+        "PTGES",
+        "GEM",
+        "ANKRD35",
+        "DUSP14",
+        "NT5E",
+        "PLK3",
+        "RARG",
+        "ENG",
+        "PTGFR",
+        "MYL9",
+        "HSPB2",
+        "CCL2",
+        "SERTAD4-AS1",
+        "HAS1",
+        "ATF3",
+        "ANGPTL2",
+        "ID2",
+        "SLC6A6",
+        "BHLHE40",
+        "PLAU",
+        "SOCS3",
+        "STING1",
+        "ID3",
+        "AKR1C1",
+        "AKR1C2",
+        "RNF24",
+        "TMEM106C",
+        "IRF1",
+        "EFEMP1",
+        "TNFSF10",
+        "ACTA2",
+        "CSRP1",
+        "ARL6IP6",
+        "NR4A1",
+        "PHGDH",
+        "LEPR",
+        "LINGO1",
+        "ALDH1A1",
+        "MYC",
+        "OLFML1",
+        "ZFP36",
+        "ALDH16A1",
+        "PPL",
+        "MEOX2",
+        "CD9",
+        "C1ORF198",
+        "ADM",
+        "CLEC14A",
+        "ISLR",
+        "IER2",
+        "CRYAB",
+        "LMNA",
+        "INHBA",
+        "C1QTNF2",
+        "FAM43A",
+        "CMTM8",
+        "ADAM33",
+        "HSPB8",
+        "GSTM5",
+        "EGR1",
+        "S100A4",
+        "CAVIN3",
+        "RIC8A",
+        "SERTAD3",
+        "PKM",
+        "VASN",
+        "CES1",
+        "SLC35B2",
+        "ADK",
+        "TMEM176B",
+        "KLF4",
+        "SLC2A3",
+        "JUNB",
+        "CD34",
+        "CARD19",
+        "FKBP9",
+        "FOS",
+        "EPHX1",
+        "CAPN2"
+      ],
+      "P2_up": [
+        "KIF5C",
+        "KCNB1",
+        "TPM3",
+        "PLCG2",
+        "LONRF2",
+        "MMP3",
+        "PTX3",
+        "ZFPM1",
+        "SERPINE1",
+        "PPDPFL",
+        "GPM6B",
+        "H2AC20",
+        "MT1G",
+        "PAPPA",
+        "DNER",
+        "CCDC144A",
+        "GASK1B",
+        "NRIP1",
+        "PMEPA1",
+        "SERPINF2",
+        "MBNL3",
+        "ODC1",
+        "SLC7A8",
+        "ALYREF",
+        "CYP4B1",
+        "ARHGEF19",
+        "DHX33",
+        "SESN3",
+        "RGCC",
+        "RAMP2-AS1",
+        "GOLGA8B",
+        "SOCS6",
+        "TMEM59L",
+        "CMYA5",
+        "GXYLT2",
+        "MDK",
+        "UBALD2",
+        "PHC2",
+        "RBM12B",
+        "INPP5A",
+        "MAP2K6",
+        "NOTCH2NLA",
+        "USP10",
+        "LRRC75A",
+        "BCAT1",
+        "HIF3A",
+        "KIAA0040",
+        "DGCR6",
+        "NEURL1B",
+        "RRN3",
+        "NME1",
+        "LAMA3",
+        "LMCD1",
+        "RALGPS2",
+        "TAF10",
+        "SEPTIN11",
+        "CIBAR1-DT",
+        "RDH10",
+        "MYL6B",
+        "PNO1",
+        "BOD1L1",
+        "E2F3",
+        "ACACB",
+        "C1QTNF1",
+        "KLF15",
+        "TAF4B",
+        "C6ORF120",
+        "RPGR",
+        "LARP4",
+        "NOP14",
+        "MTHFD2",
+        "TMEM97",
+        "WDR81",
+        "FKTN",
+        "TSPAN8",
+        "MBD2",
+        "FBXO9",
+        "NUDT2",
+        "COL5A3",
+        "RFLNB",
+        "RGPD5",
+        "WDR43",
+        "DPP6",
+        "FOXD1",
+        "COLEC12",
+        "RAMP2",
+        "PTPN11",
+        "ZNF708",
+        "URB1",
+        "SINHCAF",
+        "NOC3L",
+        "PDE4D"
+      ]
+    }
+  },
+  "metadata": {
+    "cell_types_muscle": [
+      "MuSC",
+      "Myofiber",
+      "Myofiber_TypeI",
+      "Myofiber_TypeII"
+    ],
+    "cell_types_fap": [
+      "fibroblast",
+      "fibroblast_deseq2"
+    ],
+    "sources": [
+      "muscle_aging_degs.csv",
+      "fibroblast_aging_degs.csv"
+    ],
+    "papers": [
+      "Lai et al. 2024 Nature \u2014 Single-nucleus RNA-seq of aged human skeletal muscle",
+      "Aging fibroblast DEGs (Nature paper, year TBD)"
+    ],
+    "thresholds": {
+      "padj": 0.05,
+      "abs_log2fc": 0.5
+    },
+    "direction_convention": "up = upregulated in aged (P1); down = downregulated in aged (P2 enriched)",
+    "alias_note": "P1_down == P2_up (mirror lists); P2_down == P1_up"
+  }
+}

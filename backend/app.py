@@ -5,6 +5,8 @@ Run with:
     cd backend
     uvicorn app:app --port 8002 --host 0.0.0.0 --reload
 """
+from __future__ import annotations
+
 import os
 import sys
 from contextlib import asynccontextmanager
@@ -22,6 +24,15 @@ from fastapi.middleware.cors import CORSMiddleware
 import config as cfg
 
 BASE_DIR = Path(__file__).parent
+
+_CORS_LAN_DEV_ORIGIN_REGEX = r"https?://[^\s/]+:\d+$"
+
+
+def _cors_allow_origin_regex(policy: cfg.ProductionHardeningPolicy) -> str | None:
+    api = policy.api
+    if api.allow_loopback_without_auth and api.cors_allow_lan_dev_origins:
+        return _CORS_LAN_DEV_ORIGIN_REGEX
+    return None
 
 
 # ------------------------------------------------------------------ #
@@ -83,6 +94,7 @@ _production_hardening_policy = cfg.get_production_hardening_policy()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_production_hardening_policy.api.cors_allowed_origins,
+    allow_origin_regex=_cors_allow_origin_regex(_production_hardening_policy),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -93,11 +105,13 @@ from api.access import router as access_router
 from api.chat import router as chat_router
 from api.files import router as files_router
 from api.sessions import router as sessions_router
+from api.tokens import router as tokens_router
 
 app.include_router(chat_router, prefix="/api")
 app.include_router(access_router, prefix="/api")
 app.include_router(sessions_router, prefix="/api")
 app.include_router(files_router, prefix="/api")
+app.include_router(tokens_router, prefix="/api")
 
 
 @app.get("/")

@@ -1,0 +1,105 @@
+{
+  "candidate_id": "INSR_IL6ST_flexible_GS4",
+  "receptor_A": "INSR",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "IRS1",
+      "IRS2",
+      "SHC1",
+      "GRB2",
+      "PIK3R1",
+      "GAB1",
+      "JAK1",
+      "JAK2",
+      "STAT3",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "SOCS3",
+      "GRB10",
+      "SH2B1",
+      "SH2B2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "VAV1",
+      "PRKCD"
+    ]
+  },
+  "biased_pathways": [
+    "PI3K-AKT-mTOR",
+    "RAS-MAPK-ERK",
+    "JAK-STAT3",
+    "IRS1/2-PI3K-AKT",
+    "SHC-GRB2-SOS-RAS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "DSTN",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.80,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "The INSR-IL6ST forced-proximity novokine (flexible_GS4 linker, ~20 Å) brings an RTK (INSR, Tyr kinase) into close apposition with a cytokine receptor (IL6ST/gp130, JAK-associated). Under forced co-clustering, INSR's kinase domain transphosphorylates IL6ST's intracellular tyrosines, creating docking sites for SHC1, GRB2, and PIK3R1 that are not efficiently engaged by IL6ST alone (which signals primarily through JAK-STAT). Simultaneously, IL6ST-associated JAK1/2 transphosphorylate INSR's juxtamembrane tyrosines, enhancing IRS1/2 and STAT3 recruitment beyond what INSR alone achieves. The short GS4 linker (~20 Å) sterically excludes large adaptors like PLCG1 (which requires ~40+ Å spacing for productive docking), biasing output toward PI3K-AKT-mTOR and RAS-MAPK-ERK pathways while suppressing PLCγ-Ca²⁺ and atypical PKC signaling. This biased signaling profile upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, TAGLN) and downregulates aged-muscle IEGs and inflammatory markers (EGR1, FOS, JUN, IL32, TXNIP), consistent with a rejuvenating transcriptional shift.",
+  "literature_refs": [
+    "PMID:2261637",
+    "PMID:23294003",
+    "PMID:19915009",
+    "PMID:25731159",
+    "PMID:12138094",
+    "PMID:16831875",
+    "PMID:12456798",
+    "PMID:8912646",
+    "PMID:9388212",
+    "PMID:9013873",
+    "PMID:9126968",
+    "PMID:10579793",
+    "PMID:11821958",
+    "PMID:11468294",
+    "PMID:7499194",
+    "PMID:10803466",
+    "PMID:8626379",
+    "PMID:11606564",
+    "PMID:10650943",
+    "PMID:9083103"
+  ]
+}

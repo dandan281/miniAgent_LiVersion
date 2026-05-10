@@ -1,0 +1,86 @@
+{
+  "candidate_id": "FGFR1_IGF1R__GS_med",
+  "receptor_A": "FGFR1",
+  "receptor_B": "IGF1R",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "IRS1",
+      "FRS2",
+      "GAB1"
+    ],
+    "cis_adaptors": [
+      "PLCG1",
+      "GRB14",
+      "NCK1",
+      "PIK3R3",
+      "GRB10",
+      "SOCS1",
+      "SOCS2",
+      "SOCS3",
+      "YWHAE",
+      "YWHAB"
+    ],
+    "excluded_adaptors": [
+      "RASA1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "ETV5",
+    "BCL2L1",
+    "SOCS3",
+    "FOS",
+    "JUN",
+    "EGR1",
+    "SPRY1",
+    "SREBF1"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN1A",
+    "FOXO1",
+    "GADD45A",
+    "BNIP3",
+    "CTGF",
+    "CCL2"
+  ],
+  "step_confidences": {
+    "step_1": 0.90,
+    "step_2": 0.75,
+    "step_3a": 0.70,
+    "step_3b": 0.70,
+    "step_3c": 0.55,
+    "step_3d": 0.40,
+    "step_4": 0.65
+  },
+  "mechanism_narrative": "FGFR1-IGF1R forced-proximity novokine with GS_med linker biases signaling by enabling transphosphorylation between FGFR1 and IGF1R kinase domains, creating novel phosphotyrosine docking sites that recruit SHC1-GRB2-SOS (MAPK/ERK) and IRS1-PI3K-AKT (PI3K/AKT/mTOR) adaptor complexes. The ~353 aa ECD asymmetry (FGFR1 ECD=353 aa vs IGF1R alpha-chain=706 aa) creates a tilted co-clustering geometry that sterically excludes RASA1 (RasGAP), preventing negative feedback on RAS signaling. PLCG1 remains CIS-phosphorylated but is not uniquely activated by forced proximity. The biased output shifts aged muscle toward a younger transcriptional phenotype by upregulating proliferation/survival genes (MYC, CCND1, DUSP6, ETV4) and downregulating senescence/inflammatory markers (TXNIP, IL32, S100A4, LGALS3).",
+  "literature_refs": [
+    "PMID:41462267 (Yeh et al. 2025 - FGFR1 essential for muscle stem cell quiescence)",
+    "PMID:41756900 (Chang et al. 2026 - activating FGFR1 restores satellite cell function in aged mice)",
+    "PMID:32103583 (Bae et al. 2020 - satellite cell FGFR signaling and muscle regeneration)",
+    "PMID:37138777 (Meng et al. 2023 - FGFR1 maintains satellite cell pool)",
+    "PMID:11030354 (FGFR1-FGF1 co-crystal structure)",
+    "PMID:10830168 (FGFR1 ECD co-crystal structure)",
+    "PMID:9660748 (FGFR1-FRS2/PLCG1 interaction)",
+    "PMID:20388777 (FGFR1-JAK2-STAT3 signaling)",
+    "PMID:8776723 (IGF1R-IRS1-SHC1-GRB10 interactions)",
+    "PMID:10082579 (IGF1R-PTPN11-RASA1-PXN interactions)",
+    "PMID:11071852 (SOCS3-IGF1R interaction)",
+    "PMID:12697834 (IGF1R-GRB10-NEDD4 interaction)",
+    "PMID:17123512 (Golding et al. 2007 - ErbB receptors in skeletal muscle stem cells)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "candidate_id": "INSR_OSMR_flexible_GS4",
+  "receptor_A": "INSR",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "IRS2",
+      "PIK3R1",
+      "GAB1",
+      "PTPN11",
+      "JAK1",
+      "JAK2",
+      "STAT5A",
+      "STAT5B"
+    ],
+    "cis_adaptors": [
+      "FRS2",
+      "SH2B1",
+      "SH2B2",
+      "GRB10",
+      "GRB14"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "VAV1",
+      "RASA1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT5",
+    "IRS_PI3K",
+    "SHC_RAS_GRB2_SOS",
+    "GAB1_signalosome"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "ITGA8",
+    "PPP1R14A",
+    "IGFBP6",
+    "SH3BP5"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5",
+    "CSRP3",
+    "HDAC9"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.75,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "The INSR-OSMR forced-proximity novokine (flexible_GS4, ~20 Å) brings an RTK (INSR, Tyr kinase domain at 1023-1298) into direct co-clustering with a type I cytokine receptor (OSMR, JAK1-associated). INSR's kinase transphosphorylates OSMR's JAK1-docking sites, while OSMR-associated JAK1/2 transphosphorylates INSR's juxtamembrane IRS1/2 docking motifs — creating a hybrid insulin-cytokine signalosome. The biased output is dominated by GRB2-SHC1-RAS-MAPK and IRS1/2-PI3K-AKT pathways (via transphosphorylation-recruited adaptors), plus JAK-STAT5 signaling from OSMR's JAK1 platform. PLCG1/2 and RASA1 are sterically excluded because the short GS4 linker (~20 Å) positions the INSR kinase domain too close to the OSMR intracellular face for PLCγ's large PH-SH2-SH3 module to bridge productively. VAV1 is excluded due to the absence of ITAM motifs in this receptor pair. The resulting transcriptome signature upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and ECM remodeling factors (IGFBP7, TIMP3, ITGA8) while suppressing aged-marker IEGs (EGR1, FOS, JUN), inflammatory mediators (IL32, TXNIP), and the myogenic differentiation factor MYF5 — consistent with a rejuvenating shift toward the young muscle phenotype.",
+  "literature_refs": [
+    "PMID:26951750",
+    "PMID:12456798",
+    "PMID:8912646",
+    "PMID:10650943",
+    "PMID:10803466",
+    "PMID:9083103",
+    "PMID:11781100",
+    "PMID:8999038",
+    "PMID:11821958",
+    "PMID:27110918"
+  ]
+}

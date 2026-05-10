@@ -1,0 +1,180 @@
+{
+  "candidate_id": "ERBB4_INSR_rigid_helix_40",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "rigid_helix_40",
+  "step_1_receptor_engagement": {
+    "receptor_A": {
+      "symbol": "ERBB4",
+      "uniprot": "Q15303",
+      "family": "RTK — EGF receptor family (ErbB4/HER4)",
+      "length_aa": 1308,
+      "ecd_length_aa": 626,
+      "tm_region": "652-675",
+      "icd_length_aa": 633,
+      "kinase_domain": "718-985",
+      "expression_aged_muscle": {
+        "MF-I": "pc=0.42 me=0.94",
+        "MF-II": "pc=0.43 me=1.06",
+        "MuSC": "pc=0.04 me=0.07",
+        "FB": "pc=0.01 me=0.02"
+      }
+    },
+    "receptor_B": {
+      "symbol": "INSR",
+      "uniprot": "P06213",
+      "family": "RTK — Insulin receptor family (IR/CD220)",
+      "length_aa": 1382,
+      "ecd_length_aa": 929,
+      "tm_region": "957-979",
+      "icd_length_aa": 403,
+      "kinase_domain": "1023-1298",
+      "expression_aged_muscle": {
+        "MF-I": "pc=0.50 me=1.04",
+        "MF-II": "pc=0.30 me=0.62",
+        "MuSC": "pc=0.14 me=0.20",
+        "FB": "pc=0.22 me=0.31"
+      }
+    },
+    "co_expression_verdict": "PASS — both receptors expressed in aged MF-I and MF-II (pc>=0.10, me>0.5)",
+    "geometry_asymmetry_high": true,
+    "ecd_asymmetry_aa": 303,
+    "linker_geometry": "rigid_helix_40 (~60 Å end-to-end)",
+    "implied_icd_spacing_note": "ERBB4 ICD=633 aa (long flexible juxtamembrane + kinase) vs INSR ICD=403 aa (shorter). The 60 Å rigid helix forces the two ICDs into a fixed orientation. ERBB4's longer juxtamembrane region (676-717) provides conformational flexibility that may partially compensate, but the INSR ICD is substantially shorter — the kinase domains (ERBB4 718-985 vs INSR 1023-1298) will be offset by ~300 aa of ICD length difference, creating an asymmetric transphosphorylation geometry.",
+    "p_fail_1": 0.05
+  },
+  "step_2_structural_geometry": {
+    "erbb4_pdb_structures": ["2AHX", "2R4B", "3BCE", "3U2P", "3BBT"],
+    "insr_pdb_structures": ["3BU3", "5HHW", "4IBM", "5U1M", "1IR3"],
+    "structural_evidence": "Both receptors have solved ECD and kinase domain structures. ERBB4 ECD (2AHX) shows the typical ErbB furin-like domain architecture. INSR ECD (3BU3) shows the (αβ)₂ disulfide-linked dimer. The large ECD asymmetry (626 vs 929 aa) means the rigid 60 Å linker will position the INSR ICD substantially further from the membrane plane than the ERBB4 ICD, creating a tilted transphosphorylation geometry.",
+    "p_fail_2": 0.20
+  },
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "IRS2",
+      "PIK3R1",
+      "GAB1",
+      "PTPN11",
+      "FRS2"
+    ],
+    "cis_adaptors": [
+      "STAT5A",
+      "STAT5B",
+      "CBL",
+      "NCK1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "adaptor_classification_rationale": {
+    "transphosphorylation_adaptors": {
+      "GRB2": "Recruited to ERBB4 pY sites (Y1056, Y1188, Y1242) via SH2 domain. Also binds INSR via IRS1/2 docking. Under forced proximity, INSR kinase can transphosphorylate ERBB4 at GRB2-docking sites, and ERBB4 kinase can transphosphorylate INSR at IRS-docking sites — creating a reinforced GRB2-SOS-RAS-MAPK signal.",
+      "SHC1": "Binds ERBB4 pY sites directly (Y1188, Y1242). Also recruited by INSR via IRS1/2. Transphosphorylation between the two kinases creates additional SHC-docking phosphotyrosines on both receptors.",
+      "IRS1": "Classical INSR substrate — INSR phosphorylates IRS1 at multiple YXXM motifs that recruit PI3K. Under forced proximity, ERBB4 kinase can also phosphorylate IRS1 at INSR-docking sites, amplifying IRS1-mediated signaling.",
+      "IRS2": "Similar to IRS1 — INSR substrate that can be transphosphorylated by ERBB4 kinase under forced co-clustering.",
+      "PIK3R1": "p85 regulatory subunit of PI3K. Recruited to pYXXM motifs on IRS1/IRS2 (activated by INSR) and to ERBB4 pY sites (CYT-1 isoform has Y1056 in YXXM context). Transphosphorylation amplifies PI3K docking sites on both receptors.",
+      "GAB1": "Scaffold that binds PI3K, SHP2, and GRB2. Recruited to ERBB4 via GRB2. Under forced proximity, INSR kinase can also phosphorylate GAB1, amplifying PI3K-AKT and MAPK signaling.",
+      "PTPN11": "SHP2 phosphatase — binds ERBB4 pY sites and IRS1/2. Transphosphorylation creates additional PTPN11 docking sites, promoting sustained MAPK signaling.",
+      "FRS2": "Classical FGFR/RTK adaptor. Binds INSR (confirmed by BioGRID biochemical activity, PMID:10650943). Under forced proximity, ERBB4 kinase can transphosphorylate FRS2 at its GRB2-docking sites, coupling to MAPK."
+    },
+    "cis_adaptors": {
+      "STAT5A": "Binds ERBB4 ICD directly (BioGRID affinity capture, PMID:15534001, PMID:16729043). Also binds INSR (PMID:12456798). These are cis interactions that occur in natural signaling and are not uniquely amplified by forced proximity.",
+      "STAT5B": "Binds INSR (PMID:12456798). Cis interaction — not uniquely biased by forced proximity.",
+      "CBL": "E3 ubiquitin ligase that binds ERBB4 pY sites (BioGRID, PMID:25140053). Involved in receptor downregulation — a cis event.",
+      "NCK1": "Binds ERBB4 (BioGRID, PMID:16729043). Adaptor for actin reorganization — cis interaction."
+    },
+    "excluded_adaptors": {
+      "PLCG1": "PLCγ1 requires specific docking geometry that spans both kinase domains in a precise orientation. The 60 Å rigid helix with 303 aa ECD asymmetry creates a tilted ICD interface that prevents PLCγ from bridging the two receptors. This is the same exclusion mechanism seen in H2F (HER2+FGFR1) where PLCγ is sterically blocked.",
+      "PLCG2": "Same steric exclusion as PLCG1 — requires precise spatial arrangement of docking phosphotyrosines that the asymmetric ERBB4-INSR geometry cannot provide."
+    }
+  },
+  "biased_pathways": [
+    "MAPK/ERK (via GRB2-SOS-RAS-RAF-MEK-ERK)",
+    "PI3K-AKT-mTOR (via IRS1/2-PIK3R1-PIP3-AKT)",
+    "GAB1 signalosome (GAB1-PIK3R1-PTPN11-GRB2)",
+    "FRS2-mediated MAPK (FRS2-GRB2-SOS-RAS)",
+    "PTPN11-SHP2 sustained MAPK signaling"
+  ],
+  "excluded_pathways": [
+    "PLCγ-Ca²⁺-PKC (PLCG1/2 sterically excluded by asymmetric ICD geometry)",
+    "JAK-STAT (STAT5A/B are cis-only, not amplified by transphosphorylation)"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "DSTN",
+    "MAFB",
+    "FMN1",
+    "CLIC4",
+    "PPP1R14A"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5"
+  ],
+  "gene_direction_rationale": {
+    "predicted_up_rationale": "MAPK/ERK and PI3K-AKT-mTOR activation downstream of GRB2-SHC1-IRS1-PIK3R1 signaling drives expression of muscle structural and contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) that are young-enriched (P2_up atlas markers). NOTCH3 is a MuSC quiescence/maintenance marker upregulated by AKT signaling. IGFBP7 and TIMP3 are extracellular matrix regulators that decline with age and are restored by AKT signaling. DSTN, MAFB, FMN1 are young-enriched P2_up markers. CLIC4 and PPP1R14A are downstream of SRF/MRTF signaling activated by MAPK.",
+    "predicted_down_rationale": "MAPK/ERK signaling suppresses IEG/AP-1 transcription factors (EGR1, FOS, JUN) that are chronically elevated in aged muscle (P1_up markers). TXNIP (oxidative stress sensor), IL32 (inflammatory cytokine), and MYF5 (myogenic factor) are all aged-enriched markers suppressed by AKT-mediated FOXO exclusion from the nucleus. MYH9 (non-muscle myosin IIA), TTN (titin), PRUNE2, ASB5, NEB are structural genes whose aged-elevated expression reflects denervation/reinnervation stress — suppressed by restored MAPK/AKT signaling. DNAJA4 (chaperone), ETS2 (transcription factor), FABP5 (lipid chaperone) are all P1_up aged markers."
+  },
+  "calibration_alignment": {
+    "matches_win_pattern": true,
+    "win_pattern_notes": "Predicted_up contains muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) matching the Win 1-3 pattern. Predicted_down contains IEGs (EGR1, FOS, JUN) and aged markers (OTUD1, TXNIP, IL32, MYF5, MYH9) matching the Win 1-3 pattern. This is consistent with the ERBB4+FGFR1/2/4 wins where GRB2-SHC1-FRS2-GAB1-PIK3R1 transphosphorylation drove the same gene direction pattern.",
+    "differs_from_fail_pattern": true,
+    "fail_pattern_notes": "Unlike Fail 1 (TNFR1+IL6R) which had broken adaptor coverage and put IEGs in predicted_up, this candidate has strong transphosphorylation adaptor coverage (GRB2, SHC1, IRS1, IRS2, PIK3R1, GAB1, PTPN11, FRS2) and correctly places IEGs in predicted_down."
+  },
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.80,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "chain_soundness": 0.32,
+  "mechanism_narrative": "ERBB4-INSR forced proximity via a 60 Å rigid helix linker creates asymmetric transphosphorylation where ERBB4 kinase phosphorylates INSR substrates (IRS1, IRS2, FRS2) and INSR kinase phosphorylates ERBB4 docking sites (GRB2, SHC1, GAB1). This amplifies GRB2-SOS-RAS-MAPK and IRS1-PIK3R1-AKT signaling while sterically excluding PLCγ docking. The biased output shifts aged muscle toward a young transcriptional phenotype by upregulating contractile structural genes (ACTA2, MYL9, MYH11) and suppressing IEG/AP-1 inflammatory programs (EGR1, FOS, JUN) and aged stress markers (TXNIP, IL32).",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:10650943",
+    "PMID:12456798",
+    "PMID:28065597",
+    "PMID:16273093",
+    "PMID:15534001",
+    "PMID:10839362",
+    "PMID:25140053",
+    "PMID:20943952",
+    "PMID:8626379",
+    "PMID:9083103",
+    "PMID:8135823",
+    "PMID:11781100",
+    "PMID:10615944",
+    "doi:10.1038/s41586-024-08370-2",
+    "doi:10.1038/s41594-024-01291-8"
+  ]
+}

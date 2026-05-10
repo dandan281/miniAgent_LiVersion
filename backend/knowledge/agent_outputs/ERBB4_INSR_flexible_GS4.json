@@ -1,0 +1,89 @@
+{
+  "candidate_id": "ERBB4_INSR_flexible_GS4",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PIK3R1",
+      "PTPN11",
+      "NCK1",
+      "CRK"
+    ],
+    "cis_adaptors": [
+      "IRS1",
+      "IRS2",
+      "FRS2",
+      "SH2B1",
+      "GRB10",
+      "CBL",
+      "SOCS3"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "YAP1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "IRS_PI3K_AKT",
+    "STAT5",
+    "RAS_RAF_MEK_ERK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "MYH7",
+    "TNNT3",
+    "MYOG",
+    "DES",
+    "TNNI1",
+    "ENO3",
+    "MYH2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "PRUNE2",
+    "TTN"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.7,
+    "step_3a": 0.75,
+    "step_3b": 0.7,
+    "step_3c": 0.65,
+    "step_3d": 0.4,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB4+INSR forced proximity via flexible_GS4 linker biases signaling toward MAPK/ERK and PI3K/AKT pathways via transphosphorylation-recruited GRB2-SHC1 and PIK3R1 adaptors, while sterically excluding PLCG1/Ca2+ and YAP1 WW-domain signaling due to the asymmetric ECD geometry (ERBB4 ~615aa vs INSR ~917aa). The resulting transcriptional output upregulates muscle structural and contractile genes (MYH, ACTA, TPM, TNNT families) via SRF/ELK activation downstream of MAPK, and suppresses aged-enriched immediate early genes (EGR1, FOS, JUN) and inflammatory mediators (IL32, IL6), mirroring the rejuvenating signature observed in prior ERBB2+FGFR wins.",
+  "literature_refs": [
+    "PMID:10348342",
+    "PMID:16729043",
+    "PMID:15534001",
+    "PMID:28065597",
+    "PMID:10839362",
+    "PMID:12456798",
+    "PMID:11726652",
+    "PMID:16271887",
+    "PMID:29512653",
+    "PMID:10353604"
+  ]
+}

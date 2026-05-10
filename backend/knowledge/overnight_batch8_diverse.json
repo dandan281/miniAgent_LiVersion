@@ -1,0 +1,12 @@
+[
+  {"candidate_id": "EGFR_IL6ST_flexible_GS8_v2", "receptor_A": "EGFR", "receptor_B": "IL6ST", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.367}, "notes": "Top candidate replication test"},
+  {"candidate_id": "ERBB2_IL6ST_flexible_GS4", "receptor_A": "ERBB2", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "ERBB2+IL6ST: HER2+gp130, untested"},
+  {"candidate_id": "ERBB2_LIFR_flexible_GS4", "receptor_A": "ERBB2", "receptor_B": "LIFR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "ERBB2+LIFR: HER2+LIF axis"},
+  {"candidate_id": "MET_OSMR_flexible_GS4", "receptor_A": "MET", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "MET+OSMR: HGF+OSM axis"},
+  {"candidate_id": "IGF1R_OSMR_flexible_GS4", "receptor_A": "IGF1R", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "IGF1R+OSMR: pro-myogenic axis"},
+  {"candidate_id": "FGFR2_OSMR_flexible_GS4", "receptor_A": "FGFR2", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "FGFR2+OSMR"},
+  {"candidate_id": "FGFR4_OSMR_flexible_GS4", "receptor_A": "FGFR4", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "FGFR4+OSMR"},
+  {"candidate_id": "ERBB3_FGFR1_flexible_GS4", "receptor_A": "ERBB3", "receptor_B": "FGFR1", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "ERBB3+FGFR1: kinase-dead RTK + active RTK"},
+  {"candidate_id": "ERBB3_IL6ST_flexible_GS4", "receptor_A": "ERBB3", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "ERBB3+IL6ST: NRG sensing + JAK/STAT"},
+  {"candidate_id": "PDGFRA_IL6ST_flexible_GS4", "receptor_A": "PDGFRA", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "PDGFRA+IL6ST: PDGF+JAK/STAT"}
+]

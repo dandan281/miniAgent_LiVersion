@@ -1,0 +1,104 @@
+{
+  "candidate_id": "MET_IL6ST_flexible_GS8",
+  "receptor_A": "MET",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "SOS1",
+      "STAT3",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ],
+    "adaptor_classification_rationale": {
+      "transphosphorylation": [
+        "GRB2 \u2014 recruited to phosphorylated tyrosines on MET (Y1356) and to SHC1; drives RAS-MAPK via SOS1. Under forced proximity, MET's kinase can also phosphorylate IL6ST ICD tyrosines, creating additional GRB2 docking sites.",
+        "SHC1 \u2014 phosphorylated by MET kinase (Y1349/Y1356 motif); recruits GRB2-SOS1. IL6ST-associated JAKs may also phosphorylate SHC1, amplifying the signal.",
+        "GAB1 \u2014 binds MET multifunctional docking site (Y1349/Y1356) directly (PMID:9242692); scaffolds PI3K and SHP2. Under forced proximity, GAB1 may also be recruited to IL6ST phosphotyrosines.",
+        "PIK3R1 \u2014 p85 regulatory subunit recruited to phosphorylated GAB1 and MET; drives PI3K-AKT-mTOR signaling.",
+        "SOS1 \u2014 recruited via GRB2 to activate RAS; the RAS-MAPK cascade is a shared output of both MET and IL6ST signaling.",
+        "STAT3 \u2014 directly phosphorylated by MET kinase (R-HSA-8875791, PMID:9440692) and by JAK1/JAK2 associated with IL6ST. The IL6ST-STAT3 axis is the canonical downstream effector; MET adds an additional STAT3 activation route.",
+        "PTPN11 (SHP2) \u2014 activated by MET (R-HSA-8865999); amplifies RAS-MAPK signaling. May also be recruited to IL6ST phosphotyrosines."
+      ],
+      "cis": [
+        "JAK1 \u2014 constitutively associated with IL6ST Box1/Box2 motifs; autophosphorylates upon IL6ST clustering. Not a direct MET substrate.",
+        "JAK2 \u2014 secondary JAK associated with IL6ST; can phosphorylate IL6ST and STATs.",
+        "TYK2 \u2014 tertiary JAK family member associated with IL6ST.",
+        "CBL \u2014 E3 ubiquitin ligase that downregulates MET; recruited to MET pY1003 (not a transphosphorylation target)."
+      ],
+      "excluded": [
+        "PLCG1 \u2014 requires specific docking at MET pY1012/pY1313 or at IL6ST phosphotyrosines. The ~311 aa ECD asymmetry (MET ECD=908aa vs IL6ST ECD=597aa) creates a tilted intracellular geometry where PLCG1's PH-SH2-SH2-SH3 domain architecture cannot productively bridge the co-clustered ICDs. The flexible_GS8 linker (~40 \u00c5) provides more slack than GS4 but the asymmetry still disfavors PLCG1 docking.",
+        "PLCG2 \u2014 similar domain architecture to PLCG1; same steric exclusion logic applies."
+      ]
+    }
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3",
+    "RAS_RAF_MEK",
+    "PTPN11_SHP2"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "SOCS3",
+    "BCL2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6"
+  ],
+  "predicted_gene_rationale": {
+    "up": "MAPK activation via GRB2-SHC1-SOS1-RAS drives muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) and NOTCH3 (satellite cell self-renewal). PI3K-AKT via GAB1-PIK3R1 upregulates CCND1 (cell cycle) and BCL2 (survival). STAT3 activation induces SOCS3 (feedback regulator). These are enriched in the P2_up (young-enriched) signature from the muscle aging atlas, consistent with the past wins pattern.",
+    "down": "Aged immediate-early genes (EGR1, FOS, JUN) and stress/senescence markers (TXNIP, IL32, CDKN2A, IL6) are suppressed. MYF5 (myogenic commitment) and MYH9 (non-muscle myosin) are reduced as the cell shifts toward a more mature/youthful myogenic program. OTUD1 (aged-enriched deubiquitinase) is also suppressed. This mirrors the past wins pattern where aged IEGs and inflammatory markers go down."
+  },
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.75,
+    "step_3a": 0.7,
+    "step_3b": 0.7,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "MET (RTK, Tyr kinase family) and IL6ST/gp130 (type I cytokine receptor, JAK-associated) forced proximity via flexible_GS8 linker (~40 \u00c5) is predicted to enable asymmetric bidirectional trans-signaling: MET's kinase domain phosphorylates IL6ST's intracellular tyrosines, creating STAT3 and SHC1/GRB2 docking sites, while IL6ST-associated JAK1/JAK2 transphosphorylate MET's C-tail tyrosines (Y1349/Y1356), enhancing GAB1, SHC1, and PIK3R1 recruitment. This hybrid signaling activates MAPK-ERK, PI3K-AKT-mTOR, and JAK-STAT3 pathways simultaneously. PLCG1/2 are predicted as sterically excluded due to the ~311 aa ECD asymmetry (908 vs 597 aa) creating a tilted intracellular geometry incompatible with PLCG1's multi-domain docking architecture. The biased output (MAPK\u2191, AKT\u2191, STAT3\u2191, PLC\u03b3\u2193) promotes muscle structural gene expression and satellite cell activation while suppressing aged inflammatory IEGs \u2014 analogous to the past wins pattern but with added STAT3-mediated SOCS3 feedback.",
+  "literature_refs": [
+    "PMID:9242692 (Weidner et al. 1997 \u2014 GAB1 binds MET multifunctional docking site)",
+    "PMID:9440692 (Boccaccio et al. 1998 \u2014 MET activates STAT3)",
+    "PMID:8662889 (Ponzetto et al. 1996 \u2014 GRB2 binds MET Y1356)",
+    "PMID:9660480 (Shen et al. 1998 \u2014 SHC1 and SOS1 recruitment by MET)",
+    "PMID:9883724 (HGF/MET activates quiescent satellite cells for muscle regeneration)",
+    "PMID:1059683 (Interleukin-6 signaling via IL6ST/gp130 \u2014 Reactome R-HSA-1059683)",
+    "PMID:39592735 (H2F ERBB2-FGFR1 forced-proximity novokine \u2014 positive control reference)",
+    "PMID:30898150 (Kennedy et al. 2019 \u2014 ERBB2-MET heterodimerization; BiFC, co-IP evidence for RTK cross-activation)"
+  ]
+}

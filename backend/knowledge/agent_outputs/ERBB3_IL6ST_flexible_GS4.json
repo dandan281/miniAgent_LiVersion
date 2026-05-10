@@ -1,0 +1,25 @@
+{
+  "candidate_id": "ERBB3_IL6ST_flexible_GS4",
+  "receptor_A": "ERBB3",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["PIK3R1", "GRB2", "SHC1", "GAB1", "PTPN11"],
+    "cis_adaptors": ["STAT3", "JAK1"],
+    "excluded_adaptors": ["PLCG1", "PLCG2", "FRS2", "FRS3", "IRS1", "IRS2"]
+  },
+  "biased_pathways": ["PI3K_AKT_mTOR", "MAPK_ERK", "JAK_STAT3", "SHP2_RAS_MAPK"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3", "TIMP3", "IGFBP7"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9", "TTN", "PRUNE2"],
+  "step_confidences": {
+    "step_1": 0.65,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.55,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB3-IL6ST forced proximity creates an asymmetric transphosphorylation signalosome where IL6ST-associated JAK1 phosphorylates ERBB3's intracellular tyrosines, unlocking ERBB3's six YxxM PI3K-docking motifs — the strongest PI3K recruitment signal in the ERBB family. The biased output is PI3K/AKT-dominant (via PIK3R1/p85 docking at ERBB3) with parallel MAPK/ERK (GRB2-SHC-SOS-RAS) and background JAK-STAT3 (IL6ST canonical). PLCgamma is excluded (no docking sites), and FRS2/FRS3 are irrelevant (no FGFR). The ~20 Å flexible GS4 linker accommodates the minimal ECD asymmetry (27 aa difference) well, enabling productive kinase-substrate geometry.",
+  "literature_refs": ["PMID:9756944", "PMID:11546794", "PMID:10383151", "PMID:16729043", "PMID:11751884"]
+}

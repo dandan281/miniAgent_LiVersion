@@ -1,0 +1,85 @@
+{
+  "candidate_id": "EGFR_IL6ST_rigid_helix_20",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "STAT3",
+      "PIK3R1",
+      "PTPN11",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "SOCS3",
+      "NCK1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3",
+      "GAB1",
+      "GAB2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK/ERK",
+    "PI3K/AKT",
+    "JAK/STAT3",
+    "RAS signaling"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "ITGA8",
+    "PPP1R14A"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "PRUNE2",
+    "TTN"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.7,
+    "step_3a": 0.75,
+    "step_3b": 0.8,
+    "step_3c": 0.7,
+    "step_3d": 0.5,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "EGFR (RTK) and IL6ST (gp130, cytokine receptor) are both expressed in aged skeletal muscle MuSC and FB compartments. The rigid_helix_20 linker (~30 \u00c5) forces EGFR's kinase domain into proximity with IL6ST's JAK-associated intracellular domain. EGFR's tyrosine kinase transphosphorylates IL6ST's cytoplasmic tyrosines, creating docking sites for GRB2-SHC1 (MAPK), PIK3R1 (PI3K/AKT), and STAT3 (JAK/STAT). PLCG1/2 are sterically excluded because the EGFR-IL6ST co-cluster geometry cannot accommodate PLC\u03b3's two SH2 domains bridging both receptors simultaneously. FRS2/3 and GAB1/2 are also excluded as they require specific phosphotyrosine motifs on FGFR-family or cytokine receptors that EGFR does not provide. The biased output is MAPK+PI3K+STAT3 activation without PLC\u03b3/Ca\u00b2\u207a signaling \u2014 a rejuvenating profile that upregulates muscle structural genes (ACTA2, MYL9, MYH11) and downregulates aged IEGs (EGR1, FOS, JUN, IL32).",
+  "literature_refs": [
+    "PMID:27153536",
+    "PMID:2261637",
+    "PMID:19915009",
+    "PMID:23294003",
+    "PMID:16729043",
+    "PMID:10358079",
+    "PMID:9013873"
+  ]
+}

@@ -24,8 +24,12 @@ build/
 backend/sessions/
 backend/storage/
 backend/config.json
+backend/config.local.json
 backend/SKILLS_SNAPSHOT.md
-backend/artifacts/__pycache__/
+backend/artifacts/
+artifacts/
+backend/knowledge/evidence_cache/
+backend/Bash tool output*
 
 # ── Node ──────────────────────────────────────────────
 node_modules/
@@ -33,6 +37,8 @@ frontend/.next/
 frontend/.next-build/
 frontend/.next-e2e-build/
 frontend/.next-dev/
+frontend/.next-slurm/
+frontend/.next-login/
 frontend/out/
 
 # ── macOS ─────────────────────────────────────────────

@@ -1,0 +1,77 @@
+{
+  "candidate_id": "ERBB4_LIFR_flexible_GS4",
+  "receptor_A": "ERBB4",
+  "receptor_B": "LIFR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "STAT5A",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "FRS2",
+      "JAK1",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT",
+    "RAS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "PRUNE2",
+    "ASB5",
+    "TTN"
+  ],
+  "step_confidences": {
+    "step_1": 0.80,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.65,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB4 (RTK) and LIFR (cytokine receptor) forced proximity via flexible_GS4 linker (~20 \u00c5) biases signaling toward GRB2-SHC1-RAS-MAPK, PI3K-AKT, and JAK-STAT pathways via transphosphorylation of shared adaptor docking sites, while sterically excluding PLCG1/PLCG2-mediated Ca2+ signaling. This biased output upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, TAGLN) and downregulates aged-muscle IEGs (EGR1, FOS, JUN) and inflammatory markers (IL32, TXNIP), consistent with a rejuvenating transcriptional shift in aged myofibers.",
+  "literature_refs": [
+    "PMID:16203964",
+    "PMID:18775332",
+    "PMID:16729043",
+    "PMID:15534001",
+    "PMID:22584572",
+    "PMID:25140053"
+  ]
+}

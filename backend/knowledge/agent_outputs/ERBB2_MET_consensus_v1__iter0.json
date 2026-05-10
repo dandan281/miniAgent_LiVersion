@@ -1,0 +1,73 @@
+{
+  "candidate_id": "ERBB2_MET_consensus_v1__iter0",
+  "receptor_A": "ERBB2",
+  "receptor_B": "MET",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GAB1",
+      "GRB2"
+    ],
+    "cis_adaptors": [
+      "PIK3R1",
+      "STAT3",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "GRB7"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "STAT3"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "ETV4",
+    "ETV5",
+    "DUSP6",
+    "SPRY2",
+    "BCL2",
+    "VEGFA",
+    "PPARGC1A",
+    "SLC2A4",
+    "MCL1",
+    "IGFBP5",
+    "FOS"
+  ],
+  "predicted_down": [
+    "PLCG1",
+    "PPP3CA",
+    "NFATC2",
+    "PRKCA",
+    "ITPR1",
+    "CAMK2B",
+    "TXNIP",
+    "IL32",
+    "CDKN2A"
+  ],
+  "step_confidences": {
+    "step_1": 0.90,
+    "step_2": 0.85,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.65,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "The ERBB2-MET novokine with GS_med linker forces two RTKs with 279 aa ECD asymmetry (ERBB2 ECD=630 aa, MET ECD=909 aa) into proximity, enabling transphosphorylation that synergistically activates SHC1-GRB2-SOS1-RAS-MAPK and GAB1-PI3K-AKT signaling axes. PLCG1 is sterically excluded due to the asymmetric geometry preventing productive docking at the co-clustered ICDs, while GRB7 is also excluded by MET ICD occlusion. The biased output (MAPK↑, AKT↑, PLCγ↓, STAT3 maintained) promotes proliferation, survival, mitochondrial biogenesis, and glucose uptake — a transcriptional program enriched in young skeletal muscle — while suppressing calcium-dependent signaling associated with aged muscle dysfunction. MET is a critical satellite cell activation receptor (PMID:9883724) and ERBB2 is expressed in muscle stem cells (PMID:17123512), making this pair a strong candidate for muscle rejuvenation.",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 — skeletal muscle stem cells express ErbB receptors)",
+    "PMID:9883724 (HGF/MET activates quiescent satellite cells; required for adult muscle regeneration)",
+    "PMID:10871856 (Follenzi et al. 2000 — MET transphosphorylates RON but NOT ERBB2; confirms novelty of forced ERBB2-MET proximity)",
+    "PMID:14983012 (Saucier et al. 2004 — SHC1 adaptor is critical for both MET/HGF and ERBB2 signaling and VEGF induction)",
+    "PMID:10871282 (Schaeper et al. 2000 — GAB1 couples to c-Met, GRB2, and SHP2 mediating biological responses)",
+    "PMID:10995442 (Sachs et al. 2000 — Essential role of GAB1 for signaling by c-Met receptor in vivo)",
+    "PMID:11238891 (Dankort et al. 2001 — Grb2 and Shc adapter proteins play distinct roles in Neu/ErbB2 signaling)",
+    "PMID:29568012 (Morano et al. 2018 — Neuregulin/ErbB system in skeletal muscle)"
+  ]
+}

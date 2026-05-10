@@ -1,0 +1,73 @@
+{
+  "candidate_id": "EGFR_FGFR1_exposit_rigid",
+  "receptor_A": "EGFR",
+  "receptor_B": "FGFR1",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1"
+    ],
+    "cis_adaptors": [
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "PTPN11",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "mTOR"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "DSTN",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.78,
+    "step_3c": 0.70,
+    "step_3d": 0.65,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "EGFR+FGFR1 forced proximity via exposit_rigid scaffold biases signaling through GRB2/SHC1/FRS2/GAB1/PIK3R1 adaptors, activating MAPK/ERK and PI3K/AKT/mTOR pathways while sterically excluding PLCgamma docking. This shifts aged muscle fibroblasts and MuSCs toward a young transcriptional phenotype by upregulating contractile structural genes (ACTA2, MYL9, MYH11, TAGLN) and suppressing aged-associated IEGs (EGR1, FOS, JUN) and inflammatory mediators (IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:15117958",
+    "PMID:9660748",
+    "PMID:11090629",
+    "PMID:20388777",
+    "PMID:24141780"
+  ]
+}

@@ -10,8 +10,39 @@ import {
 import { completedElapsedLabel } from "@/lib/message-duration";
 import { splitStreamingMarkdown } from "@/lib/streaming-markdown";
 import { cn } from "@/lib/utils";
+import { useApp } from "@/lib/store";
 import TurnActivityFeed from "./TurnActivityFeed";
 import type { Message } from "@/lib/types";
+
+const RUNNER_TOOLS = new Set([
+  "superbio",
+  "alphafold3_api",
+  "slurm_tool",
+  "alphafold2",
+]);
+
+function hasRunnerToolCalls(message: Message): boolean {
+  if (!message.blocks) return false;
+  return message.blocks.some(
+    (block) =>
+      (block.type === "tool_use" || block.type === "tool_result") &&
+      RUNNER_TOOLS.has(block.tool)
+  );
+}
+
+function RunnerAffordance() {
+  const { setInspectorTab } = useApp();
+  return (
+    <button
+      type="button"
+      onClick={() => setInspectorTab("runners")}
+      className="mt-2 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[11px] font-medium text-[var(--apex-accent-strong)] hover:bg-[rgba(35,130,83,0.08)] transition-colors"
+    >
+      <span aria-hidden="true">↗</span>
+      Open Runners tab
+    </button>
+  );
+}
 
 interface ChatMessageProps {
   message: Message;
@@ -153,6 +184,7 @@ export default function ChatMessage({
   const showTurnActivityAfterContent = false;
   const showStreamingContent = hasContent;
   const completedDuration = !message.isStreaming ? completedElapsedLabel(message) : null;
+  const showRunnerAffordance = !message.isStreaming && hasRunnerToolCalls(message);
 
   if (isUser) {
     return (
@@ -207,6 +239,7 @@ export default function ChatMessage({
         ) : null}
 
         {showTurnActivityAfterContent ? <TurnActivityFeed message={message} /> : null}
+        {showRunnerAffordance ? <RunnerAffordance /> : null}
       </div>
     </article>
   );

@@ -1,0 +1,86 @@
+{
+  "candidate_id": "EGFR_FGFR1_rigid_helix_20",
+  "receptor_A": "EGFR",
+  "receptor_B": "FGFR1",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "PTPN11",
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "RAS_RAF_MEK",
+    "FRS2_GRB2_SOS",
+    "GAB1_signalosome"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "DSTN",
+    "FMN1",
+    "MAFB",
+    "TIMP3",
+    "IGFBP7",
+    "PPARGC1A",
+    "SLC2A4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.8,
+    "step_3a": 0.75,
+    "step_3b": 0.88,
+    "step_3c": 0.7,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "The EGFR-FGFR1 novokine with a rigid_helix_20 linker (~30 \u00c5) forces two structurally asymmetric RTKs into proximity (ECD ratio ~1.66:1, EGFR 621 aa vs FGFR1 374 aa). This enables transphosphorylation that synergistically activates the shared SHC1\u2192GRB2:SOS1\u2192RAS\u2192MAPK and FRS2\u2192GAB1\u2192PI3K\u2192AKT signaling axes while sterically excluding PLCG1/PLCG2 from the FGFR1 Y766 docking site due to the rigid geometry. The biased output (MAPK\u2191, AKT\u2191, PLC\u03b3\u2193) promotes muscle structural gene expression (ACTA2, MYL9, MYH11, TAGLN) and suppresses aged-marker immediate-early genes (EGR1, FOS, JUN, IL32, TXNIP) \u2014 a transcriptional program enriched in young skeletal muscle.",
+  "literature_refs": [
+    "PMID:27153536",
+    "PMID:10830168",
+    "PMID:8622701",
+    "PMID:19224897",
+    "PMID:20456371"
+  ]
+}

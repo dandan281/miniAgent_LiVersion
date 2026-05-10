@@ -1,0 +1,43 @@
+{
+  "candidate_id": "EGFR_IL6ST_flexible_GS8_v2",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS8",
+  "biased_output": {},
+  "biased_pathways": [],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "DNAJA4"
+  ],
+  "step_confidences": {},
+  "mechanism_narrative": "EGFR+IL6ST flexible 40\u00c5",
+  "literature_refs": [],
+  "_meta": {
+    "n_tool_calls": 0,
+    "n_tokens": 0,
+    "cached_from_iteration": 5,
+    "cached_from_iteration_id": "10e78111-acff-47ba-b93b-980277264c4b",
+    "cached_prior_reward": 0.8637967624843639,
+    "cached_prior_tier": "TOP_K_DESIGN"
+  }
+}

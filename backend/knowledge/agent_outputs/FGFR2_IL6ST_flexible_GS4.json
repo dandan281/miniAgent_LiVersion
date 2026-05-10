@@ -1,0 +1,79 @@
+{
+  "candidate_id": "FGFR2_IL6ST_flexible_GS4",
+  "receptor_A": "FGFR2",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAS_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "SOCS3",
+    "BCL2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA"
+  ],
+  "step_confidences": {
+    "step_1": 0.40,
+    "step_2": 0.70,
+    "step_3a": 0.65,
+    "step_3b": 0.75,
+    "step_3c": 0.60,
+    "step_3d": 0.55,
+    "step_4": 0.65
+  },
+  "mechanism_narrative": "FGFR2 (RTK) and IL6ST (gp130, cytokine receptor) are forced into proximity by a flexible_GS4 linker (~20 Å). FGFR2's tyrosine kinase transphosphorylates IL6ST's intracellular domain, creating phosphotyrosine docking sites for SH2-domain adaptors (GRB2, SHC1, PIK3R1, PTPN11) that normally cannot engage IL6ST directly. The JAKs (JAK1/JAK2/TYK2) remain constitutively associated with IL6ST's Box1/Box2 motifs (cis) and are further activated by FGFR2 transphosphorylation, amplifying STAT3 signaling. FRS2 docks constitutively to FGFR2's juxtamembrane region and recruits GRB2-SOS (RAS/MAPK) and GAB1-PIK3R1 (PI3K/AKT). PLCG1 is sterically excluded due to the large ECD asymmetry (FGFR2 ECD=356aa vs IL6ST ECD=597aa, ratio 1.68×) combined with the short ~20 Å linker, which creates a tilted co-clustered interface that PLCG1's multi-domain architecture cannot bridge. The biased output is synergistic MAPK + PI3K/AKT + STAT3 activation, promoting muscle structural gene expression and suppressing aged stress/inflammatory programs.",
+  "literature_refs": [
+    "PMID:20388777",
+    "PMID:21596750",
+    "PMID:18374639",
+    "PMID:10579793",
+    "PMID:9013873",
+    "PMID:9126968",
+    "PMID:9388212",
+    "PMID:11751884",
+    "PMID:11468294",
+    "PMID:12403768"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "candidate_id": "_test_dry_run",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR1",
+  "app": "binder_design_boltz1",
+  "app_id": "6823397116b277b0d684d48e",
+  "num_designs": 10,
+  "binder_min_aa": 70,
+  "binder_max_aa": 100,
+  "model_preset": "multimer",
+  "contigs": "A1-630/0 70-100",
+  "target_pdb_path": null,
+  "target_sequence": null,
+  "submitted_at": "2026-05-04T07:35:51.033095+00:00",
+  "dry_run": true
+}

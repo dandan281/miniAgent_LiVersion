@@ -1,0 +1,138 @@
+{
+  "candidate_id": "EGFR_INSR_flexible_GS4",
+  "receptor_A": "EGFR",
+  "receptor_B": "INSR",
+  "linker": "flexible_GS4",
+  "step_1_summary": {
+    "receptor_A": {
+      "symbol": "EGFR",
+      "uniprot": "P00533",
+      "family": "RTK (ErbB/EGFR kinase family)",
+      "length_aa": 1210,
+      "ecd_approx_aa": 621,
+      "expression": {
+        "MuSC_young_pc": 0.60,
+        "MuSC_young_me": 1.10,
+        "MuSC_old_pc": 0.40,
+        "MuSC_old_me": 0.80,
+        "delta_pc_old_minus_young": -0.20
+      }
+    },
+    "receptor_B": {
+      "symbol": "INSR",
+      "uniprot": "P06213",
+      "family": "RTK (Insulin receptor family, Tyr protein kinase)",
+      "length_aa": 1382,
+      "ecd_approx_aa": 944,
+      "expression": {
+        "MF_I_young_pc": 0.47,
+        "MF_I_young_me": 0.88,
+        "MF_I_old_pc": 0.50,
+        "MF_I_old_me": 1.04,
+        "delta_pc_old_minus_young": 0.03,
+        "MuSC_young_pc": 0.20,
+        "MuSC_young_me": 0.27,
+        "MuSC_old_pc": 0.14,
+        "MuSC_old_me": 0.20,
+        "delta_pc_MuSC_old_minus_young": -0.07
+      }
+    },
+    "co_expression_verdict": "PASS — both receptors expressed in aged muscle. EGFR in MuSC (old pc=0.40, me=0.80) and INSR in MF-I (old pc=0.50, me=1.04) both satisfy pc>=0.10 AND me>0.5. EGFR shows moderate aged dropout in MuSC (Δpc=-0.20) but remains above threshold.",
+    "linker_geometry": {
+      "type": "flexible_GS4",
+      "approx_distance": "~20 Å",
+      "geometry_asymmetry_high": true,
+      "asymmetry_note": "|ECD_EGFR(621) - ECD_INSR(944)| = 323 aa > 200 aa. The flexible GS4 linker (~20 Å) may not fully span the ECD asymmetry, but flexibility partially compensates."
+    },
+    "p_fail_1": 0.05
+  },
+  "step_2_summary": {
+    "structural_evidence": "Both receptors have abundant PDB structures (EGFR: 356 entries, INSR: 90 entries). Both are well-characterized RTKs with canonical kinase domains. Kinase domain geometry is compatible for transphosphorylation — EGFR kinase (TKD, ~267 aa) and INSR kinase (~287 aa) share the typical RTK bilobal fold. The flexible GS4 linker can accommodate the asymmetric ECD spacing.",
+    "p_fail_2": 0.20
+  },
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "PIK3R1",
+      "GAB1"
+    ],
+    "cis_adaptors": [
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "adaptor_rationale": {
+    "transphosphorylation": "Under forced EGFR-INSR co-clustering, EGFR kinase transphosphorylates INSR juxtamembrane tyrosines (Y960, Y972), creating docking sites for IRS1 (the canonical INSR adaptor). INSR kinase reciprocally transphosphorylates EGFR tyrosines (Y1068, Y1086, Y1148, Y1173), creating docking sites for GRB2, SHC1, and GAB1. PIK3R1 (p85) docks to both IRS1 phospho-YXXM motifs and EGFR pY1068. This dual transphosphorylation creates a shared GRB2-SHC1-IRS1-PIK3R1 signalosome that simultaneously activates MAPK/ERK and PI3K/AKT — the core biased output.",
+    "cis_background": "PTPN11 (SHP2) can be recruited to either receptor individually via cis-phosphorylated ITIM-like motifs. This is not a distinguishing feature of forced proximity.",
+    "exclusion": "PLCG1 requires specific phosphotyrosine sites (EGFR pY1173/pY992) with sufficient spatial access to bridge the dimer interface. The EGFR-INSR co-cluster geometry with ~20 Å flexible linker and 323 aa ECD asymmetry sterically blocks PLCG1 from productively docking — analogous to the PLCγ exclusion seen in H2F (HER2+FGFR1). This is the key 'off' signal of the biased output."
+  },
+  "biased_pathways": [
+    "MAPK/ERK (via GRB2-SOS-RAS-RAF-MEK-ERK)",
+    "PI3K/AKT (via IRS1-PIK3R1-PIP3-AKT)",
+    "mTOR (downstream of AKT via TSC1/2-RHEB-mTORC1)",
+    "FOXO (inactivated by AKT, reducing atrophy gene expression)",
+    "SRF/MRTF (via MAPK-dependent ELK1 and actin dynamics)"
+  ],
+  "excluded_pathways": [
+    "PLCγ/Ca²⁺/PKC (sterically excluded by co-clustering geometry)"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "TTN"
+  ],
+  "gene_direction_rationale": {
+    "predicted_up": "Muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) are young-enriched (P2_up) and driven by SRF/MRTF and MAPK-dependent transcription. NOTCH3 supports satellite cell quiescence and self-renewal. IGFBP7 and CLIC4 are young-enriched markers from the atlas. All are in P2_up or P1_down (young-enriched/aged-depleted).",
+    "predicted_down": "Immediate early genes (EGR1, FOS, JUN) are aged-enriched inflammatory/stress markers (P1_up). OTUD1, TXNIP, IL32 are aged-enriched stress/immune genes. MYF5 is an aged-enriched myogenic regulator (P1_up). MYH9 (non-muscle myosin) and TTN (titin fragment) are aged-enriched. CDKN2A (p16) is a senescence marker. All are in P1_up (aged-enriched) — placing them in predicted_down is the rejuvenating direction. CRITICAL: IEGs (EGR1, FOS, JUN) are NEVER placed in predicted_up, consistent with the prior experience pattern."
+  },
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "step_confidence_rationale": {
+    "step_1": "0.95 — Pre-fetched UniProt and atlas expression data are high quality. Both receptors are well-characterized RTKs with clear expression in aged muscle.",
+    "step_2": "0.80 — Abundant PDB structures exist, but the exact ECD asymmetry (323 aa) and flexible linker geometry introduce moderate uncertainty about the precise kinase domain spacing.",
+    "step_3a": "0.75 — OmniPath was unavailable (HTTP 502), so adaptor classification relies on literature knowledge (Takács et al. 2024 showing EGFR→IRS1, and canonical EGFR/INSR signaling biochemistry). PhosphoSitePlus cache was also unavailable. Moderate confidence.",
+    "step_3b": "0.80 — Reactome pathways for both receptors are well-annotated (Signaling by EGFR R-HSA-177929, Signaling by Insulin receptor R-HSA-74752). Pathway cassettes are canonical.",
+    "step_3c": "0.70 — OmniPath TF-target was unavailable. Gene direction relies on the pre-loaded atlas DE lists (P2_up/P1_up) and the prior experience pattern. The match to the winning pattern (muscle structural UP, IEGs DOWN) is strong but the TF→target mapping step could not be independently verified.",
+    "step_3d": "0.60 — BioGRID ORCS screens for EGFR and INSR exist but are mostly cancer cell line essentiality screens, not muscle-specific. No muscle-relevant CRISPR screens available. Moderate-low confidence.",
+    "step_4": "0.75 — Assembly is coherent with the biased signaling logic and calibrated against prior experience, but the gene lists are predictions that require experimental validation."
+  },
+  "mechanism_narrative": "The EGFR+INSR forced-proximity novokine (flexible_GS4 linker) biases signaling toward MAPK/ERK and PI3K/AKT pathways via transphosphorylation-dependent recruitment of GRB2, SHC1, IRS1, PIK3R1, and GAB1, while sterically excluding PLCγ/Ca²⁺ signaling. This shifts aged skeletal muscle toward a young transcriptional phenotype by upregulating muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and downregulating aged-enriched stress/inflammatory markers (EGR1, FOS, JUN, IL32, TXNIP, CDKN2A). The mechanism is analogous to the H2F (HER2+FGFR1) positive control, with IRS1 serving as the INSR-specific adaptor that additionally engages PI3K/AKT/mTOR and FOXO pathways — potentially providing stronger anabolic signaling than H2F alone.",
+  "literature_refs": [
+    "PMID:39326351 — Takács et al. 2024. IRS1 is a novel member of EGFR signaling in pancreatic cells. (EGFR→IRS1 phosphorylation evidence)",
+    "PMID:18656632 — Roztocil et al. 2008. Insulin-induced EGFR activation in vascular smooth muscle cells is ADAM-dependent. (EGFR-INSR cross-talk in muscle)",
+    "PMID:20110336 — Nagareddy et al. 2010. GPCR agonist-induced transactivation of the EGFR upregulates MLC II expression. (EGFR→MLC/contractile gene regulation)",
+    "PMID:10601235 — Eguchi et al. 1999. EGFR, Ras, ERK, and Akt in p70 S6K phosphorylation. (EGFR→AKT/mTOR pathway)",
+    "Expòsit et al. 2025 — rigid scaffold geometry biases pSTAT pathway usage. (Forced proximity signaling framework)",
+    "Edman 2024 — 18 Å vs 54 Å linker produces qualitatively different FGFR signaling. (Linker geometry effects)"
+  ]
+}

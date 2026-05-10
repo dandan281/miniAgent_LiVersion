@@ -1,0 +1,25 @@
+{
+  "candidate_id": "FGFR1_TGFBR2_flexible_GS4",
+  "receptor_A": "FGFR1",
+  "receptor_B": "TGFBR2",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "FRS2", "GAB1", "PIK3R1"],
+    "cis_adaptors": ["SMAD2", "SMAD3"],
+    "excluded_adaptors": ["PLCG1", "SMAD4", "TGFBR1"]
+  },
+  "biased_pathways": ["MAPK_ERK", "PI3K_AKT", "RAS_RAF_MEK", "FRS2_GRB2_SOS"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3", "DSTN", "IGFBP7"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9", "ASB5", "PRUNE2"],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.60,
+    "step_3a": 0.70,
+    "step_3b": 0.75,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "FGFR1 (RTK, Tyr kinase) and TGFBR2 (Ser/Thr kinase) are forced into proximity by the flexible_GS4 linker (~20 Å). FGFR1's Tyr kinase transphosphorylates TGFBR2's juxtamembrane Tyr residues, creating docking sites for SH2-domain adaptors GRB2/SHC1/FRS2/GAB1/PIK3R1 that activate MAPK-ERK and PI3K-AKT signaling — pathways normally absent from TGFBR2 signaling. The canonical TGFBR2→TGFBR1→SMAD2/3 cascade is disrupted because TGFBR1 is sterically excluded from the co-cluster (large ECD asymmetry: FGFR1 ECD ~355 aa vs TGFBR2 ECD ~143 aa, ratio >2×). PLCG1 is also excluded due to the tight geometry. The net biased output is a pro-youthful MAPK/AKT signal that upregulates muscle structural genes (ACTA2, MYL9, MYH11) while suppressing aged IEGs (EGR1, FOS, JUN, IL32).",
+  "literature_refs": ["PMID:15117958", "PMID:19224897", "PMID:7774578", "PMID:2173789", "PMID:33569393"]
+}

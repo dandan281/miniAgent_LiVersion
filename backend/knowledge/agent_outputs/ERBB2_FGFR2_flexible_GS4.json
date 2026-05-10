@@ -1,0 +1,34 @@
+{
+  "candidate_id": "ERBB2_FGFR2_flexible_GS4",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR2",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "FRS2", "GAB1", "PIK3R1"],
+    "cis_adaptors": [],
+    "excluded_adaptors": ["PLCG1"]
+  },
+  "biased_pathways": ["MAPK/ERK", "PI3K/AKT"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9"],
+  "step_confidences": {
+    "step_1": 0.80,
+    "step_2": 0.85,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.65,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "ERBB2+FGFR2 forced-proximity via flexible_GS4 linker (~20 Å) biases signaling toward GRB2/SHC1/FRS2/GAB1/PIK3R1 transphosphorylation adaptors, activating MAPK/ERK and PI3K/AKT pathways while sterically excluding PLCγ. The biased output upregulates muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2, NOTCH3) and suppresses aged immediate-early genes (EGR1, FOS, JUN, OTUD1, TXNIP, IL32, MYF5, MYH9), mirroring the H2F exemplar pattern and the validated ERBB2+FGFR2 GS_med win.",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:21596750",
+    "PMID:18374639",
+    "PMID:10085134",
+    "PMID:9710588",
+    "PMID:9756944",
+    "PMID:11069186",
+    "PMID:1676673"
+  ]
+}

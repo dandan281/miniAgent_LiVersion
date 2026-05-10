@@ -1,0 +1,82 @@
+{
+  "candidate_id": "LIFR_OSMR_flexible_GS4",
+  "receptor_A": "LIFR",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "STAT3",
+      "STAT1",
+      "PTPN11",
+      "GRB2",
+      "PIK3R1",
+      "SOCS3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "IRS1",
+      "SHC1",
+      "GAB1",
+      "FRS2"
+    ]
+  },
+  "biased_pathways": [
+    "JAK-STAT3",
+    "JAK-STAT1",
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "SHP2_RAS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "SOCS3",
+    "CCND1",
+    "BCL2",
+    "MYC"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.70,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "The LIFR+OSMR forced-proximity novokine (flexible_GS4 linker, ~20 \u00c5) brings two type I cytokine receptor subunits into close apposition, enabling JAK transphosphorylation across the LIFR-OSMR heterodimer. Both receptors lack intrinsic kinase activity and signal through constitutively associated JAK1/JAK2/TYK2. Under forced co-clustering, JAK transphosphorylation is enhanced, creating amplified phosphotyrosine docking sites for STAT3 (primary), STAT1, and PTPN11/SHP2 on the receptor intracellular domains. The short GS4 linker sterically excludes large adaptors like PLCG1 (which requires wider spacing for productive docking) and IRS-family adaptors (which are not canonical for cytokine receptor signaling). The biased output is synergistic JAK-STAT3 + JAK-STAT1 + SHP2-RAS-MAPK + PI3K-AKT activation, promoting muscle structural gene expression (ACTA2, MYL9, MYH11, TAGLN) and suppressing aged-enriched stress/inflammatory markers (EGR1, FOS, JUN, IL32, TXNIP, CDKN2A). This mirrors the winning pattern from past iterations where muscle structural genes go UP and aged IEGs go DOWN.",
+  "literature_refs": [
+    "PMID:35008777 — Lörchner et al. 2021. Concomitant activation of OSM and LIF receptor confers cardioprotection.",
+    "PMID:38198032 — Sims & Lévesque 2024. Oncostatin M: dual regulator of skeletal and hematopoietic systems.",
+    "PMID:22649064 — Broholm et al. 2012. Deficient LIF signaling in muscle precursor cells from type 2 diabetes patients.",
+    "PMID:12424252 — Zvonic et al. 2003. Regulation of CNTF signaling proteins in adipocytes (LIFR/JAK/STAT mechanism).",
+    "PMID:10812968 — Sleeman et al. 2000. CNTF and its receptor CNTFR alpha (LIFR family signaling)."
+  ]
+}

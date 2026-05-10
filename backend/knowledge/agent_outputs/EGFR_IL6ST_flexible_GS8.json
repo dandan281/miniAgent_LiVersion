@@ -1,0 +1,83 @@
+{
+  "candidate_id": "EGFR_IL6ST_flexible_GS8",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PTPN11",
+      "STAT3",
+      "PIK3R1",
+      "STAT1",
+      "STAT5A"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "RASA1",
+      "NCK1",
+      "NCK2",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "GAB1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "STAT3",
+    "STAT1_STAT5",
+    "RAS_RAF_MEK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "DNAJA4"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.8,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.8,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "EGFR (RTK) and IL6ST/gp130 (cytokine receptor, no intrinsic kinase) are co-expressed in aged skeletal muscle fibroblasts and MuSC. Under forced proximity via flexible_GS8 (~40 A), EGFR's kinase transphosphorylates IL6ST's intracellular tyrosines, creating novel docking sites for GRB2-SHC-SOS (RAS-MAPK), PIK3R1 (PI3K-AKT), and STAT3/STAT1/STAT5. PLCgamma is sterically excluded by the EGFR-IL6ST co-cluster geometry, analogous to H2F. The biased output combines EGFR-driven MAPK/PI3K with IL6ST-driven STAT3 signaling, shifting muscle cells toward a young transcriptional program (up: structural/contractile genes; down: aged IEGs and inflammatory markers).",
+  "literature_refs": [
+    "PMID:2790960",
+    "PMID:27153536",
+    "PMID:2261637",
+    "PMID:19915009",
+    "PMID:11821958",
+    "PMID:16729043",
+    "PMID:9126968",
+    "PMID:9013873",
+    "PMID:10579793",
+    "PMID:10358079"
+  ]
+}

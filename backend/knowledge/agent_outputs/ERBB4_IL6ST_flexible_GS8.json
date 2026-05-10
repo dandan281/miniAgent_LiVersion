@@ -1,0 +1,74 @@
+{
+  "candidate_id": "ERBB4_IL6ST_flexible_GS8",
+  "receptor_A": "ERBB4",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "SOS1",
+      "SOS2",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3",
+    "GAB1_signalosome"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "TIMP3",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.85,
+    "step_3a": 0.80,
+    "step_3b": 0.88,
+    "step_3c": 0.75,
+    "step_3d": 0.70,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "ERBB4 (RTK, ECD=626aa) and IL6ST/gp130 (cytokine receptor, ECD=597aa) are co-expressed in aged MF-II myofibers (ERBB4: old pc=0.43, me=1.06; IL6ST: old pc=0.19, me=0.35). Under forced proximity via flexible_GS8 linker (~40 A), ERBB4's tyrosine kinase domain (718-985) transphosphorylates IL6ST's intracellular tyrosines, while JAK1/JAK2/TYK2 constitutively associated with IL6ST's Box1/Box2 motifs reciprocally phosphorylate ERBB4. This creates a biased signaling output: GRB2/SHC1/GAB1/PIK3R1 are recruited to the combined phosphotyrosine landscape, driving MAPK/ERK and PI3K/AKT/mTOR activation (analogous to H2F wins). STAT3 is additionally recruited to IL6ST pY905, creating a novel JAK/STAT3 activation axis amplified by ERBB4 kinase activity. PLCG1 is sterically excluded by the co-cluster geometry (same exclusion principle as H2F). The biased transcriptome shift upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) via SRF/ELK1 downstream of MAPK, and downregulates aged IEG/inflammatory markers (EGR1, FOS, JUN, IL32, TXNIP, MYF5) via AKT-mediated FOXO inactivation and reduced stress signaling.",
+  "literature_refs": [
+    "PMID:26188635",
+    "PMID:20943952",
+    "PMID:16170367",
+    "PMID:24944161",
+    "PMID:19278030"
+  ]
+}

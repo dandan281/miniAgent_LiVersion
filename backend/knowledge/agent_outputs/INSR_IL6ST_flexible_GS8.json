@@ -1,0 +1,78 @@
+{
+  "candidate_id": "INSR_IL6ST_flexible_GS8",
+  "receptor_A": "INSR",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "STAT3",
+      "STAT1",
+      "IRS1",
+      "IRS2",
+      "SHC1"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "GRB2",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "SOCS3",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "JAK-STAT3",
+    "JAK-STAT1",
+    "PI3K-AKT",
+    "MAPK-ERK",
+    "mTOR"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "RGCC"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "ASB5",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.85,
+    "step_3a": 0.80,
+    "step_3b": 0.85,
+    "step_3c": 0.80,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "INSR-IL6ST forced proximity via flexible_GS8 linker creates a biased signaling output dominated by STAT3 transphosphorylation (INSR kinase directly phosphorylating STAT3 on IL6ST-bound JAK-scaffolded sites) and enhanced IRS-PI3K-AKT signaling (dual input from INSR kinase and JAK2). The MAPK-ERK arm is moderately activated via SHC1-GRB2-SOS and PTPN11. SOCS3 negative feedback and CBL-mediated degradation are partially sterically excluded by the co-clustered geometry. The net transcriptional outcome shifts aged muscle toward a young phenotype: upregulation of SRF-dependent muscle structural genes (ACTA2, MYL9, MYH11) and AKT-dependent survival genes, with suppression of aged IEGs (EGR1, FOS, JUN) and inflammatory markers (IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:10652248",
+    "PMID:9329978",
+    "PMID:10625637",
+    "PMID:2033070",
+    "PMID:16271887"
+  ]
+}

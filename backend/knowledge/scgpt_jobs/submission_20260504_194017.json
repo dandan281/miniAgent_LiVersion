@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "app_name": "scgpt_grn",
+      "app_id": "64b804fb823bc93b64c10a76",
+      "atlas": "/gpfs/scrubbed/danlovuw/miniAgent/backend/storage/atlases/SKM_balanced_30k.h5ad",
+      "atlas_size_gb": 0.126964648,
+      "config": {
+        "genename_col_name": "SYMBOL",
+        "celltype_col_name": "annotation_level0",
+        "batch_key": "batch",
+        "pretrained_model": "human_all",
+        "data_is_raw": false,
+        "hvg_flavor": "cell_ranger",
+        "number_hvg": 1200,
+        "filter_genes_on_cluster": 4,
+        "filter_gene_counts": 3,
+        "filter_cell_counts": -1,
+        "gene_program_index": 4,
+        "db_pathway": "Reactome_2022"
+      },
+      "dry_run": false,
+      "submitted_at": "2026-05-04T19:40:12.070540+00:00",
+      "job_id": "69f8f61cf5b5f7da20571932",
+      "raw": {
+        "job_id": "69f8f61cf5b5f7da20571932"
+      },
+      "status": "submitted"
+    }
+  ]
+}

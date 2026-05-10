@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "app_name": "scgpt_mapping",
+      "app_id": "6548f339a9ed6f6e5560b07d",
+      "atlas": "/gpfs/scrubbed/danlovuw/miniAgent/backend/storage/atlases/SKM_human_pp_cells2nuclei_2023-06-22.h5ad",
+      "atlas_size_gb": 2.022042678,
+      "config": {
+        "genename_col_name": "SYMBOL"
+      },
+      "dry_run": false,
+      "submitted_at": "2026-05-04T17:08:16.160730+00:00",
+      "job_id": "69f8d280f5b5f7da20571922",
+      "raw": {
+        "job_id": "69f8d280f5b5f7da20571922"
+      },
+      "status": "submitted"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "candidate_id": "ERBB2_FGFR2__GS_med",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR2",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "FRS2",
+      "FRS3",
+      "GAB1",
+      "SOS1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "GRB7",
+      "SRC",
+      "PTK6",
+      "MEMO1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "RAS_RAF_MEK",
+    "FRS2_GRB2_SOS",
+    "SHC_RAS_GEF",
+    "PTPN11_RAS"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "ETV5",
+    "EGR1",
+    "FOS",
+    "JUN",
+    "BCL2",
+    "MCL1",
+    "CDKN1A",
+    "SPRY2",
+    "SPRY4"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN2A",
+    "GADD45A",
+    "GADD45B",
+    "SERPINE1",
+    "CTGF",
+    "CYR61",
+    "FST"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.82,
+    "step_3a": 0.70,
+    "step_3b": 0.88,
+    "step_3c": 0.55,
+    "step_3d": 0.75,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB2-FGFR2 forced-proximity novokine with GS_med linker (~20 Å) biases signaling by enabling transphosphorylation between ERBB2 and FGFR2 kinase domains, which recruits SHC1-GRB2-SOS1 and FRS2-GAB1-PI3K adaptor complexes to drive MAPK/ERK and PI3K/AKT pathways. PLCG1 is sterically excluded due to the ~275 aa ECD asymmetry (ERBB2 ECD=630 aa vs FGFR2 ECD=355 aa) creating a geometry where PLCG1 cannot productively dock at the co-clustered intracellular domains, analogous to the H2F exemplar. This biased output shifts aged muscle toward a younger transcriptional phenotype by upregulating proliferation/survival genes (MYC, CCND1, DUSP6, ETV4) and downregulating senescence/inflammatory markers (TXNIP, IL32, S100A4, LGALS3).",
+  "literature_refs": [
+    "PMID:17123512",
+    "PMID:29568012",
+    "PMID:32103583",
+    "PMID:37138777",
+    "PMID:41462267",
+    "PMID:41756900"
+  ]
+}

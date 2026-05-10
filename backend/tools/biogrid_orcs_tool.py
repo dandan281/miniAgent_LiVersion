@@ -103,7 +103,11 @@ class BiogridOrcsInput(BaseModel):
     )
     gene_list: Optional[str] = Field(
         default=None,
-        description="Comma-separated gene symbols for multi-gene PPI queries (e.g. 'EGFR,ERBB2,GRB2').",
+        description=(
+            "Comma-separated gene symbols (e.g. 'EGFR,ERBB2,GRB2'). "
+            "Supported by both PPI queries and 'screens_for_gene' (cap 25 genes). "
+            "PREFER batched gene_list over many single gene_symbol calls — saves tool budget."
+        ),
     )
     organism_id: str = Field(
         default="9606",
@@ -217,29 +221,47 @@ class BiogridOrcsTool(BaseTool):
             elif query_type == "screens_for_gene":
                 if not genes:
                     return invalid_input_result(
-                        self.name, "'gene_symbol' is required for screens_for_gene.", metadata={})
+                        self.name, "'gene_symbol' or 'gene_list' is required for screens_for_gene.", metadata={})
 
-                gene_id = _resolve_gene_id(genes[0], key, organism_id)
-                if not gene_id:
+                # Multi-gene batched query — accepts up to 25 genes per call.
+                # Each gene requires (a) gene-id resolution + (b) /orcs/screens
+                # call. Internally serial; externally one tool call.
+                MAX_BATCH = 25
+                if len(genes) > MAX_BATCH:
                     return invalid_input_result(
                         self.name,
-                        f"Could not resolve '{genes[0]}' to a NCBI Gene ID via BioGRID. "
-                        "Check the symbol spelling.",
-                        metadata={"gene_symbol": genes[0]},
+                        f"Too many genes ({len(genes)}); cap is {MAX_BATCH} per call.",
+                        metadata={"requested": len(genes)},
                     )
 
-                params_orcs = {
-                    "accessKey": key, "format": "json",
-                    "geneId": gene_id, "hitsOnly": "true",
-                }
-                url = f"{_ORCS_BASE}/screens?" + urllib.parse.urlencode(params_orcs)
-                status_code, data = _get(url)
+                all_screens: list[dict] = []
+                missing_genes: list[str] = []
+                last_status_code = 0
+                last_url = ""
+                for gene in genes:
+                    gene_id = _resolve_gene_id(gene, key, organism_id)
+                    if not gene_id:
+                        missing_genes.append(gene)
+                        continue
+                    params_orcs = {
+                        "accessKey": key, "format": "json",
+                        "geneId": gene_id, "hitsOnly": "true",
+                    }
+                    last_url = f"{_ORCS_BASE}/screens?" + urllib.parse.urlencode(params_orcs)
+                    status_code, gene_data = _get(last_url)
+                    last_status_code = status_code
+                    if isinstance(gene_data, list):
+                        for rec in gene_data:
+                            rec["queried_gene"] = gene
+                            rec["ncbi_gene_id"] = gene_id
+                            all_screens.append(rec)
 
-                # Annotate with the resolved gene info
-                if isinstance(data, list):
-                    for rec in data:
-                        rec["queried_gene"] = genes[0]
-                        rec["ncbi_gene_id"] = gene_id
+                url = last_url
+                status_code = last_status_code
+                data = all_screens
+                # Surface the missing genes in metadata for transparency
+                if missing_genes:
+                    pass  # added to meta below
 
             # ── ORCS: list_screens ────────────────────────────────────────────
             elif query_type == "list_screens":

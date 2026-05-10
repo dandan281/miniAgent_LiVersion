@@ -1,0 +1,83 @@
+{
+  "candidate_id": "INSR_IL6ST_exposit_rigid",
+  "receptor_A": "INSR",
+  "receptor_B": "IL6ST",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "IRS1",
+      "IRS2",
+      "SHC1"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "GRB2",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "JAK-STAT3",
+    "JAK-STAT5",
+    "IRS-PI3K-AKT",
+    "SHC-GRB2-SOS-RAS-MAPK",
+    "mTOR"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "SOCS3",
+    "CISH",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "The INSR-IL6ST exposit_rigid novokine forces proximity between the insulin receptor RTK and gp130 cytokine receptor, creating a hybrid signaling node where INSR's tyrosine kinase transphosphorylates IL6ST's intracellular tyrosines (creating STAT3/5 docking sites) while JAK2 associated with IL6ST phosphorylates IRS1/2 (creating a JAK-to-IRS-to-PI3K axis absent in normal insulin signaling). PLC-gamma is sterically excluded by the rigid scaffold geometry. The biased output combines JAK-STAT3/5 transcriptional programs with enhanced IRS-PI3K-AKT and SHC-MAPK signaling, upregulating muscle structural genes (ACTA2, MYL9, MYH11) via SRF/MRTF and downregulating aged inflammatory IEGs (EGR1, FOS, JUN, IL32) via STAT3-mediated SOCS3 feedback and AKT-mediated FOXO inhibition.",
+  "literature_refs": [
+    "PMID:2033070",
+    "PMID:16271887",
+    "PMID:29512653",
+    "PMID:24336569",
+    "PMID:26627737"
+  ]
+}

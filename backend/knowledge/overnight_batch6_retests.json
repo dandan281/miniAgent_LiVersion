@@ -1,0 +1,10 @@
+[
+  {"candidate_id": "ERBB2_MET_flexible_GS4", "receptor_A": "ERBB2", "receptor_B": "MET", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Re-test ERBB2+MET (original BOTTOM 0.451) with optimized pipeline"},
+  {"candidate_id": "INSR_MET_flexible_GS4", "receptor_A": "INSR", "receptor_B": "MET", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Re-test INSR+MET (original BOTTOM 0.432)"},
+  {"candidate_id": "ERBB2_FGFR2_flexible_GS4", "receptor_A": "ERBB2", "receptor_B": "FGFR2", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Re-test ERBB2+FGFR2 (original BOTTOM 0.360)"},
+  {"candidate_id": "ERBB2_FGFR4_flexible_GS4", "receptor_A": "ERBB2", "receptor_B": "FGFR4", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Re-test ERBB2+FGFR4 (original BOTTOM 0.377)"},
+  {"candidate_id": "FGFR1_IGF1R_flexible_GS4", "receptor_A": "FGFR1", "receptor_B": "IGF1R", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Re-test FGFR1+IGF1R (original WORST 0.254)"},
+  {"candidate_id": "MET_LIFR_flexible_GS4", "receptor_A": "MET", "receptor_B": "LIFR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "MET+LIFR new combo: HGF + LIF axis"},
+  {"candidate_id": "ERBB4_LIFR_flexible_GS4", "receptor_A": "ERBB4", "receptor_B": "LIFR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "ERBB4+LIFR new combo: NRG + LIF"},
+  {"candidate_id": "INSR_OSMR_flexible_GS4", "receptor_A": "INSR", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "INSR+OSMR new combo"}
+]

@@ -9,7 +9,7 @@ from langchain_deepseek import ChatDeepSeek
 from langchain_openai import ChatOpenAI
 
 ModelRole = Literal["executor", "planner", "verifier", "title"]
-ModelProvider = Literal["deepseek", "openai"]
+ModelProvider = Literal["deepseek", "openai", "anthropic"]
 
 
 @dataclass(frozen=True)
@@ -25,6 +25,11 @@ class RoleModelConfig:
 
 _ROLE_DEFAULTS: dict[ModelRole, dict[str, object]] = {
     "executor": {
+        # Chat-UI executor default: DeepSeek (cost / availability).
+        # The v2 evidence-stacking pipeline uses Claude Opus 4.7 directly via
+        # the anthropic SDK in evidence_stacking/orchestrator/agents.py.
+        # To switch chat UI to Anthropic: BIOAPEX_EXECUTOR_PROVIDER=anthropic
+        # + BIOAPEX_EXECUTOR_MODEL=claude-opus-4-7 (requires credit balance).
         "provider": "deepseek",
         "model": "deepseek-chat",
         "base_url": "https://api.deepseek.com",
@@ -67,6 +72,8 @@ def _resolve_provider(raw: object, *, fallback: ModelProvider) -> ModelProvider:
         return "openai"
     if normalized == "deepseek":
         return "deepseek"
+    if normalized in {"anthropic", "claude"}:
+        return "anthropic"
     return fallback
 
 
@@ -125,6 +132,8 @@ def get_role_model_config(role: ModelRole, *, streaming: bool | None = None) -> 
             if provider == "deepseek" and role == "executor"
             else os.getenv("OPENAI_MODEL")
             if provider == "openai"
+            else os.getenv("ANTHROPIC_MODEL")
+            if provider == "anthropic"
             else None
         )
         or fallback_model
@@ -139,6 +148,10 @@ def get_role_model_config(role: ModelRole, *, streaming: bool | None = None) -> 
             os.getenv("DEEPSEEK_BASE_URL")
             if provider == "deepseek"
             else os.getenv("OPENAI_BASE_URL")
+            if provider == "openai"
+            else os.getenv("ANTHROPIC_BASE_URL")
+            if provider == "anthropic"
+            else None
         )
         or default_base_url
     )
@@ -150,6 +163,10 @@ def get_role_model_config(role: ModelRole, *, streaming: bool | None = None) -> 
             os.getenv("DEEPSEEK_API_KEY")
             if provider == "deepseek"
             else os.getenv("OPENAI_API_KEY")
+            if provider == "openai"
+            else os.getenv("ANTHROPIC_API_KEY")
+            if provider == "anthropic"
+            else None
         )
         or ""
     )
@@ -199,5 +216,28 @@ def build_chat_model(role: ModelRole, *, streaming: bool | None = None):
             base_url=settings.base_url,
             temperature=settings.temperature,
             streaming=settings.streaming,
+        )
+    if settings.provider == "anthropic":
+        try:
+            from langchain_anthropic import ChatAnthropic  # lazy import
+        except ImportError as e:
+            raise RuntimeError(
+                "Provider 'anthropic' requires `pip install langchain_anthropic anthropic`. "
+                f"Original error: {e}"
+            ) from e
+        # Claude Opus 4.7+ deprecated `temperature` — it's rejected by the API.
+        # We do NOT enable extended thinking on the chat-loop path: thinking
+        # returns `thinking` content blocks that must be preserved across turns,
+        # and langchain_anthropic 1.4.x strips the body when serializing
+        # assistant messages back to the API in tool loops, causing
+        # `messages.N.content.0.thinking.thinking: Field required` errors.
+        # The evidence-stacking ClaudeAgent (single-turn) enables thinking via
+        # the raw anthropic SDK where we control message reconstruction.
+        return ChatAnthropic(
+            model=settings.model,
+            api_key=settings.api_key,
+            base_url=settings.base_url,
+            streaming=settings.streaming,
+            max_tokens=8192,
         )
     raise ValueError(f"Unsupported provider for role {role!r}: {settings.provider!r}")

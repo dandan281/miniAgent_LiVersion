@@ -1,12 +1,13 @@
+
 ---
 name: COT_Rejuv_Pipeline
-description: Six-step chain-of-thought pipeline that mechanistically scores a candidate novokine for its ability to shift human skeletal muscle cells from an aged (65+) to a young (25–35) transcriptional phenotype. Produces a continuous rank metric usable by the RL outer loop. v2 — forced-proximity biased signaling, noisy-OR uncertainty, top-K ranking.
+description: Six-step chain-of-thought pipeline that mechanistically scores a candidate novokine for two target phenotypes (aged→young muscle AND fibroblast→muscle transdifferentiation). Produces a continuous rank metric consumed as ONE FEATURE in the v2 evidence-stacking composite. v3 — pivoted from RL reward tracks (4-track sum) to feature-of-composite role.
 category: bio/rejuvenation
-version: 2.0
-requires_tools: [search_knowledge_base, fetch_url, read_file, python_repl, write_file, omnipath_api, reactome_api, biogrid_orcs, phosphosite_plus, uniprot_api, ncbi_eutils]
+version: 3.0
+requires_tools: [search_knowledge_base, fetch_url, read_file, python_repl, write_file, omnipath_api, reactome_api, biogrid_orcs, phosphosite_plus, uniprot_api, ncbi_eutils, local_atlas_query, cellxgene_expression]
 requires_network: true
 user_invocable: true
-tags: [novokine, rejuvenation, muscle, chain-of-thought, reinforcement-learning, signaling, omnipath, reactome, biogrid, phosphosite]
+tags: [novokine, rejuvenation, muscle, chain-of-thought, evidence-stacking, signaling, omnipath, reactome, biogrid, phosphosite]
 aliases: [novokine_rejuvenation_cot, muscle_rejuv_scorer]
 species: human
 modality: protein_design
@@ -15,13 +16,18 @@ stability: evolving
 safety_level: medium
 ---
 
-# COT_Rejuv_Pipeline — Chain-of-Thought Novokine Rejuvenation Scorer (v2)
+# COT_Rejuv_Pipeline — Chain-of-Thought Novokine Rejuvenation Scorer (v3)
+
+> **v3 pivot (2026-05-10)**: This skill is no longer the inner loop of an RL system. It is now ONE FEATURE among many in the v2 evidence-stacking composite (`backend/evidence_stacking/composites/`). Its CoT output (per-pair phenotype score) is treated as a single deterministic float that the orchestrator aggregates with other features (novelty filter, pathway co-activation, fibro enrichment, ...) under an equal-weight additive composite. The 4-track reward formula (Track A/B/C/A.5) and the RL loop are RETIRED. See `backend/knowledge/dev/plans/master_rejuvenation_plan_v2.md`. The `scgpt_programs` tool dependency was dropped during the pivot.
 
 ## Purpose
 
-Given a candidate **novokine** (a designed protein dimer fusing two minibinders targeting two cell-surface receptors), execute a six-step mechanistic chain of thought that ends in a continuous rank metric indicating how much the novokine is predicted to shift human skeletal muscle cells from the **aged** phenotype (P1: ≥65 years) toward the **young** phenotype (P2: 25–35 years), as defined by differential expression in the human skeletal muscle cell atlas (Lai et al. 2024, Lacraz et al. 2024).
+Given a candidate **novokine** (a designed protein dimer fusing two minibinders targeting two cell-surface receptors), execute a six-step mechanistic chain of thought that ends in a continuous rank metric. The metric is interpreted under TWO target phenotypes:
 
-This skill is the **inner CoT evaluator** of the RL system. The RL outer loop proposes novokines; this skill returns the per-novokine rank metric.
+- **`aged_young`**: shift human skeletal muscle cells from aged (P1: ≥65 years) toward young (P2: 25–35 years), per the human skeletal muscle cell atlas (Lai et al. 2024, Lacraz et al. 2024).
+- **`fibro_muscle`**: drive fibroblast → skeletal muscle transdifferentiation, per the desmin tSKM assay framing in the attached novokine ranking methods doc.
+
+The orchestrator reads this skill's output as one feature in the equal-weight additive composite. Other features (novelty filter, pathway coactivation, fibro enrichment) are stacked on top per the v2 plan.
 
 ---
 
@@ -77,7 +83,7 @@ Calibrate `p_fail_i` against H2F (positive control): H2F must reach `chain_sound
 
 | Step | Baseline `p_fail_i` | What inflates it |
 |------|---------------------|-----------------|
-| 1 — receptor expression | 0.05 | receptor absent in target cell type |
+| 1 — receptor expression | 0.05 (both pass in old) → 0.20 (young-only / aged dropout) → 0.40 (one in young) → 0.60 (neither) | absent in aged target cell type per `local_atlas_query`; falls back to `cellxgene_expression` (cap floor 0.10) or Protein Atlas (0.40) |
 | 2 — structural geometry | 0.20 | no PDB structure, large ECD asymmetry |
 | 3a — OmniPath adaptor layer | 0.15 | sparse OmniPath evidence for this receptor |
 | 3b — Reactome pathway | 0.12 | receptor is an orphan or poorly annotated |
@@ -104,8 +110,15 @@ Execute in order. Write each structured block to scratch before proceeding. The 
 - UniProt accession, protein family, domain architecture (extracellular domain length in aa, transmembrane position, kinase domain position)
 - If accessions were provided as input, use those directly.
 
-1b. **Expression in target cell** — call `search_knowledge_base` with query `"{receptor_A} {receptor_B} skeletal muscle expression aged"`. If no result, call `fetch_url` to Human Protein Atlas (`https://www.proteinatlas.org/GENENAME/tissue`) for each receptor. Confirm both are expressed (TPM > 1 or annotated "medium"/"high") in myoblast, myotube, satellite cell, or FAP in aged human skeletal muscle.
-- If either receptor is absent from the target cell type: set `p_fail_1 = 0.80` and flag `co_expression_risk = true`. Do not stop — log and continue.
+1b. **Expression in target cell — preferred path: `local_atlas_query`.**
+Call `local_atlas_query` with `action="expression_summary"`, `genes=[receptor_A, receptor_B]`, and `cell_types=["MuSC", "MF-I", "MF-II", "FB"]` (the four primary muscle compartments). The tool returns per-cell-type × per-age-bin (`young`/`old`) `fraction_expressing` and `mean_expression`, plus `delta_old_minus_young`. Apply the age-stratified decision rule:
+- `co_expression_pass` requires **both receptors** to satisfy `fraction_expressing >= 0.10` AND `mean_expression > 0.5` in **at least one** of `young` or `old` cells of the same target cell type.
+- If both receptors pass in **`old`**: `p_fail_1 = 0.05` (best case — novokine engages aged cells directly).
+- If both pass in **`young` but not `old`** (aged dropout): `p_fail_1 = 0.20`, set `co_expression_aged_dropout = true`. The novokine targets a cell population that has aged out — it still might rescue cells before they age, but evidence is weaker.
+- If one receptor passes only in young: `p_fail_1 = 0.40`.
+- If neither receptor satisfies in either age bin: `p_fail_1 = 0.60`, set `co_expression_risk = true`. Do **not** stop — log and continue (some receptors are induced under regenerative or injury conditions the steady-state atlas does not capture).
+- If `local_atlas_query` fails (atlas not on disk, gene missing from atlas), **fall back** to `cellxgene_expression(action="expression_summary", genes=[A,B], tissue="skeletal muscle")` and apply the WMG decision rule (`pc≥0.10` AND `me>0.5` in target cell type, no age stratification — set `p_fail_1` no lower than 0.10 since age is unknown).
+- If both tools fail or return ambiguous results, fall back to `search_knowledge_base` query `"{receptor_A} {receptor_B} skeletal muscle expression aged"` and finally `fetch_url` to `https://www.proteinatlas.org/GENENAME/tissue`. In that case set `p_fail_1 = 0.40` (high uncertainty).
 
 1c. **Receptor family check** — confirm both receptors are RTKs, cytokine/JAK-STAT receptors, TGF-β type I/II pairs, or TNFR superfamily members. These are the receptor classes where transphosphorylation-driven agonism is mechanistically established. If either receptor is a GPCR, ion channel, or nuclear receptor: set `p_fail_1 += 0.30` and note scope limitation (NOT a biological impossibility, just outside H2F-template evidence).
 
@@ -124,9 +137,15 @@ Estimate the implied intracellular kinase-to-substrate spacing using: ECD length
 **Block to write**:
 ```
 ### Step 1 — Receptor engagement
-- Receptor A: {symbol} | UniProt: {acc} | family: {RTK/cytokine/...} | ECD: {N} aa | expressed in {cell_context}: {yes/low/no/unknown}
-- Receptor B: {symbol} | UniProt: {acc} | family: {RTK/cytokine/...} | ECD: {N} aa | expressed: {yes/low/no/unknown}
-- Co-expression confirmed: {yes/no/unknown}
+- Receptor A: {symbol} | UniProt: {acc} | family: {RTK/cytokine/...} | ECD: {N} aa
+  - In target cell type {target_ct}: young pc={X.XX} me={X.XX} | old pc={X.XX} me={X.XX} | Δ_old-young pc={±X.XX}
+  - Pass age-stratified gate: {yes_in_old / yes_in_young_only / no}
+- Receptor B: {symbol} | UniProt: {acc} | family: {RTK/cytokine/...} | ECD: {N} aa
+  - In {target_ct}: young pc={X.XX} me={X.XX} | old pc={X.XX} me={X.XX} | Δ pc={±X.XX}
+  - Pass age-stratified gate: {yes_in_old / yes_in_young_only / no}
+- Co-expression in target cell type: {pass_old / pass_young_only / fail / unknown}
+- co_expression_aged_dropout: {true/false}
+- Expression source: {local_atlas_query / cellxgene_expression / Protein Atlas}
 - Linker: {linker_option} → ~{D} Å end-to-end
 - Geometry asymmetry flag: {true/false} (|ECD_A - ECD_B| = {N} aa)
 - Forced-proximity agonism defensible: {yes/partial/no} — {one-sentence reason}
@@ -290,10 +309,33 @@ conflicted_genes     = intersection(TF_activated targets, TF_suppressed targets)
 Resolve conflicts by majority TF count; flag unresolved as `±?`.
 
 3c-iv. Muscle-specific cross-reference — check predicted_up_genes and predicted_down_genes against the canonical muscle rejuvenation marker set:
-- Pro-myogenic / young markers (should be UP): PAX7, MYOD1, MYOG, MEF2C, MYH3, MYH2, IGF1, PPARGC1A (PGC-1α), MKI67
-- Inflammaging / aged markers (should be DOWN): CDKN2A (p16), IL6, TNF, CXCL1, GDF15, NF-κB targets (NFKBIA, ICAM1, VCAM1)
+- Pro-myogenic / young markers (should be UP): MYH7, MYH2, MYH3, TNNT1, TNNT3, ACTA1, ACTA2, MYL9, DES, MYOG, MYOD1, MEF2C, IGF1, PPARGC1A (PGC-1α), IGFBP7, MT-CO2, MKI67
+- Inflammaging / aged markers (should be DOWN): CDKN2A (p16), IL6, IL32, TXNIP, GDF15, MYF5, TNF, CXCL1, NF-κB targets (NFKBIA, ICAM1, VCAM1)
 
-**Confidence**: `p_fail_3c = 0.20` baseline; add 0.10 for each conflicted muscle-marker gene; subtract 0.05 for each pro-myogenic marker confirmed in predicted_up.
+**🚨 MUSCLE-AGING NUANCE — read carefully before finalizing the gene lists.**
+In standard textbook reasoning, MAPK/AKT activation produces immediate-early genes (EGR1, FOS, JUN, MYC, CCND1) and is interpreted as "growth / proliferation / good." But in the **human skeletal muscle aging atlas (P1_up, donors ≥65 yr)**, EGR1, FOS, JUN, MYH9, MYF5, IL32, TXNIP, ASB5 are themselves **upregulated in AGED tissue** — they are aged markers, not young ones. This is because chronic MAPK-driven IEG induction in aged satellite cells contributes to senescence and impaired regeneration.
+
+⛔ Therefore, predicting `EGR1, FOS, JUN, MYC, IEG-canonical-targets ∈ predicted_up` is a STRONG INDICATOR your gene list is biologically wrong for the rejuvenation use case. The H2F positive control's biased output (MAPK + AKT on, PLCγ off) reportedly *reprograms* fibroblasts toward muscle and matures myotubes — its rejuvenating effect is dominated by **muscle structural genes (myosin/actin/troponin family) UP** and **aged IEGs / SASP / inflammation DOWN**, NOT by canonical IEGs going UP.
+
+**Calibration step (mandatory)**: before writing the predicted_up / predicted_down lists, `read_file knowledge/muscle_atlas_DE.json` (or `search_knowledge_base "muscle atlas P2 P1 DE"`) and confirm:
+- Any gene you put in `predicted_up` that appears in `P1_up` (aged) → **move to predicted_down** (or remove). The mechanism activates the receptor → signaling axis, but the *interpretation* must match atlas-defined rejuvenation direction.
+- Any gene in `predicted_down` that appears in `P2_up` (young, mature muscle structural) → **move to predicted_up**.
+- Aim for `predicted_up ∩ P2_up ≥ 4 genes` and `predicted_down ∩ P1_up ≥ 4 genes`. The H2F positive control achieves this by including MYH7/MYH2/TNNT3/ACTA1/MYL9/DES in predicted_up and EGR1/IL32/JUN/MYF5/TXNIP in predicted_down.
+
+**Confidence**: `p_fail_3c = 0.20` baseline; add 0.10 for each conflicted muscle-marker gene; subtract 0.05 for each pro-myogenic marker confirmed in predicted_up. Add 0.20 if any IEG (EGR1/FOS/JUN/MYC) is in predicted_up.
+
+3c-v. **scGPT gene-program self-check (mandatory before finalizing the lists).** Call:
+```
+scgpt_programs(action="score_geneset", up_genes=<your draft up list>, down_genes=<your draft down list>)
+```
+The tool returns a `net_score` (positive = activates young programs + suppresses aged programs; negative = the opposite) and a `top_programs` list naming the top-contributing programs with direction (`young` or `aged`).
+
+Decision rules:
+- If `net_score >= +0.5` → keep the gene lists, proceed to Step 3d.
+- If `0 <= net_score < +0.5` → review `top_programs`. Any aged-direction program with positive `f_up - f_down` flags that several of your `predicted_up` genes co-cluster with aged-enriched programs (e.g. immune/MHC, complement, SASP). Remove or move-to-down those overlapping genes; iterate once.
+- If `net_score < 0` → the predictions hit MORE aged programs than young programs. This is a strong sign Step 3c-iv (atlas-direction calibration) was insufficient. Re-read `muscle_atlas_DE.json` `P1_up` and `P2_up`, and rebuild the lists from the structural-muscle-up + IEG/SASP-down baseline. Iterate at most twice (3 calls of `scgpt_programs(score_geneset)` total per candidate to keep tool budget bounded).
+
+Add `+0.10` to `p_fail_3c` if `net_score < 0` after final iteration; subtract `0.05` if `net_score >= +0.8`.
 
 **Block to write**:
 ```
@@ -305,6 +347,8 @@ Resolve conflicts by majority TF count; flag unresolved as `±?`.
 - Conflicted genes (±?): {list}
 - Pro-myogenic markers in predicted_up: {list}
 - Inflammaging markers in predicted_down: {list}
+- scGPT net_score: {value}  ({n_young} young programs hit, {n_aged} aged programs hit)
+- scGPT top contributing program: {program_id} ({direction}, gsea_label)
 - p_fail_3c: {value}
 - Write predicted gene signature to: scratch/cot_rejuv/{novokine_id}_biased_signature.tsv
 ```
@@ -317,10 +361,14 @@ Resolve conflicts by majority TF count; flag unresolved as `±?`.
 
 **Actions**:
 
-For each gene in the top-20 predicted_up and predicted_down lists, call:
+**Use the batched form** (one tool call for up to 25 genes):
 ```
-biogrid_orcs(query_type="search_genes", gene_symbol={gene}, organism_id="9606", hits_only=True)
+biogrid_orcs(query_type="screens_for_gene",
+             gene_list="GENE1,GENE2,...,GENE10",  # comma-separated, no spaces
+             organism_id="9606")
 ```
+For the top-10 predicted_up and top-10 predicted_down lists, this is **2 tool calls total** (not 20).
+Do NOT call `biogrid_orcs` once per gene — that's wasted budget.
 
 Filter returned screens for muscle-relevant context: keywords `muscle`, `myoblast`, `myotube`, `satellite`, `FAP`, `differentiation`, `atrophy` in screen name or description.
 
@@ -377,6 +425,8 @@ for p in p_fail:
 **Input**: `predicted_up_genes` and `predicted_down_genes` from Step 3c (the biased gene signature — NOT a pathway union).
 
 Load the atlas DE reference: `read_file(atlas_de_path)` → dict with keys `P2_up`, `P2_down`, `P1_up`, `P1_down`.
+
+**🚨 Reward direction sanity check (mandatory before scoring).** If you have not already done the Step 3c-iv calibration, do it now: any IEG (EGR1/FOS/JUN/MYC) or aged-marker (IL32/TXNIP/MYF5/CDKN2A/IL6) currently in `predicted_up` will subtract from Track A. If your top up-list is dominated by such genes, the candidate will score NEUTRAL or worse despite a sound mechanism. The reward function rewards alignment with **muscle-atlas-derived young phenotype (P2)**, not generic "growth/proliferation."
 
 ---
 
@@ -606,7 +656,7 @@ If called by the RL outer loop (`output_format=json`), return only:
 ## Related skills and knowledge
 
 - [knowledge/novokines.md](../../knowledge/novokines.md) — canonical reference; H2F biology; receptor families; Expòsit/Abedi 2025 papers. **Read first** for any mechanistic reasoning.
-- [knowledge/rejuvenation_rl_plan.md](../../knowledge/rejuvenation_rl_plan.md) — full v2 plan; uncertainty model §2.3; track weights; calibration spec.
+- [knowledge/dev/plans/master_rejuvenation_rl_plan.md](../../knowledge/dev/plans/master_rejuvenation_rl_plan.md) — full v2 plan; uncertainty model §2.3; track weights; calibration spec.
 - [knowledge/muscle_atlas_DE.json](../../knowledge/muscle_atlas_DE.json) — P1/P2 DE gene lists (Lai 2024, Lacraz 2024). Required for Track A.
 - [novokine_identification](../novokine_identification/SKILL.md) — upstream: proposes receptor pairs and linker options.
 - [novokine_validation](../novokine_validation/SKILL.md) — gate before this skill: structural sanity, expression check.

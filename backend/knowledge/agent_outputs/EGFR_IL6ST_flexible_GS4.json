@@ -1,0 +1,72 @@
+{
+  "candidate_id": "EGFR_IL6ST_flexible_GS4",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "SOCS3"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "SOCS3",
+    "IGFBP7",
+    "MYOG"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.75,
+    "step_3a": 0.7,
+    "step_3b": 0.65,
+    "step_3c": 0.6,
+    "step_3d": 0.55,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "EGFR (RTK) and IL6ST/gp130 (cytokine receptor, JAK-associated) forced proximity via flexible_GS4 linker (~20 \u00c5) is predicted to enable bidirectional trans-signaling: EGFR's TK domain may phosphorylate IL6ST ICD tyrosines creating STAT3 docking sites, while JAK1/JAK2 bound to IL6ST may transphosphorylate EGFR C-tail tyrosines enhancing GRB2/SHC1/GAB1/PIK3R1 recruitment. This hybrid signaling is predicted to activate MAPK-ERK, PI3K-AKT, and JAK-STAT3 pathways simultaneously. PLCG1 is predicted as sterically excluded because its productive docking requires specific EGFR pY1173 geometry that may be incompatible with the co-clustered IL6ST ICD. The biased output is predicted to drive a myogenic/youthful transcriptome (ACTA2, MYL9, MYH11, MYOG up) while suppressing aged inflammatory IEGs (EGR1, FOS, JUN, IL32 down) \u2014 analogous to H2F but with added STAT3-mediated SOCS3 feedback. Note: this is a heterologous RTK+cytokine pair with no published precedent; the mechanism is inferred from known individual receptor biochemistry.",
+  "literature_refs": [
+    "PMID:27153536",
+    "PMID:2261637",
+    "PMID:19915009",
+    "PMID:23294003",
+    "PMID:25731159",
+    "PMID:10358079",
+    "PMID:16729043",
+    "PMID:39592735"
+  ]
+}

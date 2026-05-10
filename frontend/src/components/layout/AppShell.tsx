@@ -1,12 +1,20 @@
 "use client";
 
-import { useCallback, useState } from "react";
-import { AppProvider } from "@/lib/store";
+import { type ReactNode, useCallback, useState } from "react";
+import { AppProvider, useApp } from "@/lib/store";
+import { RunnerEventsProvider } from "@/lib/runner-events-context";
 import InspectorPanel from "@/components/editor/InspectorPanel";
 import Navbar from "@/components/layout/Navbar";
 import ResizeHandle from "@/components/layout/ResizeHandle";
 import Sidebar from "@/components/layout/Sidebar";
 import WorkspacePanel from "@/components/layout/WorkspacePanel";
+
+function RunnerEventsBridge({ children }: { children: ReactNode }) {
+  const { currentSessionId } = useApp();
+  return (
+    <RunnerEventsProvider sessionId={currentSessionId}>{children}</RunnerEventsProvider>
+  );
+}
 
 const SIDEBAR_MIN = 232;
 const SIDEBAR_MAX = 296;
@@ -32,37 +40,39 @@ export default function AppShell() {
 
   return (
     <AppProvider>
-      <div className="app-shell-viewport flex min-h-0 flex-col overflow-hidden bg-[var(--shell-canvas)] text-slate-900">
-        <Navbar />
+      <RunnerEventsBridge>
+        <div className="app-shell-viewport flex min-h-0 flex-col overflow-hidden bg-[var(--shell-canvas)] text-slate-900">
+          <Navbar />
 
-        <main className="min-h-0 flex-1 overflow-hidden">
-          <div className="mx-auto flex h-full min-h-0 w-full max-w-[1420px] box-border gap-2.5 px-3 py-3 sm:gap-3 sm:px-5 sm:py-5">
-            <div className="flex min-h-0 flex-1 items-stretch gap-0">
-              <div
-                style={{ width: sidebarWidth }}
-                className="min-h-0 flex-shrink-0 overflow-hidden"
-              >
-                <Sidebar />
-              </div>
+          <main className="min-h-0 flex-1 overflow-hidden">
+            <div className="mx-auto flex h-full min-h-0 w-full max-w-[1420px] box-border gap-2.5 px-3 py-3 sm:gap-3 sm:px-5 sm:py-5">
+              <div className="flex min-h-0 flex-1 items-stretch gap-0">
+                <div
+                  style={{ width: sidebarWidth }}
+                  className="min-h-0 flex-shrink-0 overflow-hidden"
+                >
+                  <Sidebar />
+                </div>
 
-              <ResizeHandle onResize={resizeSidebar} />
+                <ResizeHandle onResize={resizeSidebar} />
 
-              <div className="min-h-0 min-w-0 flex-1 overflow-hidden">
-                <WorkspacePanel />
-              </div>
+                <div className="min-h-0 min-w-0 flex-1 overflow-hidden">
+                  <WorkspacePanel />
+                </div>
 
-              <ResizeHandle onResize={resizeInspector} />
+                <ResizeHandle onResize={resizeInspector} />
 
-              <div
-                style={{ width: inspectorWidth }}
-                className="min-h-0 flex-shrink-0 overflow-hidden"
-              >
-                <InspectorPanel />
+                <div
+                  style={{ width: inspectorWidth }}
+                  className="min-h-0 flex-shrink-0 overflow-hidden"
+                >
+                  <InspectorPanel />
+                </div>
               </div>
             </div>
-          </div>
-        </main>
-      </div>
+          </main>
+        </div>
+      </RunnerEventsBridge>
     </AppProvider>
   );
 }

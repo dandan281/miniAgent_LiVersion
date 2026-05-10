@@ -1,0 +1,95 @@
+{
+  "candidate_id": "INSR_IL6ST_rigid_helix_20",
+  "receptor_A": "INSR",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PIK3R1",
+      "GAB1",
+      "IRS1",
+      "JAK1",
+      "JAK2",
+      "STAT3",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "IRS1",
+      "IRS2",
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "CBL",
+      "SOCS3"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK/ERK (via SHC1-GRB2-SOS1-RAS-RAF-MEK-ERK)",
+    "PI3K/AKT (via IRS1/2-PIK3R1-PDK1-AKT-mTOR)",
+    "JAK-STAT3 (via JAK1/2 phosphorylation of IL6ST Y* motifs -> STAT3 recruitment and phosphorylation; INSR kinase also transphosphorylates IL6ST tyrosines)",
+    "SHP2-MAPK (via PTPN11 recruitment to IL6ST pY759 -> GRB2-SOS -> RAS)",
+    "GAB1 signalosome (via GAB1-PIK3R1 -> PI3K/AKT amplification)"
+  ],
+  "suppressed_pathways": [
+    "PLCG1-Ca2+-NFAT (excluded adaptor - rigid helix geometry prevents PLCG1 SH2 domain from bridging INSR-IL6ST complex)",
+    "CBL-TC10 (excluded adaptor - CBL requires specific spatial orientation incompatible with rigid helix constraint)",
+    "SOCS3 negative feedback (excluded adaptor - INSR kinase does not efficiently phosphorylate the SOCS3 recruitment site on IL6ST)"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "BCL2",
+    "SOCS3",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA",
+    "TTN"
+  ],
+  "predicted_gene_rationale": {
+    "up": "MAPK activation drives muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) and NOTCH3 (satellite cell self-renewal). PI3K-AKT upregulates CCND1 (cell cycle) and BCL2 (survival). STAT3 activation induces SOCS3 (feedback regulator). IGFBP7 is an INSR-responsive gene linked to insulin sensitivity in muscle. These are enriched in the P2_up (young-enriched) signature from the muscle aging atlas, consistent with the past wins pattern.",
+    "down": "Aged immediate-early genes (EGR1, FOS, JUN) and stress/senescence markers (TXNIP, IL32, CDKN2A, IL6) are suppressed. MYF5 (myogenic commitment) and MYH9 (non-muscle myosin) are reduced as the cell shifts toward a more mature/youthful myogenic program. TTN (titin, a P1_up aged marker) is suppressed. NFKBIA is reduced as NF-kB signaling is attenuated. This mirrors the past wins pattern where aged IEGs and inflammatory markers go down."
+  },
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.90,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.80,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "The INSR-IL6ST forced-proximity novokine (rigid_helix_20 linker, ~30 Å) brings an RTK (INSR, Tyr kinase) into close apposition with a cytokine receptor (IL6ST/gp130, JAK-associated). Under forced co-clustering, INSR's kinase domain transphosphorylates IL6ST's intracellular tyrosines, creating STAT3 and SHP2 docking sites not efficiently engaged by IL6ST alone. Simultaneously, IL6ST-associated JAK1/2 transphosphorylate INSR's juxtamembrane tyrosines, enhancing IRS1/2 and SHC1 recruitment beyond what INSR alone achieves. The rigid 20-helix linker (~30 Å) sterically excludes large adaptors like PLCG1 (which requires ~40+ Å spacing for productive docking) and CBL, biasing output toward PI3K-AKT-mTOR, RAS-MAPK-ERK, and JAK-STAT3 pathways while suppressing PLCγ-Ca²⁺ signaling. This biased signaling profile upregulates muscle structural/contractile genes and downregulates aged-muscle IEGs and inflammatory markers, consistent with a rejuvenating transcriptional shift.",
+  "literature_refs": [
+    "PMID:2033070",
+    "PMID:16271887",
+    "PMID:29512653",
+    "PMID:31651330",
+    "PMID:10409724",
+    "PMID:30229539",
+    "PMID:29903916"
+  ]
+}

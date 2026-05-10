@@ -1,0 +1,82 @@
+{
+  "candidate_id": "ERBB2_FGFR4__GS_med",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR4",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "SOS1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "GRB7",
+      "PTK6",
+      "MEMO1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "RAS_RAF_MEK",
+    "FRS2_GRB2_SOS",
+    "SHC_RAS",
+    "PTPN11_RAS_amplification"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "ETV5",
+    "FOS",
+    "JUN",
+    "EGR1",
+    "SRF",
+    "BCL2",
+    "MCL1",
+    "EIF4EBP1",
+    "RPS6KB1",
+    "VEGFA"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN1A",
+    "CDKN2A",
+    "GADD45A",
+    "GADD45B",
+    "SERPINE1",
+    "CTGF",
+    "IL6",
+    "CCL2"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.75,
+    "step_3a": 0.70,
+    "step_3b": 0.80,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "The ERBB2-FGFR4 novokine with GS_med linker (~30 Å) forces two structurally asymmetric RTKs into proximity (ECD ratio 1.81:1, ERBB2 ECD=630 aa vs FGFR4 ECD=348 aa), enabling transphosphorylation that synergistically activates the shared SHC1→GRB2:SOS1→RAS→MAPK and FRS2→GAB1→PI3K→AKT signaling axes while sterically excluding PLCG1 from the FGFR4 Y754 docking site. FGFR4's FRS2-mediated signaling (R-HSA-5654712) and SHC1-mediated cascade (R-HSA-5654719) converge with ERBB2's GRB2/SHC1/PI3K pathways (R-HSA-1227986) to produce a biased output of MAPK↑, AKT↑, PLCγ↓ — promoting proliferation, survival, and protein synthesis while suppressing calcium-dependent signaling and senescence-associated transcriptional programs.",
+  "literature_refs": [
+    "PMID:39679940",
+    "PMID:17123512",
+    "PMID:32103583",
+    "PMID:29568012",
+    "PMID:11433297",
+    "PMID:18480409",
+    "PMID:18670643"
+  ]
+}

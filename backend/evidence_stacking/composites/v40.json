@@ -1,0 +1,17 @@
+{
+  "version": "v40",
+  "parent": null,
+  "stage_index": 0,
+  "weights": "equal",
+  "features": [
+    {
+      "name": "atlas_coexpression",
+      "version": "1.0"
+    }
+  ],
+  "agent_rationale": "Initial baseline. Mirrors \u00a73.1 of attached methods doc \u2014 class-pair prior plus atlas DEG membership bonus. No tool calls.",
+  "rho_at_commit": {
+    "aged_young": 0.25214264067259917,
+    "fibro_muscle": 0.27598336159675174
+  }
+}

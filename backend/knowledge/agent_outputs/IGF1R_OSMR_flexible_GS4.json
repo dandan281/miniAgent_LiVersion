@@ -1,0 +1,85 @@
+{
+  "candidate_id": "IGF1R_OSMR_flexible_GS4",
+  "receptor_A": "IGF1R",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "PIK3R1",
+      "GAB1",
+      "JAK1",
+      "JAK2",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "PTPN11",
+      "CBL",
+      "SOCS3"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "VAV1",
+      "NCK1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "IRS_METABOLIC"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "DSTN",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "CAV1",
+    "SPRY1"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.70,
+    "step_3b": 0.85,
+    "step_3c": 0.75,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "IGF1R (RTK) and OSMR (cytokine receptor) are co-expressed in aged skeletal muscle (MuSC, FB, MF-I/II). The flexible_GS4 linker (~20 Å) forces close proximity between IGF1R's kinase domain (residues 999-1274) and OSMR's JAK-docked intracellular domain. IGF1R transphosphorylates OSMR's juxtamembrane tyrosines, enabling GRB2-SHC1-RAS-MAPK and IRS1-PI3K-AKT signaling, while OSMR-recruited JAK1/2 transphosphorylate IGF1R, enabling STAT3 activation. PLCG1/2 are sterically excluded due to the short linker geometry and large ECD asymmetry (IGF1R ECD=195aa vs OSMR ECD=713aa, ratio 3.66×), which orients the kinase domains at an angle incompatible with PLCγ docking. The biased output is MAPK+AKT+STAT3 activation without PLCγ/Ca²⁺ signaling, producing a muscle structural gene program (ACTA2, MYL9, MYH11, TAGLN) and suppressing aged IEG markers (EGR1, FOS, JUN, IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:32858949",
+    "PMID:38198032",
+    "PMID:24336569",
+    "PMID:26627737"
+  ]
+}

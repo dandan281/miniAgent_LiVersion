@@ -1,0 +1,198 @@
+[
+  {
+    "candidate_id": "EGFR_INSR_flexible_GS4",
+    "receptor_A": "EGFR",
+    "receptor_B": "INSR",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.15,
+      "co_expression_in_old": [
+        "PnFB"
+      ],
+      "co_expression_in_young": [
+        "PnFB",
+        "MF-II"
+      ],
+      "aged_dropout_cell_types": [
+        "MF-II"
+      ],
+      "ecd_ratio": 1.5,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_ErbB",
+      "family_B": "RTK_INSR"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "INSR_IL6ST_flexible_GS4",
+    "receptor_A": "INSR",
+    "receptor_B": "IL6ST",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.15,
+      "co_expression_in_old": [
+        "PnFB"
+      ],
+      "co_expression_in_young": [
+        "PnFB",
+        "MF-I"
+      ],
+      "aged_dropout_cell_types": [
+        "MF-I"
+      ],
+      "ecd_ratio": 1.56,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_INSR",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "EGFR_FGFR4_flexible_GS4",
+    "receptor_A": "EGFR",
+    "receptor_B": "FGFR4",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.1083,
+      "co_expression_in_old": [
+        "MuSC"
+      ],
+      "co_expression_in_young": [
+        "MuSC"
+      ],
+      "aged_dropout_cell_types": [],
+      "ecd_ratio": 1.77,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_ErbB",
+      "family_B": "RTK_FGFR"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "EGFR_LIFR_flexible_GS4",
+    "receptor_A": "EGFR",
+    "receptor_B": "LIFR",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.1083,
+      "co_expression_in_old": [
+        "FB"
+      ],
+      "co_expression_in_young": [
+        "FB"
+      ],
+      "aged_dropout_cell_types": [],
+      "ecd_ratio": 1.31,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_ErbB",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "EGFR_OSMR_flexible_GS4",
+    "receptor_A": "EGFR",
+    "receptor_B": "OSMR",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.1083,
+      "co_expression_in_old": [
+        "FB"
+      ],
+      "co_expression_in_young": [],
+      "aged_dropout_cell_types": [],
+      "ecd_ratio": 1.16,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_ErbB",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "FGFR4_IL6ST_flexible_GS4",
+    "receptor_A": "FGFR4",
+    "receptor_B": "IL6ST",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.1083,
+      "co_expression_in_old": [
+        "MuSC"
+      ],
+      "co_expression_in_young": [
+        "MuSC"
+      ],
+      "aged_dropout_cell_types": [],
+      "ecd_ratio": 1.71,
+      "asymmetry_penalty": 0.0,
+      "family_A": "RTK_FGFR",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "FGFR1_OSMR_flexible_GS4",
+    "receptor_A": "FGFR1",
+    "receptor_B": "OSMR",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.0877,
+      "co_expression_in_old": [
+        "FB"
+      ],
+      "co_expression_in_young": [],
+      "aged_dropout_cell_types": [],
+      "ecd_ratio": 2.03,
+      "asymmetry_penalty": 0.021,
+      "family_A": "RTK_FGFR",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "FGFR1_TGFBR2_flexible_GS4",
+    "receptor_A": "FGFR1",
+    "receptor_B": "TGFBR2",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.0847,
+      "co_expression_in_old": [
+        "FB"
+      ],
+      "co_expression_in_young": [
+        "PnFB",
+        "FB"
+      ],
+      "aged_dropout_cell_types": [
+        "PnFB"
+      ],
+      "ecd_ratio": 2.58,
+      "asymmetry_penalty": 0.065,
+      "family_A": "RTK_FGFR",
+      "family_B": "TGFb_TypeII"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  },
+  {
+    "candidate_id": "ERBB4_IL6R_flexible_GS4",
+    "receptor_A": "ERBB4",
+    "receptor_B": "IL6R",
+    "linker": "flexible_GS4",
+    "atlas_seed": {
+      "composite_atlas_score": 0.0769,
+      "co_expression_in_old": [],
+      "co_expression_in_young": [
+        "MF-I",
+        "MF-II"
+      ],
+      "aged_dropout_cell_types": [
+        "MF-I",
+        "MF-II"
+      ],
+      "ecd_ratio": 1.86,
+      "asymmetry_penalty": 0.006,
+      "family_A": "RTK_ErbB",
+      "family_B": "Cytokine"
+    },
+    "notes": "atlas-seeded; ranked by co-expression in aged target cells."
+  }
+]

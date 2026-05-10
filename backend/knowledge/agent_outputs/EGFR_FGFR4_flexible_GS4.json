@@ -1,0 +1,77 @@
+{
+  "candidate_id": "EGFR_FGFR4_flexible_GS4",
+  "receptor_A": "EGFR",
+  "receptor_B": "FGFR4",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "RAS_RAF_MEK",
+    "FRS2_GRB2_SOS",
+    "SHC_RAS"
+  ],
+  "excluded_pathways": [
+    "PLCgamma_Ca2+_PKC"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "DSTN",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "CSRP3",
+    "CAV1",
+    "HDAC9"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.8,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.8,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "EGFR-FGFR4 forced proximity with a flexible GS4 linker (~20 \u00c5) creates a co-clustered signaling complex with ~270 aa ECD asymmetry (EGFR ECD=645 aa, FGFR4 ECD=375 aa). This geometry enables transphosphorylation where EGFR kinase phosphorylates FGFR4 juxtamembrane tyrosines (creating FRS2 docking sites) and FGFR4 kinase reciprocally phosphorylates EGFR tyrosines (Y1068, Y1086, Y1173, creating GRB2/SHC1/GAB1 docking sites). The shared transphosphorylation signalosome (GRB2-SHC1-SOS1\u2192RAS\u2192RAF\u2192MEK\u2192ERK and FRS2-GAB1-PIK3R1\u2192PI3K\u2192AKT\u2192mTOR) is synergistically activated. PLCG1 is sterically excluded from the tilted EGFR-FGFR4 interface, suppressing the PLC\u03b3/Ca\u00b2\u207a/PKC branch. This biased output (MAPK\u2191, AKT\u2191, PLC\u03b3\u2193) promotes muscle structural gene expression and suppresses aged inflammatory/senescence markers, consistent with a rejuvenating transcriptional shift.",
+  "literature_refs": [
+    "PMID:17123512",
+    "PMID:41462267",
+    "PMID:32103583",
+    "PMID:29869452",
+    "PMID:37758009"
+  ]
+}

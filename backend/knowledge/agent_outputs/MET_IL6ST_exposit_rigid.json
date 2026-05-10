@@ -1,0 +1,25 @@
+{
+  "candidate_id": "MET_IL6ST_exposit_rigid",
+  "receptor_A": "MET",
+  "receptor_B": "IL6ST",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "GAB1", "PIK3R1", "PTPN11"],
+    "cis_adaptors": ["JAK1", "JAK2", "TYK2", "SOS1", "STAT3", "STAT1", "SOCS3"],
+    "excluded_adaptors": ["PLCG1", "PLCG2", "FRS2", "FRS3", "IRS1", "IRS2"]
+  },
+  "biased_pathways": ["MAPK_ERK", "PI3K_AKT", "STAT3", "PTPN11_SHP2"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3", "SOCS3", "BCL2L1", "CCND1"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9", "ASB5", "TTN", "PRUNE2"],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.50,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "MET (RTK) and IL6ST (gp130, cytokine receptor) are both expressed in aged MuSC and myofibers. The exposit_rigid linker forces MET's tyrosine kinase domain into proximity with IL6ST's JAK-associated intracellular domain, enabling transphosphorylation of shared adaptor docking sites. This amplifies GRB2-SHC1-GAB1-PIK3R1-PTPN11 signaling (MAPK/ERK + PI3K/AKT + STAT3) while sterically excluding PLCγ and FRS adaptors that require specific receptor-specific docking geometries. The biased output shifts muscle toward a young transcriptional program: upregulating contractile/structural genes (ACTA2, MYL9, MYH11, TAGLN) via SRF/MRTF downstream of MAPK, and downregulating aged IEGs (EGR1, FOS, JUN, IL32, TXNIP) via AKT-mediated FOXO inactivation and STAT3-mediated SOCS3 feedback.",
+  "literature_refs": ["PMID:23794705", "PMID:26285778", "doi:10.3180/R-HSA-8851805", "doi:10.3180/R-HSA-8851907", "doi:10.3180/R-HSA-1059683"]
+}

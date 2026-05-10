@@ -1,0 +1,76 @@
+{
+  "candidate_id": "ERBB2_MET_consensus_v1__iter1",
+  "receptor_A": "ERBB2",
+  "receptor_B": "MET",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "GAB1",
+      "SOS1",
+      "PIK3R1"
+    ],
+    "cis_adaptors": [
+      "STAT3",
+      "GRB7",
+      "PTK6",
+      "PTPN12"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "STAT3",
+    "RAP1_RAC1"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "EGR1",
+    "FOS",
+    "JUN",
+    "BCL2",
+    "MCL1",
+    "SRF",
+    "ACTA2",
+    "MYL9",
+    "TAGLN"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN1A",
+    "GADD45A",
+    "MYF5",
+    "MYH9",
+    "CTGF"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.75,
+    "step_3a": 0.7,
+    "step_3b": 0.8,
+    "step_3c": 0.6,
+    "step_3d": 0.55,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "ERBB2-MET forced-proximity novokine with GS_med linker (~20 A) biases signaling by enabling transphosphorylation between ERBB2 and MET kinase domains, which recruits SHC1-GRB2-SOS1 and GAB1-PI3K adaptor complexes to drive MAPK/ERK and PI3K/AKT pathways. PLCG1 is sterically excluded because ERBB2 lacks the canonical PLCG1 docking site (Y992/1173 equivalent) and the forced geometry prevents MET's PLCG1-recruitment motif from being accessible to the ERBB2 kinase. STAT3 is activated via MET's direct Y1349/Y1356 multisubstrate docking site (cis-phosphorylation). The biased output shifts aged muscle toward a younger transcriptional phenotype by upregulating proliferation/survival genes (MYC, CCND1, DUSP6, ETV4) and downregulating senescence/inflammatory markers (TXNIP, IL32, S100A4, LGALS3).",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 - skeletal muscle stem cells express ErbB receptors)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:9883724 (HGF/MET activates quiescent satellite cells; required for adult muscle regeneration)",
+    "PMID:7926719 (MET signaling in muscle progenitor cell migration)",
+    "PMID:21454582 (ERBB2 kinase activation and transphosphorylation mechanism)",
+    "PMID:17662939 (MET adaptor recruitment: GAB1, GRB2, SHC1, PI3K, STAT3)",
+    "PMID:1718989 (MET multisubstrate docking site Y1349/Y1356)",
+    "PMID:10358079 (ERBB2 nuclear transcriptional regulation)"
+  ]
+}

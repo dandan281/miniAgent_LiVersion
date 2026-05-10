@@ -1,0 +1,75 @@
+{
+  "candidate_id": "EGFR_FGFR1_rigid_helix_40",
+  "receptor_A": "EGFR",
+  "receptor_B": "FGFR1",
+  "linker": "rigid_helix_40",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "RAS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "ASB5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.85,
+    "step_3c": 0.75,
+    "step_3d": 0.60,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "EGFR+FGFR1 forced proximity via rigid_helix_40 (~60 Å) linker biases signaling toward GRB2-SHC1-FRS2-GAB1-PIK3R1 adaptor complexes, activating MAPK/ERK and PI3K/AKT pathways while sterically excluding PLCG1/2 (Ca2+ signaling) and CBL (EGFR downregulation). The biased output upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, TAGLN) and downregulates aged-muscle IEGs (EGR1, FOS, JUN, IL32, TXNIP) and myogenic stress markers (MYF5, MYH9), consistent with a rejuvenating shift from aged fibroblast/MuSC toward a young muscle phenotype.",
+  "literature_refs": [
+    "PMID:27153536",
+    "PMID:19224897",
+    "PMID:31741433",
+    "PMID:20456371",
+    "PMID:10830168",
+    "PMID:8622701"
+  ]
+}

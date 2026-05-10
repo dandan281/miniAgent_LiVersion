@@ -18,6 +18,7 @@ VALID_BIOLOGY_CATEGORIES = frozenset(
     {
         "bio/literature",
         "bio/single_cell_rna",
+        "bio/bulk_rna",
         "bio/perturb_seq",
         "bio/crispr_screen",
         "bio/multiomics",
@@ -33,6 +34,7 @@ VALID_MODALITIES = frozenset(
         "multiomics",
         "spatial",
         "single_cell_rna",
+        "bulk_rna",
         "perturb_seq",
         "wet_lab",
         "literature",
@@ -44,6 +46,7 @@ VALID_STAGES = frozenset(
     {
         "design",
         "qc",
+        "data_intake",
         "preprocess",
         "analysis",
         "annotation",

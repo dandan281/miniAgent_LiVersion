@@ -1,0 +1,89 @@
+{
+  "candidate_id": "MET_LIFR_flexible_GS4",
+  "receptor_A": "MET",
+  "receptor_B": "LIFR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3",
+      "IRS1",
+      "IRS2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "PTPN11_SHP2",
+    "RAP1_RAC1"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "DSTN",
+    "FMN1",
+    "MAFB",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "SPRY1",
+    "PRKAA2",
+    "CCSER2"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.8,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.7,
+    "step_3d": 0.55,
+    "step_4": 0.8
+  },
+  "mechanism_narrative": "MET (RTK) and LIFR (cytokine receptor) are co-expressed in aged MuSC, MF-I, and MF-II cells with MET showing modest expression (pc~0.15-0.23) and LIFR showing strong expression (pc~0.16-0.34) that declines with age. The flexible_GS4 linker (~20A) forces close proximity between MET's kinase domain (residues 1078-1345) and LIFR's JAK-associated intracellular region (no intrinsic kinase). Under forced co-clustering, MET's kinase transphosphorylates LIFR's JAK-docking tyrosines, creating hybrid phospho-sites that recruit GRB2/SHC1 (MAPK), GAB1/PIK3R1 (PI3K/AKT), and STAT3 - a biased output that excludes PLCg (sterically blocked by the tight ~20A spacing) and FRS2 (which requires FGFR-specific juxtamembrane docking absent in both receptors). The resulting MAPK/AKT/STAT3 signaling drives a muscle structural gene program (ACTA2, MYL9, MYH11, TAGLN) while suppressing aged IEG markers (EGR1, FOS, JUN, IL32, TXNIP), producing a transcriptional shift toward the young muscle phenotype.",
+  "literature_refs": [
+    "PMID:25736998",
+    "PMID:18775332",
+    "PMID:23794705",
+    "PMID:26285778",
+    "PMID:24336569",
+    "PMID:25307932",
+    "PMID:26627737"
+  ]
+}

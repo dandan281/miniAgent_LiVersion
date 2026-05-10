@@ -1,0 +1,87 @@
+{
+  "candidate_id": "MET_OSMR_flexible_GS4",
+  "receptor_A": "MET",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "STAT5A",
+      "STAT5B"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3",
+      "IRS1",
+      "IRS2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "JAK_STAT5",
+    "RAP1_RAC1",
+    "PTPN11_SHP2"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "DSTN",
+    "FMN1",
+    "MAFB",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "CDKN2A"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.70,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.55,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "MET (RTK with intrinsic kinase domain) and OSMR (type I cytokine receptor lacking intrinsic kinase, signaling via JAK1/2) are forced into proximity by the flexible GS4 linker (~20 Å). MET's kinase transphosphorylates OSMR's JAK-docking sites, while JAK1/2 transphosphorylate MET's multisubstrate docking site (Y1349/Y1356). This bidirectional transphosphorylation enables GRB2-SHC1-GAB1-PIK3R1 signalosome assembly (MAPK/PI3K) AND JAK-STAT3/5 activation simultaneously — a combination not achievable by either receptor alone. PLCG1/2 are sterically excluded because the MET-OSMR co-cluster geometry does not position PLCγ's SH2 domains to bridge the kinase-substrate interface. FRS2/3 and IRS1/2 are excluded because OSMR lacks the juxtamembrane phosphotyrosine motifs required for their docking. The biased output is MAPK↑, PI3K-AKT↑, JAK-STAT3/5↑ with PLCγ-Ca2+↓, producing a transcriptional shift that upregulates muscle structural/contractile genes (young-enriched P2_up signature) and downregulates aged inflammatory/stress immediate-early genes (P1_up signature).",
+  "literature_refs": [
+    "PMID:27048591",
+    "PMID:30899259",
+    "PMID:20602996",
+    "PMID:22970934",
+    "PMID:10586060",
+    "PMID:18430728"
+  ]
+}

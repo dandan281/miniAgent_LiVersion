@@ -1,0 +1,25 @@
+{
+  "candidate_id": "ERBB2_IL6ST_flexible_GS4",
+  "receptor_A": "ERBB2",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "GAB1", "PIK3R1", "STAT3", "PTPN11"],
+    "cis_adaptors": ["JAK1", "JAK2", "TYK2"],
+    "excluded_adaptors": ["PLCG1"]
+  },
+  "biased_pathways": ["MAPK_ERK", "PI3K_AKT_mTOR", "JAK_STAT3", "SRF_MRTF"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3", "FMN1", "MAFB", "IGFBP7", "TIMP3"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9", "CDKN2A", "PRUNE2", "ASB5"],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.78,
+    "step_3c": 0.70,
+    "step_3d": 0.65,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "ERBB2 (RTK) and IL6ST/gp130 (cytokine receptor) are forced into close proximity by a flexible GS4 linker (~20 Å). ERBB2's kinase transphosphorylates IL6ST's cytoplasmic tail, enhancing JAK/STAT3 signaling, while JAKs bound to IL6ST reciprocally phosphorylate ERBB2's C-terminal tyrosines, boosting GRB2-SHC1-GAB1-PIK3R1 recruitment and downstream MAPK/AKT signaling. PLCγ1 is sterically excluded by the constrained geometry. The biased output shifts aged muscle toward a young transcriptional phenotype: muscle structural genes (ACTA2, MYL9, MYH11, TAGLN) are upregulated via SRF/MRTF and MAPK, while aged markers and stress-response IEGs (EGR1, FOS, JUN, IL32, TXNIP) are suppressed via AKT-mediated FOXO exclusion and reduced inflammatory signaling.",
+  "literature_refs": ["PMID:11940572", "PMID:16729043", "PMID:10085134", "PMID:11751884", "PMID:11594781"]
+}

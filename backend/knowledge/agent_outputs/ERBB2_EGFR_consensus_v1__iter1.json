@@ -1,0 +1,164 @@
+{
+  "candidate_id": "ERBB2_EGFR_consensus_v1__iter1",
+  "receptor_A": "ERBB2",
+  "receptor_B": "EGFR",
+  "linker": "GS_med",
+  "step_log": {
+    "step_1": {
+      "receptor_A": {
+        "symbol": "ERBB2",
+        "uniprot": "P04626",
+        "family": "RTK (ErbB family, EGFR subfamily)",
+        "ecd_length_aa": 630,
+        "icd_length_aa": 580,
+        "kinase_domain": "720-987",
+        "expressed_in_muscle": "yes — PMID:17123512 confirms ErbB receptor expression in skeletal muscle stem cells; HPA RNA consensus shows medium expression in skeletal muscle"
+      },
+      "receptor_B": {
+        "symbol": "EGFR",
+        "uniprot": "P00533",
+        "family": "RTK (ErbB family, EGFR subfamily)",
+        "ecd_length_aa": 621,
+        "icd_length_aa": 542,
+        "kinase_domain": "712-979",
+        "expressed_in_muscle": "yes — EGFR is ubiquitously expressed; HPA shows medium RNA expression in skeletal muscle; known to be expressed in satellite cells and myofibers"
+      },
+      "co_expression_confirmed": "yes",
+      "linker": "GS_med",
+      "linker_end_to_end_approx": "~30 Å (flexible GGGGS×6, ~22 aa)",
+      "geometry_asymmetry": "low — |ECD_A - ECD_B| = 9 aa (630 vs 621); nearly identical ECD lengths",
+      "forced_proximity_agonism_defensible": "yes — both are ErbB family RTKs that naturally heterodimerize; forced proximity via GS_med linker will drive transphosphorylation at the intracellular kinase domains. The near-identical ECD lengths (9 aa difference) mean the ICDs will be positioned at nearly the same distance from the membrane, enabling symmetric transphosphorylation.",
+      "p_fail_1": 0.05
+    },
+    "step_2": {
+      "structure_tier_A": "PDB_experimental — ERBB2 ECD: 1N8Z, 1S78; multiple high-resolution structures available",
+      "structure_tier_B": "PDB_experimental — EGFR ECD: 1IVO, 1NQL, 2GS6; extensive structural coverage",
+      "natural_dimerization": "yes — ERBB2 and EGFR are known obligate heterodimerization partners (Reactome: R-HSA-1963589). ERBB2 is the preferred dimerization partner for all other ErbB receptors. However, forced-proximity via the novokine linker locks the dimer in a specific geometry that differs from ligand-induced dimerization, creating biased signaling.",
+      "novelty_flag": "moderate — natural heterodimer exists, but forced-proximity geometry biases the output away from the natural ligand-induced signaling pattern",
+      "p_fail_2": 0.1
+    },
+    "step_3a": {
+      "notes": "Adaptor classification based on Reactome signaling pathways for ERBB2:EGFR heterodimers (R-HSA-1227986, R-HSA-177929) and known phosphotyrosine docking sites",
+      "transphosphorylation_adaptors": [
+        "SHC1 — binds pY sites on both ERBB2 and EGFR; amplified under forced proximity as both kinases phosphorylate SHC1 simultaneously",
+        "GRB2 — directly binds pY1068/pY1086 on EGFR and pY1139/pY1196 on ERBB2; enhanced by transphosphorylation creating more docking sites",
+        "SOS1 — recruited by GRB2; RAS-GEF activity drives MAPK cascade; transphosphorylation creates more GRB2-SOS1 recruitment platforms",
+        "GAB1 — scaffold that binds GRB2 and recruits PI3K; both ERBB2 and EGFR phosphorylate GAB1, amplified under forced proximity",
+        "PIK3R1 (p85 regulatory subunit of PI3K) — binds pY sites on ERBB2 (pY1196) and via GAB1; transphosphorylation enhances PI3K recruitment"
+      ],
+      "cis_adaptors": [
+        "SRC — phosphorylates EGFR at Y845 and ERBB2 at Y877; this is a cis event that occurs even without forced proximity",
+        "PTK6 — binds ERBB2 and is activated; can occur in cis in natural dimers"
+      ],
+      "excluded_adaptors": [
+        "PLCG1 — binds pY992 on EGFR and pY1196 on ERBB2 via its SH2 domains. Under forced-proximity with GS_med (~30 Å), the co-clustered ICDs create steric constraints that prevent PLCG1 from productively docking. This is the same exclusion mechanism seen in H2F (ERBB2-FGFR1), where PLCG1 is sterically excluded. The ~9 aa ECD symmetry here is tighter than H2F, but the GS_med linker still constrains the ICD geometry enough to exclude PLCG1's large multi-domain structure.",
+        "GRB7 — binds ERBB2 pY1139; its RA-PH domain requires specific membrane orientation that may be disrupted by the forced co-clustering geometry"
+      ],
+      "p_fail_3a": 0.15
+    },
+    "step_3b": {
+      "notes": "Pathway cassettes derived from Reactome analysis of adaptors recruited via transphosphorylation",
+      "biased_pathways": [
+        "MAPK/ERK signaling (R-HSA-5673001) — via SHC1→GRB2→SOS1→RAS→RAF→MEK→ERK cascade; the primary transphosphorylation-driven output",
+        "PI3K/AKT signaling (R-HSA-1257604) — via GAB1→PIK3R1→PIP3→AKT; enhanced by transphosphorylation creating more GAB1 docking sites",
+        "mTOR signaling — downstream of AKT; promotes protein synthesis and cell growth",
+        "Cell cycle progression — via ERK-dependent MYC and CCND1 transcription"
+      ],
+      "excluded_pathways": [
+        "PLCγ/Ca²⁺ signaling (R-HSA-212718) — excluded due to PLCG1 steric exclusion",
+        "PKC signaling downstream of PLCγ — secondary exclusion"
+      ],
+      "p_fail_3b": 0.12
+    },
+    "step_3c": {
+      "notes": "TF→target mapping based on MAPK/ERK and PI3K/AKT downstream transcription factors (ELK1, SRF, MYC, FOS, JUN, ETS family, FOXO family)",
+      "predicted_up_rationale": "MAPK/ERK and PI3K/AKT activation drives expression of proliferation, survival, and growth genes",
+      "predicted_down_rationale": "Suppression of senescence, inflammation, and atrophy programs via AKT-mediated FOXO inhibition and reduced inflammatory signaling",
+      "p_fail_3c": 0.2
+    },
+    "step_3d": {
+      "notes": "BioGRID ORCS screens show ERBB2 and EGFR are fitness genes in multiple cancer cell lines (essentiality screens). No muscle-specific CRISPR screens available. EGFR is a well-validated drug target with extensive genetic perturbation data.",
+      "p_fail_3d": 0.25
+    },
+    "step_4": {
+      "notes": "Gene lists assembled from MAPK/ERK and PI3K/AKT transcriptional targets, filtered for relevance to muscle rejuvenation (young-enriched = up, aged-enriched = down)",
+      "p_fail_4": 0.15
+    }
+  },
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "SOS1",
+      "GAB1",
+      "PIK3R1"
+    ],
+    "cis_adaptors": [
+      "SRC",
+      "PTK6"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "GRB7"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "mTOR",
+    "Cell_Cycle_Progression"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "ETV5",
+    "FOS",
+    "JUN",
+    "EGR1",
+    "BCL2",
+    "MCL1",
+    "EIF4E",
+    "RPS6KB1",
+    "VEGFA"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN1A",
+    "GADD45A",
+    "FOXO1",
+    "FOXO3",
+    "BNIP3",
+    "CTGF"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.9,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.8,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "ERBB2-EGFR forced-proximity novokine with GS_med linker (~30 Å) drives transphosphorylation between the two ErbB family RTKs, which have nearly identical ECD lengths (630 vs 621 aa, asymmetry = 9 aa). This symmetric geometry enables robust SHC1-GRB2-SOS1 and GAB1-PI3K adaptor recruitment, amplifying MAPK/ERK and PI3K/AKT signaling. PLCG1 is sterically excluded due to the constrained ICD geometry imposed by the GS_med linker, suppressing the PLCγ/Ca²⁺ branch. The biased output upregulates proliferation/survival genes (MYC, CCND1, DUSP6, ETV4/5) and downregulates senescence/inflammatory markers (TXNIP, IL32, S100A4, LGALS3), shifting aged muscle toward a younger transcriptional phenotype. Unlike H2F (ERBB2-FGFR1), this ERBB2-EGFR pair has minimal ECD asymmetry, making it a more symmetric forced-proximity dimer with potentially stronger MAPK output but less dramatic pathway biasing than the highly asymmetric H2F.",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 — skeletal muscle stem cells express ErbB receptors)",
+    "PMID:29568012 (Morano et al. 2018 — Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:27153536 (EGFR signaling cascades — RAS-RAF-MEK-ERK, PI3K-AKT, PLCgamma-PKC, STATs)",
+    "PMID:10805725 (ERBB2 heterodimerization with EGFR and signaling outcomes)",
+    "PMID:21454582 (ERBB2 activation by dimerization, PTK6 interaction)",
+    "PMID:18719096 (ERBB2 kinase activity regulation)",
+    "PMID:15380516 (ERBB2 nuclear transcriptional regulation)",
+    "PMID:21555369 (ERBB2 transcriptional activation of PTGS2 and CDKN1A)",
+    "Reactome: R-HSA-1227986 (Signaling by ERBB2)",
+    "Reactome: R-HSA-177929 (Signaling by EGFR)",
+    "Reactome: R-HSA-5673001 (RAF/MAP kinase cascade)",
+    "Reactome: R-HSA-1257604 (PIP3 activates AKT signaling)",
+    "Reactome: R-HSA-1251932 (PLCG1 events in ERBB2 signaling)",
+    "Reactome: R-HSA-1963589 (ERBB2 forms heterodimers with ligand-activated EGFR)"
+  ]
+}

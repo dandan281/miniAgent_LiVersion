@@ -1,0 +1,69 @@
+{
+  "candidate_id": "FGFR1_IGF1R_flexible_GS4",
+  "receptor_A": "FGFR1",
+  "receptor_B": "IGF1R",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "IRS1"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "IRS1_MAPK_feedback"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "TTN"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.8,
+    "step_3a": 0.75,
+    "step_3b": 0.88,
+    "step_3c": 0.7,
+    "step_3d": 0.25,
+    "step_4": 0.8
+  },
+  "mechanism_narrative": "FGFR1+IGF1R forced-proximity novokine with flexible_GS4 linker (~20 A) biases signaling through GRB2/SHC1/FRS2/GAB1/PIK3R1/IRS1 adaptors via transphosphorylation, activating MAPK/ERK and PI3K/AKT pathways while sterically excluding PLCgamma-mediated cascades. IRS1 serves as a critical crosstalk mediator between FGFR1 and IGF1R (PMID:33007330), creating a positive feedback loop that amplifies MAPK signaling. The biased output upregulates muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) matching the young-enriched P2_up signature, while suppressing aged IEG markers (EGR1, FOS, JUN, IL32, TXNIP) from the P1_up set.",
+  "literature_refs": [
+    "PMID:33007330",
+    "PMID:24651014",
+    "doi:10.1016/j.cell.2024.05.012"
+  ]
+}

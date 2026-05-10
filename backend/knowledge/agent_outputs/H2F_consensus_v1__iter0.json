@@ -1,0 +1,80 @@
+{
+  "candidate_id": "H2F_consensus_v1__iter0",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR1",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "GAB1",
+      "PIK3R1",
+      "SOS1",
+      "FRS2",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "GRB7",
+      "PTK6",
+      "MEMO1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK_signaling",
+    "PI3K_AKT_mTOR_signaling",
+    "RAS_RAF_MEK_ERK_cascade",
+    "SHC_mediated_RAS_activation",
+    "FRS2_mediated_MAPK_signaling",
+    "GAB1_PI3K_signaling"
+  ],
+  "predicted_up": [
+    "MYOD1",
+    "MYOG",
+    "MYH2",
+    "MYH7",
+    "TNNT3",
+    "IGF1",
+    "IGF2",
+    "FGF2",
+    "SPRY1",
+    "DUSP6",
+    "ETV5",
+    "CCND1",
+    "MEF2C"
+  ],
+  "predicted_down": [
+    "IL6",
+    "TNF",
+    "CDKN2A",
+    "TGFB1",
+    "CTGF",
+    "COL1A1",
+    "COL3A1",
+    "MMP2",
+    "SERPINE1",
+    "FOS",
+    "JUN",
+    "NFKB1"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.7,
+    "step_3a": 0.75,
+    "step_3b": 0.8,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "ERBB2-FGFR1 forced-proximity novokine (GS_med linker) biases signaling toward MAPK/ERK and PI3K/AKT pathways via transphosphorylation-recruited adaptors SHC1, GRB2, GAB1, FRS2, and PTPN11, while sterically excluding PLCG1-mediated Ca2+ signaling. This biased output is predicted to upregulate myogenic genes (MYOD1, MYOG, MYH2, MYH7) and downregulate inflammatory/fibrotic markers (IL6, TNF, CDKN2A, COL1A1), shifting aged muscle toward a young regenerative phenotype.",
+  "literature_refs": [
+    "PMID: 8665853",
+    "PMID: 10918587",
+    "PMID: 8622701",
+    "PMID: 19224897",
+    "PMID: 10464310",
+    "PMID: 8321198"
+  ]
+}

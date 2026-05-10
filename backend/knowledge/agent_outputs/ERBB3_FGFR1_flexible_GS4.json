@@ -1,0 +1,83 @@
+{
+  "candidate_id": "ERBB3_FGFR1_flexible_GS4",
+  "receptor_A": "ERBB3",
+  "receptor_B": "FGFR1",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PIK3R1",
+      "PTPN11",
+      "GAB1"
+    ],
+    "cis_adaptors": [
+      "FRS2",
+      "FRS3",
+      "STAT3",
+      "JAK2",
+      "SRC"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "NCK1",
+      "VAV1",
+      "CRK"
+    ]
+  },
+  "biased_pathways": [
+    "PI3K-AKT-mTOR",
+    "MAPK-ERK",
+    "RAS-RAF-MEK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "TIMP3",
+    "IGFBP7",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "PRUNE2",
+    "DNAJA4",
+    "ETS2"
+  ],
+  "step_confidences": {
+    "step_1": 0.40,
+    "step_2": 0.35,
+    "step_3a": 0.60,
+    "step_3b": 0.70,
+    "step_3c": 0.55,
+    "step_3d": 0.30,
+    "step_4": 0.50
+  },
+  "mechanism_narrative": "ERBB3 is a kinase-dead RTK (PMID 12853564) that cannot transphosphorylate FGFR1, making this a unidirectional forced-proximity pair. FGFR1's active kinase phosphorylates ERBB3's ICD, creating pY docking sites that strongly recruit PIK3R1 (p85) — ERBB3's canonical function as a PI3K-AKT coupling platform. GRB2-SHC1-RAS-MAPK signaling is also engaged via both FGFR1's direct GRB2 binding and ERBB3's SHC1 recruitment. The large ECD asymmetry (ERBB3=624aa vs FGFR1=355aa, Δ=269aa) combined with the short flexible GS4 linker (~20Å) sterically excludes PLCG1/PLCG2 docking, suppressing Ca2+ signaling. FRS2-mediated signaling is partially retained as cis signaling on FGFR1 but may be geometrically constrained. The biased output strongly favors PI3K-AKT-mTOR and MAPK-ERK pathways while excluding PLCγ-Ca2+ signaling, producing a transcriptional profile that upregulates muscle structural genes (ACTA2, MYL9, MYH11, TAGLN) and downregulates aged IEGs (EGR1, FOS, JUN, IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:12853564",
+    "PMID:16273093",
+    "PMID:10918587",
+    "PMID:11877385",
+    "PMID:15117958",
+    "PMID:25241761",
+    "PMID:10629055",
+    "PMID:11090629",
+    "PMID:9660748"
+  ]
+}

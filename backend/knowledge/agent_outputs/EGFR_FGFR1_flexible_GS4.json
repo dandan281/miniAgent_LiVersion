@@ -1,0 +1,82 @@
+{
+  "candidate_id": "EGFR_FGFR1_flexible_GS4",
+  "receptor_A": "EGFR",
+  "receptor_B": "FGFR1",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "STAT3",
+      "STAT5A",
+      "CBL",
+      "NCK1",
+      "NCK2",
+      "CRK"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "RAS_RAF_MEK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "PPARGC1A",
+    "SLC2A4",
+    "CCND1",
+    "MYC",
+    "BCL2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "S100A4",
+    "LGALS3"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.65,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "EGFR+FGFR1 forced-proximity novokine with flexible_GS4 linker (~20 Å) biases signaling by enabling transphosphorylation between EGFR and FGFR1 kinase domains, synergistically activating the shared SHC1→GRB2:SOS1→RAS→MAPK and FRS2→GAB1→PI3K→AKT signaling axes. PLCG1 is sterically excluded due to the ~266 aa ECD asymmetry (EGFR ECD=621 aa vs FGFR1 ECD=355 aa), which creates a tilted co-clustered geometry that PLCG1's PH-SH2-SH2-SH3 domain architecture cannot bridge. This biased output (MAPK↑, AKT↑, PLCγ↓) upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and metabolic regulators (PPARGC1A, SLC2A4) while suppressing aged stress/inflammatory markers (EGR1, FOS, JUN, TXNIP, IL32, CDKN2A) — a transcriptional shift from aged toward young muscle phenotype.",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 - skeletal muscle stem cells express ErbB receptors)",
+    "PMID:41462267 (Yeh et al. 2025 - FGFR1 essential for muscle stem cell quiescence)",
+    "PMID:41756900 (Chang et al. 2026 - activating FGFR1 restores satellite cell function in aged mice)",
+    "PMID:32103583 (Bae et al. 2020 - satellite cell FGFR signaling and muscle regeneration)",
+    "PMID:37138777 (Meng et al. 2023 - FGFR1 maintains satellite cell pool)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:41279583 (Abedi, Expòsit et al. 2025 - high-throughput novokine design platform)",
+    "PMID:16729043 (Blagoev et al. 2007 - EGFR interactome by MS)",
+    "PMID:15117958 (Hinsby et al. 2004 - FGFR1 interactome by Y2H)",
+    "PMID:9660748 (Xu et al. 1998 - FGFR1 FRS2/PLCG1 binding)"
+  ]
+}

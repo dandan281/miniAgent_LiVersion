@@ -17,7 +17,7 @@ WORKFLOW_SPEC_VERSION = "1.0.0"
 
 _SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+$")
 _PYTHON_IDENTIFIER_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
-_STRUCTURED_EXTERNAL_ENGINES = {"nextflow", "snakemake"}
+_STRUCTURED_EXTERNAL_ENGINES = {"nextflow", "snakemake", "superbio"}
 
 InputKind = Literal["artifact", "parameter", "template", "metadata"]
 OutputKind = Literal["artifact", "value"]

@@ -22,6 +22,35 @@ from .contracts import (
 _BASE = "https://rest.uniprot.org"
 _MAX = 50_000
 
+# UniProt renamed `organism` → `organism_name` (and added `organism_id`) in 2022.
+# A bare unquoted multi-word organism value also returns HTTP 400. Normalize the
+# deprecated patterns so the agent's older syntax keeps working.
+_COMMON_TAXIDS = {
+    "homo sapiens": 9606, "human": 9606,
+    "mus musculus": 10090, "mouse": 10090,
+    "rattus norvegicus": 10116, "rat": 10116,
+    "danio rerio": 7955, "zebrafish": 7955,
+    "drosophila melanogaster": 7227,
+    "caenorhabditis elegans": 6239,
+    "saccharomyces cerevisiae": 4932, "yeast": 4932,
+    "escherichia coli": 562, "e. coli": 562,
+}
+
+
+def _normalize_uniprot_query(query: str) -> str:
+    import re
+    def _sub(m: "re.Match[str]") -> str:
+        value = m.group("val").strip().strip('"').strip("'")
+        taxid = _COMMON_TAXIDS.get(value.lower())
+        if taxid is not None:
+            return f'organism_id:{taxid}'
+        return f'organism_name:"{value}"'
+    pattern = re.compile(
+        r'\borganism(?:_name)?\s*:\s*(?P<val>"[^"]+"|\'[^\']+\'|[A-Za-z][\w.\-]*(?:\s+[A-Za-z][\w.\-]*)?)',
+        re.IGNORECASE,
+    )
+    return pattern.sub(_sub, query)
+
 
 @dataclass(frozen=True)
 class UniprotApiResponse:
@@ -42,8 +71,9 @@ def fetch_uniprot_response(
     size: int = 5,
 ) -> UniprotApiResponse:
     resolved_fields = fields or "accession,gene_names,protein_name,organism_name,function"
+    normalized_query = _normalize_uniprot_query(query)
     url = (
-        f"{_BASE}/uniprotkb/search?query={urllib.parse.quote(query)}"
+        f"{_BASE}/uniprotkb/search?query={urllib.parse.quote(normalized_query)}"
         f"&fields={urllib.parse.quote(resolved_fields)}&format={format}&size={size}"
     )
 
@@ -85,7 +115,9 @@ class UniprotApiTool(BaseTool):
     name: str = "uniprot_api"
     description: str = (
         "Query UniProt REST API for protein information. "
-        "Use query like gene_exact:TP53, a UniProt accession, or a UniProt entry name. "
+        "Use query like gene_exact:TP53, a UniProt accession (P04626), or a UniProt entry name (ERBB2_HUMAN). "
+        "For species filtering, use organism_id:9606 (human) / 10090 (mouse) — "
+        "the legacy `organism:` field was removed; bare values like organism:Homo sapiens cause HTTP 400. "
         "Input: query, optional fields and format."
     )
     args_schema: Type[BaseModel] = UniprotApiInput

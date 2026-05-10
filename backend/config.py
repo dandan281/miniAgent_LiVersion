@@ -30,6 +30,12 @@ _DEFAULT: dict = {
             "provider": "deepseek",
             "roles": {
                 "executor": {
+                    # Chat-UI executor: DeepSeek for cost / availability.
+                    # The v2 evidence-stacking pipeline uses Claude Opus 4.7 directly
+                    # via the raw anthropic SDK (see evidence_stacking/orchestrator/agents.py).
+                    # To switch chat UI to Anthropic: set BIOAPEX_EXECUTOR_PROVIDER=anthropic
+                    # + BIOAPEX_EXECUTOR_MODEL=claude-opus-4-7, and ensure ANTHROPIC_API_KEY
+                    # has credit balance.
                     "provider": "deepseek",
                     "model": "deepseek-chat",
                     "temperature": 0.3,

@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import {
+  Activity,
   AlertTriangle,
   BookOpen,
   Brain,
@@ -33,6 +34,7 @@ import {
   type FilePreviewTarget,
 } from "@/components/preview/FilePreviewSurface";
 import TurnDetailsPanel from "@/components/editor/TurnDetailsPanel";
+import RunnerStack from "@/components/runners/RunnerStack";
 import {
   getSessionTokens,
   listSkillsRegistry,
@@ -84,6 +86,7 @@ const MEMORY_PATH = "memory/MEMORY.md";
 const INSPECTOR_TABS = [
   { id: "files", label: "Files", icon: FileText },
   { id: "sources", label: "Sources", icon: Search },
+  { id: "runners", label: "Runners", icon: Activity },
   { id: "memory", label: "Memory", icon: Brain },
   { id: "skills", label: "Skills", icon: Sparkles },
   { id: "usage", label: "Usage", icon: Hash },
@@ -3672,6 +3675,7 @@ export default function InspectorPanel() {
       <div className="min-h-0 flex-1 overflow-y-auto px-2 py-2">
         {inspectorTab === "files" && renderFilesTab()}
         {inspectorTab === "sources" && renderSourcesTab()}
+        {inspectorTab === "runners" && <RunnerStack />}
         {inspectorTab === "memory" && renderMemoryTab()}
         {inspectorTab === "skills" && renderSkillsTab()}
         {inspectorTab === "usage" && renderUsageTab()}

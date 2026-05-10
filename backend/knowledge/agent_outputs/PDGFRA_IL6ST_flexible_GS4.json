@@ -1,0 +1,80 @@
+{
+  "candidate_id": "PDGFRA_IL6ST_flexible_GS4",
+  "receptor_A": "PDGFRA",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "FRS2",
+      "NCK1",
+      "CRK",
+      "SRC"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAS_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "SOCS3",
+    "FABP4",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.80,
+    "step_3a": 0.70,
+    "step_3b": 0.85,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "PDGFRA-IL6ST forced-proximity novokine with flexible GS4 linker (~20 Å) enables bidirectional transphosphorylation between an RTK (PDGFRA) and a cytokine receptor (IL6ST/gp130). PDGFRA's kinase domain phosphorylates IL6ST's intracellular tyrosines, creating STAT3 docking sites and amplifying JAK-STAT signaling. Reciprocally, JAK1/2 pre-associated with IL6ST phosphorylate PDGFRA tyrosines, enhancing GRB2-SHC1-SOS-RAS-MAPK and PI3K-AKT recruitment via GAB1/PIK3R1. PLCG1/2 are sterically excluded by the tight ~20 Å linker geometry and the 92 aa ECD asymmetry (505 vs 597 aa), which prevents productive PLCγ docking. The biased output is synergistic MAPK↑ + PI3K/AKT↑ + STAT3↑ signaling in FAPs (the primary co-expressing cell type in aged muscle), promoting muscle structural gene expression (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and suppressing aged inflammatory/IEG programs (EGR1, FOS, JUN, IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:7535778",
+    "PMID:9677323",
+    "PMID:11046132",
+    "PMID:28205554",
+    "PMID:32103583",
+    "PMID:37138777"
+  ]
+}

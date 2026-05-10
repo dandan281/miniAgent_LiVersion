@@ -1,0 +1,9 @@
+cell_class,age_group,n_cells
+MuSC,old,2000
+MuSC,young,2000
+Myofiber,old,2000
+Myofiber,young,2000
+Myofiber_TypeI,old,2000
+Myofiber_TypeI,young,2000
+Myofiber_TypeII,old,2000
+Myofiber_TypeII,young,2000

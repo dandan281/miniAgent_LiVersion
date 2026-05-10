@@ -1,0 +1,87 @@
+{
+  "candidate_id": "IGF1R_IL6ST_flexible_GS4",
+  "receptor_A": "IGF1R",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "IRS2",
+      "PIK3R1",
+      "GAB1",
+      "PTPN11",
+      "JAK1",
+      "JAK2",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "IRS_PI3K",
+    "RAS_RAF_MEK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "DSTN",
+    "FMN1",
+    "MAFB",
+    "MT-CO2",
+    "MT-ND2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "DNAJA4"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.70,
+    "step_3a": 0.75,
+    "step_3b": 0.88,
+    "step_3c": 0.75,
+    "step_3d": 0.50,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "IGF1R (RTK) and IL6ST/gp130 (cytokine receptor) are co-expressed in aged skeletal muscle (MF-I, MF-II, FB, MuSC). The flexible_GS4 linker (~20 Å) forces close proximity between IGF1R's tyrosine kinase domain and IL6ST's JAK-associated intracellular domain. Under forced co-clustering, IGF1R's kinase transphosphorylates IL6ST's cytoplasmic tyrosines (especially Y759, Y767, Y814, Y905), creating docking sites for STAT3 and PTPN11/SHP2 that are normally only engaged by JAK-mediated IL6ST phosphorylation. Simultaneously, IL6ST-associated JAKs (JAK1/JAK2) transphosphorylate IGF1R's activation loop tyrosines (Y1161/Y1165/Y1166), amplifying IRS1/IRS2 recruitment and PI3K-AKT signaling beyond normal IGF1R activation levels. The biased output is a hybrid IGF1R->PI3K/AKT + IL6ST->STAT3 signal with enhanced MAPK/ERK via GRB2-SHC1-SOS-RAS, while PLCgamma (PLCG1/PLCG2) is sterically excluded due to the asymmetric ECD geometry (IGF1R ECD=195aa vs IL6ST ECD=597aa, ratio 3.06x) and CBL-mediated negative regulation is suppressed, shifting the balance toward pro-survival/pro-differentiation transcriptional programs that oppose the aged muscle phenotype.",
+  "literature_refs": [
+    "PMID:15068962",
+    "PMID:35440303",
+    "PMID:37152930",
+    "PMID:38762131",
+    "PMID:39094905"
+  ]
+}

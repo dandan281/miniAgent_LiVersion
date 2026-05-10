@@ -1,0 +1,592 @@
+[
+  {
+    "pair": "ERBB2_FGFR1",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 0,
+    "dossier_path": "01_top_k_design/ERBB2_FGFR1.md"
+  },
+  {
+    "pair": "ERBB2_FGFR2",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 1,
+    "dossier_path": "01_top_k_design/ERBB2_FGFR2.md"
+  },
+  {
+    "pair": "ERBB2_FGFR4",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 2,
+    "dossier_path": "01_top_k_design/ERBB2_FGFR4.md"
+  },
+  {
+    "pair": "ERBB2_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/ERBB2_MET.md"
+  },
+  {
+    "pair": "EGFR_FGFR1",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 4,
+    "dossier_path": "01_top_k_design/EGFR_FGFR1.md"
+  },
+  {
+    "pair": "EGFR_FGFR2",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/EGFR_FGFR2.md"
+  },
+  {
+    "pair": "EGFR_FGFR4",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/EGFR_FGFR4.md"
+  },
+  {
+    "pair": "EGFR_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 7,
+    "dossier_path": "01_top_k_design/EGFR_MET.md"
+  },
+  {
+    "pair": "FGFR1_IGF1R",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 8,
+    "dossier_path": "01_top_k_design/FGFR1_IGF1R.md"
+  },
+  {
+    "pair": "FGFR1_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 9,
+    "dossier_path": "01_top_k_design/FGFR1_INSR.md"
+  },
+  {
+    "pair": "FGFR1_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 10,
+    "dossier_path": "01_top_k_design/FGFR1_MET.md"
+  },
+  {
+    "pair": "FGFR2_IGF1R",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 11,
+    "dossier_path": "01_top_k_design/FGFR2_IGF1R.md"
+  },
+  {
+    "pair": "FGFR2_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 12,
+    "dossier_path": "01_top_k_design/FGFR2_INSR.md"
+  },
+  {
+    "pair": "FGFR2_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 13,
+    "dossier_path": "01_top_k_design/FGFR2_MET.md"
+  },
+  {
+    "pair": "FGFR4_IGF1R",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 14,
+    "dossier_path": "01_top_k_design/FGFR4_IGF1R.md"
+  },
+  {
+    "pair": "FGFR4_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 15,
+    "dossier_path": "01_top_k_design/FGFR4_INSR.md"
+  },
+  {
+    "pair": "FGFR4_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 16,
+    "dossier_path": "01_top_k_design/FGFR4_MET.md"
+  },
+  {
+    "pair": "MET_PDGFRA",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 17,
+    "dossier_path": "01_top_k_design/MET_PDGFRA.md"
+  },
+  {
+    "pair": "MET_PDGFRB",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.9624999999999999,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "GS_med",
+    "iteration": 18,
+    "dossier_path": "01_top_k_design/MET_PDGFRB.md"
+  },
+  {
+    "pair": "EGFR_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8637967624843639,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS8",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/EGFR_IL6ST.md"
+  },
+  {
+    "pair": "ERBB4_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8632994688075306,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "rigid_helix_20",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/ERBB4_INSR.md"
+  },
+  {
+    "pair": "IL6ST_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8610305959650179,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS8",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/IL6ST_INSR.md"
+  },
+  {
+    "pair": "IL6ST_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8495776894349611,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 0,
+    "dossier_path": "01_top_k_design/IL6ST_MET.md"
+  },
+  {
+    "pair": "ERBB4_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8443003866774902,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS8",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/ERBB4_IL6ST.md"
+  },
+  {
+    "pair": "FGFR1_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8416927562330407,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/FGFR1_OSMR.md"
+  },
+  {
+    "pair": "INSR_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.840841310361171,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 7,
+    "dossier_path": "01_top_k_design/INSR_OSMR.md"
+  },
+  {
+    "pair": "EGFR_LIFR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8292995509447614,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/EGFR_LIFR.md"
+  },
+  {
+    "pair": "INSR_LIFR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8249541019876945,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/INSR_LIFR.md"
+  },
+  {
+    "pair": "EGFR_INSR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.822915871138346,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 0,
+    "dossier_path": "01_top_k_design/EGFR_INSR.md"
+  },
+  {
+    "pair": "ERBB2_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8184496803781567,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 1,
+    "dossier_path": "01_top_k_design/ERBB2_IL6ST.md"
+  },
+  {
+    "pair": "ERBB2_LIFR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8125407042599427,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 2,
+    "dossier_path": "01_top_k_design/ERBB2_LIFR.md"
+  },
+  {
+    "pair": "FGFR4_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8070891247516011,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/FGFR4_OSMR.md"
+  },
+  {
+    "pair": "LIFR_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.80408328803991,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/LIFR_MET.md"
+  },
+  {
+    "pair": "FGFR1_TGFBR2",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8026166303908537,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 7,
+    "dossier_path": "01_top_k_design/FGFR1_TGFBR2.md"
+  },
+  {
+    "pair": "IGF1R_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.8021051298328439,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 4,
+    "dossier_path": "01_top_k_design/IGF1R_IL6ST.md"
+  },
+  {
+    "pair": "FGFR2_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7963442584881198,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/FGFR2_OSMR.md"
+  },
+  {
+    "pair": "ERBB4_LIFR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7960265174798774,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/ERBB4_LIFR.md"
+  },
+  {
+    "pair": "FGFR1_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7955275424362955,
+    "phenotype": 0.923501323260111,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/FGFR1_IL6ST.md"
+  },
+  {
+    "pair": "LIFR_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7943338464580038,
+    "phenotype": 0.923501323260111,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/LIFR_OSMR.md"
+  },
+  {
+    "pair": "MET_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7937502760769563,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/MET_OSMR.md"
+  },
+  {
+    "pair": "IL6ST_PDGFRA",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7936976407276592,
+    "phenotype": 0.9298906370485808,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 9,
+    "dossier_path": "01_top_k_design/IL6ST_PDGFRA.md"
+  },
+  {
+    "pair": "INSR_KIT",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7931289578412144,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 9,
+    "dossier_path": "01_top_k_design/INSR_KIT.md"
+  },
+  {
+    "pair": "FGFR4_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7924233169215167,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 5,
+    "dossier_path": "01_top_k_design/FGFR4_IL6ST.md"
+  },
+  {
+    "pair": "EGFR_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.790275836722059,
+    "phenotype": 0.89177970089842,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 4,
+    "dossier_path": "01_top_k_design/EGFR_OSMR.md"
+  },
+  {
+    "pair": "ERBB4_IL6R",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7898913216831642,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 8,
+    "dossier_path": "01_top_k_design/ERBB4_IL6R.md"
+  },
+  {
+    "pair": "FGFR1_TNFRSF1A",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7830318016636083,
+    "phenotype": 0.9361041627174518,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 4,
+    "dossier_path": "01_top_k_design/FGFR1_TNFRSF1A.md"
+  },
+  {
+    "pair": "ERBB3_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7830308043952076,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 8,
+    "dossier_path": "01_top_k_design/ERBB3_IL6ST.md"
+  },
+  {
+    "pair": "INSR_MET",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7780800301676394,
+    "phenotype": 0.89177970089842,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 1,
+    "dossier_path": "01_top_k_design/INSR_MET.md"
+  },
+  {
+    "pair": "FLT1_KDR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7775669411735346,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 8,
+    "dossier_path": "01_top_k_design/FLT1_KDR.md"
+  },
+  {
+    "pair": "IGF1R_OSMR",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7684235945895348,
+    "phenotype": 0.9388322506082297,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 4,
+    "dossier_path": "01_top_k_design/IGF1R_OSMR.md"
+  },
+  {
+    "pair": "TGFBR2_TNFRSF1A",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7548292316101175,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 3,
+    "dossier_path": "01_top_k_design/TGFBR2_TNFRSF1A.md"
+  },
+  {
+    "pair": "FGFR2_IL6ST",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7448524586945571,
+    "phenotype": 0.9263136083832437,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 1,
+    "dossier_path": "01_top_k_design/FGFR2_IL6ST.md"
+  },
+  {
+    "pair": "ERBB3_FGFR1",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7245233196222197,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 7,
+    "dossier_path": "01_top_k_design/ERBB3_FGFR1.md"
+  },
+  {
+    "pair": "ACVR2B_BMPR1A",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7038758543838265,
+    "phenotype": 1.0,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 6,
+    "dossier_path": "01_top_k_design/ACVR2B_BMPR1A.md"
+  },
+  {
+    "pair": "BMPR1A_TGFBR2",
+    "tier": "TOP_K_DESIGN",
+    "reward": 0.7001582950022087,
+    "phenotype": 0.8923076825724525,
+    "verdict": "REJUVENATING",
+    "linker": "flexible_GS4",
+    "iteration": 7,
+    "dossier_path": "01_top_k_design/BMPR1A_TGFBR2.md"
+  },
+  {
+    "pair": "EGFR_ERBB2",
+    "tier": "BOTTOM_LOG_ONLY",
+    "reward": 0.3639147656841054,
+    "phenotype": 0.11342670454104199,
+    "verdict": "NEUTRAL",
+    "linker": "GS_med",
+    "iteration": 0,
+    "dossier_path": "03_bottom_log_only/EGFR_ERBB2.md"
+  },
+  {
+    "pair": "RANDOM_RECEPTOR_A_RANDOM_RECEPTOR_B",
+    "tier": "INCOHERENT_LOG_ONLY",
+    "reward": 0.01875,
+    "phenotype": 0.0,
+    "verdict": "NEUTRAL",
+    "linker": "GS\u00d74",
+    "iteration": 1,
+    "dossier_path": "04_incoherent_log_only/RANDOM_RECEPTOR_A_RANDOM_RECEPTOR_B.md"
+  },
+  {
+    "pair": "IL6R_TNFRSF1A",
+    "tier": "INCOHERENT_LOG_ONLY",
+    "reward": -0.07678707972279845,
+    "phenotype": -0.3424757448172585,
+    "verdict": "ANTI-REJUVENATING",
+    "linker": "rigid helix 30aa",
+    "iteration": 1,
+    "dossier_path": "04_incoherent_log_only/IL6R_TNFRSF1A.md"
+  },
+  {
+    "pair": "IL6R_TNFR1",
+    "tier": "INCOHERENT_LOG_ONLY",
+    "reward": -0.2624851991308468,
+    "phenotype": -0.5999763186093549,
+    "verdict": "ANTI-REJUVENATING",
+    "linker": "rigid 40aa",
+    "iteration": 0,
+    "dossier_path": "04_incoherent_log_only/IL6R_TNFR1.md"
+  }
+]

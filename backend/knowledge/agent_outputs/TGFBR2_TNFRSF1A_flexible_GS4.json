@@ -1,0 +1,87 @@
+{
+  "candidate_id": "TGFBR2_TNFRSF1A_flexible_GS4",
+  "receptor_A": "TGFBR2",
+  "receptor_B": "TNFRSF1A",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SMAD2",
+      "SMAD3",
+      "SMAD4",
+      "ZFYVE9",
+      "TRADD",
+      "TRAF2",
+      "RIPK1"
+    ],
+    "cis_adaptors": [
+      "SMAD7",
+      "CBL",
+      "BIRC2",
+      "BIRC3"
+    ],
+    "excluded_adaptors": [
+      "FADD",
+      "CASP8",
+      "PLCG1",
+      "GRB2",
+      "SHC1"
+    ]
+  },
+  "biased_pathways": [
+    "SMAD2/3-SMAD4 transcriptional program (TGF-beta canonical, biased)",
+    "NF-kB signaling (TRADD/TRAF2/RIPK1-mediated, survival-biased)",
+    "MAPK non-canonical (TGFBR2->TAK1->p38/JNK, partial)",
+    "PI3K-AKT (indirect via TRAF2, partial)"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "FN1",
+    "COL1A1",
+    "SERPINE1",
+    "CTGF",
+    "SMAD7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "IL32",
+    "TXNIP",
+    "OTUD1",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "TNFSF10",
+    "CASP3",
+    "CASP8"
+  ],
+  "step_confidences": {
+    "step_1": 0.6,
+    "step_2": 0.5,
+    "step_3a": 0.55,
+    "step_3b": 0.7,
+    "step_3c": 0.5,
+    "step_3d": 0.35,
+    "step_4": 0.45
+  },
+  "mechanism_narrative": "TGFBR2 (Ser/Thr kinase) and TNFRSF1A (death receptor, no kinase) are forced into proximity by a flexible GS4 linker (~20 A). TGFBR2's constitutive kinase transphosphorylates TNFRSF1A's intracellular domain at atypical Ser/Thr sites, creating hybrid docking surfaces. The biased output retains SMAD2/3-SMAD4 transcriptional signaling (via TGFBR2->SMAD2/3) and NF-kB survival signaling (via TNFRSF1A->TRADD->TRAF2->RIPK1->IKK), but sterically excludes the proapoptotic FADD/CASP8 DISC complex (requires precise death-domain geometry disrupted by co-clustering) and GRB2/SHC1/PLCG1 adaptors (require tyrosine-phosphorylated motifs absent from both receptors). This yields a TGF-beta/TNF hybrid signal biased toward matrix remodeling and survival over apoptosis and inflammation.",
+  "literature_refs": [
+    "PMID:7774578",
+    "PMID:7758105",
+    "PMID:8612133",
+    "PMID:14585990",
+    "PMID:21307340",
+    "PMID:24130170",
+    "PMID:10892748",
+    "PMID:8387891",
+    "PMID:9915703"
+  ]
+}

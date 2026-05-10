@@ -1,0 +1,37 @@
+{
+  "study_id": "muscle_atlas_integrated",
+  "short_name": "integrated_3_studies",
+  "citation": "User-supplied integrated meta-analysis combining bulk RNA-seq DEGs from GSE164471 (Tumasian 2021), GSE111016 (Pillon 2019), and GTEx v11 with cell-type-resolved labels.",
+  "tissue": "skeletal muscle (cell-type resolved)",
+  "modality": "integrated bulk-RNA-seq meta-analysis projected onto cell-type categories",
+  "design": "per-cell-type pseudobulk-style DEG with balanced 2000-cells-per-(cell_class x age_group) design (see cell_counts_per_age_group.csv)",
+  "comparison": "old vs young per cell type",
+  "n_donors_total": null,
+  "n_cells_per_group": 2000,
+  "cell_types_included": [
+    "MuSC",
+    "Myofiber",
+    "Myofiber_TypeI",
+    "Myofiber_TypeII",
+    "fibroblast_deseq2"
+  ],
+  "differential_method": "Wilcoxon for muscle cell types (score column = Wilcoxon stat); DESeq2 for fibroblast (cell type label `fibroblast_deseq2`)",
+  "table_file": "integrated_per_celltype_degs.csv",
+  "table_columns": "gene, log2fc, pval, padj, direction (up|down), cell_type, score",
+  "table_status": "INTEGRATED_BY_USER",
+  "n_genes_in_table": 1000,
+  "n_per_cell_type": 200,
+  "consensus_thresholds": {
+    "padj": 0.05,
+    "abs_log2fc": 0.5,
+    "rationale": "File is pre-filtered to top ~200 genes per cell type with strong signal; default thresholds apply"
+  },
+  "role_in_consensus": "PRIMARY bulk-equivalent source. Replaces the separate GSE164471/GSE111016/GTEx slots since this file is described as integrating those three studies with cell-type resolution. Counts as ONE source in the >=2-source consensus voting (not three).",
+  "supersedes": [
+    "GSE164471_tumasian_2021/deg_table.tsv (re-derived locally; subsumed by this integrated file)",
+    "GSE111016_pillon_2019/deg_table.tsv (Supp Data 4 extraction; subsumed)",
+    "gtex_v11_skeletal_muscle/deg_table.tsv (pending; no longer needed)"
+  ],
+  "added_to_kb": "2026-05-05",
+  "notes": "Direction convention: `up` = upregulated in aged (P1); `down` = upregulated in young (P2). Cell-type labels match the v1 atlas per_cell_type taxonomy."
+}

@@ -1,0 +1,90 @@
+{
+  "candidate_id": "FGFR1_OSMR_exposit_rigid",
+  "receptor_A": "FGFR1",
+  "receptor_B": "OSMR",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "STAT3",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "PTPN11"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "JAK_STAT5"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "DSTN",
+    "DHCR24",
+    "FABP4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "NEB",
+    "PRUNE2",
+    "TTN",
+    "DNAJA4",
+    "ETS2",
+    "FABP5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.70,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.75,
+    "step_3d": 0.65,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "FGFR1 (RTK) and OSMR (cytokine receptor, JAK-associated) are forced into proximity by an exposit_rigid scaffold. FGFR1's kinase transphosphorylates OSMR's intracellular tyrosines, creating docking sites for GRB2/SHC1 (MAPK), GAB1/PIK3R1 (PI3K-AKT), and STAT3 (JAK-STAT). OSMR-associated JAK1/2 reciprocally phosphorylate FGFR1 tyrosines, amplifying STAT3/5 recruitment. The rigid geometry and large ECD asymmetry (355 vs 713 aa) sterically exclude PLCG1/2 (cannot bridge the kinase-substrate gap) and CBL (ubiquitin ligase). The biased output is MAPK + PI3K-AKT + JAK-STAT activation without PLCγ/Ca²⁺ signaling, producing a transcriptional program that upregulates muscle structural/contractile genes (young-enriched) and suppresses aged IEG/inflammatory markers.",
+  "literature_refs": [
+    "PMID:10918587",
+    "PMID:8622701",
+    "PMID:19224897",
+    "PMID:10464310",
+    "PMID:11030354",
+    "PMID:22523080",
+    "PMID:18022941",
+    "PMID:28769084",
+    "PMID:26300540",
+    "PMID:31980649"
+  ]
+}

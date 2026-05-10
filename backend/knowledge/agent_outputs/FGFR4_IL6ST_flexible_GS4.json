@@ -1,0 +1,72 @@
+{
+  "candidate_id": "FGFR4_IL6ST_flexible_GS4",
+  "receptor_A": "FGFR4",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAS_RAF_MEK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.80,
+    "step_3a": 0.70,
+    "step_3b": 0.85,
+    "step_3c": 0.65,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "FGFR4 (RTK) + IL6ST/gp130 (cytokine receptor) forced-proximity novokine with flexible_GS4 linker (~20 Å). FGFR4's active kinase domain transphosphorylates IL6ST's intracellular tyrosines (Y767, Y814, Y905, Y915), creating docking sites for STAT3 and PTPN11/SHP2 that are normally JAK-dependent. Concurrently, JAKs associated with IL6ST can phosphorylate FGFR4 tyrosines, recruiting GRB2-SHC1-FRS2-GAB1-PIK3R1 to drive MAPK and PI3K-AKT signaling. PLCγ is sterically excluded by the asymmetric co-clustering geometry (FGFR4 ECD ~347 aa vs IL6ST ECD ~597 aa, |Δ| ≈ 250 aa). The biased output is MAPK + AKT + STAT3 activation without PLCγ/Ca²⁺ signaling, producing a muscle structural gene program (ACTA2, MYL9, MYH11, TAGLN) and suppressing aged IEGs (EGR1, FOS, JUN, IL32).",
+  "literature_refs": [
+    "PMID:10918587",
+    "PMID:10409724",
+    "PMID:9794795",
+    "PMID:2261637",
+    "PMID:23294003"
+  ]
+}

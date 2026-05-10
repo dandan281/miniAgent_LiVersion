@@ -1,0 +1,94 @@
+# Receptor universe v2 — 59 cell-surface receptors in 5 functional classes.
+# Mirrors §1 of "Novokine Bispecific Receptor Pair Ranking — Methods" (attached, 2026-05-10).
+# Yields 59*58/2 = 1,711 unordered bispecific pairs; validated at load time.
+#
+# UniProt accessions populated for the high-confidence members; remaining
+# accessions are filled lazily by uniprot_api on first reference and cached at
+# backend/storage/receptor_cache.json.
+#
+# muscle_role hints inform feature compute; not load-bearing for enumeration.
+
+version: 2
+n_receptors: 59
+n_pairs: 1711
+
+classes:
+
+  bmp_type_i:
+    description: "BMP-arm type-I receptors (SMAD1/5/8 signaling)"
+    members:
+      - {symbol: ACVRL1, uniprot: P37023, role: "ALK1; endothelial BMP9/10; central hit node in attached methods doc"}
+      - {symbol: BMPR1A, uniprot: P36894, role: "ALK3; BMP myogenesis; pairs strongly with BMPR2"}
+      - {symbol: BMPR1B, uniprot: O00238, role: "ALK6; chondrogenic BMP signaling"}
+      - {symbol: ACVR1,  uniprot: Q04771, role: "ALK2; BMP/activin signaling"}
+
+  bmp_type_ii:
+    description: "BMP/activin type-II receptors (recruit type-I to phosphorylate SMAD1/5/8)"
+    members:
+      - {symbol: BMPR2,  uniprot: Q13873, role: "Dominant hit-list partner; pairs with both BMP type-I and RTKs"}
+      - {symbol: ACVR2A, uniprot: P27037, role: "Activin/myostatin type-II; muscle hypertrophy gate"}
+      - {symbol: ACVR2B, uniprot: Q13705, role: "Activin/myostatin type-II"}
+
+  tgfb:
+    description: "TGF-β arm receptors (canonical SMAD2/3; pro-fibrotic by default, context-dependent)"
+    members:
+      - {symbol: TGFBR1, uniprot: P36897, role: "ALK5; pro-fibrotic; non-hit alone"}
+      - {symbol: TGFBR2, uniprot: P37173, role: "Hit only when paired with ACVRL1 (signal redirection to SMAD1/5/8)"}
+      - {symbol: TGFBR3, uniprot: Q03167, role: "Betaglycan; TGF-β/inhibin co-receptor; non-signaling presenter"}
+
+  rtk:
+    description: "Growth factor receptor tyrosine kinases (MAPK/ERK + PI3K/AKT signaling)"
+    members:
+      - {symbol: EGFR,   uniprot: P00533, role: "ErbB1; canonical MAPK/AKT; H2F partner"}
+      - {symbol: ERBB2,  uniprot: P04626, role: "HER2; H2F partner; obligate heterodimer"}
+      - {symbol: ERBB3,  uniprot: P21860, role: "HER3; kinase-dead; PI3K-biased"}
+      - {symbol: ERBB4,  uniprot: Q15303, role: "HER4; cardiomyocyte signaling"}
+      - {symbol: FGFR1,  uniprot: P11362, role: "C6-DPC pro-myogenic arm; H2F partner (FGFR1c isoform)"}
+      - {symbol: FGFR2,  uniprot: P21802, role: "FGFR2c isoform; muscle satellite cell"}
+      - {symbol: FGFR3,  uniprot: P22607, role: "Skeletal/chondrocyte"}
+      - {symbol: FGFR4,  uniprot: P22455, role: "Skeletal muscle FGF21 signaling"}
+      - {symbol: IGF1R,  uniprot: P08069, role: "IGF1; muscle hypertrophy via PI3K/AKT/mTOR"}
+      - {symbol: IGF2R,  uniprot: P11717, role: "Mannose-6-P receptor; IGF2 clearance, no kinase"}
+      - {symbol: INSR,   uniprot: P06213, role: "Insulin; metabolic + growth signaling"}
+      - {symbol: NTRK1,  uniprot: P04629, role: "TrkA; NGF; sensory/sympathetic"}
+      - {symbol: NTRK2,  uniprot: Q16620, role: "TrkB; BDNF; muscle innervation"}
+      - {symbol: NTRK3,  uniprot: Q16288, role: "TrkC; NT-3"}
+      - {symbol: PDGFRA, uniprot: P16234, role: "PDGF; FAP/fibro-adipogenic progenitor marker"}
+      - {symbol: PDGFRB, uniprot: P09619, role: "PDGF; pericyte/vascular smooth muscle"}
+      - {symbol: MET,    uniprot: P08581, role: "HGF; satellite cell activation"}
+      - {symbol: KIT,    uniprot: P10721, role: "SCF; mast/melanocyte; some muscle stem"}
+      - {symbol: FLT1,   uniprot: P17948, role: "VEGFR1; vascular"}
+      - {symbol: KDR,    uniprot: P35968, role: "VEGFR2; vascular"}
+      - {symbol: RET,    uniprot: P07949, role: "GDNF family; neural"}
+      - {symbol: LEPR,   uniprot: P48357, role: "Leptin; energy balance, JAK/STAT3"}
+      - {symbol: GHR,    uniprot: P10912, role: "Growth hormone; JAK2/STAT5"}
+      - {symbol: AXL,    uniprot: P30530, role: "TAM family; PI3K/AKT; fibrosis-associated"}
+      - {symbol: MERTK,  uniprot: Q12866, role: "TAM family; efferocytosis; muscle regeneration"}
+      - {symbol: CSF1R,  uniprot: P07333, role: "M-CSF receptor; macrophage/muscle inflammation crosstalk"}
+
+  cytokine_adhesion:
+    description: "Cytokine, JAK-STAT, and adhesion receptors"
+    members:
+      - {symbol: IL6ST,    uniprot: P40189, role: "gp130; STAT1/STAT3 via dimer geometry (Expòsit 2025); inhibition aids reprogramming (Keshri 2026)"}
+      - {symbol: IL2RG,    uniprot: P31785, role: "γc; β-common geometry drives STAT5 (Expòsit 2025)"}
+      - {symbol: OSMR,     uniprot: Q99650, role: "OSM receptor; gp130 family; muscle inflammation"}
+      - {symbol: LIFR,     uniprot: P42702, role: "LIF receptor; gp130 family; muscle stem self-renewal"}
+      - {symbol: IL6R,     uniprot: P08887, role: "IL-6 alpha receptor; with IL6ST forms hexameric signaling complex"}
+      - {symbol: IFNAR1,   uniprot: P17181, role: "Type-I IFN receptor; STAT1/2 anti-viral"}
+      - {symbol: IFNAR2,   uniprot: P48551, role: "Type-I IFN receptor; with IFNAR1"}
+      - {symbol: TNFRSF1A, uniprot: P19438, role: "TNFR1; NF-κB inflammatory"}
+      - {symbol: TNFRSF1B, uniprot: P20333, role: "TNFR2; immune-modulatory; some pro-survival"}
+      - {symbol: DDR1,     uniprot: Q08345, role: "Discoidin; collagen-activated RTK"}
+      - {symbol: DDR2,     uniprot: Q16832, role: "Discoidin; fibroblast/ECM remodeling"}
+      - {symbol: ITGA7,    uniprot: Q13683, role: "Integrin α7; muscle laminin receptor"}
+      - {symbol: ITGB1,    uniprot: P05556, role: "Integrin β1; broad ECM adhesion"}
+      - {symbol: ITGAV,    uniprot: P06756, role: "Integrin αv; latent TGF-β activation"}
+      - {symbol: PLAUR,    uniprot: Q03405, role: "uPAR; ECM remodeling, GPI-anchored"}
+      - {symbol: CD44,     uniprot: P16070, role: "Hyaluronic acid receptor; muscle stem cell marker"}
+      - {symbol: NOTCH1,   uniprot: P46531, role: "Notch; satellite cell quiescence"}
+      - {symbol: NOTCH2,   uniprot: Q04721, role: "Notch; muscle development"}
+      - {symbol: ROBO1,    uniprot: Q9Y6N7, role: "Slit receptor; muscle stem migration"}
+      - {symbol: ITGA1,    uniprot: P56199, role: "Integrin α1; collagen IV/laminin receptor"}
+      - {symbol: ITGA6,    uniprot: P23229, role: "Integrin α6; laminin receptor; muscle satellite cell marker"}
+      - {symbol: CXCR4,    uniprot: P61073, role: "SDF-1/CXCL12 receptor; satellite cell homing"}
+      - {symbol: CD36,     uniprot: P16671, role: "Fatty acid + thrombospondin receptor; muscle metabolism"}

@@ -1,0 +1,55 @@
+{
+  "candidate_id": "MET_IL6ST_rigid_helix_40",
+  "receptor_A": "MET",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_40",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "GAB1", "PIK3R1", "PTPN11", "STAT3", "JAK1", "JAK2", "FRS2"],
+    "cis_adaptors": ["SOS1", "SOS2", "CBL"],
+    "excluded_adaptors": ["PLCG1", "PLCG2"]
+  },
+  "biased_pathways": ["MAPK", "PI3K_AKT", "STAT3", "JAK_STAT"],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "SOCS3",
+    "CCND1",
+    "BCL2",
+    "PPARGC1A"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.85,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.50,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "MET (RTK) + IL6ST (gp130, cytokine receptor) forced proximity via rigid_helix_40 (~60Å) creates a biased signaling platform where MET's kinase trans-phosphorylates JAKs docked on IL6ST and IL6ST's JAKs phosphorylate MET's ICD, amplifying STAT3 activation. The transphosphorylation adaptor set (GRB2, SHC1, GAB1, PIK3R1, PTPN11, STAT3, JAK1, JAK2, FRS2) drives synergistic MAPK + PI3K/AKT + STAT3 signaling, while PLCG1/PLCG2 are sterically excluded by the 311aa ECD asymmetry and rigid linker geometry. This triple-axis output promotes muscle structural gene expression (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2), satellite cell self-renewal (NOTCH3), and mitochondrial biogenesis (PPARGC1A), while suppressing aged IEGs (EGR1, FOS, JUN), stress/senescence markers (TXNIP, IL32, CDKN2A, IL6), and aged myogenic commitment (MYF5) — consistent with the past wins pattern.",
+  "literature_refs": [
+    "PMID:10409724",
+    "PMID:32041944",
+    "PMID:30053126",
+    "PMID:23794705",
+    "PMID:26285778"
+  ]
+}

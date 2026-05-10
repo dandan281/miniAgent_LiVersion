@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from typing import Any, AsyncGenerator
 
 from runtime.query_engine import QueryEngine, QueryTurnInput
+from runtime.runner_events import current_session_id as _runner_session_var
 from runtime.turn_ledger import TurnResult
 from tools.policy import tool_policy_context
 from tools.policy_types import ToolPolicyExecutionContext
@@ -209,16 +210,20 @@ class ChatRuntime:
                     yield _sse({"type": "error", "error": event["error"]})
                     return
 
-        with tool_policy_context(policy_context):
-            try:
-                turn = QueryTurnInput(
-                    message=request.message,
-                    history=list(history),
-                    policy_context=policy_context,
-                )
-                query_engine = QueryEngine(self.agent_manager)
-                async for payload in _consume_query_events(query_engine.run_turn(turn)):
-                    yield payload
-            except Exception as exc:
-                _save_user_message()
-                yield _sse({"type": "error", "error": str(exc)})
+        runner_session_token = _runner_session_var.set(request.session_id)
+        try:
+            with tool_policy_context(policy_context):
+                try:
+                    turn = QueryTurnInput(
+                        message=request.message,
+                        history=list(history),
+                        policy_context=policy_context,
+                    )
+                    query_engine = QueryEngine(self.agent_manager)
+                    async for payload in _consume_query_events(query_engine.run_turn(turn)):
+                        yield payload
+                except Exception as exc:
+                    _save_user_message()
+                    yield _sse({"type": "error", "error": str(exc)})
+        finally:
+            _runner_session_var.reset(runner_session_token)

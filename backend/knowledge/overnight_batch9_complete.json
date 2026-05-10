@@ -1,0 +1,8 @@
+[
+  {"candidate_id": "ERBB4_INSR_flexible_GS8", "receptor_A": "ERBB4", "receptor_B": "INSR", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.217}, "notes": "Complete linker matrix for ERBB4+INSR"},
+  {"candidate_id": "MET_IL6ST_rigid_helix_40", "receptor_A": "MET", "receptor_B": "IL6ST", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "Complete linker matrix for MET+IL6ST"},
+  {"candidate_id": "INSR_IL6ST_rigid_helix_40", "receptor_A": "INSR", "receptor_B": "IL6ST", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.15}, "notes": "Complete linker matrix for INSR+IL6ST"},
+  {"candidate_id": "INSR_IL6ST_flexible_GS8", "receptor_A": "INSR", "receptor_B": "IL6ST", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.15}, "notes": "Complete linker matrix for INSR+IL6ST"},
+  {"candidate_id": "INSR_IL6ST_exposit_rigid", "receptor_A": "INSR", "receptor_B": "IL6ST", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.15}, "notes": "Complete linker matrix for INSR+IL6ST"},
+  {"candidate_id": "ERBB4_INSR_exposit_rigid_v2", "receptor_A": "ERBB4", "receptor_B": "INSR", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.217}, "notes": "Reproducibility check"}
+]

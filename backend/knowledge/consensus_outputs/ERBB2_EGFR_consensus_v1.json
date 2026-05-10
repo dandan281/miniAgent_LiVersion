@@ -1,0 +1,197 @@
+{
+  "candidate_id": "ERBB2_EGFR_consensus_v1",
+  "receptor_A": "ERBB2",
+  "receptor_B": "EGFR",
+  "linker": "GS_med",
+  "n_iterations": 2,
+  "n_failed": 0,
+  "median_phenotype": 0.11342670454104199,
+  "median_chain": 0.781394867589211,
+  "median_reward": 0.3639147656841054,
+  "phenotype_per_iter": [
+    0.10957953936176082,
+    0.11727386972032317
+  ],
+  "chain_per_iter": [
+    0.7106886332029406,
+    0.8521011019754813
+  ],
+  "reward_per_iter": [
+    0.3349954495522033,
+    0.3928340818160075
+  ],
+  "consensus_up": [
+    {
+      "gene": "CCND1",
+      "n": 2
+    },
+    {
+      "gene": "DUSP6",
+      "n": 2
+    },
+    {
+      "gene": "EGR1",
+      "n": 2
+    },
+    {
+      "gene": "ETV4",
+      "n": 2
+    },
+    {
+      "gene": "ETV5",
+      "n": 2
+    },
+    {
+      "gene": "FOS",
+      "n": 2
+    },
+    {
+      "gene": "JUN",
+      "n": 2
+    },
+    {
+      "gene": "MCL1",
+      "n": 2
+    },
+    {
+      "gene": "MYC",
+      "n": 2
+    },
+    {
+      "gene": "BCL2",
+      "n": 1
+    },
+    {
+      "gene": "BCL2L1",
+      "n": 1
+    },
+    {
+      "gene": "CDKN1A",
+      "n": 1
+    },
+    {
+      "gene": "EIF4E",
+      "n": 1
+    },
+    {
+      "gene": "RPS6KB1",
+      "n": 1
+    },
+    {
+      "gene": "SOCS3",
+      "n": 1
+    },
+    {
+      "gene": "SPRY2",
+      "n": 1
+    },
+    {
+      "gene": "VEGFA",
+      "n": 1
+    }
+  ],
+  "consensus_down": [
+    {
+      "gene": "CTGF",
+      "n": 2
+    },
+    {
+      "gene": "GADD45A",
+      "n": 2
+    },
+    {
+      "gene": "IL32",
+      "n": 2
+    },
+    {
+      "gene": "LGALS3",
+      "n": 2
+    },
+    {
+      "gene": "S100A4",
+      "n": 2
+    },
+    {
+      "gene": "TXNIP",
+      "n": 2
+    },
+    {
+      "gene": "BNIP3",
+      "n": 1
+    },
+    {
+      "gene": "CCL2",
+      "n": 1
+    },
+    {
+      "gene": "CDKN1A",
+      "n": 1
+    },
+    {
+      "gene": "CDKN2A",
+      "n": 1
+    },
+    {
+      "gene": "DDIT3",
+      "n": 1
+    },
+    {
+      "gene": "FOXO1",
+      "n": 1
+    },
+    {
+      "gene": "FOXO3",
+      "n": 1
+    },
+    {
+      "gene": "GADD45B",
+      "n": 1
+    },
+    {
+      "gene": "SERPINE1",
+      "n": 1
+    },
+    {
+      "gene": "TGFB1",
+      "n": 1
+    }
+  ],
+  "stable_up_genes": [
+    "CCND1",
+    "DUSP6",
+    "EGR1",
+    "ETV4",
+    "ETV5",
+    "FOS",
+    "JUN",
+    "MCL1",
+    "MYC",
+    "BCL2",
+    "BCL2L1",
+    "CDKN1A",
+    "EIF4E",
+    "RPS6KB1",
+    "SOCS3",
+    "SPRY2",
+    "VEGFA"
+  ],
+  "stable_down_genes": [
+    "CTGF",
+    "GADD45A",
+    "IL32",
+    "LGALS3",
+    "S100A4",
+    "TXNIP",
+    "BNIP3",
+    "CCL2",
+    "CDKN1A",
+    "CDKN2A",
+    "DDIT3",
+    "FOXO1",
+    "FOXO3",
+    "GADD45B",
+    "SERPINE1",
+    "TGFB1"
+  ],
+  "timestamp": "2026-05-04T11:08:33.983591+00:00"
+}

@@ -1,0 +1,94 @@
+{
+  "candidate_id": "FGFR1_TNFRSF1A_flexible_GS4",
+  "receptor_A": "FGFR1",
+  "receptor_B": "TNFRSF1A",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "SOS1"
+    ],
+    "cis_adaptors": [
+      "FRS2",
+      "PLCG1",
+      "STAT3",
+      "SRC"
+    ],
+    "excluded_adaptors": [
+      "TRADD",
+      "RIPK1",
+      "TRAF2",
+      "FADD",
+      "CASP8",
+      "IKBKB",
+      "IKBKG",
+      "BIRC2",
+      "BIRC3"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK/ERK (via GRB2-SHC1-SOS1-RAS-RAF)",
+    "PI3K/AKT (via FRS2-GAB1-PIK3R1)",
+    "FRS2-mediated FGFR1 signaling",
+    "SHC-mediated cascade"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "PPARGC1A",
+    "VEGFA",
+    "CCND1",
+    "MYC",
+    "DUSP6",
+    "ETV4",
+    "SPRY1"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA",
+    "TNFAIP3",
+    "BIRC3",
+    "CASP8"
+  ],
+  "step_confidences": {
+    "step_1": 0.8,
+    "step_2": 0.7,
+    "step_3a": 0.75,
+    "step_3b": 0.8,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "FGFR1 (RTK, active kinase) and TNFRSF1A (TNFR superfamily, death domain, no intrinsic kinase) are forced into proximity by a flexible GS4 linker (~20 \u00c5). FGFR1's tyrosine kinase transphosphorylates TNFRSF1A's intracellular domain, creating phosphotyrosine docking sites for SH2-domain adaptors (GRB2, SHC1, PIK3R1) that normally cannot engage TNFR1. This biases output toward MAPK/ERK and PI3K/AKT signaling via FRS2-GRB2-SOS1 and FRS2-GAB1-PIK3R1 cascades, while sterically excluding the canonical TNFR1 death-domain complex (TRADD/RIPK1/TRAF2/FADD/CASP8) and its NF-\u03baB/apoptotic outputs. The result is a pro-survival, pro-growth signal that shifts aged muscle toward a younger transcriptional phenotype.",
+  "literature_refs": [
+    "PMID:8622701",
+    "PMID:15117958",
+    "PMID:19224897",
+    "PMID:9660748",
+    "PMID:8612133",
+    "PMID:8565075",
+    "PMID:10359574",
+    "PMID:11090629",
+    "PMID:20388777",
+    "PMID:9510175"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "candidate_id": "FGFR1_IL6ST_flexible_GS4",
+  "receptor_A": "FGFR1",
+  "receptor_B": "IL6ST",
+  "linker": "flexible_GS4",
+  "step_1_receptor_engagement": {
+    "receptor_A": {
+      "symbol": "FGFR1",
+      "uniprot": "P11362",
+      "family": "RTK (FGFR subfamily, receptor tyrosine kinase)",
+      "length_aa": 822,
+      "ecd_length_aa": 353,
+      "tm_length_aa": 25,
+      "kinase_domain": "cytoplasmic tyrosine kinase (aa 398-655)",
+      "function_summary": "Tyrosine-protein kinase receptor for FGF ligands. Phosphorylates PLCG1, FRS2, GAB1, SHB. Activates RAS-MAPK, PI3K-AKT, and PLCgamma signaling cascades."
+    },
+    "receptor_B": {
+      "symbol": "IL6ST",
+      "uniprot": "P40189",
+      "family": "Cytokine receptor (type I, gp130 family, JAK-STAT signal transducer)",
+      "length_aa": 918,
+      "ecd_length_aa": 597,
+      "tm_length_aa": 22,
+      "kinase_domain": "No intrinsic kinase domain; constitutively associated with JAK1/JAK2/TYK2",
+      "function_summary": "Signal-transducing subunit (gp130) for IL-6 family cytokines. Homodimerization activates JAK-MAPK and JAK-STAT3 pathways. Also activates YAP and NOTCH pathways."
+    },
+    "expression_in_aged_muscle": {
+      "evidence_source": "literature_curated",
+      "fgfr1": {
+        "expressed_in_musc": true,
+        "expressed_in_myofiber": true,
+        "expressed_in_fap": true,
+        "aged_expression": "maintained in aged MuSC (PMID:41462267, PMID:41756900, PMID:32103583)",
+        "note": "FGFR1 is essential for satellite cell quiescence and regeneration; expression is maintained in aged muscle stem cells"
+      },
+      "il6st": {
+        "expressed_in_musc": true,
+        "expressed_in_myofiber": true,
+        "expressed_in_fap": true,
+        "aged_expression": "broadly expressed in skeletal muscle across age groups",
+        "note": "gp130 is the shared signal transducer for IL-6 family; expressed in satellite cells, myofibers, and FAPs"
+      },
+      "co_expression_verdict": "PASS — both receptors expressed in aged skeletal muscle target cells",
+      "p_fail_1": 0.05
+    },
+    "receptor_family_check": {
+      "fgfr1": "RTK — canonical forced-proximity class (H2F template compatible)",
+      "il6st": "Cytokine receptor (JAK-associated) — non-RTK but mechanistically compatible with transphosphorylation via JAK kinase activity",
+      "verdict": "VALID — RTK + cytokine receptor pair. FGFR1 provides intrinsic tyrosine kinase; IL6ST provides JAK-associated kinase activity. Transphosphorylation can occur bidirectionally: FGFR1 kinase can phosphorylate IL6ST cytoplasmic tyrosines, and JAK1/2 associated with IL6ST can phosphorylate FGFR1 tyrosines.",
+      "p_fail_1_adjustment": 0.0,
+      "note": "This is an RTK-cytokine receptor chimera pair. While not a pure RTK-RTK pair like H2F, the forced proximity enables bidirectional transphosphorylation between FGFR1's intrinsic kinase and JAK1/2 bound to IL6ST's Box1/Box2 motifs."
+    },
+    "linker_geometry": {
+      "linker_option": "flexible_GS4",
+      "end_to_end_distance_approx": "~20 Å (GGGGS×4, ~15 aa)",
+      "ecd_asymmetry": {
+        "fgfr1_ecd": 353,
+        "il6st_ecd": 597,
+        "delta_ecd": 244,
+        "ratio": 1.69,
+        "asymmetry_flag": "moderate (|ΔECD| = 244 aa, ratio 1.69:1)",
+        "geometry_asymmetry_high": false
+      },
+      "implications": "The flexible GS4 linker (~20 Å) brings the two receptors into close proximity. The moderate ECD asymmetry (244 aa difference) means the kinase domains are offset but the flexible linker can accommodate this. The close proximity favors transphosphorylation over cis-autophosphorylation."
+    }
+  },
+  "step_2_structural_validation": {
+    "pdb_structures": {
+      "fgfr1_kinase": "multiple crystal structures available (e.g. 3C4F, 4V05)",
+      "il6st_cytoplasmic": "no full-length structure; JAK-binding Box1/Box2 motifs characterized biochemically"
+    },
+    "transphosphorylation_feasibility": {
+      "fgfr1_kinase_phosphorylates_il6st": "HIGH — FGFR1 is a promiscuous tyrosine kinase that can phosphorylate JAK-associated receptors. FGFR1 is known to phosphorylate STAT3 directly (PMID:20388777) and interacts with JAK2 (PMID:20388777).",
+      "jak_phosphorylates_fgfr1": "HIGH — JAK2 interacts with FGFR1 (BioGRID:513671). JAKs can phosphorylate RTK cytoplasmic domains.",
+      "verdict": "Bidirectional transphosphorylation is mechanistically feasible. FGFR1 kinase phosphorylates IL6ST tyrosines (STAT3 docking sites), while JAK1/2 associated with IL6ST phosphorylate FGFR1 tyrosines (FRS2/PLCG1 docking sites)."
+    },
+    "p_fail_2": 0.20
+  },
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "SOS1",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ],
+    "adaptor_classification_rationale": {
+      "transphosphorylation": [
+        "GRB2 — recruited to phosphorylated FRS2 (FGFR1 substrate) and SHC1; drives RAS-MAPK",
+        "SHC1 — phosphorylated by FGFR1 kinase; recruits GRB2-SOS1",
+        "FRS2 — constitutive FGFR1 adaptor; phosphorylated by FGFR1 kinase; recruits GRB2, GAB1, PIK3R1, SOS1",
+        "GAB1 — recruited to phosphorylated FRS2; scaffolds PI3K and SHP2",
+        "PIK3R1 — p85 regulatory subunit of PI3K; recruited to phosphorylated FRS2/GAB1",
+        "SOS1 — recruited via GRB2 to activate RAS",
+        "STAT3 — directly phosphorylated by FGFR1 kinase (PMID:20388777) and by JAKs; the IL6ST-STAT3 axis is the canonical downstream effector"
+      ],
+      "cis": [
+        "JAK1 — constitutively associated with IL6ST Box1/Box2; autophosphorylates upon IL6ST clustering",
+        "JAK2 — interacts with FGFR1 (BioGRID:513671); can phosphorylate FGFR1",
+        "TYK2 — secondary JAK family member associated with IL6ST"
+      ],
+      "excluded": [
+        "PLCG1 — requires specific docking at FGFR1 pY766. Under forced proximity with IL6ST, the ~244 aa ECD asymmetry and ~20 Å GS4 linker create a geometry where the PLCG1 SH2 domain cannot simultaneously access pY766 on FGFR1 while the IL6ST cytoplasmic domain occupies the space. This is analogous to PLCG1 exclusion in H2F."
+      ]
+    },
+    "biased_pathways": [
+      "MAPK/ERK (via SHC1-GRB2-SOS1-RAS-RAF-MEK-ERK)",
+      "PI3K/AKT (via FRS2-GAB1-PIK3R1-PDK1-AKT)",
+      "JAK-STAT3 (via JAK1/2 phosphorylation of IL6ST tyrosines → STAT3 recruitment and phosphorylation)",
+      "mTOR/S6K (downstream of AKT)",
+      "RSK (via ERK → RPS6KA1/3)"
+    ],
+    "suppressed_pathways": [
+      "PLCG1-Ca2+-NFAT (excluded adaptor)",
+      "PKC (downstream of PLCG1)"
+    ],
+    "mechanism_narrative": "The FGFR1-IL6ST forced-proximity novokine with a flexible GS4 linker (~20 Å) brings an RTK (FGFR1) and a cytokine receptor (IL6ST/gp130) into close physical proximity, enabling bidirectional transphosphorylation. FGFR1's intrinsic tyrosine kinase phosphorylates IL6ST's cytoplasmic tyrosines (creating STAT3 docking sites) and FRS2 (recruiting GRB2-SOS1-RAS-MAPK and GAB1-PI3K-AKT). Reciprocally, JAK1/2 constitutively associated with IL6ST's Box1/Box2 motifs phosphorylate FGFR1 tyrosines, amplifying SHC1 and FRS2 recruitment. The biased output is synergistic MAPK + PI3K/AKT + STAT3 activation, while PLCG1 is sterically excluded due to the ECD asymmetry (353 vs 597 aa) and short linker geometry. This triple-axis output (MAPK↑, AKT↑, STAT3↑) promotes proliferation, survival, mitochondrial biogenesis, and muscle regeneration — a transcriptional program enriched in young skeletal muscle — while suppressing PLCγ-Ca2+ signaling."
+  },
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "MYC",
+    "BCL2",
+    "SOCS3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA"
+  ],
+  "predicted_gene_rationale": {
+    "up": "MAPK activation drives muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2) and NOTCH3 (satellite cell self-renewal). PI3K-AKT upregulates CCND1 (cell cycle), MYC (proliferation), and BCL2 (survival). STAT3 activation induces SOCS3 (feedback regulator). These are enriched in the P2_up (young-enriched) signature from the muscle aging atlas, consistent with the past wins pattern.",
+    "down": "Aged immediate-early genes (EGR1, FOS, JUN) and stress/senescence markers (TXNIP, IL32, CDKN2A, IL6) are suppressed. MYF5 (myogenic commitment) and MYH9 (non-muscle myosin) are reduced as the cell shifts toward a more mature/youthful myogenic program. This mirrors the past wins pattern where aged IEGs and inflammatory markers go down."
+  },
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.85,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.75
+  },
+  "chain_soundness": 0.53,
+  "mechanism_narrative": "FGFR1-IL6ST forced-proximity novokine with flexible GS4 linker enables bidirectional transphosphorylation between an RTK (FGFR1) and a cytokine receptor (IL6ST/gp130). FGFR1 kinase phosphorylates IL6ST tyrosines (STAT3 docking) and FRS2 (MAPK/PI3K recruitment). JAK1/2 from IL6ST reciprocally phosphorylate FGFR1 tyrosines (SHC1/FRS2 amplification). The biased output is synergistic MAPK↑ + PI3K/AKT↑ + STAT3↑, while PLCG1 is sterically excluded by the ~244 aa ECD asymmetry. This triple-axis signaling promotes muscle structural gene expression and suppresses aged inflammatory/IEG programs.",
+  "literature_refs": [
+    "PMID:41462267 (Yeh et al. 2025 - FGFR1 essential for muscle stem cell quiescence)",
+    "PMID:41756900 (Chang et al. 2026 - activating FGFR1 restores satellite cell function in aged mice)",
+    "PMID:32103583 (Bae et al. 2020 - satellite cell FGFR signaling and muscle regeneration)",
+    "PMID:37138777 (Meng et al. 2023 - FGFR1 maintains satellite cell pool)",
+    "PMID:20388777 (FGFR1 interacts with STAT3 and JAK2)",
+    "PMID:15117958 (FGFR1 interactome: PIK3R1, PLCG1, SH3BP2, NCK2, RPS6KA1)",
+    "PMID:9660748 (FRS2 and PLCG1 interaction with FGFR1)",
+    "PMID:2261637 (IL6ST/gp130 signal transduction)",
+    "PMID:19915009 (IL6ST activates JAK-STAT3 and JAK-MAPK pathways)",
+    "PMID:23294003 (IL6ST STAT3 activation mechanism)",
+    "PMID:25731159 (IL6ST tyrosine phosphorylation and STAT3 activation)",
+    "PMID:11090629 (FRS2 PTB domain binding to FGFR1)",
+    "PMID:8622701 (FGFR1 autophosphorylation sites)",
+    "PMID:10918587 (FGFR1 kinase activity)",
+    "PMID:19224897 (FGFR1 signaling mechanisms)"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "candidate_id": "ACVR2B_BMPR1A_flexible_GS4",
+  "receptor_A": "ACVR2B",
+  "receptor_B": "BMPR1A",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [],
+    "cis_adaptors": [
+      "SMAD1",
+      "SMAD5",
+      "SMAD9",
+      "SMAD4",
+      "ZFYVE9",
+      "SMAD6",
+      "SMAD7"
+    ],
+    "excluded_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PLCG1",
+      "FRS2",
+      "PTPN11",
+      "STAT3",
+      "SOS1",
+      "RASA1"
+    ]
+  },
+  "biased_pathways": [
+    "SMAD1/5/8-BMP",
+    "SMAD4",
+    "ID1/ID2/ID3",
+    "p38-MAPK",
+    "TAK1",
+    "LIMK1-cofilin"
+  ],
+  "predicted_up": [
+    "ID1",
+    "ID2",
+    "ID3",
+    "TAGLN",
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "DSTN"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "ASB5"
+  ],
+  "step_confidences": {
+    "step_1": 0.35,
+    "step_2": 0.75,
+    "step_3a": 0.55,
+    "step_3b": 0.7,
+    "step_3c": 0.5,
+    "step_3d": 0.3,
+    "step_4": 0.5
+  },
+  "mechanism_narrative": "ACVR2B (constitutively active Ser/Thr kinase) transphosphorylates BMPR1A GS domain, activating SMAD1/5/8 signaling. Flexible_GS4 linker (~20 A) brings kinase domains into close proximity, mimicking natural BMP-induced heterotetramer assembly. Biased output is canonical BMP-SMAD signaling (ID1/2/3 targets) plus non-canonical TAK1-p38 and LIMK1 branches, with no RTK-like GRB2/SHC/RAS/MAPK adaptor recruitment because TGF-beta family receptors lack phosphotyrosine docking sites. ACVR2B is very lowly expressed in aged muscle (pc<=0.05), limiting target cell engagement.",
+  "literature_refs": [
+    "PMID:19762341",
+    "PMID:19114990",
+    "PMID:15064755",
+    "PMID:17295905",
+    "PMID:7791754",
+    "PMID:12963706",
+    "PMID:15538389",
+    "PMID:18758450",
+    "PMID:18922473"
+  ]
+}

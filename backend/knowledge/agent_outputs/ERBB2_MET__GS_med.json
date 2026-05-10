@@ -1,0 +1,75 @@
+{
+  "candidate_id": "ERBB2_MET__GS_med",
+  "receptor_A": "ERBB2",
+  "receptor_B": "MET",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "GAB1",
+      "STAT3",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "GRB7",
+      "CBL"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "STAT3",
+    "RAC1_RAP1"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "EGR2",
+    "BCL2L1",
+    "SOCS3",
+    "JUNB",
+    "FOSL1",
+    "CTGF"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN1A",
+    "GADD45A",
+    "NFKBIZ",
+    "TSC22D3",
+    "PPP1R15A",
+    "DUSP1"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.75,
+    "step_3a": 0.7,
+    "step_3b": 0.8,
+    "step_3c": 0.65,
+    "step_3d": 0.6,
+    "step_4": 0.7
+  },
+  "mechanism_narrative": "The ERBB2-MET novokine with GS_med linker (~20 \u00c5 flexible) forces two structurally asymmetric RTKs (ERBB2 ECD ~630 aa, MET ECD ~930 aa; ratio 1.48:1) into proximity, enabling transphosphorylation that synergistically activates SHC1\u2192GRB2:SOS1\u2192RAS\u2192MAPK/ERK and GAB1\u2192PI3K\u2192AKT signaling axes, plus STAT3 activation via MET's multifunctional docking site (Y1349/Y1356). PLCG1 is sterically excluded due to the ~300 aa ECD asymmetry creating a geometry where PLCG1 cannot productively dock at the co-clustered intracellular domains. The biased output (MAPK\u2191, AKT\u2191, STAT3\u2191, PLC\u03b3\u2193) promotes satellite cell activation, proliferation, and survival \u2014 a transcriptional program enriched in young skeletal muscle \u2014 while suppressing calcium-dependent signaling pathways associated with aged muscle dysfunction.",
+  "literature_refs": [
+    "PMID:30898150 (Kennedy et al. 2019 - ERBB2-MET heterodimerization in breast cancer; BiFC, co-IP, PLA evidence)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:17123512 (Golding et al. 2007 - skeletal muscle stem cells express ErbB receptors)",
+    "PMID:9242692 (Weidner et al. 1997 - GAB1 binds MET multifunctional docking site)",
+    "PMID:9440692 (Boccaccio et al. 1998 - MET activates STAT3)",
+    "PMID:8662889 (Ponzetto et al. 1996 - GRB2 binds MET Y1356)",
+    "PMID:9660480 (Shen et al. 1998 - SHC1 and SOS1 recruitment by MET)",
+    "PMID:16729043 (Zhang et al. 2006 - ERBB2 interactome: SHC1, GRB2, PTPN11, PIK3R1)",
+    "PMID:11940572 (Ren et al. 2002 - ERBB2 activates STAT3 via SRC/JAK2)",
+    "PMID:9756944 (Vijapurkar et al. 1998 - ERBB2 recruits SHC1, GRB2, PIK3R1, PTPN11)"
+  ]
+}

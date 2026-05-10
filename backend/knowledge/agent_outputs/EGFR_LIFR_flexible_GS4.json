@@ -1,0 +1,77 @@
+{
+  "candidate_id": "EGFR_LIFR_flexible_GS4",
+  "receptor_A": "EGFR",
+  "receptor_B": "LIFR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "JAK1",
+      "JAK2",
+      "STAT3",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "EGFR_autophosphorylation_sites"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "SHP2_MAPK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "CCND1",
+    "SOCS3",
+    "BCL2"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.70,
+    "step_3c": 0.70,
+    "step_3d": 0.55,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "The EGFR+LIFR forced-proximity novokine (flexible_GS4 linker, ~20 Å) biases signaling by enabling EGFR's intrinsic tyrosine kinase to transphosphorylate LIFR's ICD, while LIFR-associated JAK1/JAK2 reciprocally phosphorylate EGFR. This synergistic cross-talk activates three axes: (1) GRB2/SHC1→RAS→MAPK/ERK via EGFR pY1068/pY1086 and LIFR/JAK phosphotyrosines; (2) GAB1/PIK3R1→PI3K→AKT via EGFR pY845/pY1173 and LIFR/JAK-recruited adaptors; and (3) JAK1/JAK2→STAT3 via LIFR box1/JAK interaction. PLCG1 is sterically excluded because the short GS4 linker (~20 Å) cannot span the asymmetric ECD geometry (EGFR ~621 aa vs LIFR ~789 aa ECD) to position PLCG1's SH2 domains for productive docking at both EGFR pY992 and LIFR/JAK phosphosites simultaneously. The biased output (MAPK↑, AKT↑, STAT3↑, PLCγ↓) promotes muscle structural gene expression and satellite cell self-renewal while suppressing aged IEGs and inflammatory markers.",
+  "literature_refs": [
+    "PMID:10358079 — EGFR directly interacts with and activates JAK2",
+    "PMID:15284024 — EGFR-JAK-STAT signaling axis in EGF-stimulated cells",
+    "PMID:11751884 — JAK1 phosphorylates STAT3 in cytokine receptor signaling",
+    "PMID:8999038 — LIFR heterodimerizes with IL6ST/gp130",
+    "PMID:12047380 — LIFR-IL6ST interaction confirmed by co-IP",
+    "PMID:12297049 — EGFR kinase domain structure and autophosphorylation sites",
+    "PMID:27153536 — EGFR signaling cascades (RAS-RAF-MEK-ERK, PI3K-AKT, PLCγ-PKC, STATs)",
+    "PMID:17123512 — Skeletal muscle stem cells express ErbB receptors",
+    "PMID:32103583 — FGFR signaling in satellite cells and muscle regeneration",
+    "PMID:39326351 — IRS1 is a novel member of EGFR signaling"
+  ]
+}

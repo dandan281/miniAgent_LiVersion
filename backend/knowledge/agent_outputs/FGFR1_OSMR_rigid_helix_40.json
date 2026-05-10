@@ -1,0 +1,91 @@
+{
+  "candidate_id": "FGFR1_OSMR_rigid_helix_40",
+  "receptor_A": "FGFR1",
+  "receptor_B": "OSMR",
+  "linker": "rigid_helix_40",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "PTPN11",
+      "JAK1",
+      "JAK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "SOS1",
+      "RASA1",
+      "NCK1",
+      "VAV1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "FRS2_MAPK",
+    "GAB1_PI3K"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "DSTN",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "PRUNE2",
+    "TTN",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.70,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "FGFR1 (RTK) and OSMR (cytokine receptor) are co-expressed in aged muscle FB/EnFB. The rigid_helix_40 linker (~60 \u00c5) forces FGFR1's kinase domain (aa 478-767, close to membrane) to transphosphorylate OSMR's intracellular domain (large 713aa ECD creates a long reach). This biased geometry activates GRB2-SHC1-FRS2-GAB1-PIK3R1 adaptors (MAPK/PI3K output) and STAT3 (via JAK transactivation), while sterically excluding PLCG1 (which requires precise docking at the FGFR1 juxtamembrane region) and SOS1/RASA1 (which require direct proximity to the kinase domain). The resulting transcriptome shift upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, TAGLN, TPM2) and downregulates aged-marker IEGs (EGR1, FOS, JUN) and atrophy-associated genes (MYF5, MYH9, TTN, NEB), consistent with a rejuvenating phenotype.",
+  "literature_refs": [
+    "PMID:11030354",
+    "PMID:9660748",
+    "PMID:11877385",
+    "PMID:20388777",
+    "PMID:15117958",
+    "PMID:10629055",
+    "PMID:24141780",
+    "PMID:31705893",
+    "PMID:34769079"
+  ]
+}

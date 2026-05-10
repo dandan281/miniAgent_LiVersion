@@ -1,0 +1,112 @@
+{
+  "candidate_id": "TGFBR2_BMPR1A_flexible_GS4",
+  "receptor_A": "TGFBR2",
+  "receptor_B": "BMPR1A",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SMAD1",
+      "SMAD5",
+      "SMAD9",
+      "SMAD2",
+      "SMAD3",
+      "SMAD4",
+      "ZFYVE9",
+      "TRAF6"
+    ],
+    "cis_adaptors": [
+      "SMAD2",
+      "SMAD3",
+      "SMAD4",
+      "ZFYVE9"
+    ],
+    "excluded_adaptors": [
+      "GRB2",
+      "SHC1",
+      "SHC2",
+      "GAB1",
+      "GAB2",
+      "PIK3R1",
+      "PTPN11",
+      "PLCG1",
+      "PLCG2",
+      "SOS1",
+      "SOS2",
+      "RASA1",
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "STAT1",
+      "JAK1",
+      "JAK2",
+      "TYK2",
+      "MAPK1",
+      "MAPK3",
+      "CBL",
+      "DOK1",
+      "FRS2",
+      "FRS3",
+      "IRS1",
+      "IRS2",
+      "NCK1",
+      "VAV1"
+    ]
+  },
+  "biased_pathways": [
+    "SMAD2/3-SMAD4 transcriptional program (TGF-β canonical)",
+    "SMAD1/5/9-SMAD4 transcriptional program (BMP canonical, activated by TGFBR2 transphosphorylation of BMPR1A)",
+    "TRAF6-TAK1-p38/JNK (non-canonical TGF-β, partial)",
+    "SERPINE1/CTGF/SMAD7 matrix remodeling program",
+    "ID1/ID2/ID3 BMP target program"
+  ],
+  "predicted_up": [
+    "SERPINE1",
+    "CTGF",
+    "SMAD7",
+    "ID1",
+    "ID2",
+    "ID3",
+    "TAGLN",
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TIMP3",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "IL32",
+    "TXNIP",
+    "OTUD1",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "TNFSF10"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.70,
+    "step_3a": 0.60,
+    "step_3b": 0.75,
+    "step_3c": 0.55,
+    "step_3d": 0.30,
+    "step_4": 0.65
+  },
+  "mechanism_narrative": "TGFBR2 (constitutively active Ser/Thr kinase, type II TGF-β receptor) and BMPR1A (type I BMP receptor) are forced into proximity by a flexible GS4 linker (~20 Å). TGFBR2's kinase transphosphorylates BMPR1A's GS domain, activating its SMAD1/5/9 kinase activity — an event that normally requires a type II BMP receptor. This generates a hybrid SMAD signal: SMAD2/3 (via TGFBR2's canonical pathway) and SMAD1/5/9 (via TGFBR2-activated BMPR1A), converging on SMAD4. All SH2-domain adaptors (GRB2, SHC1, PIK3R1, PLCG1) are excluded because TGF-β family Ser/Thr kinases do not create phosphotyrosine docking motifs. The biased output is a dual SMAD transcriptional program favoring matrix remodeling (SERPINE1, CTGF, SMAD7, ACTA2, TAGLN) and BMP targets (ID1, ID2, ID3), while suppressing aged IEGs (EGR1, FOS, JUN) and inflammatory markers (IL32, IL6). This is a novel receptor class combination with no H2F precedent — the mechanism is plausible but the lack of MAPK/ERK and PI3K/AKT engagement (due to absent phosphotyrosine signaling) distinguishes it from the ERBB2+FGFR1 wins.",
+  "literature_refs": [
+    "PMID:10712517",
+    "PMID:21701805",
+    "PMID:35177083",
+    "PMID:32899497",
+    "PMID:8622701",
+    "PMID:15117958",
+    "PMID:19224897",
+    "PMID:9660748",
+    "PMID:8612133",
+    "PMID:10359574"
+  ]
+}

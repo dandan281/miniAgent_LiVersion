@@ -1,0 +1,82 @@
+{
+  "candidate_id": "INSR_IL6ST_rigid_helix_40",
+  "receptor_A": "INSR",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_40",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "IRS1",
+      "IRS2",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "SOCS3",
+      "GRB10",
+      "SH2B1",
+      "DOK1",
+      "VAV1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "CBL"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAS_SHP2"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.85,
+    "step_3a": 0.80,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.70,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "INSR (RTK, Tyr kinase) and IL6ST (gp130, JAK-associated cytokine receptor) are forced into proximity by a rigid 60 Å α-helical linker. INSR's intrinsic tyrosine kinase transphosphorylates IL6ST's ICD tyrosines, creating novel docking sites for GRB2, SHC1, PIK3R1, and STAT3, while JAK1/JAK2 from IL6ST reciprocally phosphorylate INSR tyrosines to recruit IRS1/IRS2 and PTPN11. The biased output is MAPK/ERK + PI3K/AKT + JAK/STAT3 signaling, with PLCγ1 and CBL sterically excluded by the rigid geometry. This shifts aged muscle toward a young transcriptional phenotype by upregulating contractile structural genes (ACTA2, MYL9, MYH11) and downregulating aged inflammatory IEGs (EGR1, FOS, JUN, IL32).",
+  "literature_refs": [
+    "PMID:23935097",
+    "PMID:9501088",
+    "PMID:12456798",
+    "PMID:9013873",
+    "PMID:9126968",
+    "PMID:9388212",
+    "PMID:10579793",
+    "PMID:11468294",
+    "PMID:11821958",
+    "PMID:12403768"
+  ]
+}

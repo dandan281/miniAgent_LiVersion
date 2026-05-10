@@ -3,7 +3,7 @@ name: novokine_validation
 description: Sanity-check a proposed novokine candidate (receptor pair + minibinders) on identity, expression, mechanism, geometry, and design quality before committing experimental or design budget.
 category: bio/literature
 version: 1.1
-requires_tools: [search_knowledge_base, fetch_url, uniprot_api, ncbi_eutils, read_file, python_repl, alphafold3_api]
+requires_tools: [search_knowledge_base, fetch_url, uniprot_api, ncbi_eutils, read_file, python_repl]
 requires_network: true
 user_invocable: true
 tags: [novokine, minibinder, validation, receptor-pair, sanity-check, alphafold3, structure-prediction]

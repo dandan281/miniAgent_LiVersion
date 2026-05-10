@@ -1,0 +1,10 @@
+[
+  {"candidate_id": "FGFR1_OSMR_rigid_helix_20", "receptor_A": "FGFR1", "receptor_B": "OSMR", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.0877}, "notes": "FGFR1+OSMR was top-5 with flex_GS4, testing rigid 30Å"},
+  {"candidate_id": "FGFR1_OSMR_rigid_helix_40", "receptor_A": "FGFR1", "receptor_B": "OSMR", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.0877}, "notes": "FGFR1+OSMR rigid 60Å"},
+  {"candidate_id": "FGFR1_OSMR_flexible_GS8", "receptor_A": "FGFR1", "receptor_B": "OSMR", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.0877}, "notes": "FGFR1+OSMR flexible 40Å"},
+  {"candidate_id": "MET_IL6ST_flexible_GS8", "receptor_A": "MET", "receptor_B": "IL6ST", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "MET+IL6ST top-3 candidate, testing GS8 (best for EGFR+IL6ST)"},
+  {"candidate_id": "MET_IL6ST_rigid_helix_20", "receptor_A": "MET", "receptor_B": "IL6ST", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "MET+IL6ST rigid 30Å"},
+  {"candidate_id": "ERBB4_IL6ST_flexible_GS8", "receptor_A": "ERBB4", "receptor_B": "IL6ST", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "ERBB4+IL6ST testing GS8 (best for EGFR+IL6ST)"},
+  {"candidate_id": "INSR_IL6ST_rigid_helix_20", "receptor_A": "INSR", "receptor_B": "IL6ST", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.15}, "notes": "INSR+IL6ST rank #4, testing rigid"},
+  {"candidate_id": "EGFR_INSR_rigid_helix_20", "receptor_A": "EGFR", "receptor_B": "INSR", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.15}, "notes": "EGFR+INSR with rigid linker"}
+]

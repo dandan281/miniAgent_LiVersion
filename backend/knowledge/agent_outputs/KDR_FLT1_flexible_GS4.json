@@ -1,0 +1,69 @@
+{
+  "candidate_id": "KDR_FLT1_flexible_GS4",
+  "receptor_A": "KDR",
+  "receptor_B": "FLT1",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "PIK3R1",
+      "NCK1",
+      "SHB"
+    ],
+    "cis_adaptors": [
+      "FYN",
+      "SH2D2A"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "RASA1"
+    ]
+  },
+  "biased_pathways": [
+    "PI3K-AKT-mTOR",
+    "p38-MAPK",
+    "FAK-PTK2-cytoskeletal",
+    "MAPK-ERK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "TAGLN",
+    "MYH11",
+    "MYOM2",
+    "MYL6",
+    "TIMP3",
+    "IGFBP7",
+    "CLIC4",
+    "PPP1R14A"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CSRP3",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.80,
+    "step_2": 0.85,
+    "step_3a": 0.70,
+    "step_3b": 0.75,
+    "step_3c": 0.65,
+    "step_3d": 0.30,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "KDR-FLT1 forced-proximity novokine with flexible_GS4 linker biases signaling toward PI3K-AKT-mTOR survival and p38-mediated myogenic differentiation via SHC1/GRB2/PIK3R1 transphosphorylation, while sterically excluding PLCG1-Ca2+-PKC signaling. The short linker (~20 A) and near-identical ECD lengths (745 vs 732 aa) position kinase domains for efficient transphosphorylation. VEGFRs are low in steady-state aged muscle but induced during regeneration (PMID:25762009), making this a regeneration-context rejuvenation candidate. The biased output suppresses aged IEG markers (EGR1/FOS/JUN) and atrophy programs via AKT-FOXO inhibition while upregulating young-enriched contractile and structural genes (ACTA2/MYL/TAGLN).",
+  "literature_refs": [
+    "PMID:25762009",
+    "PMID:27170199",
+    "PMID:20953695",
+    "PMID:25830763"
+  ]
+}

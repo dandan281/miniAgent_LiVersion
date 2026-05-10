@@ -1,0 +1,84 @@
+{
+  "candidate_id": "INSR_MET__GS_med",
+  "receptor_A": "INSR",
+  "receptor_B": "MET",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "IRS1",
+      "IRS2",
+      "SHC1",
+      "GAB1",
+      "GRB2",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "SRC",
+      "STAT3"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "PI3K_AKT_mTOR",
+    "RAS_MAPK_ERK",
+    "SHC_GRB2_SOS_RAS",
+    "IRS_PI3K_AKT",
+    "GAB1_PI3K_AKT",
+    "PTPN11_RAS_amplification",
+    "FOXO_metabolic"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "PPARGC1A",
+    "SLC2A4",
+    "EGR1",
+    "FOS",
+    "JUN",
+    "BCL2",
+    "MCL1",
+    "FOXO1",
+    "IGFBP5",
+    "VEGFA",
+    "DUSP6",
+    "SPRY2"
+  ],
+  "predicted_down": [
+    "PLCG1",
+    "PPP3CA",
+    "NFATC2",
+    "NFATC4",
+    "PRKCA",
+    "PRKCB",
+    "ITPR1",
+    "ITPR2",
+    "CAMK2A",
+    "CAMK2B",
+    "TXNIP",
+    "IL32"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.85,
+    "step_3a": 0.70,
+    "step_3b": 0.88,
+    "step_3c": 0.65,
+    "step_3d": 0.75,
+    "step_4": 0.78
+  },
+  "mechanism_narrative": "The INSR-MET novokine with GS_med linker (~20-35 Å flexible) forces two RTKs with nearly identical ECD lengths (INSR=929 aa, MET=908 aa; ratio 1.02:1) into proximity, enabling transphosphorylation that synergistically activates shared PI3K-AKT-mTOR and RAS-MAPK signaling via IRS1/IRS2 (INSR-specific), GAB1 (shared), SHC1 (shared), and GRB2-SOS (shared) adaptors. The key biased output is PI3K-AKT-mTOR dominance (both receptors strongly couple to PI3K) with RAS-MAPK co-activation, while PLCG1 is sterically excluded because MET's long juxtamembrane domain (122 aa vs INSR's 43 aa) creates an asymmetric intracellular geometry that prevents PLCG1 from productively docking at the co-clustered kinase domains. This biased output (AKT↑, MAPK↑, PLCγ↓) promotes glucose uptake, mitochondrial biogenesis, protein synthesis, and cell survival — a transcriptional program enriched in young skeletal muscle — while suppressing calcium-dependent signaling pathways.",
+  "literature_refs": [
+    "PMID:9428692 — INSR autophosphorylation sites and IRS/SHC adaptor recruitment",
+    "PMID:18819921 — MET interacts with PTPN1 and signals through GAB1-GRB2",
+    "PMID:10454568 — MET signaling through GAB1, PI3K, and STAT3",
+    "PMID:9883724 — HGF/MET activates quiescent satellite cells for muscle regeneration",
+    "PMID:12138094 — INSR-IGF1R hybrid receptor signaling",
+    "doi:10.1038/372186a0 — Insulin signaling drives glucose uptake in muscle",
+    "PMID:31604163 — FGF2 signaling expands satellite cells (H2F template reference)",
+    "PMID:39592735 — H2F (ERBB2-FGFR1) forced-proximity novokine drives myogenic reprogramming"
+  ]
+}

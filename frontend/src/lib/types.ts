@@ -444,7 +444,39 @@ export type InspectorTab =
   | "memory"
   | "skills"
   | "usage"
-  | "turns";
+  | "turns"
+  | "runners";
+
+export type RunnerPhase =
+  | "queued"
+  | "running"
+  | "downloading"
+  | "done"
+  | "failed"
+  | "heartbeat"
+  | (string & {}); // forward-compatible: tools may use custom phase strings
+
+export interface RunnerEventPayload {
+  session_id: string;
+  job_id: string;
+  tool: string;
+  phase: RunnerPhase;
+  timestamp: number;
+  event_index: number;
+  percent?: number;
+  eta_s?: number;
+  elapsed_s?: number;
+  log_tail?: string;
+  payload?: Record<string, unknown>;
+}
+
+export interface RunnerJobState {
+  job_id: string;
+  tool: string;
+  latest: RunnerEventPayload;
+  history: RunnerEventPayload[]; // bounded; oldest pruned by the consumer
+  first_seen_at: number;
+}
 
 export interface Session {
   id: string;

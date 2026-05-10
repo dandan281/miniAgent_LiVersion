@@ -1,0 +1,195 @@
+{
+  "candidate_id": "FGFR2_OSMR_flexible_GS4",
+  "receptor_A": "FGFR2",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "step_analysis": {
+    "step_1_receptor_engagement": {
+      "receptor_A": {
+        "symbol": "FGFR2",
+        "uniprot": "P21802",
+        "family": "RTK (Tyr protein kinase family, FGFR subfamily)",
+        "ecd_length_aa": 356,
+        "kinase_domain": "481-770",
+        "expression_in_aged_muscle": {
+          "EnFB": "old pc=0.03 me=0.05 (BELOW 0.10 threshold)",
+          "FB": "old pc=0.00 me=0.00",
+          "MuSC": "old pc=0.01 me=0.01",
+          "MF-I": "old pc=0.00 me=0.01",
+          "MF-II": "old pc=0.00 me=0.01"
+        },
+        "expression_pass": false,
+        "note": "FGFR2 is expressed at very low levels across all aged muscle cell types. Highest in EnFB at pc=0.03, well below the 0.10 threshold. This is a significant concern for target engagement."
+      },
+      "receptor_B": {
+        "symbol": "OSMR",
+        "uniprot": "Q99650",
+        "family": "Type I cytokine receptor family (Type 2 subfamily), associates with JAK1/2",
+        "ecd_length_aa": 713,
+        "kinase_domain": "None (no intrinsic kinase — signals via JAK1 association)",
+        "expression_in_aged_muscle": {
+          "FB": "old pc=0.35 me=0.57 (PASS)",
+          "EnFB": "old pc=0.13 me=0.21 (PASS)",
+          "MuSC": "old pc=0.12 me=0.16 (PASS)",
+          "MF-II": "old pc=0.11 me=0.21 (PASS)",
+          "PnFB": "old pc=0.15 me=0.26 (PASS)"
+        },
+        "expression_pass": true,
+        "note": "OSMR is well-expressed in aged muscle fibroblasts (FB, EnFB, PnFB), MuSC, and MF-II. Strong target in the aged muscle microenvironment."
+      },
+      "co_expression_verdict": "FGFR2 FAILS the pc>=0.10 threshold in all aged muscle cell types. OSMR passes in multiple compartments. This is a significant asymmetry — the novokine's FGFR2-targeting arm has poor target availability in aged muscle.",
+      "receptor_family_check": "FGFR2 (RTK) + OSMR (cytokine receptor) — both are valid transphosphorylation-capable classes. RTK kinase can phosphorylate JAK-associated cytokine receptor substrates, and JAK can reciprocally phosphorylate RTK sites. This is a novel but mechanistically defensible cross-family pair.",
+      "linker_geometry": {
+        "type": "flexible_GS4",
+        "approx_distance": "~20 Å (GGGGS×4, ~15 aa)",
+        "ecd_asymmetry": "FGFR2 ECD=356aa vs OSMR ECD=713aa → |Δ|=357aa > 200aa → geometry_asymmetry_high=true",
+        "implication": "The 2:1 ECD size ratio means FGFR2's intracellular kinase domain sits ~50-60 Å closer to the membrane than OSMR's JAK-docking region. A flexible 20 Å GS4 linker may not fully bridge this gap. The OSMR ECD is exceptionally long (713aa, one of the longest cytokine receptor ECDs), creating a large spatial offset. This geometry likely biases which adaptors can productively dock."
+      },
+      "p_fail_1": 0.40,
+      "p_fail_1_rationale": "FGFR2 fails expression threshold in aged muscle (pc<0.10 in all cell types). OSMR passes strongly. High ECD asymmetry (357aa difference). Elevated to 0.40 due to target engagement risk."
+    },
+    "step_2_structural_geometry": {
+      "fgfr2_pdb_entries": 54,
+      "osmr_pdb_entries": 0,
+      "fgfr2_structural_coverage": "Well-characterized — multiple crystal structures of ECD (e.g. 10OU, 2PVF, 3B2T, 4J99) and kinase domain available.",
+      "osmr_structural_coverage": "No PDB structures — large 713aa ECD with FNIII domains, structurally uncharacterized.",
+      "geometry_verdict": "FGFR2 has excellent structural coverage. OSMR has none. The large ECD asymmetry (356 vs 713 aa) combined with a short flexible linker (20 Å) means the kinase domains are unlikely to align optimally. The flexible GS4 linker may accommodate some of the offset, but the 357aa ECD difference is substantial.",
+      "p_fail_2": 0.35,
+      "p_fail_2_rationale": "No OSMR structure available. Large ECD asymmetry with short linker. Elevated from baseline 0.20 to 0.35."
+    },
+    "step_3a_adaptor_classification": {
+      "fgfr2_known_interactors_from_biogrid": ["PIK3R1", "FRS2", "PLCG1", "STAT3", "STAT5A", "STAT5B", "CBL", "PTPN11", "FYN", "LYN", "PTPN6", "PTPN12"],
+      "osmr_known_interactors_from_biogrid": ["JAK1", "IL6ST", "ERBB2", "EGFR", "RAC1", "RAC3", "RHOC", "RHOJ"],
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "cis_adaptors": [
+        "JAK1",
+        "STAT3",
+        "STAT5A",
+        "STAT5B",
+        "PTPN11"
+      ],
+      "excluded_adaptors": [
+        "PLCG1",
+        "PLCG2"
+      ],
+      "adaptor_rationale": {
+        "transphosphorylation": "GRB2, SHC1, FRS2, GAB1, and PIK3R1 are recruited via phosphotyrosine sites created by transphosphorylation between FGFR2's kinase and OSMR's JAK1-associated tyrosines. FGFR2 kinase phosphorylates Y sites on OSMR's intracellular tail, creating docking sites for SH2-domain adaptors (GRB2, SHC1, PIK3R1 p85). FRS2 is constitutively associated with FGFR2 and becomes hyper-phosphorylated under forced proximity. GAB1 is recruited to phosphorylated FRS2. These adaptors define the biased output.",
+        "cis": "JAK1 is constitutively associated with OSMR (Box1/Box2 motifs) and is activated by cis-phosphorylation within the OSMR-JAK complex. STAT3/5 are recruited to phosphorylated JAK1 and OSMR Y sites — these are background JAK-STAT signals that occur in both natural OSM signaling and the novokine context. PTPN11 (SHP2) binds to FGFR2 phosphosites via its SH2 domains in cis.",
+        "excluded": "PLCG1/PLCG2 are excluded because the large ECD asymmetry (356 vs 713 aa) and short GS4 linker (~20 Å) prevent PLCγ from bridging the FGFR2-OSMR co-cluster geometry. PLCγ requires precise spatial positioning to access both its PH domain (membrane PIP2) and its SH2 domains (receptor pY sites). The 357aa ECD offset creates a geometry where PLCγ cannot simultaneously satisfy both binding requirements. This mirrors the H2F exemplar where PLCγ was sterically excluded."
+      },
+      "p_fail_3a": 0.25,
+      "p_fail_3a_rationale": "OmniPath was unavailable (502 errors). Adaptor classification based on BioGRID PPI evidence and literature knowledge. Moderate confidence."
+    },
+    "step_3b_pathway_cassette": {
+      "reactome_pathways_from_adaptors": {
+        "grb2_pathways": ["PI3K Cascade (R-HSA-109704)", "SOS-mediated signalling (R-HSA-112412)", "GRB2 events in EGFR signaling (R-HSA-179812)", "GRB2 events in ERBB2 signaling (R-HSA-1963640)", "Signalling to RAS (R-HSA-167044)", "RAF/MAP kinase cascade (R-HSA-5673001)"],
+        "shc1_pathways": ["SHC1 events in ERBB2 signaling (R-HSA-1250196)", "SHC-mediated cascade:FGFR2 (R-HSA-5654699)", "Interleukin receptor SHC signaling (R-HSA-912526)", "Signalling to RAS (R-HSA-167044)"],
+        "frs2_pathways": ["FRS-mediated FGFR2 signaling (R-HSA-5654700)", "Signalling to RAS (R-HSA-167044)", "PI-3K cascade:FGFR2 (R-HSA-5654695)"],
+        "gab1_pathways": ["GAB1 signalosome (R-HSA-180292)", "PI3K/AKT activation (R-HSA-198203)"],
+        "pik3r1_pathways": ["PI3K Cascade (R-HSA-109704)", "PIP3 activates AKT signaling (R-HSA-1257604)", "PI-3K cascade:FGFR2 (R-HSA-5654695)", "PI3K events in ERBB2 signaling (R-HSA-1963642)"],
+        "jak1_pathways": ["Interleukin-6 signaling (R-HSA-1059683)", "Interleukin receptor SHC signaling (R-HSA-912526)", "Other interleukin signaling (R-HSA-449836)"],
+        "stat3_pathways": ["Signalling to STAT3 (R-HSA-198745)", "Interleukin-6 signaling (R-HSA-1059683)", "Interleukin-7 signaling (R-HSA-1266695)"]
+      },
+      "biased_pathways": [
+        "MAPK/ERK (via GRB2-SOS-RAS-RAF-MAPK cascade)",
+        "PI3K/AKT (via PIK3R1-GAB1-PIP3-AKT)",
+        "FRS2-mediated FGFR2 signaling",
+        "SHC-mediated RAS signaling"
+      ],
+      "background_pathways": [
+        "JAK-STAT3 signaling (via JAK1-STAT3 — present in both natural OSM and novokine)",
+        "JAK-STAT5 signaling (via JAK1-STAT5A/B)"
+      ],
+      "excluded_pathways": [
+        "PLCγ-Ca²⁺ signaling (PLCG1/PLCG2 excluded by geometry)"
+      ],
+      "pathway_rationale": "The forced proximity of FGFR2 (RTK with intrinsic kinase) and OSMR (JAK-associated cytokine receptor) creates a unique signaling hub. FGFR2's kinase phosphorylates OSMR's intracellular tyrosines, creating novel docking sites for SH2-domain adaptors (GRB2, SHC1, PIK3R1) that are not normally recruited to OSMR. This biases signaling toward MAPK and PI3K/AKT — pathways that are normally weak or absent in OSM signaling (which primarily activates JAK-STAT). The GS4 linker's short length (~20 Å) combined with the large ECD asymmetry means the FGFR2 kinase domain is positioned closer to the membrane than OSMR's JAK-docking region, favoring adaptors that bind near the membrane-proximal region.",
+      "p_fail_3b": 0.20,
+      "p_fail_3b_rationale": "Reactome data obtained for key adaptors. Pathway logic is sound but the RTK-cytokine cross-family signaling is novel and not directly validated."
+    },
+    "step_3c_tf_target_mapping": {
+      "atlas_calibration": {
+        "p2_up_young_enriched": ["FMN1", "TAGLN", "MAFB", "ACTA2", "MYL9", "DSTN", "ZBED3", "MT-ND3", "MT-ATP6", "PRKAG2", "FABP4", "MT-CO2", "ACTB", "ENTREP1", "DHCR24", "IGFBP7", "MYH11", "MYOM2", "MT-CO3", "MYL6", "NBPF14", "TMSB4X", "TIMP3", "MT-ND4", "MT-ND2", "MT-CYB", "ADIRF", "RGCC", "MT-CO1", "DDX3Y", "MT-ND1", "CLIC4", "ITGA8", "PPP1R14A", "ENPP5", "IGFBP6", "C11ORF96", "EEF1A1", "SH3BP5", "PTMA"],
+        "p1_up_aged_enriched": ["OTUD1", "TTN", "PRUNE2", "MYH9", "ASB5", "NEB", "MAP3K7CL", "PPDPFL", "EGR1", "DNAJA4", "ETS2", "IL32", "FABP5", "TXNIP", "CSRP3", "ADIRF", "C1R", "RRAS2", "HDAC9", "MYF5", "GPAT3", "DEPP1", "MYF6", "CAV1", "HIPK3", "ATP11B", "FOS", "GPX3", "UBC", "ST3GAL5", "PPP2R3A", "SPRY1", "USP13", "TP63", "CCSER2", "PRKAA2", "NRAP", "KAT6B", "IFRD1", "PICALM"],
+        "ieg_aged_markers_never_up": ["EGR1", "FOS", "JUN", "MYC", "MYH9", "MYF5", "IL32", "TXNIP", "ASB5"]
+      },
+      "tf_target_logic": "MAPK/ERK signaling activates SRF (via TCF/ELK1 phosphorylation) and AP-1 (FOS/JUN) transcription factors. PI3K/AKT signaling activates FOXO and mTOR downstream effectors. In the context of aged muscle, MAPK activation drives expression of contractile and cytoskeletal genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, TPM2) — these are P2_up (young-enriched) markers. Importantly, the biased MAPK/PI3K output from FGFR2+OSMR forced proximity should NOT activate the aged IEG program (EGR1, FOS, JUN, IL32, TXNIP) because: (1) PLCγ-Ca²⁺ signaling is excluded, which is a major route to IEG activation via Ca²⁺-dependent transcription factors; (2) the JAK-STAT pathway is present as background but not amplified by the forced proximity geometry.",
+      "p_fail_3c": 0.30,
+      "p_fail_3c_rationale": "OmniPath TF-target data unavailable (502). TF logic based on literature knowledge of MAPK/PI3K downstream targets. Moderate-high uncertainty."
+    },
+    "step_3d_crispr_evidence": {
+      "biogrid_screens": "BioGRID ORCS query for FGFR2 and OSMR returned no muscle-relevant CRISPR screens. Most ORCS data is from cancer cell lines.",
+      "relevant_evidence": "FGFR2 has been identified in CRISPR screens for cell proliferation (HeLa, negative genetic interaction with BRAF and MAP3K1). OSMR has no significant CRISPR screen hits in the ORCS database.",
+      "p_fail_3d": 0.35,
+      "p_fail_3d_rationale": "No muscle-relevant CRISPR screens available. Standard baseline for novel targets."
+    }
+  },
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "FRS2", "GAB1", "PIK3R1"],
+    "cis_adaptors": ["JAK1", "STAT3", "STAT5A", "STAT5B", "PTPN11"],
+    "excluded_adaptors": ["PLCG1", "PLCG2"]
+  },
+  "biased_pathways": ["MAPK/ERK", "PI3K/AKT", "FRS2-mediated signaling", "SHC-RAS signaling"],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "PPP1R14A",
+    "ITGA8",
+    "TMSB4X"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "PRUNE2",
+    "DNAJA4",
+    "HDAC9",
+    "CSRP3",
+    "FABP5"
+  ],
+  "step_confidences": {
+    "step_1": 0.60,
+    "step_2": 0.65,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.65,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "FGFR2 (RTK) and OSMR (cytokine receptor) are forced into proximity by a flexible GS4 linker (~20 Å). FGFR2's kinase transphosphorylates OSMR's intracellular tyrosines, creating docking sites for GRB2-SHC1-SOS (→RAS→MAPK/ERK) and PIK3R1-GAB1 (→PI3K/AKT) that are not normally engaged by OSM signaling alone. PLCγ is sterically excluded by the large ECD asymmetry (356 vs 713 aa), preventing Ca²⁺-dependent IEG activation. The biased output shifts aged muscle fibroblasts toward a young-like transcriptional state by upregulating contractile/cytoskeletal genes (ACTA2, MYL9, MYH11) and suppressing aged IEGs (EGR1, FOS, JUN, IL32). However, FGFR2's very low expression in aged muscle (pc<0.03 in all cell types) is a major risk factor — the novokine may not engage its target in the aged tissue context.",
+  "literature_refs": [
+    "PMID:11069186",
+    "PMID:21596750",
+    "PMID:18374639",
+    "PMID:20388777",
+    "PMID:21464042",
+    "PMID:15190072",
+    "PMID:11821958",
+    "PMID:8999038",
+    "PMID:27110918",
+    "PMID:25241761"
+  ],
+  "chain_soundness": 0.28,
+  "chain_soundness_rationale": "Noisy-OR: 1 - (1-0.40)*(1-0.35)*(1-0.25)*(1-0.20)*(1-0.30)*(1-0.35) = 0.28. The low FGFR2 expression in aged muscle is the dominant failure risk."
+}

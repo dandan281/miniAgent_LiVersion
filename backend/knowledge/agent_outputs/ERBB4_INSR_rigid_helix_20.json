@@ -1,0 +1,94 @@
+{
+  "candidate_id": "ERBB4_INSR_rigid_helix_20",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "PIK3R1",
+      "PTPN11",
+      "GAB1"
+    ],
+    "cis_adaptors": [
+      "STAT5A",
+      "STAT5B",
+      "JAK1",
+      "JAK2",
+      "CBL",
+      "NCK1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "IRS_PI3K",
+    "GAB1_signalosome",
+    "RAS_RAF_MEK",
+    "SHC_GRB2_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "ITGA8",
+    "PPP1R14A",
+    "FABP4",
+    "DHCR24"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "DNAJA4",
+    "ETS2",
+    "FABP5",
+    "CSRP3"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.85,
+    "step_3b": 0.88,
+    "step_3c": 0.82,
+    "step_3d": 0.75,
+    "step_4": 0.90
+  },
+  "mechanism_narrative": "ERBB4-INSR forced proximity via rigid_helix_20 (~30 Å) biases signaling through GRB2-SHC1-SOS-RAS-MAPK and IRS1-PIK3R1-AKT pathways while sterically excluding PLCG1/2 (requires ~40+ Å spacing for productive docking) and FRS2/FRS3 (which depend on FGFR-specific juxtamembrane motifs absent in both ERBB4 and INSR). The rigid helix imposes a fixed ~30 Å inter-kinase distance that favors transphosphorylation of SHC1 and IRS1 docking sites over the larger PLCG1 bridging geometry. This biased output activates muscle structural gene programs (ACTA2, MYL9, MYH11 via SRF/MRTF) and suppresses aged inflammatory IEG programs (EGR1, FOS, JUN, IL32) — a rejuvenating transcriptional phenotype consistent with past wins (ERBB2+FGFR1/2/4).",
+  "literature_refs": [
+    "PMID:9168115",
+    "PMID:16729043",
+    "PMID:28065597",
+    "PMID:10803466",
+    "PMID:12456798",
+    "PMID:7493946",
+    "PMID:16273093",
+    "PMID:25140053",
+    "PMID:20943952",
+    "PMID:15534001"
+  ]
+}

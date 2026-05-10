@@ -1,0 +1,12 @@
+[
+  {"candidate_id": "EGFR_IL6ST_exposit_rigid", "receptor_A": "EGFR", "receptor_B": "IL6ST", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.367}, "notes": "Top pair, testing Exposit-style rigid scaffold"},
+  {"candidate_id": "ERBB4_INSR_exposit_rigid", "receptor_A": "ERBB4", "receptor_B": "INSR", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.217}, "notes": "Rank 2, exposit linker"},
+  {"candidate_id": "MET_IL6ST_exposit_rigid", "receptor_A": "MET", "receptor_B": "IL6ST", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "Rank 3, exposit linker"},
+  {"candidate_id": "EGFR_FGFR1_exposit_rigid", "receptor_A": "EGFR", "receptor_B": "FGFR1", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.258}, "notes": "Rank 13, exposit linker"},
+  {"candidate_id": "FGFR1_OSMR_exposit_rigid", "receptor_A": "FGFR1", "receptor_B": "OSMR", "linker": "exposit_rigid", "atlas_seed": {"composite_atlas_score": 0.0877}, "notes": "Rank 6, exposit linker"},
+  {"candidate_id": "LIFR_OSMR_flexible_GS4", "receptor_A": "LIFR", "receptor_B": "OSMR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Same-family gp130 pair (penalty applies)"},
+  {"candidate_id": "ACVR2B_BMPR1A_flexible_GS4", "receptor_A": "ACVR2B", "receptor_B": "BMPR1A", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "TGF-β type II + type I (BMP/myostatin axis)"},
+  {"candidate_id": "TGFBR2_BMPR1A_flexible_GS4", "receptor_A": "TGFBR2", "receptor_B": "BMPR1A", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "TGF-β II + BMP I"},
+  {"candidate_id": "KDR_FLT1_flexible_GS4", "receptor_A": "KDR", "receptor_B": "FLT1", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "VEGFR2 + VEGFR1 (vascular axis)"},
+  {"candidate_id": "INSR_KIT_flexible_GS4", "receptor_A": "INSR", "receptor_B": "KIT", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.05}, "notes": "Insulin + SCF (mast/progenitor) axis"}
+]

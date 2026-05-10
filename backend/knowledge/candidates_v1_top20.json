@@ -1,0 +1,1093 @@
+[
+  {
+    "candidate_id": "ERBB2_FGFR1__GS_med",
+    "receptor_A": "ERBB2",
+    "receptor_B": "FGFR1",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Co-receptor in HER family; H2F template (ERBB2+FGFR1) drives myogenic reprogramming. PMID:39592735",
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "ERBB2_FGFR2__GS_med",
+    "receptor_A": "ERBB2",
+    "receptor_B": "FGFR2",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Co-receptor in HER family; H2F template (ERBB2+FGFR1) drives myogenic reprogramming. PMID:39592735",
+      "Closely related to FGFR1; expressed on myoblasts and fibro-adipogenic progenitors. doi:10.1242/dev.151035"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "ERBB2_FGFR4__GS_med",
+    "receptor_A": "ERBB2",
+    "receptor_B": "FGFR4",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Co-receptor in HER family; H2F template (ERBB2+FGFR1) drives myogenic reprogramming. PMID:39592735",
+      "Predominant FGFR on differentiating myoblasts; required for myogenic terminal differentiation. PMID:7926719"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "ERBB2_MET__GS_med",
+    "receptor_A": "ERBB2",
+    "receptor_B": "MET",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "GAB1",
+        "STAT3"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "GAB1 is a strong MET adaptor and ErbB co-recruiter; STAT3 supports satellite-cell activation."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Co-receptor in HER family; H2F template (ERBB2+FGFR1) drives myogenic reprogramming. PMID:39592735",
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, MET); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "EGFR_FGFR1__GS_med",
+    "receptor_A": "EGFR",
+    "receptor_B": "FGFR1",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Activates Ras/MAPK in satellite cells; modulates muscle regeneration. doi:10.1016/j.stem.2018.04.020",
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "EGFR_FGFR2__GS_med",
+    "receptor_A": "EGFR",
+    "receptor_B": "FGFR2",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Activates Ras/MAPK in satellite cells; modulates muscle regeneration. doi:10.1016/j.stem.2018.04.020",
+      "Closely related to FGFR1; expressed on myoblasts and fibro-adipogenic progenitors. doi:10.1242/dev.151035"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "EGFR_FGFR4__GS_med",
+    "receptor_A": "EGFR",
+    "receptor_B": "FGFR4",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Activates Ras/MAPK in satellite cells; modulates muscle regeneration. doi:10.1016/j.stem.2018.04.020",
+      "Predominant FGFR on differentiating myoblasts; required for myogenic terminal differentiation. PMID:7926719"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "EGFR_MET__GS_med",
+    "receptor_A": "EGFR",
+    "receptor_B": "MET",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "GAB1",
+        "STAT3"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "GAB1 is a strong MET adaptor and ErbB co-recruiter; STAT3 supports satellite-cell activation."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Activates Ras/MAPK in satellite cells; modulates muscle regeneration. doi:10.1016/j.stem.2018.04.020",
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, MET); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR1_IGF1R__GS_med",
+    "receptor_A": "FGFR1",
+    "receptor_B": "IGF1R",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163",
+      "Master regulator of muscle hypertrophy via AKT/mTOR; drives myofibre growth. doi:10.1038/ncb1101-1014"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR1_INSR__GS_med",
+    "receptor_A": "FGFR1",
+    "receptor_B": "INSR",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163",
+      "Insulin signaling drives glucose uptake and oxidative metabolism in muscle. doi:10.1038/372186a0"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR1_MET__GS_med",
+    "receptor_A": "FGFR1",
+    "receptor_B": "MET",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "FRS2",
+        "GAB1",
+        "STAT3"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "MET-driven GAB1/STAT3 + FGFR FRS2 \u2192 myogenic; PLC\u03b3 partly occluded by GAB1 competition."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163",
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, MET); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR2_IGF1R__GS_med",
+    "receptor_A": "FGFR2",
+    "receptor_B": "IGF1R",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Closely related to FGFR1; expressed on myoblasts and fibro-adipogenic progenitors. doi:10.1242/dev.151035",
+      "Master regulator of muscle hypertrophy via AKT/mTOR; drives myofibre growth. doi:10.1038/ncb1101-1014"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR2_INSR__GS_med",
+    "receptor_A": "FGFR2",
+    "receptor_B": "INSR",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Closely related to FGFR1; expressed on myoblasts and fibro-adipogenic progenitors. doi:10.1242/dev.151035",
+      "Insulin signaling drives glucose uptake and oxidative metabolism in muscle. doi:10.1038/372186a0"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR2_MET__GS_med",
+    "receptor_A": "FGFR2",
+    "receptor_B": "MET",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "FRS2",
+        "GAB1",
+        "STAT3"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "MET-driven GAB1/STAT3 + FGFR FRS2 \u2192 myogenic; PLC\u03b3 partly occluded by GAB1 competition."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Closely related to FGFR1; expressed on myoblasts and fibro-adipogenic progenitors. doi:10.1242/dev.151035",
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, MET); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR4_IGF1R__GS_med",
+    "receptor_A": "FGFR4",
+    "receptor_B": "IGF1R",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Predominant FGFR on differentiating myoblasts; required for myogenic terminal differentiation. PMID:7926719",
+      "Master regulator of muscle hypertrophy via AKT/mTOR; drives myofibre growth. doi:10.1038/ncb1101-1014"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR4_INSR__GS_med",
+    "receptor_A": "FGFR4",
+    "receptor_B": "INSR",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "FRS2",
+        "GRB2",
+        "IRS1",
+        "SHC1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "mTOR"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "FRS2 occupies FGFR docking site; IRS1 routes IGF/INSR side to AKT/mTOR; PLC\u03b3 excluded."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Predominant FGFR on differentiating myoblasts; required for myogenic terminal differentiation. PMID:7926719",
+      "Insulin signaling drives glucose uptake and oxidative metabolism in muscle. doi:10.1038/372186a0"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, INSR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "FGFR4_MET__GS_med",
+    "receptor_A": "FGFR4",
+    "receptor_B": "MET",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "FRS2",
+        "GAB1",
+        "STAT3"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "MET-driven GAB1/STAT3 + FGFR FRS2 \u2192 myogenic; PLC\u03b3 partly occluded by GAB1 competition."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Predominant FGFR on differentiating myoblasts; required for myogenic terminal differentiation. PMID:7926719",
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (FGFR, MET); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "MET_PDGFRA__GS_med",
+    "receptor_A": "MET",
+    "receptor_B": "PDGFRA",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GAB1",
+        "GRB2",
+        "STAT3",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "GAB1 swap displaces PDGFR PLC\u03b3 Y1021; STAT3 + AKT \u2192 regenerative."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724",
+      "Marker of FAPs; sustained signaling drives fibrosis and adipogenesis (anti-myogenic). doi:10.1038/ncb2025"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (MET, PDGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "MET_PDGFRB__GS_med",
+    "receptor_A": "MET",
+    "receptor_B": "PDGFRB",
+    "linker": "GS_med",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 20,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GAB1",
+        "GRB2",
+        "STAT3",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT",
+        "STAT3"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 1.0,
+      "mechanism_notes": "GAB1 swap displaces PDGFR PLC\u03b3 Y1021; STAT3 + AKT \u2192 regenerative."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6",
+      "TPM2",
+      "NOTCH3",
+      "NTRK2"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32",
+      "MYF5",
+      "MYH9"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "HGF/MET activates quiescent satellite cells; required for adult muscle regeneration. PMID:9883724",
+      "Expressed on muscle pericytes; supports vascular and stromal niche. doi:10.1242/dev.067595"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (MET, PDGFR); axis: myogenic; linker: GS_med (20 aa, flexible)."
+  },
+  {
+    "candidate_id": "ERBB2_FGFR1__GS_long",
+    "receptor_A": "ERBB2",
+    "receptor_B": "FGFR1",
+    "linker": "GS_long",
+    "linker_sequence": "GGGGSGGGGSGGGGSGGGGSGGGGSGGGGSGGGGSGGGGS",
+    "linker_length_aa": 40,
+    "biased_output": {
+      "transphosphorylation_adaptors": [
+        "GRB2",
+        "SHC1",
+        "FRS2",
+        "GAB1",
+        "PIK3R1"
+      ],
+      "biased_pathways": [
+        "MAPK",
+        "AKT"
+      ],
+      "excluded_adaptors": [
+        "PLCG_docking"
+      ],
+      "output_axis": "myogenic",
+      "linker_modulation": 0.7,
+      "mechanism_notes": "H2F-template; forced co-clustering biases away from FGFR1 PLC\u03b3 docking \u2192 pure MAPK+AKT \u2192 myogenic reprogramming."
+    },
+    "predicted_up": [
+      "ACTA2",
+      "MYL9",
+      "MYH11",
+      "MYOM2",
+      "TAGLN",
+      "MYL6"
+    ],
+    "predicted_down": [
+      "EGR1",
+      "FOS",
+      "JUN",
+      "OTUD1",
+      "TXNIP",
+      "IL32"
+    ],
+    "chain_soundness": 0.9,
+    "track_c_score": null,
+    "literature_refs": [
+      "Co-receptor in HER family; H2F template (ERBB2+FGFR1) drives myogenic reprogramming. PMID:39592735",
+      "FGF2 signaling expands satellite cells and antagonises differentiation; partner in published H2F. PMID:31604163"
+    ],
+    "notes": "Heuristic candidate from generate_candidates.py \u2014 class pair: (ErbB, FGFR); axis: myogenic; linker: GS_long (40 aa, flexible)."
+  }
+]

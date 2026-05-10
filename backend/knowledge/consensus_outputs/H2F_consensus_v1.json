@@ -1,0 +1,267 @@
+{
+  "candidate_id": "H2F_consensus_v1",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR1",
+  "linker": "GS_med",
+  "n_iterations": 2,
+  "n_failed": 0,
+  "median_phenotype": 0.15139616637078815,
+  "median_chain": 0.7276588289065942,
+  "median_reward": 0.3674946648217154,
+  "phenotype_per_iter": [
+    0.15130242638598027,
+    0.15148990635559603
+  ],
+  "chain_per_iter": [
+    0.7081885492210422,
+    0.7471291085921461
+  ],
+  "reward_per_iter": [
+    0.3601347224491285,
+    0.3748546071943023
+  ],
+  "consensus_up": [
+    {
+      "gene": "CCND1",
+      "n": 2
+    },
+    {
+      "gene": "BCL2",
+      "n": 1
+    },
+    {
+      "gene": "DUSP6",
+      "n": 1
+    },
+    {
+      "gene": "EGR1",
+      "n": 1
+    },
+    {
+      "gene": "ETV5",
+      "n": 1
+    },
+    {
+      "gene": "FGF2",
+      "n": 1
+    },
+    {
+      "gene": "FOS",
+      "n": 1
+    },
+    {
+      "gene": "FOXO1",
+      "n": 1
+    },
+    {
+      "gene": "IGF1",
+      "n": 1
+    },
+    {
+      "gene": "IGF2",
+      "n": 1
+    },
+    {
+      "gene": "IGFBP5",
+      "n": 1
+    },
+    {
+      "gene": "IGFBP7",
+      "n": 1
+    },
+    {
+      "gene": "JUN",
+      "n": 1
+    },
+    {
+      "gene": "MCL1",
+      "n": 1
+    },
+    {
+      "gene": "MEF2C",
+      "n": 1
+    },
+    {
+      "gene": "MYC",
+      "n": 1
+    },
+    {
+      "gene": "MYH2",
+      "n": 1
+    },
+    {
+      "gene": "MYH7",
+      "n": 1
+    },
+    {
+      "gene": "MYOD1",
+      "n": 1
+    },
+    {
+      "gene": "MYOG",
+      "n": 1
+    },
+    {
+      "gene": "PPARGC1A",
+      "n": 1
+    },
+    {
+      "gene": "SLC2A4",
+      "n": 1
+    },
+    {
+      "gene": "SPRY1",
+      "n": 1
+    },
+    {
+      "gene": "TNNT3",
+      "n": 1
+    },
+    {
+      "gene": "VEGFA",
+      "n": 1
+    }
+  ],
+  "consensus_down": [
+    {
+      "gene": "CAMK2A",
+      "n": 1
+    },
+    {
+      "gene": "CAMK2B",
+      "n": 1
+    },
+    {
+      "gene": "CDKN2A",
+      "n": 1
+    },
+    {
+      "gene": "COL1A1",
+      "n": 1
+    },
+    {
+      "gene": "COL3A1",
+      "n": 1
+    },
+    {
+      "gene": "CTGF",
+      "n": 1
+    },
+    {
+      "gene": "FOS",
+      "n": 1
+    },
+    {
+      "gene": "IL6",
+      "n": 1
+    },
+    {
+      "gene": "ITPR1",
+      "n": 1
+    },
+    {
+      "gene": "ITPR2",
+      "n": 1
+    },
+    {
+      "gene": "JUN",
+      "n": 1
+    },
+    {
+      "gene": "MMP2",
+      "n": 1
+    },
+    {
+      "gene": "NFATC2",
+      "n": 1
+    },
+    {
+      "gene": "NFATC4",
+      "n": 1
+    },
+    {
+      "gene": "NFKB1",
+      "n": 1
+    },
+    {
+      "gene": "PLCG1",
+      "n": 1
+    },
+    {
+      "gene": "PPP3CA",
+      "n": 1
+    },
+    {
+      "gene": "PRKCA",
+      "n": 1
+    },
+    {
+      "gene": "PRKCB",
+      "n": 1
+    },
+    {
+      "gene": "SERPINE1",
+      "n": 1
+    },
+    {
+      "gene": "TGFB1",
+      "n": 1
+    },
+    {
+      "gene": "TNF",
+      "n": 1
+    }
+  ],
+  "stable_up_genes": [
+    "CCND1",
+    "BCL2",
+    "DUSP6",
+    "EGR1",
+    "ETV5",
+    "FGF2",
+    "FOS",
+    "FOXO1",
+    "IGF1",
+    "IGF2",
+    "IGFBP5",
+    "IGFBP7",
+    "JUN",
+    "MCL1",
+    "MEF2C",
+    "MYC",
+    "MYH2",
+    "MYH7",
+    "MYOD1",
+    "MYOG",
+    "PPARGC1A",
+    "SLC2A4",
+    "SPRY1",
+    "TNNT3",
+    "VEGFA"
+  ],
+  "stable_down_genes": [
+    "CAMK2A",
+    "CAMK2B",
+    "CDKN2A",
+    "COL1A1",
+    "COL3A1",
+    "CTGF",
+    "FOS",
+    "IL6",
+    "ITPR1",
+    "ITPR2",
+    "JUN",
+    "MMP2",
+    "NFATC2",
+    "NFATC4",
+    "NFKB1",
+    "PLCG1",
+    "PPP3CA",
+    "PRKCA",
+    "PRKCB",
+    "SERPINE1",
+    "TGFB1",
+    "TNF"
+  ],
+  "timestamp": "2026-05-04T09:54:45.174702+00:00"
+}

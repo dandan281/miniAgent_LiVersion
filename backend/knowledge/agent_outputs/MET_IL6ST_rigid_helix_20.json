@@ -1,0 +1,81 @@
+{
+  "candidate_id": "MET_IL6ST_rigid_helix_20",
+  "receptor_A": "MET",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "SOS1",
+      "SOS2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3",
+      "IRS1",
+      "IRS2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAP1_RAC1",
+    "PTPN11_SHP2"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.75,
+    "step_3a": 0.70,
+    "step_3b": 0.80,
+    "step_3c": 0.65,
+    "step_3d": 0.55,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "MET (RTK) and IL6ST/gp130 (cytokine receptor) are co-expressed in aged MuSC and myofibers. The rigid_helix_20 linker (~30 Å) forces close proximity between MET's kinase domain (residues 1078-1345) and IL6ST's intracellular domain (lacking intrinsic kinase). Under forced proximity, MET's kinase transphosphorylates IL6ST's membrane-proximal tyrosines, creating docking sites for STAT3 (canonical gp130 signal) and SHC1/GRB2/GAB1/PIK3R1 (MET's canonical RAS-PI3K adaptors). PLCG1/2 are sterically excluded because the rigid short helix prevents the large PLCG SH2-phospholipase module from bridging the MET-IL6ST geometry. FRS2/3 and IRS1/2 are excluded because IL6ST lacks the juxtamembrane TKB motif required for their docking. The biased output is MAPK+PI3K+STAT3 activation without PLCγ/Ca²⁺ signaling, producing a transcriptional program that upregulates muscle structural genes (ACTA2, MYL9, MYH11) and downregulates aged IEGs (EGR1, FOS, JUN) and sarcomeric stress markers (TTN, NEB, MYH9).",
+  "literature_refs": [
+    "PMID:23794705",
+    "PMID:26285778",
+    "PMID:31409809",
+    "PMID:32579973",
+    "PMID:35995768"
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "candidate_id": "EGFR_INSR_rigid_helix_20",
+  "receptor_A": "EGFR",
+  "receptor_B": "INSR",
+  "linker": "rigid_helix_20",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "IRS2",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "JAK2",
+      "SOS1",
+      "SOS2"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "NCK1",
+      "VAV1",
+      "RASA1",
+      "GRB10",
+      "GRB14",
+      "SH2B1",
+      "SH2B2",
+      "DOK1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "IRS_PI3K",
+    "JAK_STAT",
+    "RAS_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "FABP4",
+    "DHCR24",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "NEB",
+    "CSRP3",
+    "HDAC9",
+    "CAV1",
+    "ASB5"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "EGFR-INSR forced-proximity via rigid_helix_20 (~30 \u00c5) enables transphosphorylation between EGFR kinase (Y712-979) and INSR kinase (Y1023-1298), with ECD asymmetry of only 110 aa (621 vs 731) favoring productive co-clustering. The biased output strongly activates the GRB2-SHC1-SOS-RAS-MAPK and IRS1-PI3K-AKT axes (shared transphosphorylation adaptors), while sterically excluding PLCG1/PLCG2 docking (large multi-domain phospholipases cannot bridge the ~30 \u00c5 intracellular gap imposed by the rigid helix). This produces a transcriptional program that upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and downregulates aged-muscle IEGs (EGR1, FOS, JUN) and inflammatory/atrophy markers (IL32, TXNIP, MYF5, MYH9), consistent with the rejuvenating pattern observed in ERBB2+FGFR wins.",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:10358079",
+    "PMID:12456798",
+    "PMID:74751",
+    "PMID:112399",
+    "PMID:1257604",
+    "PMID:167044",
+    "PMID:179812",
+    "PMID:180336",
+    "PMID:109704"
+  ]
+}

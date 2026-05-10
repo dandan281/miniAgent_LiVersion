@@ -1,0 +1,10 @@
+[
+  {"candidate_id": "EGFR_FGFR1_rigid_helix_20", "receptor_A": "EGFR", "receptor_B": "FGFR1", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.2583, "co_expression_in_old": ["FB","EnFB"]}, "notes": "EGFR+FGFR1 best pair, testing rigid 30Å linker"},
+  {"candidate_id": "EGFR_FGFR1_rigid_helix_40", "receptor_A": "EGFR", "receptor_B": "FGFR1", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.2583, "co_expression_in_old": ["FB","EnFB"]}, "notes": "EGFR+FGFR1 testing rigid 60Å linker"},
+  {"candidate_id": "EGFR_FGFR1_flexible_GS8", "receptor_A": "EGFR", "receptor_B": "FGFR1", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.2583, "co_expression_in_old": ["FB","EnFB"]}, "notes": "EGFR+FGFR1 testing 40Å flexible linker"},
+  {"candidate_id": "EGFR_IL6ST_rigid_helix_20", "receptor_A": "EGFR", "receptor_B": "IL6ST", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.367}, "notes": "EGFR+IL6ST top atlas score, rigid 30Å"},
+  {"candidate_id": "EGFR_IL6ST_rigid_helix_40", "receptor_A": "EGFR", "receptor_B": "IL6ST", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.367}, "notes": "EGFR+IL6ST rigid 60Å"},
+  {"candidate_id": "EGFR_IL6ST_flexible_GS8", "receptor_A": "EGFR", "receptor_B": "IL6ST", "linker": "flexible_GS8", "atlas_seed": {"composite_atlas_score": 0.367}, "notes": "EGFR+IL6ST flexible 40Å"},
+  {"candidate_id": "ERBB4_INSR_rigid_helix_20", "receptor_A": "ERBB4", "receptor_B": "INSR", "linker": "rigid_helix_20", "atlas_seed": {"composite_atlas_score": 0.217}, "notes": "ERBB4+INSR rigid 30Å"},
+  {"candidate_id": "ERBB4_INSR_rigid_helix_40", "receptor_A": "ERBB4", "receptor_B": "INSR", "linker": "rigid_helix_40", "atlas_seed": {"composite_atlas_score": 0.217}, "notes": "ERBB4+INSR rigid 60Å"}
+]

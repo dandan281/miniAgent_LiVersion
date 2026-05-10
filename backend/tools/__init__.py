@@ -8,14 +8,18 @@ import config
 from .policy_wrappers import build_policy_wrapped_tools
 from .registry import ToolManifestEntry, ToolRegistry, build_tool_registry
 from .biogrid_orcs_tool import BiogridOrcsTool
+from .cellxgene_tool import CellxgeneTool
+from .local_atlas_tool import LocalAtlasTool
 from .ensembl_api_tool import EnsemblApiTool
 from .fetch_url_tool import FetchURLTool
 from .http_json_tool import HttpJsonTool
 from .ncbi_eutils_tool import NcbiEutilsTool
 from .omnipath_api_tool import OmnipathApiTool
+from .phenotype_checkpoint_tool import PhenotypeCheckpointTool
 from .phosphosite_tool import PhosphositeTool
 from .plan_agent_tool import PlanAgentTool
 from .python_repl_tool import PythonReplTool
+from .rcsb_search_tool import RcsbSearchTool
 from .reactome_api_tool import ReactomeApiTool
 from .read_file_tool import ReadFileTool
 from .search_knowledge_tool import SearchKnowledgeBaseTool
@@ -46,8 +50,12 @@ def _instantiate_all_tools(base_dir: Path) -> list:
         EnsemblApiTool(),
         OmnipathApiTool(),
         ReactomeApiTool(),
+        RcsbSearchTool(),
         BiogridOrcsTool(),
         PhosphositeTool(base_dir=str(base_dir)),
+        CellxgeneTool(),
+        LocalAtlasTool(),
+        PhenotypeCheckpointTool(base_dir=str(base_dir)),
         ReadFileTool(root_dir=str(base_dir), extra_allowed_roots=extra_roots),
         WriteFileTool(root_dir=str(base_dir)),
         SearchKnowledgeBaseTool(

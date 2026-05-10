@@ -1,0 +1,73 @@
+{
+  "candidate_id": "ERBB4_INSR_flexible_GS8",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "IRS1",
+      "FRS2"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "IRS_PI3K_AKT",
+    "RAS_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "CSRP3"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "ERBB4+INSR forced proximity via flexible_GS8 linker (~40 Å) enables transphosphorylation where INSR kinase phosphorylates ERBB4 juxtamembrane tyrosines and ERBB4 kinase phosphorylates INSR juxtamembrane tyrosines. This recruits GRB2/SHC1/GAB1/PIK3R1 (from ERBB4 side) and IRS1/FRS2 (from INSR side) as transphosphorylation-dependent adaptors, activating MAPK/ERK and PI3K/AKT signaling. PLCG1/PLCG2 are sterically excluded because the ~40 Å linker geometry cannot accommodate the large PLCγ PH-SH2-SH2-SH3 module bridging the two ICDs. The biased output upregulates muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) via SRF/MRTF and downregulates aged IEGs (EGR1, FOS, JUN, IL32, TXNIP) via FOXO and AKT-mediated suppression, producing a rejuvenating transcriptional phenotype.",
+  "literature_refs": [
+    "PMID:16203964",
+    "PMID:18278056",
+    "PMID:16729043",
+    "PMID:12716924",
+    "PMID:20943952",
+    "PMID:16170367"
+  ]
+}

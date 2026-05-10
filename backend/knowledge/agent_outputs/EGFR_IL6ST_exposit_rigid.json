@@ -1,0 +1,82 @@
+{
+  "candidate_id": "EGFR_IL6ST_exposit_rigid",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "STAT1",
+      "STAT5A",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "CBL",
+      "SOCS3",
+      "SOS1",
+      "SOS2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "MYH7",
+    "TNNT3",
+    "MYOG",
+    "DES",
+    "TNNI1"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "PRUNE2",
+    "TTN",
+    "NEB"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "EGFR+IL6ST forced-proximity novokine with exposit_rigid linker biases signaling toward MAPK/ERK, PI3K/AKT, and JAK-STAT pathways via transphosphorylation adaptors GRB2, SHC1, PIK3R1, PTPN11, and STAT3/STAT1/STAT5A. EGFR's intrinsic Tyr kinase transphosphorylates IL6ST's intracellular tyrosines, while JAK1/JAK2 constitutively bound to IL6ST's box1/box2 motif reciprocally phosphorylate EGFR C-terminal tyrosines, creating novel docking sites. PLCG1 is sterically excluded by the rigid scaffold geometry (621aa vs 597aa ECD spacing), suppressing Ca2+ signaling. The biased output upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN, MYL6, TPM2, NOTCH3, MYH7, TNNT3, MYOG, DES, TNNI1) and downregulates aged markers and immediate early genes (EGR1, FOS, JUN, OTUD1, TXNIP, IL32, MYF5, MYH9, CDKN2A, PRUNE2, TTN, NEB), consistent with the rejuvenating pattern observed in prior ERBB2+FGFR wins.",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:10358079",
+    "PMID:9388212",
+    "PMID:9126968",
+    "PMID:9013873",
+    "PMID:10579793",
+    "PMID:11821958",
+    "PMID:12070153"
+  ]
+}

@@ -1,0 +1,251 @@
+schema_version: "1.0.0"
+kind: workflow_spec
+workflow_id: boltz2
+version: "1.0.0"
+name: Boltz-2 (Superbio)
+purpose: Submit one or more protein sequences to Boltz-2 on Superbio.ai for structure prediction, with QC summary and BioAPEX provenance.
+engine: external_workflow_adapter_v1
+required_inputs:
+  - name: sequence_set
+    kind: artifact
+    artifact_type: protein_sequence_set
+    schema_ref: artifact_schema:protein_sequence_set@1.0.0
+    description: |
+      Input artifact describing one or more amino-acid sequences to fold. A JSON file at
+      the artifact path with shape `[{"protein_name": "<name>", "sequence": "<aa>"}, ...]`,
+      or a FASTA file the preflight runner will normalize into that shape.
+      For multi-chain complex prediction supply all chains in the list; they are assembled
+      into a Boltz-2-native YAML input file by the preflight step.
+optional_inputs:
+  - name: use_msa_server
+    kind: parameter
+    data_type: boolean
+    default: true
+    description: If true (default), Boltz-2 uses its own MSA server instead of requiring a pre-built a3m MSA file.
+  - name: poll_timeout_seconds
+    kind: parameter
+    data_type: integer
+    default: 7200
+    description: Maximum seconds to wait for the Superbio job to finish.
+  - name: poll_interval_seconds
+    kind: parameter
+    data_type: integer
+    default: 30
+    description: Seconds between Superbio job-status polls.
+  - name: structure_summary_template
+    kind: template
+    template_path: workflows/report_templates/boltz2_summary.md.j2
+    description: Optional Jinja2 markdown template for the human-readable structure QA summary.
+runtime:
+  provided_inputs:
+    - sequence_set
+    - use_msa_server
+    - poll_timeout_seconds
+    - poll_interval_seconds
+    - structure_summary_template
+  allowed_parameter_overrides:
+    - use_msa_server
+    - poll_timeout_seconds
+    - poll_interval_seconds
+  generated_state:
+    - run_id
+    - created_at
+    - submitted_job_id
+    - superbio_app_id
+    - step_statuses
+    - artifact_paths
+    - warnings
+  state_artifact: workflow_run
+  artifact_root_template: artifacts/{workflow_id}/{date}/{run_id}
+outputs:
+  - name: structure_predictions
+    kind: artifact
+    artifact_type: protein_structure_prediction_set
+    schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+    description: Bundle of predicted structures (CIF/PDB) and per-sequence confidence metrics returned by Boltz-2.
+    source:
+      step_id: download_results
+      output_name: structure_predictions
+  - name: qa_report
+    kind: artifact
+    artifact_type: qa_report
+    schema_ref: artifact_schema:qa_report@1.0.0
+    description: Structured QA summary of the Boltz-2 run for artifact registration and downstream review.
+    source:
+      step_id: summarize_structures
+      output_name: qa_report
+qc_gates:
+  - id: sequence-set-required
+    label: Input sequence set must be present
+    when: before_execution
+    target:
+      source_type: workflow_input
+      input_name: sequence_set
+    failure_policy: block
+  - id: sequence-validation-passed
+    label: Preflight sequence validation must pass before launch
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: preflight_check
+      output_name: boltz2_input_file
+    failure_policy: block
+  - id: external-outputs-materialized
+    label: Boltz-2 outputs must be materialized before summarization
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: download_results
+      output_name: structure_predictions
+    failure_policy: block
+compliance_hooks:
+  - id: privacy-preflight
+    stage: before_execution
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+  - id: publish-review
+    stage: before_publish
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+      - name: qa_report
+        source:
+          source_type: step_output
+          step_id: summarize_structures
+          output_name: qa_report
+steps:
+  - id: preflight_check
+    label: Validate sequences and write Boltz-2 input YAML
+    executor:
+      executor_type: python
+      module: workflows.runners.boltz2
+      function: validate_and_prepare_input
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+      - name: use_msa_server
+        source:
+          source_type: workflow_input
+          input_name: use_msa_server
+    outputs:
+      - name: boltz2_input_file
+        kind: artifact
+        artifact_type: boltz2_input_yaml
+        schema_ref: artifact_schema:boltz2_input_yaml@1.0.0
+        description: Boltz-2-native YAML input file (or a3m for single-chain) ready for Superbio submission.
+    prerequisites: []
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: launch_boltz2
+    label: Submit Boltz-2 job to Superbio
+    executor:
+      executor_type: external_engine
+      engine_name: superbio
+      entrypoint: workflows/engines/superbio/boltz2_entrypoint.md
+      version_command: python -c "import superbio, sys; sys.stdout.write(getattr(superbio, '__version__', 'unknown'))"
+      execution_profile: superbio_gpu
+      parameter_bindings:
+        app_id: "688c728099fcc1d511509092"
+        app_name: "boltz2"
+        # Boltz-2 advertises only mode_id=1 (label_as_gpu=True) — Superbio SDK maps
+        # mode_id=1 to "cpu" string even though execution is on GPU hardware.
+        running_mode: "cpu"
+        boltz2_input_file: "{boltz2_input_file}"
+      environment_references:
+        - "secret:SUPERBIO_TOKEN"
+        - "secret:SUPERBIO_USER_ID"
+        - "package:superbio>=0.1.0"
+      output_locations:
+        - "{run_dir}/outputs/generated/external/boltz2/structures"
+        - "{run_dir}/outputs/generated/external/boltz2/logs"
+        - "{run_dir}/outputs/generated/external/boltz2/manifest.json"
+    inputs:
+      - name: boltz2_input_file
+        source:
+          source_type: step_output
+          step_id: preflight_check
+          output_name: boltz2_input_file
+      - name: use_msa_server
+        source:
+          source_type: workflow_input
+          input_name: use_msa_server
+    outputs:
+      - name: external_job_handle
+        kind: value
+        description: Handle to the submitted Superbio Boltz-2 job (job_id, app_id, submission timestamp).
+    prerequisites:
+      - preflight_check
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: download_results
+    label: Poll Superbio and download Boltz-2 results
+    executor:
+      executor_type: python
+      module: workflows.runners.boltz2
+      function: poll_and_download
+    inputs:
+      - name: external_job_handle
+        source:
+          source_type: step_output
+          step_id: launch_boltz2
+          output_name: external_job_handle
+      - name: poll_timeout_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_timeout_seconds
+      - name: poll_interval_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_interval_seconds
+    outputs:
+      - name: structure_predictions
+        kind: artifact
+        artifact_type: protein_structure_prediction_set
+        schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+        description: Downloaded predicted-structure bundle (CIF + confidence JSON) materialized in the run directory.
+    prerequisites:
+      - launch_boltz2
+    retry_policy:
+      max_attempts: 3
+      backoff_seconds: 60
+    failure_policy: fail_workflow
+  - id: summarize_structures
+    label: Summarize Boltz-2 prediction quality
+    executor:
+      executor_type: python
+      module: workflows.runners.boltz2
+      function: summarize_structures
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+    outputs:
+      - name: qa_report
+        kind: artifact
+        artifact_type: qa_report
+        schema_ref: artifact_schema:qa_report@1.0.0
+        description: Structured QA report summarizing Boltz-2 confidence metrics (ipTM, complex_pLDDT, confidence_score).
+    prerequisites:
+      - download_results
+    retry_policy:
+      max_attempts: 2
+      backoff_seconds: 30
+    failure_policy: fail_workflow

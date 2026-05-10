@@ -1,0 +1,79 @@
+{
+  "candidate_id": "FGFR4_OSMR_flexible_GS4",
+  "receptor_A": "FGFR4",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "STAT5A",
+      "STAT5B"
+    ],
+    "cis_adaptors": [
+      "JAK1",
+      "JAK2",
+      "TYK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "JAK_STAT5",
+    "RAS_SOS"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4",
+    "DSTN"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "NEB",
+    "CSRP3"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.88,
+    "step_3c": 0.70,
+    "step_3d": 0.75,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "FGFR4 (RTK) and OSMR (cytokine receptor) are co-expressed in aged MuSC (FGFR4 pc=0.45, OSMR pc=0.12). The flexible_GS4 linker (~20 Å) forces close proximity between FGFR4's kinase domain (aa 467-755) and OSMR's JAK-associated intracellular domain (aa 762-979). FGFR4's kinase transphosphorylates OSMR-associated JAK1/JAK2 docking sites, while OSMR-associated JAKs phosphorylate FGFR4's C-terminal tyrosines — creating hybrid phosphotyrosine motifs that recruit GRB2-SHC1-SOS (MAPK), FRS2-GAB1-PIK3R1 (PI3K/AKT), and STAT3/STAT5 (JAK-STAT) adaptors. PLCγ is sterically excluded because its large PH-PLC catalytic domains cannot bridge the asymmetric ECD geometry (FGFR4 ECD=348aa vs OSMR ECD=713aa, |Δ|=365aa) with a short ~20 Å linker. The biased output is MAPK+PI3K/AKT+STAT3/5 activation without PLCγ/Ca²⁺ signaling — a rejuvenating signature that upregulates muscle structural genes (ACTA2, MYL9, MYH11) and downregulates aged IEG markers (EGR1, FOS, JUN, IL32).",
+  "literature_refs": [
+    "PMID:10918587",
+    "PMID:28205554",
+    "PMID:24336569",
+    "PMID:26627737"
+  ]
+}

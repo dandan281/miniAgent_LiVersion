@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "app_name": "scgpt_mapping",
+      "app_id": "6548f339a9ed6f6e5560b07d",
+      "atlas": "/gpfs/scrubbed/danlovuw/miniAgent/backend/storage/atlases/SKM_human_pp_cells2nuclei_2023-06-22.h5ad",
+      "atlas_size_gb": 2.022042678,
+      "dry_run": false,
+      "submitted_at": "2026-05-04T17:06:49.472351+00:00",
+      "error": "submission failed: Missing the following parameter values: ['genename_col_name']"
+    }
+  ]
+}

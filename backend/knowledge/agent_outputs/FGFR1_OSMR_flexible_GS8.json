@@ -1,0 +1,76 @@
+{
+  "candidate_id": "FGFR1_OSMR_flexible_GS8",
+  "receptor_A": "FGFR1",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS8",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "STAT3",
+      "JAK1"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "NCK1",
+      "CRK"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "VAV1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "CLIC4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "ASB5",
+    "CSRP3",
+    "HDAC9"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.70,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "FGFR1 (RTK) and OSMR (type I cytokine receptor) are co-expressed in aged muscle FB and EnFB. The flexible_GS8 linker (~40 Å) forces FGFR1's kinase domain to transphosphorylate OSMR's intracellular tyrosines, creating docking sites for GRB2/SHC1 (→MAPK), FRS2/GAB1/PIK3R1 (→PI3K-AKT), and STAT3/JAK1 (→JAK-STAT). PLCG1 is sterically excluded by the asymmetric ECD geometry (355 vs 713 aa), suppressing Ca²⁺/NFAT signaling. The biased output shifts aged FB/EnFB toward a young-like transcriptional program: upregulating contractile/structural genes (ACTA2, MYL9, MYH11, TAGLN) and downregulating aged IEGs (EGR1, FOS, JUN) and inflammatory markers (IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:11030354",
+    "PMID:9660748",
+    "PMID:20388777",
+    "PMID:11821958",
+    "PMID:25241761",
+    "PMID:15117958"
+  ]
+}

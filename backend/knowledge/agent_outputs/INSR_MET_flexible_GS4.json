@@ -1,0 +1,94 @@
+{
+  "candidate_id": "INSR_MET_flexible_GS4",
+  "receptor_A": "INSR",
+  "receptor_B": "MET",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "IRS1",
+      "CBL"
+    ],
+    "cis_adaptors": [
+      "PTPN11",
+      "STAT3",
+      "STAT5A",
+      "STAT5B",
+      "JAK1",
+      "JAK2"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "VAV1",
+      "NCK1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "IRS_PI3K",
+    "GAB1_signalosome",
+    "RAS_RAF_MEK",
+    "RAC1_RHO"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "DSTN",
+    "FABP4",
+    "DHCR24",
+    "CLIC4",
+    "ITGA8"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "NEB",
+    "ASB5",
+    "HDAC9",
+    "CAV1",
+    "GPX3"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.88,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.85
+  },
+  "mechanism_narrative": "INSR-MET forced proximity via flexible_GS4 linker (~20 Å) enables transphosphorylation where INSR kinase phosphorylates MET juxtamembrane docking sites (Y1003, Y1234/1235) and MET kinase phosphorylates INSR juxtamembrane/IRS-binding sites (Y960, Y1146/1150/1151). This biased co-clustering preferentially recruits GRB2-SHC1-SOS (MAPK), GAB1-PIK3R1 (PI3K/AKT), and IRS1/2 (IRS-PI3K) adaptors while sterically excluding PLCG1/2 (Ca2+ branch) and NCK1/VAV1 (actin remodeling). The resulting biased output shifts aged muscle toward a young transcriptional phenotype: upregulating contractile/structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and downregulating aged IEGs (EGR1, FOS, JUN) and atrophy markers (MYF5, MYH9, TTN, NEB).",
+  "literature_refs": [
+    "PMID:2033070",
+    "PMID:10650943",
+    "PMID:9660480",
+    "PMID:9242692",
+    "PMID:10871282",
+    "PMID:12456798",
+    "PMID:11571281",
+    "PMID:8662889",
+    "PMID:7499194",
+    "PMID:18273061"
+  ]
+}

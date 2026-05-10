@@ -1,0 +1,77 @@
+{
+  "candidate_id": "FGFR1_OSMR_flexible_GS4",
+  "receptor_A": "FGFR1",
+  "receptor_B": "OSMR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "FRS2",
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "JAK1",
+      "STAT3"
+    ],
+    "cis_adaptors": [
+      "SHB",
+      "GRB14",
+      "NCK1",
+      "CRK",
+      "SOS1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "FMN1",
+    "MAFB"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.75,
+    "step_3a": 0.80,
+    "step_3b": 0.85,
+    "step_3c": 0.70,
+    "step_3d": 0.60,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "FGFR1 (RTK) and OSMR (cytokine receptor, JAK1-associated) are forced into close proximity by a flexible GS4 linker (~20 Å). FGFR1's tyrosine kinase transphosphorylates JAK1-associated tyrosines on OSMR's ICD, while JAK1 reciprocally phosphorylates FGFR1 tyrosines — enhancing FRS2-GRB2-SOS1 (MAPK/ERK) and FRS2-GAB1-PIK3R1 (PI3K/AKT) signaling. FGFR1 also directly phosphorylates STAT3, amplifying the JAK/STAT3 arm. PLCG1 is sterically excluded by the asymmetric ECD geometry (FGFR1 ~370 aa vs OSMR ~600 aa) with a short linker, suppressing Ca2+/NFAT signaling. The biased output shifts aged muscle toward a young transcriptional phenotype by upregulating contractile/structural genes (ACTA2, MYL9, MYH11) via SRF/ELK1 and downregulating aged IEGs (EGR1, FOS, JUN) and inflammatory markers (IL32, TXNIP).",
+  "literature_refs": [
+    "PMID:8622701",
+    "PMID:15117958",
+    "PMID:19224897",
+    "PMID:9660748",
+    "PMID:11090629",
+    "PMID:20388777",
+    "PMID:8999038",
+    "PMID:15184896",
+    "PMID:7537362",
+    "PMID:10713090"
+  ]
+}

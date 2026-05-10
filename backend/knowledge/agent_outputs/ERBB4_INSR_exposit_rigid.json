@@ -1,0 +1,95 @@
+{
+  "candidate_id": "ERBB4_INSR_exposit_rigid",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "exposit_rigid",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "IRS1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "STAT5A",
+      "STAT5B",
+      "CBL",
+      "NCK1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "SOS1",
+      "SOS2",
+      "RASA1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "IRS_mediated_signaling",
+    "SHC_RAS_RAF_MAPK",
+    "FRS2_GRB2_SOS_RAS",
+    "GAB1_PI3K_AKT",
+    "PTPN11_SHP2_RAS_ERK"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "DSTN",
+    "PRKAG2",
+    "FABP4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "CDKN2A",
+    "HDAC9"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.80,
+    "step_3a": 0.70,
+    "step_3b": 0.75,
+    "step_3c": 0.65,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB4-INSR forced-proximity novokine with exposit_rigid linker biases signaling toward MAPK/ERK and PI3K/AKT via transphosphorylation-recruited GRB2/SHC1/IRS1/FRS2/GAB1/PIK3R1/PTPN11 adaptors, while sterically excluding PLCG1/PLCG2 (Ca2+ branch) and SOS1/SOS2/RASA1 (direct RAS-GEF/RAS-GAP). The biased output upregulates muscle structural genes (ACTA2, MYL9, MYH11, MYOM2, TAGLN) and downregulates aged-marker IEGs (EGR1, FOS, JUN, TXNIP, IL32) and sarcomeric stress genes (TTN, NEB, MYH9), consistent with a rejuvenating transcriptome shift in aged skeletal muscle.",
+  "literature_refs": [
+    "PMID:16729043",
+    "PMID:25140053",
+    "PMID:10803466",
+    "PMID:12456798",
+    "PMID:28065597",
+    "PMID:20943952",
+    "PMID:15534001",
+    "PMID:10650943",
+    "PMID:11726652",
+    "PMID:16273093"
+  ]
+}

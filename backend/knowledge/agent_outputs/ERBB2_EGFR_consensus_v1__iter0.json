@@ -1,0 +1,81 @@
+{
+  "candidate_id": "ERBB2_EGFR_consensus_v1__iter0",
+  "receptor_A": "ERBB2",
+  "receptor_B": "EGFR",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "GAB1",
+      "SOS1",
+      "SOS2"
+    ],
+    "cis_adaptors": [
+      "PIK3R1",
+      "PIK3CA",
+      "GRB7",
+      "STAT3",
+      "STAT5A",
+      "STAT5B"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "mTOR",
+    "STAT3",
+    "RAS_RAF_MEK"
+  ],
+  "predicted_up": [
+    "MYC",
+    "CCND1",
+    "DUSP6",
+    "ETV4",
+    "ETV5",
+    "EGR1",
+    "FOS",
+    "JUN",
+    "BCL2L1",
+    "MCL1",
+    "CDKN1A",
+    "SPRY2",
+    "SOCS3"
+  ],
+  "predicted_down": [
+    "TXNIP",
+    "IL32",
+    "S100A4",
+    "LGALS3",
+    "CDKN2A",
+    "GADD45A",
+    "GADD45B",
+    "DDIT3",
+    "CTGF",
+    "SERPINE1",
+    "CCL2",
+    "TGFB1"
+  ],
+  "step_confidences": {
+    "step_1": 0.95,
+    "step_2": 0.90,
+    "step_3a": 0.75,
+    "step_3b": 0.85,
+    "step_3c": 0.60,
+    "step_3d": 0.40,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "ERBB2-EGFR forced-proximity novokine with GS_med linker (~30 Å) drives sustained, ligand-independent transphosphorylation between two highly homologous ErbB family RTKs (ECD asymmetry only ~9 aa). This amplifies SHC1-GRB2-SOS1-mediated RAS-MAPK and GAB1-PI3K-AKT signaling while partially reducing PLCG1 access due to steric crowding at the co-clustered intracellular domains. Unlike H2F (ERBB2-FGFR1) where massive ECD asymmetry (277 aa) sterically excludes PLCG1, the near-symmetric ERBB2-EGFR pair produces a more subtle biased output: sustained pro-survival/proliferative signaling without the qualitative pathway switch. The predicted transcriptional outcome in aged skeletal muscle is upregulation of MAPK/AKT target genes (MYC, CCND1, DUSP6, ETV4) and downregulation of senescence/inflammatory markers (TXNIP, IL32, S100A4, LGALS3).",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 - skeletal muscle stem cells express ErbB receptors)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:1372904 (Coussens et al. 1985 - ERBB2/EGFR homology)",
+    "PMID:7680658 (Graus-Porta et al. 1995 - ErbB2 preferred dimerization partner)",
+    "PMID:9461559 (Tzahar et al. 1998 - ErbB receptor signaling networks)",
+    "PMID:12172553 (Yarden & Sliwkowski 2001 - ErbB signaling review)",
+    "PMID:26460020 (Arkhipov et al. 2014 - EGFR/ErbB2 ECD structures)"
+  ]
+}

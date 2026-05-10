@@ -1,0 +1,25 @@
+{
+  "candidate_id": "INSR_KIT_flexible_GS4",
+  "receptor_A": "INSR",
+  "receptor_B": "KIT",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": ["GRB2", "SHC1", "PIK3R1", "GAB1", "IRS1"],
+    "cis_adaptors": ["SOS1", "SOS2", "PTPN11"],
+    "excluded_adaptors": ["PLCG1", "STAT5A", "STAT5B", "CBL"]
+  },
+  "biased_pathways": ["MAPK_ERK", "PI3K_AKT_mTOR", "RAS_signaling"],
+  "predicted_up": ["ACTA2", "MYL9", "MYH11", "MYOM2", "TAGLN", "MYL6", "TPM2", "NOTCH3", "FMN1", "MAFB", "DSTN", "IGFBP7", "TIMP3", "CLIC4", "PPP1R14A"],
+  "predicted_down": ["EGR1", "FOS", "JUN", "OTUD1", "TXNIP", "IL32", "MYF5", "MYH9", "ASB5", "DNAJA4", "ETS2", "FABP5", "CSRP3", "HDAC9", "PRUNE2"],
+  "step_confidences": {
+    "step_1": 0.60,
+    "step_2": 0.75,
+    "step_3a": 0.70,
+    "step_3b": 0.75,
+    "step_3c": 0.65,
+    "step_3d": 0.50,
+    "step_4": 0.70
+  },
+  "mechanism_narrative": "INSR+KIT forced proximity via flexible_GS4 linker (~20 Å) biases signaling toward MAPK/ERK and PI3K/AKT/mTOR pathways through transphosphorylation of GRB2, SHC1, PIK3R1, GAB1, and IRS1 adaptors, while sterically excluding PLCG1 (Ca2+ branch) and STAT5 (JAK-STAT branch). The resulting transcriptome shift upregulates muscle structural/contractile genes (ACTA2, MYL9, MYH11, TAGLN — young-enriched P2 markers) and downregulates aged-enriched immediate early genes (EGR1, FOS, JUN) and inflammatory/stress markers (IL32, TXNIP), recapitulating the rejuvenating signature observed in ERBB2+FGFR wins. KIT is essentially absent from steady-state aged muscle atlas but is a well-established stem/progenitor marker induced during regeneration (PMID:22500403), making this candidate best suited for regenerative contexts rather than steady-state aged muscle.",
+  "literature_refs": ["PMID:22500403", "PMID:1379243", "PMID:2033070", "PMID:16271887", "PMID:29512653"]
+}

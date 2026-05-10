@@ -1,0 +1,53 @@
+{
+  "candidate_id": "ERBB4_INSR_exposit_rigid_v2",
+  "receptor_A": "ERBB4",
+  "receptor_B": "INSR",
+  "linker": "exposit_rigid",
+  "biased_output": {},
+  "biased_pathways": [],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3",
+    "FMN1",
+    "MAFB",
+    "DSTN",
+    "PRKAG2",
+    "FABP4"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "TTN",
+    "PRUNE2",
+    "ASB5",
+    "NEB",
+    "CSRP3",
+    "CDKN2A",
+    "HDAC9"
+  ],
+  "step_confidences": {},
+  "mechanism_narrative": "Rank 2, exposit linker",
+  "literature_refs": [],
+  "_meta": {
+    "n_tool_calls": 0,
+    "n_tokens": 0,
+    "cached_from_iteration": 1,
+    "cached_from_iteration_id": "8cb9368d-70d1-423a-aaf3-ca5513e04b85",
+    "cached_prior_reward": 0.7978422355511429,
+    "cached_prior_tier": "TOP_K_DESIGN"
+  }
+}

@@ -1,0 +1,276 @@
+schema_version: "1.0.0"
+kind: workflow_spec
+workflow_id: protenix
+version: "1.0.0"
+name: Protenix (Superbio)
+purpose: Submit a protein complex (one or more chains) to Protenix on Superbio.ai — an open-source AlphaFold3 reproduction — for high-accuracy multimer structure prediction, with QC summary and BioAPEX provenance.
+engine: external_workflow_adapter_v1
+required_inputs:
+  - name: sequence_set
+    kind: artifact
+    artifact_type: protein_sequence_set
+    schema_ref: artifact_schema:protein_sequence_set@1.0.0
+    description: |
+      Input artifact describing one or more amino-acid chains to fold together as a complex.
+      A JSON file at the artifact path with shape `[{"protein_name": "<name>", "sequence": "<aa>"}, ...]`,
+      or a FASTA file the preflight runner normalizes into that shape.
+      All chains are assembled into a single Protenix AF3-style JSON input (ByteDance format)
+      by the preflight step. Ideal for novokine + ECD complex predictions.
+optional_inputs:
+  - name: n_samples
+    kind: parameter
+    data_type: integer
+    default: 5
+    description: Number of diffusion samples (structure hypotheses) Protenix generates per complex. Higher = better coverage, higher cost.
+  - name: n_steps
+    kind: parameter
+    data_type: integer
+    default: 200
+    description: Number of diffusion denoising steps. 200 is the standard; reduce to ~100 for rapid screening.
+  - name: n_cycles
+    kind: parameter
+    data_type: integer
+    default: 10
+    description: Number of model recycling cycles. More cycles improve accuracy on difficult interfaces.
+  - name: poll_timeout_seconds
+    kind: parameter
+    data_type: integer
+    default: 7200
+    description: Maximum seconds to wait for the Superbio job to finish.
+  - name: poll_interval_seconds
+    kind: parameter
+    data_type: integer
+    default: 30
+    description: Seconds between Superbio job-status polls.
+  - name: structure_summary_template
+    kind: template
+    template_path: workflows/report_templates/protenix_summary.md.j2
+    description: Optional Jinja2 markdown template for the human-readable structure QA summary.
+runtime:
+  provided_inputs:
+    - sequence_set
+    - n_samples
+    - n_steps
+    - n_cycles
+    - poll_timeout_seconds
+    - poll_interval_seconds
+    - structure_summary_template
+  allowed_parameter_overrides:
+    - n_samples
+    - n_steps
+    - n_cycles
+    - poll_timeout_seconds
+    - poll_interval_seconds
+  generated_state:
+    - run_id
+    - created_at
+    - submitted_job_id
+    - superbio_app_id
+    - step_statuses
+    - artifact_paths
+    - warnings
+  state_artifact: workflow_run
+  artifact_root_template: artifacts/{workflow_id}/{date}/{run_id}
+outputs:
+  - name: structure_predictions
+    kind: artifact
+    artifact_type: protein_structure_prediction_set
+    schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+    description: Bundle of predicted structures (CIF) and per-sequence/complex confidence metrics returned by Protenix.
+    source:
+      step_id: download_results
+      output_name: structure_predictions
+  - name: qa_report
+    kind: artifact
+    artifact_type: qa_report
+    schema_ref: artifact_schema:qa_report@1.0.0
+    description: Structured QA report with Protenix confidence metrics (ipTM, pLDDT, per-chain ranking).
+    source:
+      step_id: summarize_structures
+      output_name: qa_report
+qc_gates:
+  - id: sequence-set-required
+    label: Input sequence set must be present
+    when: before_execution
+    target:
+      source_type: workflow_input
+      input_name: sequence_set
+    failure_policy: block
+  - id: sequence-validation-passed
+    label: Preflight must emit a valid Protenix JSON input before launch
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: preflight_check
+      output_name: protenix_input_file
+    failure_policy: block
+  - id: external-outputs-materialized
+    label: Protenix outputs must be materialized before summarization
+    when: after_step
+    target:
+      source_type: step_output
+      step_id: download_results
+      output_name: structure_predictions
+    failure_policy: block
+compliance_hooks:
+  - id: privacy-preflight
+    stage: before_execution
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+  - id: publish-review
+    stage: before_publish
+    tool: compliance_preflight
+    required: true
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+      - name: qa_report
+        source:
+          source_type: step_output
+          step_id: summarize_structures
+          output_name: qa_report
+steps:
+  - id: preflight_check
+    label: Validate sequences and write Protenix AF3-style JSON input
+    executor:
+      executor_type: python
+      module: workflows.runners.protenix
+      function: validate_and_prepare_input
+    inputs:
+      - name: sequence_set
+        source:
+          source_type: workflow_input
+          input_name: sequence_set
+      - name: n_samples
+        source:
+          source_type: workflow_input
+          input_name: n_samples
+    outputs:
+      - name: protenix_input_file
+        kind: artifact
+        artifact_type: protenix_input_json
+        schema_ref: artifact_schema:protenix_input_json@1.0.0
+        description: Protenix-compatible AF3-style JSON describing all chains of the complex.
+    prerequisites: []
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: launch_protenix
+    label: Submit Protenix job to Superbio
+    executor:
+      executor_type: external_engine
+      engine_name: superbio
+      entrypoint: workflows/engines/superbio/protenix_entrypoint.md
+      version_command: python -c "import superbio, sys; sys.stdout.write(getattr(superbio, '__version__', 'unknown'))"
+      execution_profile: superbio_gpu
+      parameter_bindings:
+        app_id: "687040d3fd98cd3abe210102"
+        app_name: "protenix"
+        # Protenix advertises only mode_id=1 (label_as_gpu=True) — Superbio SDK maps
+        # mode_id=1 to "cpu" string even though execution is on GPU hardware.
+        running_mode: "cpu"
+        n_samples: "{n_samples}"
+        n_steps: "{n_steps}"
+        n_cycles: "{n_cycles}"
+        protenix_input_file: "{protenix_input_file}"
+      environment_references:
+        - "secret:SUPERBIO_TOKEN"
+        - "secret:SUPERBIO_USER_ID"
+        - "package:superbio>=0.1.0"
+      output_locations:
+        - "{run_dir}/outputs/generated/external/protenix/structures"
+        - "{run_dir}/outputs/generated/external/protenix/logs"
+        - "{run_dir}/outputs/generated/external/protenix/manifest.json"
+    inputs:
+      - name: protenix_input_file
+        source:
+          source_type: step_output
+          step_id: preflight_check
+          output_name: protenix_input_file
+      - name: n_samples
+        source:
+          source_type: workflow_input
+          input_name: n_samples
+      - name: n_steps
+        source:
+          source_type: workflow_input
+          input_name: n_steps
+      - name: n_cycles
+        source:
+          source_type: workflow_input
+          input_name: n_cycles
+    outputs:
+      - name: external_job_handle
+        kind: value
+        description: Handle to the submitted Superbio Protenix job (job_id, app_id, submission timestamp).
+    prerequisites:
+      - preflight_check
+    retry_policy:
+      max_attempts: 1
+      backoff_seconds: 0
+    failure_policy: block_workflow
+  - id: download_results
+    label: Poll Superbio and download Protenix results
+    executor:
+      executor_type: python
+      module: workflows.runners.protenix
+      function: poll_and_download
+    inputs:
+      - name: external_job_handle
+        source:
+          source_type: step_output
+          step_id: launch_protenix
+          output_name: external_job_handle
+      - name: poll_timeout_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_timeout_seconds
+      - name: poll_interval_seconds
+        source:
+          source_type: workflow_input
+          input_name: poll_interval_seconds
+    outputs:
+      - name: structure_predictions
+        kind: artifact
+        artifact_type: protein_structure_prediction_set
+        schema_ref: artifact_schema:protein_structure_prediction_set@1.0.0
+        description: Downloaded predicted-structure bundle (CIF + confidence JSON) materialized in the run directory.
+    prerequisites:
+      - launch_protenix
+    retry_policy:
+      max_attempts: 3
+      backoff_seconds: 60
+    failure_policy: fail_workflow
+  - id: summarize_structures
+    label: Summarize Protenix prediction quality
+    executor:
+      executor_type: python
+      module: workflows.runners.protenix
+      function: summarize_structures
+    inputs:
+      - name: structure_predictions
+        source:
+          source_type: step_output
+          step_id: download_results
+          output_name: structure_predictions
+    outputs:
+      - name: qa_report
+        kind: artifact
+        artifact_type: qa_report
+        schema_ref: artifact_schema:qa_report@1.0.0
+        description: Structured QA report with Protenix confidence metrics (ipTM per chain, pLDDT, ranking scores across samples).
+    prerequisites:
+      - download_results
+    retry_policy:
+      max_attempts: 2
+      backoff_seconds: 30
+    failure_policy: fail_workflow

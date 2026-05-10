@@ -1,0 +1,33 @@
+{
+  "study_id": "GSE111016",
+  "short_name": "pillon_2019",
+  "citation": "Pillon NJ, Gabriel BM, Dollet L, Smith JAB, Sardon Puig L, et al. (2019). Transcriptomic profiling of skeletal muscle adaptations to exercise and inactivity. Nature Communications 11:470. (Singapore Sarcopenia Study cohort).",
+  "pmid": "31772143",
+  "doi": "10.1038/s41467-019-13869-w",
+  "geo_accession": "GSE111016",
+  "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE111016",
+  "tissue": "vastus lateralis (skeletal muscle, bulk)",
+  "platform": "Illumina HiSeq (HTSeq counts)",
+  "modality": "bulk RNA-seq",
+  "design": "~ condition",
+  "comparison": "Sarcopenic (n=20) vs Healthy elderly control (n=20)",
+  "n_donors_total": 40,
+  "age_range": "65-79 (all elderly)",
+  "sex_distribution": "all male",
+  "differential_method": "limma-voom on RNA-seq counts (paper Supplementary Data 4, 'Sarcopenia' sheet)",
+  "original_threshold": "FDR < 0.10 (per publication; n=40 underpowered for genome-wide padj < 0.05)",
+  "consensus_thresholds": {
+    "padj": 0.10,
+    "abs_log2fc": 0.3,
+    "rationale": "Pillon n=40 has min padj=0.0796; using paper's published FDR<0.10 cutoff"
+  },
+  "table_file": "deg_table.tsv",
+  "table_status": "EXTRACTED_FROM_SI_SUPP_DATA_4",
+  "table_provenance": "Extracted by backend/scripts/extract_pillon_deg.py from Nat Comm Supplementary Data 4 (MOESM4_ESM.xlsx, 'Sarcopenia' sheet). Original archived as pillon_2019_SuppData4_full.xlsx. Fetched 2026-05-05.",
+  "table_columns": "gene_symbol (from symbol.org.Hs.eg), log2fc (from coef_sarc), padj (from adjp_sarc), pvalue (from pval_sarc), ensembl_id",
+  "n_genes_in_table": 16861,
+  "design_note": "DISEASE-PROXY DESIGN, not young-vs-old. Sarcopenia = accelerated/advanced muscle aging. Concordance with healthy aging datasets validates rejuvenation signal.",
+  "limitations": "All-male cohort; eliminates sex confound but limits generalizability to female aging.",
+  "role_in_consensus": "Independent secondary signal — sarcopenia as advanced-aging proxy. Genes up in sarcopenia AND up in healthy aging (GSE164471/GTEx) are the highest-confidence aged-enriched markers.",
+  "added_to_kb": "2026-05-05"
+}

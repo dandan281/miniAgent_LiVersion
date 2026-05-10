@@ -1,0 +1,83 @@
+{
+  "candidate_id": "EGFR_IL6ST_rigid_helix_40",
+  "receptor_A": "EGFR",
+  "receptor_B": "IL6ST",
+  "linker": "rigid_helix_40",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11",
+      "STAT3",
+      "JAK1",
+      "JAK2"
+    ],
+    "cis_adaptors": [
+      "SOS1",
+      "SOS2",
+      "CBL",
+      "NCK1",
+      "VAV1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1",
+      "PLCG2",
+      "FRS2",
+      "FRS3"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT",
+    "JAK_STAT3",
+    "RAS_RAF"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "SOCS3",
+    "CCND1",
+    "BCL2",
+    "MYC"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "IL6",
+    "NFKBIA",
+    "PRUNE2"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.80,
+    "step_3a": 0.75,
+    "step_3b": 0.80,
+    "step_3c": 0.65,
+    "step_3d": 0.60,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "The EGFR-IL6ST novokine with a rigid_helix_40 linker (~60 Å) forces an RTK (EGFR, 1210 aa, ECD ~621 aa) into proximity with a cytokine receptor (IL6ST/gp130, 918 aa, ECD ~597 aa). EGFR's intrinsic tyrosine kinase transphosphorylates IL6ST's cytoplasmic tyrosines, creating docking sites for GRB2-SHC1 (MAPK), GAB1-PIK3R1 (PI3K/AKT), and STAT3 (JAK-STAT). Simultaneously, IL6ST-associated JAK1/JAK2 phosphorylate EGFR tyrosines, amplifying GRB2 and STAT3 recruitment. PLCG1 is sterically excluded because its SH2 domain requires specific phosphotyrosine spacing that the asymmetric RTK-cytokine geometry cannot provide. FRS2/FRS3 are also excluded as they are FGFR-specific adaptors. The biased output is synergistic MAPK + PI3K/AKT + STAT3 activation, promoting a muscle structural gene program (ACTA2, MYL9, MYH11, MYOM2, TAGLN) enriched in young muscle while suppressing aged IEGs (EGR1, FOS, JUN) and inflammatory/senescence markers (IL32, TXNIP, CDKN2A).",
+  "literature_refs": [
+    "PMID:2261637",
+    "PMID:10358079",
+    "PMID:9388212",
+    "PMID:11821958",
+    "PMID:9013873",
+    "PMID:9126968"
+  ]
+}

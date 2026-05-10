@@ -1,0 +1,7 @@
+[
+  {"candidate_id": "MET_IL6ST_flexible_GS4", "receptor_A": "MET", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "MET+IL6ST: HGF receptor + gp130, both expressed in fibroblasts and MuSC"},
+  {"candidate_id": "FGFR2_IL6ST_flexible_GS4", "receptor_A": "FGFR2", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "FGFR2+IL6ST: FGFR2 highly expressed in muscle stem cells"},
+  {"candidate_id": "ERBB4_IL6ST_flexible_GS4", "receptor_A": "ERBB4", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "ERBB4+IL6ST: NRG/HBEGF + IL-6 family axis"},
+  {"candidate_id": "INSR_LIFR_flexible_GS4", "receptor_A": "INSR", "receptor_B": "LIFR", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.08}, "notes": "INSR+LIFR: insulin + LIF axis (myotube maturation)"},
+  {"candidate_id": "IGF1R_IL6ST_flexible_GS4", "receptor_A": "IGF1R", "receptor_B": "IL6ST", "linker": "flexible_GS4", "atlas_seed": {"composite_atlas_score": 0.10}, "notes": "IGF1R+IL6ST: pro-myogenic IGF + JAK/STAT axis"}
+]

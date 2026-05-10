@@ -120,37 +120,66 @@ class PhosphositeTool(BaseTool):
         try:
             results = []
             with open(ks_file, "r", encoding="utf-8", errors="replace") as f:
-                # Skip comment lines starting with #
-                lines = [l for l in f if not l.startswith("#")]
-            reader = csv.DictReader(io.StringIO("".join(lines)), delimiter="\t")
+                raw_lines = f.readlines()
+            # PhosphoSitePlus bulk files start with 3 preamble lines (date, license
+            # blurb, blank) before the tab-separated header beginning with "GENE\t".
+            # Skip everything before that header so csv.DictReader picks up the
+            # real column names instead of the date stamp.
+            header_idx = next(
+                (i for i, l in enumerate(raw_lines)
+                 if l.startswith("GENE\t") and "KINASE" in l),
+                0,
+            )
+            data_lines = [l for l in raw_lines[header_idx:] if not l.startswith("#")]
+            reader = csv.DictReader(io.StringIO("".join(data_lines)), delimiter="\t")
 
             for row in reader:
                 row_org = (row.get("KIN_ORGANISM") or row.get("SUB_ORGANISM") or "").lower()
                 if org not in row_org and org != "all":
                     continue
 
+                in_vivo = (row.get("IN_VIVO_RXN", "") or "").strip().upper() == "X"
+                in_vitro = (row.get("IN_VITRO_RXN", "") or "").strip().upper() == "X"
+
                 if query_type in ("kinase_substrates", "substrates_of_kinase"):
                     kin_gene = (row.get("KINASE") or row.get("KIN_ACC_ID") or "").upper()
-                    if kin_gene == gene or gene in kin_gene:
+                    if kin_gene == gene:
                         results.append({
                             "kinase": row.get("KINASE", ""),
                             "substrate": row.get("SUBSTRATE", ""),
                             "substrate_gene": row.get("SUB_GENE", ""),
                             "residue": row.get("SUB_MOD_RSD", ""),
                             "organism": row.get("SUB_ORGANISM", ""),
+                            "in_vivo": in_vivo,
+                            "in_vitro": in_vitro,
                             "cst_catalog": row.get("CST_Catalog#", ""),
                             "references": row.get("SITE_GRP_ID", ""),
                         })
                 elif query_type == "sites_for_protein":
                     sub_gene = (row.get("SUB_GENE") or row.get("SUBSTRATE") or "").upper()
-                    if sub_gene == gene or gene in sub_gene:
+                    if sub_gene == gene:
                         results.append({
                             "kinase": row.get("KINASE", ""),
                             "substrate_gene": row.get("SUB_GENE", ""),
                             "residue": row.get("SUB_MOD_RSD", ""),
                             "organism": row.get("SUB_ORGANISM", ""),
+                            "in_vivo": in_vivo,
+                            "in_vitro": in_vitro,
                             "site_group_id": row.get("SITE_GRP_ID", ""),
                         })
+
+            # Sort by confidence: in_vivo+in_vitro first (gold standard),
+            # then in_vivo only, then in_vitro only, then neither.
+            def _confidence_key(r: dict) -> int:
+                if r.get("in_vivo") and r.get("in_vitro"):
+                    return 0
+                if r.get("in_vivo"):
+                    return 1
+                if r.get("in_vitro"):
+                    return 2
+                return 3
+
+            results.sort(key=_confidence_key)
 
         except Exception as exc:
             return execution_error_result(

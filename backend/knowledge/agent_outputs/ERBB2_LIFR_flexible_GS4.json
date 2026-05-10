@@ -1,0 +1,76 @@
+{
+  "candidate_id": "ERBB2_LIFR_flexible_GS4",
+  "receptor_A": "ERBB2",
+  "receptor_B": "LIFR",
+  "linker": "flexible_GS4",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "GRB2",
+      "SHC1",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "PLCG1",
+      "STAT3",
+      "JAK1",
+      "JAK2"
+    ],
+    "excluded_adaptors": [
+      "FRS2",
+      "IRS1",
+      "IRS2"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "JAK_STAT3"
+  ],
+  "predicted_up": [
+    "ACTA2",
+    "MYL9",
+    "MYH11",
+    "MYOM2",
+    "TAGLN",
+    "MYL6",
+    "TPM2",
+    "NOTCH3",
+    "IGFBP7",
+    "TIMP3"
+  ],
+  "predicted_down": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "OTUD1",
+    "TXNIP",
+    "IL32",
+    "MYF5",
+    "MYH9",
+    "CDKN2A",
+    "ASB5"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.8,
+    "step_3a": 0.75,
+    "step_3b": 0.8,
+    "step_3c": 0.7,
+    "step_3d": 0.5,
+    "step_4": 0.75
+  },
+  "mechanism_narrative": "ERBB2+LIFR forced proximity creates an asymmetric RTK-cytokine hybrid signalosome. ERBB2's kinase transphosphorylates LIFR's intracellular tyrosines, recruiting GRB2-SHC1-SOS (MAPK/ERK) and PIK3R1-GAB1 (PI3K/AKT/mTOR) adaptors that are not efficiently engaged by LIFR's JAKs alone. LIFR's JAK1/2 amplify STAT3 signaling in parallel. The ~20 A flexible GS4 linker brings the 630-aa ERBB2 ECD and 789-aa LIFR ECD into moderate proximity (159 aa asymmetry), favoring the GRB2/SHC1/PI3K cassette over PLCG1 which remains in cis-only mode. The biased output shifts aged muscle toward a young transcriptional phenotype by upregulating contractile structural genes (ACTA2, MYL9, MYH11) via AKT/mTOR and downregulating aged inflammatory IEGs (EGR1, FOS, JUN, IL32) via STAT3-mediated suppression.",
+  "literature_refs": [
+    "PMID: 16729043",
+    "PMID: 11940572",
+    "PMID: 18775332",
+    "PMID: 12444095",
+    "PMID: 10085134",
+    "PMID: 9710588",
+    "PMID: 11606575",
+    "PMID: 11960376",
+    "PMID: 8596638"
+  ]
+}

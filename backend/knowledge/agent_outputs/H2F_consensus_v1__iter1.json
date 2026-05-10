@@ -1,0 +1,79 @@
+{
+  "candidate_id": "H2F_consensus_v1__iter1",
+  "receptor_A": "ERBB2",
+  "receptor_B": "FGFR1",
+  "linker": "GS_med",
+  "biased_output": {
+    "transphosphorylation_adaptors": [
+      "SHC1",
+      "GRB2",
+      "SOS1",
+      "FRS2",
+      "GAB1",
+      "PIK3R1",
+      "PTPN11"
+    ],
+    "cis_adaptors": [
+      "GRB7",
+      "PTK6",
+      "MEMO1"
+    ],
+    "excluded_adaptors": [
+      "PLCG1"
+    ]
+  },
+  "biased_pathways": [
+    "MAPK_ERK",
+    "PI3K_AKT_mTOR",
+    "RAS_RAF_MEK",
+    "FRS2_GRB2_SOS",
+    "SHC_RAS"
+  ],
+  "predicted_up": [
+    "EGR1",
+    "FOS",
+    "JUN",
+    "MYC",
+    "CCND1",
+    "BCL2",
+    "MCL1",
+    "VEGFA",
+    "PPARGC1A",
+    "SLC2A4",
+    "FOXO1",
+    "IGFBP5",
+    "IGFBP7"
+  ],
+  "predicted_down": [
+    "PLCG1",
+    "PPP3CA",
+    "NFATC2",
+    "NFATC4",
+    "PRKCA",
+    "PRKCB",
+    "ITPR1",
+    "ITPR2",
+    "CAMK2A",
+    "CAMK2B"
+  ],
+  "step_confidences": {
+    "step_1": 0.85,
+    "step_2": 0.75,
+    "step_3a": 0.70,
+    "step_3b": 0.80,
+    "step_3c": 0.65,
+    "step_3d": 0.70,
+    "step_4": 0.80
+  },
+  "mechanism_narrative": "The ERBB2-FGFR1 novokine with a GS_med linker (~30 Å) forces two structurally asymmetric RTKs into proximity (ECD ratio 1.78:1, |631-355|=276 aa asymmetry), enabling transphosphorylation that synergistically activates the shared SHC1→GRB2:SOS1→RAS→MAPK and FRS2→GAB1→PI3K→AKT signaling axes while sterically excluding PLCG1 from the FGFR1 Y766 docking site. The biased output (MAPK↑, AKT↑, PLCγ↓) promotes proliferation, survival, mitochondrial biogenesis, and glucose uptake — a transcriptional program enriched in young skeletal muscle — while suppressing calcium-dependent signaling pathways associated with aged muscle dysfunction.",
+  "literature_refs": [
+    "PMID:17123512 (Golding et al. 2007 - skeletal muscle stem cells express ErbB receptors)",
+    "PMID:41462267 (Yeh et al. 2025 - FGFR1 essential for muscle stem cell quiescence)",
+    "PMID:41756900 (Chang et al. 2026 - activating FGFR1 restores satellite cell function in aged mice)",
+    "PMID:32103583 (Bae et al. 2020 - satellite cell FGFR signaling and muscle regeneration)",
+    "PMID:37138777 (Meng et al. 2023 - FGFR1 maintains satellite cell pool)",
+    "PMID:29568012 (Morano et al. 2018 - Neuregulin/ErbB system in skeletal muscle)",
+    "PMID:17847085 (Cho et al. 2003 - ERBB2 ECD crystal structure)",
+    "PMID:16829530 (Plotnikov et al. 2000 - FGFR1 ECD crystal structure)"
+  ]
+}

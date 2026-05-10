@@ -1,0 +1,30 @@
+{
+  "study_id": "lai_2024_hlma",
+  "short_name": "lai_2024",
+  "citation": "Lai Y, Ramírez-Pardo I, Isern J, An J, Perdiguero E, et al. (2024). Multimodal cell atlas of the ageing human skeletal muscle. Nature 629:154-164.",
+  "pmid": null,
+  "doi": "10.1038/s41586-024-07348-6",
+  "source_url": "https://db.cngb.org/cdcp/hlma/",
+  "tissue": "hindlimb (vastus lateralis, gluteus medius, semitendinosus)",
+  "modality": "scRNA-seq + snRNA-seq + snATAC-seq + spatial transcriptomics",
+  "n_cells_total": "~387000 (multimodal combined)",
+  "n_donors": 31,
+  "n_donors_young": 12,
+  "n_donors_aged": 19,
+  "age_range_young": "15-46",
+  "age_range_aged": "74-99 (includes sarcopenic individuals)",
+  "design": "Pearson age-correlation per gene, per cell type (Suppl Table 5); pseudo-bulk DEG per figure (Suppl Table 10)",
+  "comparison": "Aged (74-99) vs Young (15-46), per cell type",
+  "key_findings": [
+    "loss of androgen receptor (AR) chromatin motif enrichment in quiescent MuSCs (snATAC-seq)",
+    "premature priming model — aged MuSCs transition from quiescence to early-activated state",
+    "preferential loss of type IIX myonuclei",
+    "profibrotic TGF-beta signaling peaks in individuals >=84y"
+  ],
+  "differential_method": "pseudo-bulk DEG (per cell type)",
+  "table_file": "deg_pseudobulk_per_cell_type.tsv",
+  "table_status": "PENDING_FETCH_FROM_NATURE_SI",
+  "h5ad_status": "NOT_STORED — multimodal raw data is GBs; literature reference only",
+  "role_in_consensus": "TIEBREAKER / SECONDARY only. Captures ADVANCED aging (74-99y) absent from other sources. Counts toward consensus only when other 4 sources already agree, OR when contributing to per-cell-type sub-blocks for cell types not covered by Kedlian.",
+  "added_to_kb": "2026-05-05"
+}

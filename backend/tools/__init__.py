@@ -12,6 +12,8 @@ from .cellxgene_tool import CellxgeneTool
 from .local_atlas_tool import LocalAtlasTool
 from .ensembl_api_tool import EnsemblApiTool
 from .fetch_url_tool import FetchURLTool
+from .go_quickgo_tool import GoQuickGoTool
+from .gtex_api_tool import GtexApiTool
 from .http_json_tool import HttpJsonTool
 from .ncbi_eutils_tool import NcbiEutilsTool
 from .omnipath_api_tool import OmnipathApiTool
@@ -23,6 +25,7 @@ from .rcsb_search_tool import RcsbSearchTool
 from .reactome_api_tool import ReactomeApiTool
 from .read_file_tool import ReadFileTool
 from .search_knowledge_tool import SearchKnowledgeBaseTool
+from .string_api_tool import StringApiTool
 from .terminal_tool import TerminalTool
 from .uniprot_api_tool import UniprotApiTool
 from .verification_agent_tool import VerificationAgentTool
@@ -55,6 +58,9 @@ def _instantiate_all_tools(base_dir: Path) -> list:
         PhosphositeTool(base_dir=str(base_dir)),
         CellxgeneTool(),
         LocalAtlasTool(),
+        StringApiTool(),
+        GtexApiTool(),
+        GoQuickGoTool(),
         PhenotypeCheckpointTool(base_dir=str(base_dir)),
         ReadFileTool(root_dir=str(base_dir), extra_allowed_roots=extra_roots),
         WriteFileTool(root_dir=str(base_dir)),

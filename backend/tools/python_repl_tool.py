@@ -34,6 +34,7 @@ from hardening import is_secret_like_path
 from langchain_core.tools import BaseTool
 from pydantic import BaseModel, Field, PrivateAttr
 
+from .contracts import artifact_ref, success_result
 from .policy import get_tool_policy_context
 
 _MAX_OUTPUT = 5_000
@@ -245,6 +246,56 @@ def _is_process_runtime_block(output: Any) -> bool:
     return "PermissionError" in rendered and _PROCESS_EXEC_BLOCK_MESSAGE in rendered
 
 
+# Directories under base_dir that may receive agent-written outputs. Scanning
+# only these (instead of the whole project tree) keeps the snapshot cheap
+# regardless of repo size — typical scan is a few thousand files at most.
+_SNAPSHOT_DIRS: tuple[str, ...] = ("artifacts", "knowledge", "workspace", "memory")
+_SNAPSHOT_SKIP_PARTS: frozenset[str] = frozenset(
+    {"__pycache__", ".venv", ".py311", "node_modules", ".git", "storage", ".next-dev", ".next-login"}
+)
+_MAX_SNAPSHOT_FILES = 5_000
+_MAX_REPL_ARTIFACT_REFS = 10
+
+
+def _snapshot_writable_files(base_dir: Path | None) -> dict[str, int]:
+    """Mtime fingerprint for files in dirs the agent typically writes to.
+
+    Returns ``{absolute_path: mtime_ns}``. Skips heavy/uninteresting subtrees
+    (caches, virtualenvs, build artifacts). Capped at ``_MAX_SNAPSHOT_FILES``
+    so a runaway tree won't make REPL calls expensive.
+    """
+    if base_dir is None:
+        return {}
+    snapshot: dict[str, int] = {}
+    for rel in _SNAPSHOT_DIRS:
+        root = base_dir / rel
+        if not root.exists() or not root.is_dir():
+            continue
+        for p in root.rglob("*"):
+            if len(snapshot) >= _MAX_SNAPSHOT_FILES:
+                return snapshot
+            if any(part in _SNAPSHOT_SKIP_PARTS for part in p.parts):
+                continue
+            try:
+                if p.is_file():
+                    snapshot[str(p)] = p.stat().st_mtime_ns
+            except OSError:
+                continue
+    return snapshot
+
+
+def _diff_snapshot_paths(
+    before: dict[str, int], after: dict[str, int]
+) -> list[str]:
+    """Return paths that are new or whose mtime changed, most recent first."""
+    changed: list[tuple[str, int]] = []
+    for path, mtime in after.items():
+        if before.get(path) != mtime:
+            changed.append((path, mtime))
+    changed.sort(key=lambda item: -item[1])
+    return [path for path, _ in changed[:_MAX_REPL_ARTIFACT_REFS]]
+
+
 class PythonReplInput(BaseModel):
     code: str = Field(description="Python code to execute.")
 
@@ -267,6 +318,10 @@ class PythonReplTool(BaseTool):
         "Input: valid Python source code."
     )
     args_schema: Type[BaseModel] = PythonReplInput
+    # Surface files written by the script as artifact_refs so the Files panel
+    # can show them. The wrapper accepts either a plain string (back-compat
+    # for error paths) or a (summary, artifact_dict) tuple from success_result.
+    response_format: str = "content_and_artifact"
     base_dir: str = ""
 
     _repl: Any = PrivateAttr(default=None)
@@ -643,6 +698,14 @@ class PythonReplTool(BaseTool):
             if top_level in _BLOCKED_NATIVE_MODULES:
                 return safe_modules[top_level]
             module = original_import(name, globals, locals, fromlist, level)
+            # The override map only applies to absolute imports. A relative
+            # import like `from .builtins import styles` inside openpyxl.styles
+            # arrives here as name="builtins" with level=1, but the resolved
+            # module is openpyxl.styles.builtins — not Python's builtins.
+            # Returning safe_modules["builtins"] in that case silently swapped
+            # in CPython's builtins copy and broke openpyxl's import chain.
+            if level != 0:
+                return module
             return safe_modules.get(name, module)
 
         safe_builtins_module.__import__ = safe_import
@@ -667,7 +730,7 @@ class PythonReplTool(BaseTool):
         python_repl.globals["sys"] = safe_sys
         state.runtime_guards_installed = True
 
-    def _run(self, code: str) -> str:
+    def _run(self, code: str) -> Any:
         if self.base_dir:
             policy = config.get_production_hardening_policy()
             if not policy.tools.python_repl_enabled:
@@ -675,7 +738,9 @@ class PythonReplTool(BaseTool):
         blocked = _scan_code(code)
         if blocked:
             return blocked
+        base = Path(self.base_dir).resolve() if self.base_dir else None
         try:
+            before_snapshot = _snapshot_writable_files(base)
             with self._execution_lock:
                 session_key, state = self._resolve_session_state()
                 if state.repl is None:
@@ -686,15 +751,50 @@ class PythonReplTool(BaseTool):
                 if session_key == _DEFAULT_SESSION_KEY:
                     self._sync_default_session_aliases()
                 output = self._run_with_global_runtime_patches(code, state)
-            if len(str(output)) > _MAX_OUTPUT:
-                output = str(output)[:_MAX_OUTPUT] + "\n...[output truncated]"
-            if _is_secret_runtime_block(output):
+            rendered = str(output)
+            if len(rendered) > _MAX_OUTPUT:
+                rendered = rendered[:_MAX_OUTPUT] + "\n...[output truncated]"
+            if _is_secret_runtime_block(rendered):
                 return f"[BLOCKED] Code refused — contains forbidden operation: {_SECRET_FILE_BLOCK_REASON}."
-            if _is_native_runtime_block(output):
+            if _is_native_runtime_block(rendered):
                 return f"[BLOCKED] Code refused — contains forbidden operation: {_NATIVE_FFI_BLOCK_REASON}."
-            if _is_process_runtime_block(output):
+            if _is_process_runtime_block(rendered):
                 return f"[BLOCKED] Code refused — contains forbidden operation: {_PROCESS_EXEC_BLOCK_REASON}."
-            return str(output)
+
+            new_or_modified = (
+                _diff_snapshot_paths(before_snapshot, _snapshot_writable_files(base))
+                if base is not None
+                else []
+            )
+            if not new_or_modified:
+                return rendered
+
+            refs = []
+            rel_names: list[str] = []
+            for absolute_path in new_or_modified:
+                p = Path(absolute_path)
+                try:
+                    rel = str(p.relative_to(base))
+                except ValueError:
+                    rel = p.name
+                rel_names.append(rel)
+                refs.append(
+                    artifact_ref(
+                        path=absolute_path,
+                        label=p.name,
+                        artifact_type="python_repl_output",
+                    )
+                )
+            summary = rendered + "\n\n[Files written: " + ", ".join(rel_names) + "]"
+            return success_result(
+                self.name,
+                summary,
+                artifact_refs=refs,
+                structured_payload={
+                    "output": rendered,
+                    "files_written": rel_names,
+                },
+            )
         except Exception as exc:
             return f"[ERROR] {exc}"
 

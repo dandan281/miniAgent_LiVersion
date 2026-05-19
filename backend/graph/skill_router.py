@@ -404,8 +404,12 @@ def select_skill_entries_for_query(
         if score > 0:
             scored_entries.append((score, explicit, entry))
 
+    # Router ran but found no relevant skill — emit empty list so the prompt
+    # builder ships a small `<available_skills/>` block instead of the entire
+    # 33 KB SKILLS_SNAPSHOT.md. `None` is reserved for "router had nothing to
+    # go on at all" (handled above when query/paths/history are all empty).
     if not scored_entries:
-        return None
+        return []
 
     explicit_entries = [entry for _, explicit, entry in scored_entries if explicit]
     if explicit_entries:

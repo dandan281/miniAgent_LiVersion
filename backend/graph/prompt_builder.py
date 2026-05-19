@@ -94,11 +94,28 @@ def build_retrieved_memory_block(results: list[dict]) -> str:
     return rendered
 
 
+# Cache parsed file contents keyed by (path, max_chars, mtime_ns). Workspace
+# files (SOUL, IDENTITY, USER, AGENTS, MEMORY) are read on every chat turn;
+# this skips the read+strip+truncate work when the file hasn't changed. The
+# mtime in the key guarantees live edits still take effect immediately.
+_component_cache: dict[tuple[str, int, int], str] = {}
+
+
 def _read_component(path: Path, *, max_chars: int = MAX_COMPONENT_CHARS) -> str:
-    if not path.exists():
+    try:
+        stat = path.stat()
+    except (FileNotFoundError, OSError):
         return ""
-    content = path.read_text(encoding="utf-8").strip()
+    cache_key = (str(path), max_chars, stat.st_mtime_ns)
+    cached = _component_cache.get(cache_key)
+    if cached is not None:
+        return cached
+    try:
+        content = path.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
     content, _ = _truncate_text(content, max_chars)
+    _component_cache[cache_key] = content
     return content
 
 
@@ -265,6 +282,32 @@ def _build_skills_snapshot_context(
     if runtime_skill_entries or iter_skill_files(base_dir):
         return render_skills_snapshot(runtime_skill_entries)
     return _read_component(base_dir / "SKILLS_SNAPSHOT.md")
+
+
+def build_simple_system_prompt(base_dir: Path) -> str:
+    """Minimal system prompt for the pure-LLM fast path.
+
+    Includes persona (SOUL/IDENTITY/USER/AGENTS) and long-term memory, but
+    omits the skills snapshot, project instructions, git context, and harness
+    guidance. Used for short conversational/factual turns where binding tools
+    and helper agents would be pure overhead.
+    """
+    parts: list[str] = []
+    for filename, label in (
+        ("SOUL.md", "Soul"),
+        ("IDENTITY.md", "Identity"),
+        ("USER.md", "User Profile"),
+        ("AGENTS.md", "Agents Guide"),
+    ):
+        text = _read_component(base_dir / "workspace" / filename)
+        if text:
+            parts.append(f"<!-- {label} -->\n{text}")
+
+    memory = _read_component(base_dir / "memory" / "MEMORY.md")
+    if memory:
+        parts.append(f"<!-- Long-term Memory -->\n{memory}")
+
+    return "\n\n".join(parts)
 
 
 def build_system_prompt(

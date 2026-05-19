@@ -3,6 +3,7 @@ AgentManager — singleton that owns the LLM, tools, session manager,
 and memory indexer. Rebuilds the agent on every request via create_agent
 so that live workspace edits are always reflected in the system prompt.
 """
+import re
 from pathlib import Path
 from typing import AsyncGenerator, Optional
 
@@ -12,7 +13,11 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from config import get_agent_runtime_limit
 from runtime.model_factory import build_chat_model
 from .memory_indexer import MemoryIndexer
-from .prompt_builder import build_retrieved_memory_block, build_system_prompt
+from .prompt_builder import (
+    build_retrieved_memory_block,
+    build_simple_system_prompt,
+    build_system_prompt,
+)
 from .session_manager import SessionManager
 from .skill_router import select_skill_entries_for_query
 from tools.contracts import normalize_tool_output
@@ -26,6 +31,61 @@ For non-trivial tasks, use the helper-agent tools deliberately:
 - Skip verification for small conversational turns or obviously complete low-risk answers where a repair pass would add little user value.
 - If verification reports `repair_required` or `fail`, fix the material issues before finalizing your answer.
 """.strip()
+
+# Short, conversational turns shouldn't trigger planner+verifier hops or tool
+# binding — they double or triple the LLM round-trip cost for no quality gain.
+# Tools and helper agents are bound only when the input looks like real work.
+_HARNESS_KEYWORDS = (
+    "analyz", "implement", "refactor", "debug", "design", "plan ", "plan,", "plan.",
+    "optimize", "optimiz", "migrate", "deploy", "build", "generate", "execute",
+    "investigate", "audit", "compare", "benchmark", "fix ", "diagnose",
+    "search ", "locate ", "trace ", "calculate", "compute", "process ", "extract",
+    "parse", "modify", "write file", "edit file", "read file",
+)
+_FILE_PATH_EXTENSIONS = (
+    ".py", ".ts", ".tsx", ".md", ".json", ".yaml", ".yml", ".csv", ".tsv",
+    ".txt", ".log", ".sh", ".sql", ".h5", ".h5ad", ".ipynb", ".pdf",
+)
+_BULLET_LINE_RE = re.compile(r"^\s*([-*•]|\d+[.)])\s")
+
+
+def _has_file_path_token(message: str) -> bool:
+    for raw in message.split():
+        token = raw.strip("`'\"()[]<>,;:{}")
+        if "/" in token and any(token.endswith(ext) for ext in _FILE_PATH_EXTENSIONS):
+            return True
+    return False
+
+
+def _looks_like_complex_turn(message: str) -> bool:
+    """True when the input looks like long-and-structured work that should be
+    handled by the full agent loop (tools + skills + helper agents). False for
+    short conversational/factual turns that should take the pure-LLM fast path.
+    """
+    if not message:
+        return False
+    lowered = message.lower()
+
+    # Explicit structural markers — code, file paths, or compute-work keywords.
+    if "```" in message:
+        return True
+    if _has_file_path_token(message):
+        return True
+    if any(kw in lowered for kw in _HARNESS_KEYWORDS):
+        return True
+
+    # Multi-line input with several bulleted/numbered lines reads as a task list.
+    lines = message.strip().splitlines()
+    if len(lines) >= 4:
+        bullet_count = sum(1 for ln in lines if _BULLET_LINE_RE.match(ln))
+        if bullet_count >= 2:
+            return True
+
+    # Walls of text (pasted logs/data) — assume the user wants real processing.
+    if len(message) > 800:
+        return True
+
+    return False
 
 
 class AgentManager:
@@ -93,6 +153,43 @@ class AgentManager:
         )
         return create_agent(self.llm, self.tools, system_prompt=system_prompt)
 
+    async def _stream_simple_turn(
+        self, lc_messages: list
+    ) -> AsyncGenerator[dict, None]:
+        """Stream the executor LLM directly with no tools/skills/harness.
+
+        Emits the same ``token``/``done``/``error`` events the chat runtime
+        already consumes, so this is fully transparent to upstream layers.
+        """
+        assert self.base_dir is not None, "AgentManager not initialised"
+        assert self.llm is not None, "executor LLM not initialised"
+
+        system_prompt = build_simple_system_prompt(self.base_dir)
+        messages = [SystemMessage(content=system_prompt), *lc_messages]
+
+        try:
+            async for chunk in self.llm.astream(messages):
+                content = getattr(chunk, "content", "")
+                if isinstance(content, str):
+                    text = content
+                elif isinstance(content, list):
+                    parts: list[str] = []
+                    for item in content:
+                        if isinstance(item, str):
+                            parts.append(item)
+                        elif isinstance(item, dict) and item.get("type") == "text":
+                            parts.append(str(item.get("text", "")))
+                    text = "".join(parts)
+                else:
+                    text = ""
+                if text:
+                    yield {"type": "token", "content": text}
+        except Exception as exc:
+            yield {"type": "error", "error": str(exc)}
+            return
+
+        yield {"type": "done"}
+
     def clear_session_runtime(self, session_id: str) -> None:
         for tool in self.tools:
             runtime_tool = getattr(tool, "wrapped_tool", tool)
@@ -144,16 +241,32 @@ class AgentManager:
             + [HumanMessage(content=message)]
         )
 
+        # ── Fast path: short conversational/factual turns ─────────────
+        # When the input doesn't look like structured work, skip the full
+        # agent loop entirely. Tools, skills, helper agents (planner +
+        # verifier), and the recursion-limited LangGraph runtime are all
+        # bypassed — we stream the executor LLM directly with a minimal
+        # persona+memory system prompt.
+        if not _looks_like_complex_turn(message):
+            async for event in self._stream_simple_turn(lc_messages):
+                yield event
+            return
+
         # ── Build agent (rebuilt every request) ───────────────────────
         selected_skill_entries = select_skill_entries_for_query(
             self.base_dir,
             message,
             history=history,
         )
-        agent = self._build_agent(rag_mode, skill_entries=selected_skill_entries)
+        agent = self._build_agent(
+            rag_mode,
+            skill_entries=selected_skill_entries,
+        )
 
         # ── Stream events ──────────────────────────────────────────────
         after_tool = False
+        # Track tool names already announced via tool_intent to avoid duplicates
+        _emitted_intents: set[str] = set()
 
         # Biology requests with retrieval and multi-step reasoning often need
         # far more graph turns than LangGraph's small default budget.
@@ -178,8 +291,20 @@ class AgentManager:
                             yield {"type": "new_response"}
                             after_tool = False
                         yield {"type": "token", "content": chunk.content}
+                    else:
+                        # Model is silently building a tool call (no text output).
+                        # Emit tool_intent as soon as the tool name is known so
+                        # the UI can escape "Preparing next step." immediately.
+                        tc_chunks = getattr(chunk, "tool_call_chunks", None) or []
+                        for tc in tc_chunks:
+                            tc_name = getattr(tc, "name", None)
+                            if tc_name and tc_name not in _emitted_intents:
+                                _emitted_intents.add(tc_name)
+                                yield {"type": "tool_intent", "tool": tc_name}
 
                 elif kind == "on_tool_start":
+                    # Clear intents — the real tool_start supersedes them
+                    _emitted_intents.clear()
                     run_id = event["run_id"]
                     tool_name = event["name"]
                     raw_input = event["data"].get("input", {})

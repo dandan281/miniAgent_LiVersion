@@ -107,6 +107,7 @@ from api.files import router as files_router
 from api.runners import router as runners_router
 from api.sessions import router as sessions_router
 from api.tokens import router as tokens_router
+from api.uploads import router as uploads_router
 
 app.include_router(chat_router, prefix="/api")
 app.include_router(access_router, prefix="/api")
@@ -114,6 +115,7 @@ app.include_router(sessions_router, prefix="/api")
 app.include_router(files_router, prefix="/api")
 app.include_router(runners_router, prefix="/api")
 app.include_router(tokens_router, prefix="/api")
+app.include_router(uploads_router, prefix="/api")
 
 
 @app.get("/")

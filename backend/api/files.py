@@ -155,6 +155,22 @@ def read_raw_file(path: str = Query(..., description="Relative file path"), requ
     return Response(content=target.read_bytes(), media_type=media_type)
 
 
+@router.get("/files/download")
+def download_file(path: str = Query(..., description="Relative file path"), request: Request = None):
+    """Download a file as an attachment (forces browser save-dialog)."""
+    require_inspection_access(request)
+    target, clean = _check_path(path, write=False)
+    if not target.exists():
+        raise HTTPException(404, f"File not found: {path}")
+    if not target.is_file():
+        raise HTTPException(400, f"Not a file: {path}")
+
+    media_type = _guess_media_type(target)
+    filename = target.name
+    headers = {"Content-Disposition": f'attachment; filename="{filename}"'}
+    return Response(content=target.read_bytes(), media_type=media_type, headers=headers)
+
+
 # ------------------------------------------------------------------ #
 # Write                                                                #
 # ------------------------------------------------------------------ #

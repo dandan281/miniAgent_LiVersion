@@ -15,6 +15,7 @@ from tools.policy_types import ToolPolicyExecutionContext
 class ChatStreamInput:
     message: str
     session_id: str
+    display_message: str = ""  # user-visible message saved to history (omits injected file text)
 
 
 class ChatRuntime:
@@ -101,10 +102,11 @@ class ChatRuntime:
             nonlocal user_msg_saved
             if user_msg_saved:
                 return
+            saved_content = request.display_message or request.message
             session_manager.save_message(
                 request.session_id,
                 "user",
-                request.message,
+                saved_content,
                 request_id=request_id,
             )
             user_msg_saved = True

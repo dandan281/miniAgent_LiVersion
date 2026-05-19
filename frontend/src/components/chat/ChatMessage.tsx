@@ -3,6 +3,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
+import { FileText, Sheet, FileArchive, Zap } from "lucide-react";
 import {
   messageHasProcessTrail,
   normalizeMessageContent,
@@ -12,7 +13,7 @@ import { splitStreamingMarkdown } from "@/lib/streaming-markdown";
 import { cn } from "@/lib/utils";
 import { useApp } from "@/lib/store";
 import TurnActivityFeed from "./TurnActivityFeed";
-import type { Message } from "@/lib/types";
+import type { Message, MessageAttachment } from "@/lib/types";
 
 const RUNNER_TOOLS = new Set([
   "superbio",
@@ -41,6 +42,33 @@ function RunnerAffordance() {
       <span aria-hidden="true">↗</span>
       Open Runners tab
     </button>
+  );
+}
+
+function fileIcon(fileType: string) {
+  if (fileType === "excel") return <Sheet size={11} strokeWidth={2} />;
+  if (fileType === "pdf") return <FileText size={11} strokeWidth={2} />;
+  return <FileArchive size={11} strokeWidth={2} />;
+}
+
+function AttachmentChips({ attachments }: { attachments: MessageAttachment[] }) {
+  return (
+    <div className="mb-2 flex flex-wrap gap-1.5">
+      {attachments.map((a) => (
+        <span
+          key={a.file_id}
+          className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(35,130,83,0.22)] bg-[rgba(35,130,83,0.07)] px-2.5 py-0.5 font-mono text-[11px] text-[var(--apex-accent-strong)]"
+        >
+          {fileIcon(a.file_type)}
+          <span className="max-w-[160px] truncate">{a.filename}</span>
+          <span className="text-[10px] text-slate-400 tabular-nums">
+            {a.char_count > 1000
+              ? `${Math.round(a.char_count / 1000)}k chars`
+              : `${a.char_count} chars`}
+          </span>
+        </span>
+      ))}
+    </div>
   );
 }
 
@@ -190,6 +218,19 @@ export default function ChatMessage({
     return (
       <article aria-label="User prompt" className="flex justify-end">
         <div className="max-w-[min(42rem,88%)] rounded-[22px] border border-[rgba(208,216,209,0.92)] bg-[rgba(248,250,246,0.96)] px-4 py-3 shadow-[0_10px_24px_rgba(29,42,33,0.04)]">
+          {(message.attachments && message.attachments.length > 0) || message.gpuMode ? (
+            <div className="mb-2 flex flex-wrap items-center gap-1.5">
+              {message.gpuMode ? (
+                <span className="inline-flex items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2.5 py-0.5 font-mono text-[11px] font-semibold text-amber-600">
+                  <Zap size={10} strokeWidth={2} className="fill-amber-400" />
+                  GPU
+                </span>
+              ) : null}
+              {message.attachments && message.attachments.length > 0 ? (
+                <AttachmentChips attachments={message.attachments} />
+              ) : null}
+            </div>
+          ) : null}
           <p className="whitespace-pre-wrap text-[0.92rem] leading-[1.72] text-slate-700">
             {message.content}
           </p>

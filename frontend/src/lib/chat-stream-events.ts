@@ -8,6 +8,7 @@ import type {
   ChatStreamRetrievalEvent,
   ChatStreamTokenEvent,
   ChatStreamToolEndEvent,
+  ChatStreamToolIntentEvent,
   ChatStreamToolStartEvent,
   ChatStreamVerificationResultEvent,
   JsonObject,
@@ -138,6 +139,21 @@ function parseTokenEvent(
   return {
     type: "token",
     content,
+    request_id: requestId,
+    event_index: eventIndex,
+  };
+}
+
+function parseToolIntentEvent(
+  payload: UnknownRecord,
+  requestId: string | undefined,
+  eventIndex: number | undefined
+): ChatStreamToolIntentEvent | null {
+  const tool = readString(payload.tool);
+  if (tool === null) return null;
+  return {
+    type: "tool_intent",
+    tool,
     request_id: requestId,
     event_index: eventIndex,
   };
@@ -309,6 +325,8 @@ export function parseChatStreamEventPayload(payload: unknown): ChatStreamEvent |
       return parseRetrievalEvent(payload, requestId, eventIndex);
     case "token":
       return parseTokenEvent(payload, requestId, eventIndex);
+    case "tool_intent":
+      return parseToolIntentEvent(payload, requestId, eventIndex);
     case "tool_start":
       return parseToolStartEvent(payload, requestId, eventIndex);
     case "tool_end":

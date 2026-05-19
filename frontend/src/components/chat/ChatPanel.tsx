@@ -95,8 +95,12 @@ export default function ChatPanel() {
     return () => window.cancelAnimationFrame(frame);
   }, [isStreaming, messages, syncScrollState]);
 
-  const handleSend = async (text: string) => {
-    await sendMessage(text);
+  const handleSend = async (
+    text: string,
+    attachments?: import("@/lib/api").UploadedFileRef[],
+    gpuMode?: boolean
+  ) => {
+    await sendMessage(text, attachments, gpuMode);
   };
 
   const handleRetryWorkspaceSync = useCallback(async () => {
@@ -202,6 +206,7 @@ export default function ChatPanel() {
               prefillText={draftMessage}
               prefillRevision={draftRevision}
               clearPrefill={clearDraftMessage}
+              sessionId={currentSessionId ?? undefined}
             />
           </div>
         </div>

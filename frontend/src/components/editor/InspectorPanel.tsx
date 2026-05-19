@@ -36,6 +36,7 @@ import {
 import TurnDetailsPanel from "@/components/editor/TurnDetailsPanel";
 import RunnerStack from "@/components/runners/RunnerStack";
 import {
+  downloadArtifactFile,
   getSessionTokens,
   listSkillsRegistry,
   openRawFileInNewTab,
@@ -43,6 +44,7 @@ import {
   saveFile,
 } from "@/lib/api";
 import {
+  getPathExtension,
   getPreviewableFileLabel,
   inferPreviewableFileKind,
 } from "@/lib/file-preview";
@@ -1709,6 +1711,8 @@ function EmptyState({ children }: { children: ReactNode }) {
   );
 }
 
+const DOWNLOADABLE_EXTENSIONS = new Set([".xlsx", ".xls", ".pdf", ".docx", ".doc", ".csv", ".tsv", ".zip"]);
+
 function GeneratedFileRow({
   item,
   active,
@@ -1722,6 +1726,13 @@ function GeneratedFileRow({
   const tone = getGeneratedArtifactTone(cue.kind);
   const detail = getGeneratedArtifactDetail(item);
   const scopeLabel = getGeneratedArtifactScopeLabel(item);
+  const ext = getPathExtension(item.path);
+  const isDownloadable = DOWNLOADABLE_EXTENSIONS.has(ext);
+
+  const handleDownload = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    void downloadArtifactFile(item.path).catch(() => {/* silent */});
+  };
 
   return (
     <button
@@ -1748,13 +1759,28 @@ function GeneratedFileRow({
           <span className="min-w-0 truncate text-[12px] font-semibold text-slate-700">
             {item.label}
           </span>
-          <span
-            className={cn(
-              "inline-flex shrink-0 items-center rounded-full border px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em]",
-              tone.badge
-            )}
-          >
-            {cue.label}
+          <span className="flex shrink-0 items-center gap-1">
+            {isDownloadable ? (
+              <span
+                role="button"
+                tabIndex={0}
+                title={`Download ${item.label}`}
+                onClick={handleDownload}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") handleDownload(e as unknown as React.MouseEvent); }}
+                className="inline-flex items-center rounded-full border border-[rgba(35,130,83,0.22)] bg-[rgba(35,130,83,0.06)] px-1.5 py-0.5 text-[9px] font-semibold text-[var(--apex-accent-strong)] hover:bg-[rgba(35,130,83,0.12)] cursor-pointer"
+              >
+                <Download size={9} strokeWidth={2.5} className="mr-0.5" />
+                DL
+              </span>
+            ) : null}
+            <span
+              className={cn(
+                "inline-flex shrink-0 items-center rounded-full border px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-[0.08em]",
+                tone.badge
+              )}
+            >
+              {cue.label}
+            </span>
           </span>
         </span>
         <span className="mt-1 flex min-w-0 items-center gap-1.5">

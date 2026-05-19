@@ -139,6 +139,59 @@ Create or edit a skill using `write_file` or another file-writing tool, then ver
 
 ---
 
+## Generating Output Files (Excel, PDF, CSV)
+
+Use `python_repl` to generate downloadable files. **Always save to `artifacts/` relative to the working directory.** The Files tab in the UI will show these files with a download button.
+
+### Excel (.xlsx)
+```python
+import os, openpyxl
+from openpyxl import Workbook
+
+os.makedirs("artifacts", exist_ok=True)
+wb = Workbook()
+ws = wb.active
+ws.title = "Results"
+ws.append(["Gene", "logFC", "p-value"])
+ws.append(["TP53", -2.1, 0.001])
+wb.save("artifacts/results.xlsx")
+print("Saved artifacts/results.xlsx")
+```
+
+For tables from pandas DataFrames:
+```python
+import os, pandas as pd
+os.makedirs("artifacts", exist_ok=True)
+df.to_excel("artifacts/results.xlsx", index=False)
+print("Saved artifacts/results.xlsx")
+```
+
+### PDF (.pdf)
+```python
+import os
+from fpdf import FPDF
+os.makedirs("artifacts", exist_ok=True)
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Helvetica", size=12)
+pdf.cell(0, 10, "Analysis Report", new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 8, "Your content here...")
+pdf.output("artifacts/report.pdf")
+print("Saved artifacts/report.pdf")
+```
+
+### CSV (.csv)
+```python
+import os, pandas as pd
+os.makedirs("artifacts", exist_ok=True)
+df.to_csv("artifacts/results.csv", index=False)
+print("Saved artifacts/results.csv")
+```
+
+After saving, tell the user: "Your file is ready — open the **Files** tab in the right panel to download it."
+
+---
+
 ## General Rules
 
 - Always use tools to verify facts rather than relying on memory or assumptions.

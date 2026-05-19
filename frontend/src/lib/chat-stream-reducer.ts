@@ -58,6 +58,18 @@ export function applyStreamEvent(
         content: message.content + event.content,
         blocks: appendTextBlock(message.blocks, event.content),
       }));
+    case "tool_intent":
+      // LLM has chosen a tool but hasn't started it yet — set pendingTool early
+      // so TurnActivityFeed can show the tool name instead of "Preparing next step."
+      return updateStreamingMessage(state, event, (message) => ({
+        ...message,
+        request_id: event.request_id ?? message.request_id,
+        pendingTool: message.pendingTool ?? {
+          tool: event.tool,
+          input: "",
+          runId: `intent_${event.tool}`,
+        },
+      }));
     case "tool_start":
       return updateStreamingMessage(state, event, (message) => ({
         ...message,

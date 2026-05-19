@@ -38,10 +38,12 @@ import type {
   AccessScopeState,
   InspectorTab,
   Message,
+  MessageAttachment,
   SessionContinuitySummary,
   Session,
   SessionHistoryMessage,
 } from "./types";
+import type { UploadedFileRef } from "./api";
 
 const DEFAULT_SESSION_TITLE = "New Chat";
 
@@ -78,7 +80,7 @@ interface AppContextValue {
   selectSession: (id: string) => Promise<void>;
   deleteSession: (id: string) => Promise<void>;
   renameSession: (id: string, title: string) => Promise<void>;
-  sendMessage: (content: string) => Promise<void>;
+  sendMessage: (content: string, attachments?: UploadedFileRef[], gpuMode?: boolean) => Promise<void>;
   stopStreaming: () => void;
   primeDraftMessage: (text: string) => void;
   clearDraftMessage: () => void;
@@ -674,7 +676,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   // ── Send message ─────────────────────────────────────────────
 
   const sendMessage = useCallback(
-    async (content: string) => {
+    async (content: string, attachments?: UploadedFileRef[], gpuMode?: boolean) => {
       if (isStreaming || !hasExecutionAccess) return;
 
       // Auto-create session if none is selected
@@ -700,12 +702,24 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
             DEFAULT_SESSION_TITLE;
       }
 
+      const msgAttachments: MessageAttachment[] | undefined =
+        attachments && attachments.length > 0
+          ? attachments.map((a) => ({
+              file_id: a.file_id,
+              filename: a.filename,
+              file_type: a.file_type,
+              char_count: a.char_count,
+            }))
+          : undefined;
+
       // Add user message + streaming placeholder
       const userMsg: Message = {
         id: uid(),
         role: "user",
         content,
         blocks: [{ type: "text", text: content }],
+        ...(msgAttachments ? { attachments: msgAttachments } : {}),
+        ...(gpuMode ? { gpuMode: true } : {}),
       };
       const assistantMsg = createOptimisticAssistantMessage(uid(), Date.now());
       streamingIdRef.current = assistantMsg.id;
@@ -755,7 +769,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
           onEvent: (event) => {
             applyAndCommitEvent(event);
           },
-        });
+        }, attachments?.map((a) => a.file_id), gpuMode);
       } catch (error) {
         if (api.isAbortError(error) && userStoppedStreamRef.current) {
           applyAndCommitEvent({

@@ -311,6 +311,11 @@ export interface ChatStreamVerificationResultEvent extends ChatStreamEventBase {
   tool_trace?: JsonObject[];
 }
 
+export interface ChatStreamToolIntentEvent extends ChatStreamEventBase {
+  type: "tool_intent";
+  tool: string;
+}
+
 export interface ChatStreamNewResponseEvent extends ChatStreamEventBase {
   type: "new_response";
 }
@@ -331,6 +336,7 @@ export type ChatStreamEvent =
   | ChatStreamTokenEvent
   | ChatStreamToolStartEvent
   | ChatStreamToolEndEvent
+  | ChatStreamToolIntentEvent
   | ChatStreamPlanCreatedEvent
   | ChatStreamPlanUpdatedEvent
   | ChatStreamVerificationResultEvent
@@ -398,6 +404,13 @@ export type SessionContentBlock =
   | SessionPlanBlock
   | SessionVerificationBlock;
 
+export interface MessageAttachment {
+  file_id: string;
+  filename: string;
+  file_type: string;
+  char_count: number;
+}
+
 export interface Message {
   id: string;
   role: "user" | "assistant";
@@ -411,6 +424,8 @@ export interface Message {
   endedAtMs?: number;
   /** Tool currently executing (cleared when tool_end arrives) */
   pendingTool?: { tool: string; input: string; runId: string };
+  attachments?: MessageAttachment[];
+  gpuMode?: boolean;
 }
 
 export interface SessionHistoryMessage {

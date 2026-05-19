@@ -1082,6 +1082,29 @@ export const openRawFileInNewTab = async (path: string): Promise<void> => {
 export const getRawFileUrl = (path: string) =>
   buildApiUrl("/api/files/raw", { path });
 
+export const getDownloadFileUrl = (path: string) =>
+  buildApiUrl("/api/files/download", { path });
+
+export const downloadArtifactFile = async (path: string): Promise<void> => {
+  const response = await inspectFetch("/api/files/download", {
+    cache: "no-store",
+    query: { path },
+  });
+  if (!response.ok) {
+    throw new Error(`Download failed: ${response.status}`);
+  }
+  const blob = await response.blob();
+  const filename = path.split("/").pop() ?? "download";
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
+};
+
 export const listSkillsRegistry = () =>
   inspectReq<unknown>("/api/skills/registry").then((payload) =>
     validateSkillRegistry(payload, "/api/skills/registry")
@@ -1112,6 +1135,31 @@ export const saveFile = (path: string, content: string) =>
     jsonBody: { content, path },
     method: "POST",
   });
+
+export interface UploadedFileRef {
+  file_id: string;
+  filename: string;
+  file_type: string;
+  char_count: number;
+  preview: string;
+}
+
+export const uploadFile = async (
+  file: File,
+  sessionId: string,
+  signal?: AbortSignal
+): Promise<UploadedFileRef> => {
+  const form = new FormData();
+  form.append("file", file);
+  form.append("session_id", sessionId);
+  const response = await executeFetch("/api/uploads", {
+    body: form,
+    method: "POST",
+    signal,
+  });
+  await throwForFailedResponse(response, "/api/uploads", "execution");
+  return response.json() as Promise<UploadedFileRef>;
+};
 
 // Chat streaming (custom SSE parser — POST-based)
 
@@ -1144,12 +1192,16 @@ export interface StreamCallbacks {
 export async function streamChat(
   message: string,
   sessionId: string,
-  callbacks: StreamCallbacks
+  callbacks: StreamCallbacks,
+  fileIds?: string[],
+  gpuMode?: boolean
 ): Promise<void> {
   const response = await executeFetch("/api/chat", {
     jsonBody: {
       message,
       session_id: sessionId,
+      ...(fileIds && fileIds.length > 0 ? { file_ids: fileIds } : {}),
+      ...(gpuMode ? { gpu_mode: true } : {}),
     },
     method: "POST",
     signal: callbacks.signal,
